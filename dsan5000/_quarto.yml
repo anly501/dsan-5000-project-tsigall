@@ -2,10 +2,10 @@ project:
   type: website
 
 website:
-  title: "dsan5000"
+  title: "DSAN 5000"
   navbar:
     left:
-      - href: about.qmd
+      - href: index.qmd
         text: About You
       - code.qmd
       - data.qmd
@@ -21,9 +21,10 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
     toc: true
+    fontsize: 1em
 
 editor: visual
 
