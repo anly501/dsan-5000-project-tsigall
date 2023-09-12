@@ -12,5 +12,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "decision_trees.html",
+    "href": "decision_trees.html",
+    "title": "Decision Trees",
+    "section": "",
+    "text": "Classification\n\n\nRegression"
   }
 ]

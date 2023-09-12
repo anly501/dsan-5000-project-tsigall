@@ -5,9 +5,19 @@ website:
   title: "dsan5000"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About You
+      - code.qmd
+      - data.qmd
+      - introduction.qmd
+      - data_gathering.qmd
+      - data_cleaning.qmd
+      - data_exploration.qmd
+      - clustering.qmd
+      - dimensionality_reduction.qmd
+      - decision_trees.qmd
+      - arm.qmd
+      - conclusions.qmd
 
 format:
   html:
