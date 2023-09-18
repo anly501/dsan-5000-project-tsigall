@@ -1,23 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About You",
-    "section": "",
-    "text": "Fill in about you section here."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "decision_trees.html",
     "href": "decision_trees.html",
     "title": "Decision Trees",
     "section": "",
     "text": "Classification\n\n\nRegression"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "Thomas Sigall is a graduate student at Georgetown University currently pursuing a Masters of Science in Data Science and Analytics. He graduated from Villanova University in 2023 with a B.A. in Philosophy and Minors in Computer Science and Statistics. Originally from Redmond, Washington, he enjoys studying a wide range of topics, as evidenced by his diverse academic background. Outside of academics, he enjoys running and loves to follow sports."
   }
 ]
