@@ -12,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "Thomas Sigall is a graduate student at Georgetown University currently pursuing a Masters of Science in Data Science and Analytics. He graduated from Villanova University in 2023 with a B.A. in Philosophy and Minors in Computer Science and Statistics. Originally from Redmond, Washington, he enjoys studying a wide range of topics, as evidenced by his diverse academic background. Outside of academics, he enjoys running and loves to follow sports."
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code",
+    "section": "",
+    "text": "Link to GitHub repository"
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data",
+    "section": "",
+    "text": "Small data: If your data is small enough to be hosted on GitHub then the “data” tab should link to your private GitHub classroom assignment repository. Keep the data organized in a logical way, ideally in a centralized “data” folder some-where. Bigger data: If you have too much data for GitHub then you can host your data files on GU domains (or Google-drive)"
   }
 ]
