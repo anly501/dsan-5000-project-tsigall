@@ -1,0 +1,6 @@
+---
+title: "Data"
+---
+
+Small data: If your data is small enough to be hosted on GitHub then the “data” tab should link to your private GitHub classroom assignment repository. Keep the data organized in a logical way, ideally in a centralized “data” folder some-where.
+Bigger data: If you have too much data for GitHub then you can host your data files on GU domains (or Google-drive)

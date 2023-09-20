@@ -13,4 +13,4 @@
 # SYNC LOCAL VERSION OF WEBSITE TO GU-DOMAINS SERVER
 # OBVIOUSLY YOU WILL NEED TO UPDATE THIS WITH INFORMATION FOR YOUR GU SERVER 
 # YOU CAN ALSO RUN THIS COMMAND BY PASTING IT INTO THE TERMINAL
-rsync -alvr dsan-website INSERT_USER_NAME@gtownX.reclaimhosting.com:/home/INSERT_USER_NAME/public_html/
+rsync -alvr --delete dsan5000/_site/ tsigallg@gtown3.reclaimhosting.com:/home/tsigallg/public_html/dsan5000

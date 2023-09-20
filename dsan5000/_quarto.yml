@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "DSAN 5000"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About You
+      - code.qmd
+      - data.qmd
+      - introduction.qmd
+      - data_gathering.qmd
+      - data_cleaning.qmd
+      - data_exploration.qmd
+      - clustering.qmd
+      - dimensionality_reduction.qmd
+      - decision_trees.qmd
+      - arm.qmd
+      - conclusions.qmd
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+    fontsize: 1em
+
+editor: visual
+
