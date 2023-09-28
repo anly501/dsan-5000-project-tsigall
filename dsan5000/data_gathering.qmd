@@ -1,3 +1,5 @@
 ---
 title: "Data Gathering"
 ---
+
+Explain all methods and sources for your data.

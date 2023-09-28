@@ -1,3 +1,13 @@
 ---
 title: "Data Exploration"
 ---
+
+1 .Have R code that cleans record, labeled data that has both qualitative and quantitative variables. (required). This must link to raw, cleaned-data, and the code.
+
+2\. Have Python code that cleans text data and includes a label (from corpus or csv or both) and you MUST use CountVectorizer.
+
+(Optional but recommended) Have R code that cleans text data from a corpus for your project. (Optional but recommended) Have Python code that cleans record data for your project.
+
+Host your cleaning codes and data in the GitHub repository.
+
+Get your data into a cleaner state that will enable you to further (and later) prepare it for modeling.
