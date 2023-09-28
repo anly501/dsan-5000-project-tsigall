@@ -18,6 +18,7 @@ library(nflverse)
 library(tidyverse)
 library(ggplot2)
 library(grid)
+library(reticulate)
 options(scipen = 999)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
@@ -79,14 +80,32 @@ This data shows when coaches make the correct choice on 4th down, their average 
 
 ## Text Data
 
-2.  Have Python code that cleans text data and includes a label (from corpus or csv or both) and you MUST use CountVectorizer.
-
 ```{python}
-print("hello world")
+import praw
+from sklearn.feature_extraction.text import CountVectorizer
+import numpy as np
+
+reddit = praw.Reddit(
+  client_id = "29BtHHkcVmVjeZfAU5Mfbw",
+  client_secret = "m8eoqej8ylk3LLG-n6TE1irUHOtxGw",
+  user_agent = "TNS621"
+)
 ```
 
-(Optional but recommended) Have R code that cleans text data from a corpus for your project. (Optional but recommended) Have Python code that cleans record data for your project.
+```{python}
+subreddit = reddit.subreddit("nfl")
+query = "4th down"
 
-Host your cleaning codes and data in the GitHub repository.
+top_posts = subreddit.search(query, limit=100)
+corpus = []
 
-Get your data into a cleaner state that will enable you to further (and later) prepare it for modeling.
+for post in top_posts:
+    corpus.append(post.title)
+
+vectorizer=CountVectorizer()   
+Xs = vectorizer.fit_transform(corpus)
+
+col_names=vectorizer.get_feature_names_out()
+print("col_names=",col_names)
+```
+
