@@ -19,11 +19,12 @@ library(tidyverse)
 library(ggplot2)
 library(grid)
 library(reticulate)
+library(kableExtra)
+use_condaenv("r-env")
 options(scipen = 999)
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-```{r load_data}
+```{r load_data, message = FALSE}
 raw_data <- load_4th_pbp(2022)
 ```
 
@@ -55,7 +56,7 @@ names <- data.frame("Variable" = names(fourth_downs),
                                      "Conversion Attempted (T/F)",
                                      "Estimated Points Added as a Result of the Play"))
 
-rmarkdown::paged_table(names)
+kable(names)
 
 ```
 
@@ -73,39 +74,62 @@ fourth_decisions <- fourth_downs %>%
     filter(count > 50)
 
 
-rmarkdown::paged_table(head(fourth_decisions))
+head(fourth_decisions)
 ```
 
 This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season.
 
-## Text Data
+## Sentiment Analysis
+
+The NFL subreddit is a useful place to extract text data produced by fans and their reaction to these essential decisions. Like most jobs, the goal of an NFL head coach is not only to win games, but to keep their bosses happy. The size and outspoken nature of NFL fan bases can be a factor in the job security of these coaches, as if a coach loses the fans, their job gets a lot harder. This is where sentiment analysis comes in, as getting an idea of how fans feel about 4th down decisions by certain coaches may give us insights into how they are making their decisions, and whether or not the fans have any influence on the decision making process.
 
 ```{python}
 import praw
 from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
 
-reddit = praw.Reddit(
-  client_id = "29BtHHkcVmVjeZfAU5Mfbw",
-  client_secret = "m8eoqej8ylk3LLG-n6TE1irUHOtxGw",
-  user_agent = "TNS621"
-)
+reddit = praw.Reddit("bot1")
 ```
 
-```{python}
+This allows us to get posts from the NFL subreddit using a search query of "4th down" and access the comments of those posts.
+
+```{python, warning = FALSE}
 subreddit = reddit.subreddit("nfl")
 query = "4th down"
 
 top_posts = subreddit.search(query, limit=100)
+urls = []
 corpus = []
 
 for post in top_posts:
-    corpus.append(post.title)
+    urls.append(post.permalink)
+    
+url = "https://www.reddit.com" + urls[0]
 
-vectorizer=CountVectorizer()   
+submission = reddit.submission(url=url)
+
+for top_level_comment in submission.comments:
+    corpus.append(top_level_comment.body)
+
+vectorizer=CountVectorizer()
 Xs = vectorizer.fit_transform(corpus)
 
 col_names=vectorizer.get_feature_names_out()
-print("col_names=",col_names)
 ```
 
+The overall sentiment from this brief analysis is a positive one, but the search terms need to be more specific to get any useful information out of this process.
+
+```{python}
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+overall = []
+sia = SentimentIntensityAnalyzer()
+
+for text in corpus:
+  score=sia.polarity_scores(text)
+  overall.append(score['compound'])
+
+
+
+sum(overall)/len(overall)
+```

@@ -1,13 +1,27 @@
 ---
 title: "Data Exploration"
+editor_options: 
+  chunk_output_type: inline
 ---
 
-1 .Have R code that cleans record, labeled data that has both qualitative and quantitative variables. (required). This must link to raw, cleaned-data, and the code.
+```{r setup, include = FALSE}
+library(nflverse)
+library(tidyverse)
+library(ggplot2)
+library(grid)
+library(reticulate)
+library(kableExtra)
+use_condaenv("r-env")
+options(scipen = 999)
+```
 
-2\. Have Python code that cleans text data and includes a label (from corpus or csv or both) and you MUST use CountVectorizer.
+# 4th Down Statistics
 
-(Optional but recommended) Have R code that cleans text data from a corpus for your project. (Optional but recommended) Have Python code that cleans record data for your project.
+How often do coaches go for it when they should?
 
-Host your cleaning codes and data in the GitHub repository.
+```{r}
+p <- ggplot(data = fourth_decisions, aes(x = should_go)) + 
+  geom_histogram(binwidth = 0.1)
 
-Get your data into a cleaner state that will enable you to further (and later) prepare it for modeling.
+p
+```
