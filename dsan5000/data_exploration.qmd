@@ -15,6 +15,10 @@ use_condaenv("r-env")
 options(scipen = 999)
 ```
 
+```{r load_data}
+load("clean_data.Rdata")
+```
+
 # 4th Down Statistics
 
 How often do coaches go for it when they should?

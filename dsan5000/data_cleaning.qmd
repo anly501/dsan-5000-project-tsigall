@@ -5,10 +5,6 @@ editor_options:
   chunk_output_type: inline
 ---
 
-# Data
-
-Data to evaluate NFL decision making was gathered by using the nflreadr package [@nflverse]. The creators of this package provide detailed instructions and examples on how to use and clean this data, which can be found at their website [here](https://nflreadr.nflverse.com/).
-
 # Cleaning Process
 
 ## 4th Down Data
@@ -24,8 +20,8 @@ use_condaenv("r-env")
 options(scipen = 999)
 ```
 
-```{r load_data, message = FALSE}
-raw_data <- load_4th_pbp(2022)
+```{r load_data, include = FALSE}
+load("raw_nfl.Rdata")
 ```
 
 ```{r head, message = FALSE}
@@ -108,6 +104,7 @@ url = "https://www.reddit.com" + urls[0]
 
 submission = reddit.submission(url=url)
 
+submission.comments.replace_more(limit=0)
 for top_level_comment in submission.comments:
     corpus.append(top_level_comment.body)
 
@@ -132,4 +129,8 @@ for text in corpus:
 
 
 sum(overall)/len(overall)
+```
+
+```{r}
+save(fourth_decisions, fourth_downs, file = "clean_data.Rdata")
 ```

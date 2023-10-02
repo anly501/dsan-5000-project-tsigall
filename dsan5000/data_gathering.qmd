@@ -2,4 +2,16 @@
 title: "Data Gathering"
 ---
 
-Explain all methods and sources for your data.
+# Data
+
+Data to evaluate NFL decision making was gathered by using the nflreadr package [@nflverse]. The creators of this package provide detailed instructions and examples on how to use and clean this data, which can be found at their website [here](https://nflreadr.nflverse.com/).
+
+```{r}
+library(nflverse)
+
+raw_data <- load_4th_pbp(2022)
+```
+
+```{r}
+save(raw_data, file = "raw_nfl.Rdata")
+```
