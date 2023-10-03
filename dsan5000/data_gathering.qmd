@@ -1,17 +1,10 @@
 ---
 title: "Data Gathering"
+bibliography: "reference.bib"
 ---
 
 # Data
 
-Data to evaluate NFL decision making was gathered by using the nflreadr package [@nflverse]. The creators of this package provide detailed instructions and examples on how to use and clean this data, which can be found at their website [here](https://nflreadr.nflverse.com/).
+Data to evaluate NFL decision making was gathered by using the nflreadr package. The creators of this package provide detailed instructions and examples on how to use and clean this data, which can be found at their website [here](https://nflreadr.nflverse.com/).
 
-```{r}
-library(nflverse)
-
-raw_data <- load_4th_pbp(2022)
-```
-
-```{r}
-save(raw_data, file = "raw_nfl.Rdata")
-```
+Reddit data is accessed through their API, information on which can be found [here](https://www.reddit.com/dev/api/). This is done using [PRAW](https://praw.readthedocs.io/en/stable/index.html): the Python Reddit API Wrapper.

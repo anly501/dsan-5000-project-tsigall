@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -74,11 +40,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -98,81 +64,116 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">DSAN 5000</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">About You</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./code.html" rel="" target="">
- <span class="menu-text">Code</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data.html" rel="" target="">
- <span class="menu-text">Data</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./introduction.html" rel="" target="">
- <span class="menu-text">Introduction</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./data_gathering.html" rel="" target="" aria-current="page">
- <span class="menu-text">Data Gathering</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_cleaning.html" rel="" target="">
- <span class="menu-text">Data Cleaning</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data_exploration.html" rel="" target="">
- <span class="menu-text">Data Exploration</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./clustering.html" rel="" target="">
- <span class="menu-text">Clustering</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./dimensionality_reduction.html" rel="" target="">
- <span class="menu-text">Dimensionality Reduction</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./decision_trees.html" rel="" target="">
- <span class="menu-text">Decision Trees</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./arm.html" rel="" target="">
- <span class="menu-text">ARM</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./conclusions.html" rel="" target="">
- <span class="menu-text">Conclusions</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_gathering.html">Data Gathering</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">DSAN 5000</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_gathering.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Data Gathering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_cleaning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Cleaning</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_exploration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Exploration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./clustering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clustering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dimensionality_reduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dimensionality Reduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./decision_trees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision Trees</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./arm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ARM</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusions</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -205,68 +206,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="data" class="level1">
 <h1>Data</h1>
-<p>Data to evaluate NFL decision making was gathered by using the nflreadr package <span class="citation" data-cites="nflverse">[@nflverse]</span>. The creators of this package provide detailed instructions and examples on how to use and clean this data, which can be found at their website <a href="https://nflreadr.nflverse.com/">here</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nflverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ──────────────────────────────────────── nflverse 1.0.2 ──</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ nflfastR 4.5.1     ✔ nflreadr 1.3.2
-✔ nflseedR 1.2.0     ✔ nflplotR 1.1.0
-✔ nfl4th   1.0.2     </code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>──────────────────────────────────────────────────────────────── Ready to go! ──</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> <span class="fu">load_4th_pbp</span>(<span class="dv">2022</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading season 2022</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Computing probabilities for 4196 plays. . .</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[21:20:38] WARNING: src/learner.cc:553: 
-  If you are loading a serialized model (like pickle in Python, RDS in R) generated by
-  older XGBoost, please export the model by calling `Booster.save_model` from that version
-  first, then load it back in current version. See:
-
-    https://xgboost.readthedocs.io/en/latest/tutorials/saving_model.html
-
-  for more details about differences between saving model and serializing.
-
-[21:20:55] WARNING: src/learner.cc:553: 
-  If you are loading a serialized model (like pickle in Python, RDS in R) generated by
-  older XGBoost, please export the model by calling `Booster.save_model` from that version
-  first, then load it back in current version. See:
-
-    https://xgboost.readthedocs.io/en/latest/tutorials/saving_model.html
-
-  for more details about differences between saving model and serializing.
-
-[21:20:55] WARNING: src/learner.cc:553: 
-  If you are loading a serialized model (like pickle in Python, RDS in R) generated by
-  older XGBoost, please export the model by calling `Booster.save_model` from that version
-  first, then load it back in current version. See:
-
-    https://xgboost.readthedocs.io/en/latest/tutorials/saving_model.html
-
-  for more details about differences between saving model and serializing.
-
-[21:20:55] WARNING: src/learner.cc:553: 
-  If you are loading a serialized model (like pickle in Python, RDS in R) generated by
-  older XGBoost, please export the model by calling `Booster.save_model` from that version
-  first, then load it back in current version. See:
-
-    https://xgboost.readthedocs.io/en/latest/tutorials/saving_model.html
-
-  for more details about differences between saving model and serializing.</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(raw_data, <span class="at">file =</span> <span class="st">"raw_nfl.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Data to evaluate NFL decision making was gathered by using the nflreadr package. The creators of this package provide detailed instructions and examples on how to use and clean this data, which can be found at their website <a href="https://nflreadr.nflverse.com/">here</a>.</p>
+<p>Reddit data is accessed through their API, information on which can be found <a href="https://www.reddit.com/dev/api/">here</a>. This is done using <a href="https://praw.readthedocs.io/en/stable/index.html">PRAW</a>: the Python Reddit API Wrapper.</p>
 
 
 </section>

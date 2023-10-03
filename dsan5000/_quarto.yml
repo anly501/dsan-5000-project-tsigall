@@ -3,8 +3,10 @@ project:
 
 website:
   title: "DSAN 5000"
-  navbar:
-    left:
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
       - href: index.qmd
         text: About You
       - code.qmd

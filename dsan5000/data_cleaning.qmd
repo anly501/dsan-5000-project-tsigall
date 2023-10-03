@@ -131,6 +131,6 @@ for text in corpus:
 sum(overall)/len(overall)
 ```
 
-```{r}
+```{r include = FALSE}
 save(fourth_decisions, fourth_downs, file = "clean_data.Rdata")
 ```

@@ -11,6 +11,7 @@ library(ggplot2)
 library(grid)
 library(reticulate)
 library(kableExtra)
+library(gridExtra)
 use_condaenv("r-env")
 options(scipen = 999)
 ```
@@ -23,9 +24,17 @@ load("clean_data.Rdata")
 
 How often do coaches go for it when they should?
 
-```{r}
+```{r warning = FALSE}
 p <- ggplot(data = fourth_decisions, aes(x = should_go)) + 
-  geom_histogram(binwidth = 0.1)
+  geom_histogram(binwidth = 0.05, fill = "#69b3a2", color="#e9ecef") +
+  scale_x_continuous(limits = c(0,1)) +
+  ggtitle("When NFL Coaches Go When They Should") +
+  xlab("")
+p1 <- ggplot(data = fourth_decisions, aes(x = shouldnt_go)) + 
+  geom_histogram(binwidth = 0.05, fill = "#69b3a2", color="#e9ecef") +
+  scale_x_continuous(limits = c(0,1)) +
+  ggtitle("When NFL Coaches Don't Go When They Shouldn't") +
+  xlab("")
 
-p
+grid.arrange(p, p1, ncol = 1)
 ```
