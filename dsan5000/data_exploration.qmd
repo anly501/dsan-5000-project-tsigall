@@ -83,7 +83,7 @@ border <- as.integer(null_value * colorlength)
 colorscale <- as.list(1:colorlength)
 
 if(border < colorlength / 2) {
-  border_neg <- colorlength - border_neg
+  border_neg <- colorlength - border
   s <- scales::seq_gradient_pal("#FF0000", "#ecf54e", "Lab")(seq(0,1,length.out=border_neg))
   for (i in 1:border) {
     colorscale[[i]] <- c((i - 1) / colorlength, s[i + border_neg - border - 1])
@@ -119,7 +119,7 @@ plot_ly(data = fourth_position,
                       color = ~go_boost,
                       colorscale = colorscale,
                       colorbar = list(len = 1))) %>%
-  layout(title = "When Coaches Actually Go For It",
+  layout(title = "When Coaches Should For It<br>(based on change in win probability)",
          xaxis = list(title = "Yardline"),
          yaxis = list(title = "Yards to Go"))
 

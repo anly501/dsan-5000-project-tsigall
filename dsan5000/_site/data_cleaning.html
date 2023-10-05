@@ -216,7 +216,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#cleaning-process" id="toc-cleaning-process" class="nav-link active" data-scroll-target="#cleaning-process">Cleaning Process</a>
   <ul class="collapse">
-  <li><a href="#th-down-data" id="toc-th-down-data" class="nav-link" data-scroll-target="#th-down-data">4th Down Data</a></li>
+  <li><a href="#th-down-data" id="toc-th-down-data" class="nav-link" data-scroll-target="#th-down-data">4th Down Data</a>
+  <ul class="collapse">
+  <li><a href="#by-coach" id="toc-by-coach" class="nav-link" data-scroll-target="#by-coach">By Coach</a></li>
+  <li><a href="#by-situation" id="toc-by-situation" class="nav-link" data-scroll-target="#by-situation">By Situation</a></li>
+  </ul></li>
   <li><a href="#sentiment-analysis" id="toc-sentiment-analysis" class="nav-link" data-scroll-target="#sentiment-analysis">Sentiment Analysis</a></li>
   </ul></li>
   </ul>
@@ -246,6 +250,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Cleaning Process</h1>
 <section id="th-down-data" class="level2">
 <h2 class="anchored" data-anchor-id="th-down-data">4th Down Data</h2>
+<section id="by-coach" class="level3">
+<h3 class="anchored" data-anchor-id="by-coach">By Coach</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(raw_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -340,21 +346,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 </div>
+<p>Making a table showing when coaches make the correct decisions on 4th down is essential in evaluating their decision making process. This is made easy by the inclusion of the <code>go_boost</code> variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fourth_decisions <span class="ot">&lt;-</span> fourth_downs <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">should_go =</span> <span class="fu">if_else</span>((go <span class="sc">==</span> <span class="dv">100</span> <span class="sc">&amp;</span> go_boost <span class="sc">&gt;</span> <span class="dv">0</span>), <span class="dv">1</span>, (<span class="fu">if_else</span>(go_boost <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>))),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">shouldnt_go =</span> <span class="fu">if_else</span>((go <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> go_boost <span class="sc">&lt;</span> <span class="dv">0</span>), <span class="dv">1</span>, (<span class="fu">if_else</span>(go_boost <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>))),</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coach =</span> <span class="fu">if_else</span>(posteam_type <span class="sc">==</span> <span class="st">"home"</span>, home_coach, away_coach),) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(coach, ydstogo, yardline_100, go_boost, should_go, shouldnt_go, go, epa) <span class="sc">%&gt;%</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(coach) <span class="sc">%&gt;%</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">should_go =</span> <span class="fu">sum</span>(should_go <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">/</span> (<span class="fu">sum</span>(should_go <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> should_go <span class="sc">==</span> <span class="dv">1</span>)),</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">shouldnt_go =</span> <span class="fu">sum</span>(shouldnt_go <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">/</span> (<span class="fu">sum</span>(shouldnt_go <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> shouldnt_go <span class="sc">==</span> <span class="dv">1</span>)),</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">EPA =</span> <span class="fu">mean</span>(epa),</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(count <span class="sc">&gt;</span> <span class="dv">50</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(fourth_decisions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">should_go =</span> <span class="fu">ifelse</span>((go_boost <span class="sc">&gt;</span> <span class="dv">0</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                             (<span class="fu">if_else</span>(go <span class="sc">==</span> <span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">0</span>)),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                             <span class="cn">NA</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">shouldnt_go =</span> <span class="fu">ifelse</span>((go_boost <span class="sc">&lt;</span> <span class="dv">0</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                             (<span class="fu">if_else</span>(go <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                             <span class="cn">NA</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">coach =</span> <span class="fu">if_else</span>(posteam_type <span class="sc">==</span> <span class="st">"home"</span>, home_coach, away_coach),) <span class="sc">%&gt;%</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(coach, ydstogo, yardline_100, go_boost, should_go, shouldnt_go, go, epa) <span class="sc">%&gt;%</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(coach) <span class="sc">%&gt;%</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">should_go =</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>                <span class="fu">sum</span>(should_go <span class="sc">==</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                (<span class="fu">sum</span>(should_go <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> should_go <span class="sc">==</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>              <span class="at">shouldnt_go =</span> </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                <span class="fu">sum</span>(shouldnt_go <span class="sc">==</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                (<span class="fu">sum</span>(shouldnt_go <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> shouldnt_go <span class="sc">==</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>              <span class="at">EPA =</span> <span class="fu">mean</span>(epa),</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>              <span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(count <span class="sc">&gt;</span> <span class="dv">50</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(fourth_decisions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   coach          should_go shouldnt_go      EPA count
@@ -367,60 +382,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6 Dan Campbell       0.507       0.907 -0.00432   121</code></pre>
 </div>
 </div>
-<p>This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season.</p>
+<p>This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season. It shows the percent of times each coach makes the correct decision in two scenarios: when going for it would have a positive effect on their win probability and when going for it would have a negative effect on their win probability.</p>
+</section>
+<section id="by-situation" class="level3">
+<h3 class="anchored" data-anchor-id="by-situation">By Situation</h3>
+<p>One of, if not the most important factor in making a decision on fourth down is the position your team is on the field. Looking at this more closely requires a table that shows coaches decisions based on where they are on the field and how many downs they need to gain to get a first down.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fourth_position <span class="ot">&lt;-</span> fourth_downs <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">should_go =</span> <span class="fu">ifelse</span>((go_boost <span class="sc">&gt;</span> <span class="dv">0</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                             (<span class="fu">if_else</span>(go <span class="sc">==</span> <span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">0</span>)),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                             <span class="cn">NA</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">shouldnt_go =</span> <span class="fu">ifelse</span>((go_boost <span class="sc">&lt;</span> <span class="dv">0</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                             (<span class="fu">if_else</span>(go <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                             <span class="cn">NA</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(yardline_100,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>         ydstogo,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>         go,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>         go_boost,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>         should_go,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>         shouldnt_go) <span class="sc">%&gt;%</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yardline_100, ydstogo) <span class="sc">%&gt;%</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">go =</span> <span class="fu">mean</span>(go),</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">count =</span> <span class="fu">n</span>(),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">go_boost =</span> <span class="fu">mean</span>(go_boost)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(go_boost <span class="sc">&gt;</span> <span class="sc">-</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'yardline_100'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(fourth_position)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+# Groups:   yardline_100 [3]
+  yardline_100 ydstogo    go count go_boost
+         &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt;
+1            1       1  80.5    41    7.06 
+2            2       1  75       4    3.69 
+3            2       2  40.7    27    2.89 
+4            3       1  50       2    2.54 
+5            3       2  16.7     6    0.995
+6            3       3  38.5    26    0.721</code></pre>
+</div>
+</div>
+<p>This table shows us the percentage of times a coach chose to go for it in the given situation. The first row, for example, shows that 80.5% of the time a coach decided to go for it when they were at 4th and 1 at the 1 yard line - they were 1 yard away from scoring. It also shows is the average increase in win probability if a coach were to go for it. For example, at 4th and 1 at the 1 yard line, going for it increases your win probability by an average of 7%, an incredibly large number.</p>
+</section>
 </section>
 <section id="sentiment-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="sentiment-analysis">Sentiment Analysis</h2>
 <p>The NFL subreddit is a useful place to extract text data produced by fans and their reaction to these essential decisions. Like most jobs, the goal of an NFL head coach is not only to win games, but to keep their bosses happy. The size and outspoken nature of NFL fan bases can be a factor in the job security of these coaches, as if a coach loses the fans, their job gets a lot harder. This is where sentiment analysis comes in, as getting an idea of how fans feel about 4th down decisions by certain coaches may give us insights into how they are making their decisions, and whether or not the fans have any influence on the decision making process.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> praw</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>reddit <span class="op">=</span> praw.Reddit(<span class="st">"bot1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> praw</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>reddit <span class="op">=</span> praw.Reddit(<span class="st">"bot1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This allows us to get posts from the NFL subreddit using a search query of “4th down” and access the comments of those posts.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>subreddit <span class="op">=</span> reddit.subreddit(<span class="st">"nfl"</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"4th down"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>top_posts <span class="op">=</span> subreddit.search(query, limit<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>urls <span class="op">=</span> []</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> []</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> post <span class="kw">in</span> top_posts:</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    urls.append(post.permalink)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://www.reddit.com"</span> <span class="op">+</span> urls[<span class="dv">0</span>]</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>submission <span class="op">=</span> reddit.submission(url<span class="op">=</span>url)</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>submission.comments.replace_more(limit<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>subreddit <span class="op">=</span> reddit.subreddit(<span class="st">"nfl"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"4th down"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>top_posts <span class="op">=</span> subreddit.search(query, limit<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>urls <span class="op">=</span> []</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> []</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> post <span class="kw">in</span> top_posts:</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    urls.append(post.permalink)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://www.reddit.com"</span> <span class="op">+</span> urls[<span class="dv">0</span>]</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>submission <span class="op">=</span> reddit.submission(url<span class="op">=</span>url)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>submission.comments.replace_more(limit<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[&lt;MoreComments count=338, children=['g86rob4', 'g86w9sz', 'g86spfe', '...']&gt;, &lt;MoreComments count=50, children=['g86u1l0']&gt;, &lt;MoreComments count=22, children=['g87nr1u', 'g86u185']&gt;, &lt;MoreComments count=19, children=['g8746y9', 'g875lus']&gt;, &lt;MoreComments count=17, children=['g86our5']&gt;, &lt;MoreComments count=12, children=['g86ntis', 'g86pv9c', 'g86vsmi', '...']&gt;, &lt;MoreComments count=12, children=['g86tjz0', 'g88dxu3', 'g874r37', '...']&gt;, &lt;MoreComments count=10, children=['g86upwx', 'g86ultp']&gt;, &lt;MoreComments count=9, children=['g87k13x', 'g86o1j9', 'g87wsxf']&gt;, &lt;MoreComments count=8, children=['g86u97z', 'g86obcw', 'g86xpy6', '...']&gt;, &lt;MoreComments count=8, children=['g87c49d', 'g86ugsz', 'g877p0k', '...']&gt;, &lt;MoreComments count=7, children=['g877imq', 'g87kh7l', 'g89p26w', '...']&gt;, &lt;MoreComments count=7, children=['g88bvze', 'g87ku3m', 'g87nw1x', 'g872v4n']&gt;, &lt;MoreComments count=7, children=['g86x048', 'g87hqcz', 'g88a3uy', '...']&gt;, &lt;MoreComments count=7, children=['g87zpc7', 'g871cu5']&gt;, &lt;MoreComments count=7, children=['g86oxbu']&gt;, &lt;MoreComments count=6, children=['g87wwd7', 'g87wwjc', 'g86vugx', '...']&gt;, &lt;MoreComments count=6, children=['g86pq3e', 'g86qf9e']&gt;, &lt;MoreComments count=6, children=['g87vm0k', 'g86pf8w', 'g86pfpz', '...']&gt;, &lt;MoreComments count=6, children=['g86x90t', 'g87kfqf', 'g873sjz', '...']&gt;, &lt;MoreComments count=6, children=['g86oe3o', 'g87wg6e', 'g89gr1j', '...']&gt;, &lt;MoreComments count=6, children=['g86nunf', 'g86p8ze', 'g86pwzt']&gt;, &lt;MoreComments count=5, children=['g87om4z', 'g879zcg', 'g89bpxg', '...']&gt;, &lt;MoreComments count=5, children=['g875x3g', 'g87wek1', 'g88cq9i', 'g87he5o']&gt;, &lt;MoreComments count=5, children=['g86pm76', 'g86oovd', 'g86q9m2', 'g86qref']&gt;, &lt;MoreComments count=5, children=['g86qv3t', 'g86p7g9']&gt;, &lt;MoreComments count=5, children=['g86mmlt']&gt;, &lt;MoreComments count=5, children=['g86rchy', 'g86pjic', 'g880745', '...']&gt;, &lt;MoreComments count=4, children=['g87ew8h', 'g87k6p8', 'g87jhql']&gt;, &lt;MoreComments count=4, children=['g87ytxi', 'g880kl5', 'g894n3r', 'g87hy0v']&gt;, &lt;MoreComments count=4, children=['g87nonn']&gt;, &lt;MoreComments count=4, children=['g86nwop', 'g87ow5j', 'g87qauz', 'g87vmct']&gt;, &lt;MoreComments count=4, children=['g87wp4y', 'g89huil', 'g87rk8a', 'g87lg55']&gt;, &lt;MoreComments count=4, children=['g86mpf7']&gt;, &lt;MoreComments count=4, children=['g86oeio']&gt;, &lt;MoreComments count=4, children=['g874vc3', 'g8e3loc', 'g886pd3', 'g88dkoi']&gt;, &lt;MoreComments count=4, children=['g86ogod', 'g87qjnp', 'g872n2e', 'g876gqt']&gt;, &lt;MoreComments count=4, children=['g86ukn3', 'g87d9kl', 'g87oqnq', 'g87ysi7']&gt;, &lt;MoreComments count=3, children=['g879prv']&gt;, &lt;MoreComments count=3, children=['g86zsko', 'g88axm6', 'g86q1s4']&gt;, &lt;MoreComments count=3, children=['g86pay4', 'g87otas', 'g87k6sg']&gt;, &lt;MoreComments count=3, children=['g86yhep', 'g86ygl3']&gt;, &lt;MoreComments count=3, children=['g87olne', 'g8929l8', 'g86o40j']&gt;, &lt;MoreComments count=3, children=['g86xw1q']&gt;, &lt;MoreComments count=3, children=['g871pb4', 'g86y4mx']&gt;, &lt;MoreComments count=3, children=['g87zu94', 'g86pv9z', 'g879cof']&gt;, &lt;MoreComments count=3, children=['g86xjh8', 'g86pzw1']&gt;, &lt;MoreComments count=3, children=['g86sf6e', 'g86mh2g', 'g86my9d']&gt;, &lt;MoreComments count=2, children=['g874wl8']&gt;, &lt;MoreComments count=2, children=['g870t7q', 'g885p2g']&gt;, &lt;MoreComments count=2, children=['g87wk8t', 'g88y0jc']&gt;, &lt;MoreComments count=2, children=['g86r7n9']&gt;, &lt;MoreComments count=2, children=['g8704vj', 'g87mtxl']&gt;, &lt;MoreComments count=2, children=['g87b3xf']&gt;, &lt;MoreComments count=2, children=['g87e6hp', 'g888azh']&gt;, &lt;MoreComments count=2, children=['g86tpwq', 'g878ucd']&gt;, &lt;MoreComments count=2, children=['g87nw3t', 'g86obxo']&gt;, &lt;MoreComments count=2, children=['g87y03d']&gt;, &lt;MoreComments count=2, children=['g89c4g3', 'g87uem0']&gt;, &lt;MoreComments count=2, children=['g87fyi2']&gt;, &lt;MoreComments count=2, children=['g87phtp', 'g88c7wy']&gt;, &lt;MoreComments count=2, children=['g86qmwx', 'g899flo']&gt;, &lt;MoreComments count=2, children=['g87v13k', 'g87nnlw']&gt;, &lt;MoreComments count=2, children=['g87t7tm']&gt;, &lt;MoreComments count=2, children=['g86ox5p', 'g86owzs']&gt;, &lt;MoreComments count=2, children=['g895s2u', 'g86siam']&gt;, &lt;MoreComments count=2, children=['g8akn8y', 'g88efwp']&gt;, &lt;MoreComments count=2, children=['g87k42o']&gt;, &lt;MoreComments count=2, children=['g87ngmh']&gt;, &lt;MoreComments count=2, children=['g87zz7b', 'g88cu86']&gt;, &lt;MoreComments count=2, children=['g86pqwz', 'g870n6c']&gt;, &lt;MoreComments count=2, children=['g86n2n2', 'g86n6w9']&gt;, &lt;MoreComments count=2, children=['g879n3n', 'g86p3iv']&gt;, &lt;MoreComments count=2, children=['g87n2tn']&gt;, &lt;MoreComments count=2, children=['g86p2uz']&gt;, &lt;MoreComments count=1, children=['g87jw2s']&gt;, &lt;MoreComments count=1, children=['g87o0ww']&gt;, &lt;MoreComments count=1, children=['g8859tg']&gt;, &lt;MoreComments count=1, children=['g87lb0g']&gt;, &lt;MoreComments count=1, children=['g86o3mx']&gt;, &lt;MoreComments count=1, children=['g89g34g']&gt;, &lt;MoreComments count=1, children=['g8951hu']&gt;, &lt;MoreComments count=1, children=['g8e306j']&gt;, &lt;MoreComments count=1, children=['g870ebz']&gt;, &lt;MoreComments count=1, children=['g87jzm1']&gt;, &lt;MoreComments count=1, children=['g86sm53']&gt;, &lt;MoreComments count=1, children=['g87ciya']&gt;, &lt;MoreComments count=1, children=['g86t4m1']&gt;, &lt;MoreComments count=1, children=['g8848rf']&gt;, &lt;MoreComments count=1, children=['g86qsx2']&gt;, &lt;MoreComments count=1, children=['g8756qe']&gt;, &lt;MoreComments count=1, children=['g87sc6e']&gt;, &lt;MoreComments count=1, children=['g874mh9']&gt;, &lt;MoreComments count=1, children=['g86ohna']&gt;, &lt;MoreComments count=1, children=['g87gnx5']&gt;, &lt;MoreComments count=1, children=['g87u15i']&gt;, &lt;MoreComments count=1, children=['g87jhuj']&gt;, &lt;MoreComments count=1, children=['g87wmzv']&gt;, &lt;MoreComments count=1, children=['g875ryb']&gt;, &lt;MoreComments count=1, children=['g87jnpo']&gt;, &lt;MoreComments count=1, children=['g86pl6b']&gt;, &lt;MoreComments count=1, children=['g87a5bk']&gt;, &lt;MoreComments count=1, children=['g86t5fr']&gt;, &lt;MoreComments count=1, children=['g88b1v8']&gt;, &lt;MoreComments count=1, children=['g87kqr0']&gt;, &lt;MoreComments count=1, children=['g8aa339']&gt;, &lt;MoreComments count=1, children=['g86r39d']&gt;, &lt;MoreComments count=1, children=['g89g68w']&gt;, &lt;MoreComments count=1, children=['g86p7hq']&gt;, &lt;MoreComments count=1, children=['g881vl7']&gt;, &lt;MoreComments count=1, children=['g88i16j']&gt;, &lt;MoreComments count=1, children=['g8a1lbd']&gt;, &lt;MoreComments count=1, children=['g88hgq4']&gt;, &lt;MoreComments count=1, children=['g88ukf7']&gt;, &lt;MoreComments count=1, children=['g87eizr']&gt;, &lt;MoreComments count=1, children=['g87itku']&gt;, &lt;MoreComments count=1, children=['g88485u']&gt;, &lt;MoreComments count=1, children=['g87k178']&gt;, &lt;MoreComments count=1, children=['g881pf9']&gt;, &lt;MoreComments count=1, children=['g86u0y6']&gt;, &lt;MoreComments count=1, children=['g88wwdf']&gt;, &lt;MoreComments count=1, children=['g86odkd']&gt;, &lt;MoreComments count=1, children=['g88y2nq']&gt;, &lt;MoreComments count=1, children=['g87xzn3']&gt;, &lt;MoreComments count=1, children=['g87xclj']&gt;, &lt;MoreComments count=1, children=['g880q35']&gt;, &lt;MoreComments count=1, children=['g88rs81']&gt;, &lt;MoreComments count=1, children=['g883f06']&gt;, &lt;MoreComments count=1, children=['g88xnri']&gt;, &lt;MoreComments count=1, children=['g86qy7i']&gt;, &lt;MoreComments count=1, children=['g88j9de']&gt;, &lt;MoreComments count=1, children=['g87diha']&gt;, &lt;MoreComments count=1, children=['g87ee9l']&gt;, &lt;MoreComments count=1, children=['g86p0yh']&gt;, &lt;MoreComments count=1, children=['g87fesb']&gt;, &lt;MoreComments count=1, children=['g87yg5m']&gt;, &lt;MoreComments count=1, children=['g874k32']&gt;, &lt;MoreComments count=1, children=['g88qa51']&gt;, &lt;MoreComments count=1, children=['g89fx4d']&gt;, &lt;MoreComments count=1, children=['g88hrnr']&gt;, &lt;MoreComments count=1, children=['g8849qs']&gt;, &lt;MoreComments count=0, children=[]&gt;, &lt;MoreComments count=0, children=[]&gt;]</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> top_level_comment <span class="kw">in</span> submission.comments:</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    corpus.append(top_level_comment.body)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>vectorizer<span class="op">=</span>CountVectorizer()</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>Xs <span class="op">=</span> vectorizer.fit_transform(corpus)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>col_names<span class="op">=</span>vectorizer.get_feature_names_out()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> top_level_comment <span class="kw">in</span> submission.comments:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    corpus.append(top_level_comment.body)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>vectorizer<span class="op">=</span>CountVectorizer()</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>Xs <span class="op">=</span> vectorizer.fit_transform(corpus)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>col_names<span class="op">=</span>vectorizer.get_feature_names_out()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The overall sentiment from this brief analysis is a positive one, but the search terms need to be more specific to get any useful information out of this process.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>overall <span class="op">=</span> []</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> text <span class="kw">in</span> corpus:</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  score<span class="op">=</span>sia.polarity_scores(text)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  overall.append(score[<span class="st">'compound'</span>])</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(overall)<span class="op">/</span><span class="bu">len</span>(overall)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>overall <span class="op">=</span> []</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> text <span class="kw">in</span> corpus:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  score<span class="op">=</span>sia.polarity_scores(text)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  overall.append(score[<span class="st">'compound'</span>])</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(overall)<span class="op">/</span><span class="bu">len</span>(overall)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.03216993006993008</code></pre>
 </div>
