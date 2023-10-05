@@ -12,29 +12,115 @@ library(grid)
 library(reticulate)
 library(kableExtra)
 library(gridExtra)
+library(plotly)
+library(RColorBrewer)
+library(scales)
+display.brewer.all(type = 'div')
 use_condaenv("r-env")
 options(scipen = 999)
 ```
 
-```{r load_data}
+```{r load_data, include = FALSE}
 load("clean_data.Rdata")
 ```
 
 # 4th Down Statistics
 
-How often do coaches go for it when they should?
+How often do coaches make the correct decision on 4th down?
 
-```{r warning = FALSE}
+```{r coach_decisions, warning = FALSE}
 p <- ggplot(data = fourth_decisions, aes(x = should_go)) + 
   geom_histogram(binwidth = 0.05, fill = "#69b3a2", color="#e9ecef") +
-  scale_x_continuous(limits = c(0,1)) +
+  scale_x_continuous(limits =c(0, 1.1), breaks = seq(0, 1, by = 0.1)) +
   ggtitle("When NFL Coaches Go When They Should") +
-  xlab("")
+  xlab("") +
+  stat_bin(binwidth = 0.05, 
+           geom='text', 
+           aes(label=ifelse(..count.. != 0, ..count.., "")), 
+           vjust = 1.2)
 p1 <- ggplot(data = fourth_decisions, aes(x = shouldnt_go)) + 
   geom_histogram(binwidth = 0.05, fill = "#69b3a2", color="#e9ecef") +
-  scale_x_continuous(limits = c(0,1)) +
+  scale_x_continuous(limits =c(0, 1.05), breaks = seq(0, 1, by = 0.1)) +
   ggtitle("When NFL Coaches Don't Go When They Shouldn't") +
-  xlab("")
+  xlab("") +
+  stat_bin(binwidth = 0.05, 
+           geom='text', 
+           aes(label=ifelse(..count.. != 0, ..count.., "")), 
+           vjust = 1.3)
 
 grid.arrange(p, p1, ncol = 1)
+```
+
+We can see a clear difference between these two plots when they are put on the same scale. When it would be a "correct" decision to kick rather than go for it (when win probability would go down if a conversion was attempted) coaches often make the correct decision. Every coach was correct in these situations at least 90% which makes sense because these decisions are often easy to make. They are not the borderline decisions that we can learn a lot about coaches from. For those we turn to the first graph, where we can clearly see that the decision on whether or not to go for it when doing so would increase your win probability is much more difficult, as only two coaches got this one right over 50% of the time. Let's look at this decision more closely and see what turns coaches away from going for it even when they should be.
+
+```{r position_decisions_actual}
+plot_ly(data = fourth_position, 
+        x = ~yardline_100, 
+        y = ~ydstogo,
+        text = ~paste("go:", go, "<br>count:", count),
+        type = "scatter",
+        mode = "markers",
+        marker = list(size = 5),
+        color = ~go,
+        colors = (c("#FF0000", "#ecf54e", "#008000"))) %>%
+  layout(title = "When Coaches Actually Go For It",
+         xaxis = list(title = "Yardline"),
+         yaxis = list(title = "Yards to Go")) %>%
+  colorbar(title = "Conversions <br>Attempted")
+```
+
+```{r position_decisions_correct}
+# https://stackoverflow.com/questions/43505146/how-to-force-map-zero-to-white-color-in-r-plotly-color-scale was used to get the color scale right
+
+min <- min(fourth_position$go_boost)
+max <- max(fourth_position$go_boost)
+
+set.seed(621)
+colorlength <- 100
+
+null_value <- (0 - min) / (max - min)
+border <- as.integer(null_value * colorlength)
+colorscale <- as.list(1:colorlength)
+
+if(border < colorlength / 2) {
+  border_neg <- colorlength - border_neg
+  s <- scales::seq_gradient_pal("#FF0000", "#ecf54e", "Lab")(seq(0,1,length.out=border_neg))
+  for (i in 1:border) {
+    colorscale[[i]] <- c((i - 1) / colorlength, s[i + border_neg - border - 1])
+  }
+  
+  border_pos <- border
+    s <- scales::seq_gradient_pal("#ecf54e", "#008000", "Lab")(seq(0,1,length.out=colorlength - border_pos))
+    for (i in 1:(colorlength - border_pos)) {
+        colorscale[[i + border_pos]] <- c((i + border) / colorlength, s[i])
+    }
+} else {
+  border_neg <- border
+    s <- scales::seq_gradient_pal("#FF0000", "#ecf54e", "Lab")(seq(0,1,length.out=border_neg))
+    for (i in 1:border_neg) {
+        colorscale[[i]] <- c((i - 1) / colorlength, s[i])
+    }
+
+    ## colorscale above zero
+    border_pos <- colorlength - border
+    s <- scales::seq_gradient_pal("#ecf54e", "#008000", "Lab")(seq(0,1,length.out=border))
+    for (i in 1:border_pos) {
+        colorscale[[i + border]] <- c((i + border) / colorlength, s[i])
+    }
+}
+
+plot_ly(data = fourth_position, 
+        x = ~yardline_100, 
+        y = ~ydstogo,
+        text = ~paste("go_boost:", go_boost, "<br>count:", count),
+        type = "scatter",
+        mode = "markers",
+        marker = list(size = 5,
+                      color = ~go_boost,
+                      colorscale = colorscale,
+                      colorbar = list(len = 1))) %>%
+  layout(title = "When Coaches Actually Go For It",
+         xaxis = list(title = "Yardline"),
+         yaxis = list(title = "Yards to Go"))
+
 ```

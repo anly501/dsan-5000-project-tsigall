@@ -9,6 +9,8 @@ editor_options:
 
 ## 4th Down Data
 
+### By Coach
+
 ```{r setup, include = FALSE}
 library(nflverse)
 library(tidyverse)
@@ -56,15 +58,25 @@ kable(names)
 
 ```
 
+Making a table showing when coaches make the correct decisions on 4th down is essential in evaluating their decision making process. This is made easy by the inclusion of the `go_boost` variable.
+
 ```{r}
 fourth_decisions <- fourth_downs %>%
-    mutate(should_go = if_else((go == 100 & go_boost > 0), 1, (if_else(go_boost < 0, -1, 0))),
-           shouldnt_go = if_else((go == 0 & go_boost < 0), 1, (if_else(go_boost > 0, -1, 0))),
+    mutate(should_go = ifelse((go_boost > 0),
+                             (if_else(go == 100, 1, 0)),
+                             NA),
+          shouldnt_go = ifelse((go_boost < 0),
+                             (if_else(go == 0, 1, 0)),
+                             NA),
            coach = if_else(posteam_type == "home", home_coach, away_coach),) %>%
     select(coach, ydstogo, yardline_100, go_boost, should_go, shouldnt_go, go, epa) %>%
     group_by(coach) %>%
-    summarize(should_go = sum(should_go == 1) / (sum(should_go == 0 | should_go == 1)),
-              shouldnt_go = sum(shouldnt_go == 1) / (sum(shouldnt_go == 0 | shouldnt_go == 1)),
+    summarize(should_go = 
+                sum(should_go == 1, na.rm = TRUE) / 
+                (sum(should_go == 0 | should_go == 1, na.rm = TRUE)),
+              shouldnt_go = 
+                sum(shouldnt_go == 1, na.rm = TRUE) / 
+                (sum(shouldnt_go == 0 | shouldnt_go == 1, na.rm = TRUE)),
               EPA = mean(epa),
               count = n()) %>%
     filter(count > 50)
@@ -73,7 +85,37 @@ fourth_decisions <- fourth_downs %>%
 head(fourth_decisions)
 ```
 
-This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season.
+This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season. It shows the percent of times each coach makes the correct decision in two scenarios: when going for it would have a positive effect on their win probability and when going for it would have a negative effect on their win probability.
+
+### By Situation
+
+One of, if not the most important factor in making a decision on fourth down is the position your team is on the field. Looking at this more closely requires a table that shows coaches decisions based on where they are on the field and how many downs they need to gain to get a first down.
+
+```{r by_position}
+fourth_position <- fourth_downs %>%
+  mutate(should_go = ifelse((go_boost > 0),
+                             (if_else(go == 100, 1, 0)),
+                             NA),
+         shouldnt_go = ifelse((go_boost < 0),
+                             (if_else(go == 0, 1, 0)),
+                             NA)) %>%
+  select(yardline_100,
+         ydstogo,
+         go,
+         go_boost,
+         should_go,
+         shouldnt_go) %>%
+  group_by(yardline_100, ydstogo) %>%
+  summarize(go = mean(go),
+            count = n(),
+            go_boost = mean(go_boost)) %>%
+  filter(go_boost > -20)
+
+head(fourth_position)
+
+```
+
+This table shows us the percentage of times a coach chose to go for it in the given situation. The first row, for example, shows that 80.5% of the time a coach decided to go for it when they were at 4th and 1 at the 1 yard line - they were 1 yard away from scoring. It also shows is the average increase in win probability if a coach were to go for it. For example, at 4th and 1 at the 1 yard line, going for it increases your win probability by an average of 7%, an incredibly large number.
 
 ## Sentiment Analysis
 
@@ -132,5 +174,5 @@ sum(overall)/len(overall)
 ```
 
 ```{r include = FALSE}
-save(fourth_decisions, fourth_downs, file = "clean_data.Rdata")
+save(fourth_decisions, fourth_downs, fourth_position, file = "clean_data.Rdata")
 ```
