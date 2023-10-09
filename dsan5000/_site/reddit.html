@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSAN 5000 - Introduction</title>
+<title>DSAN 5000 - Text Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -92,7 +107,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nflverse.html">Data Cleaning</a></li><li class="breadcrumb-item"><a href="./reddit.html">Text Data</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,7 +135,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About You</span></a>
+ <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -137,7 +152,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -147,12 +162,29 @@ div.csl-indent {
  <span class="menu-text">Data Gathering</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./data_cleaning.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Data Cleaning</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nflverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4th Down Data</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reddit.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Text Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_exploration.html" class="sidebar-item-text sidebar-link">
@@ -199,9 +231,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#decision-making-in-sports" id="toc-decision-making-in-sports" class="nav-link active" data-scroll-target="#decision-making-in-sports">Decision Making in Sports</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#sentiment-analysis" id="toc-sentiment-analysis" class="nav-link active" data-scroll-target="#sentiment-analysis">Sentiment Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -210,7 +240,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Text Data</h1>
 </div>
 
 
@@ -225,48 +255,60 @@ div.csl-indent {
 
 </header>
 
-<blockquote class="blockquote">
-<p>Thomas Sigall - tns29</p>
-</blockquote>
-<section id="decision-making-in-sports" class="level1">
-<h1>Decision Making in Sports</h1>
-<p>In sports, as in all areas of life, there are a variety of decisions that actors can make as their game or competition unfolds. As a result, there are numerous decisions that can be made, each coming with their own level of risk. Some decisions are obvious, like tagging up from third base on a deep fly ball with less than two outs or punting on fourth and long when back at your own end zone. However, many more appear to not be so obvious, as evidenced by the variety of opinions that arise when observing these choices in action. Despite numerous advancements in analysis in many sports, decisions are still heavily debated on a daily basis. Even if analysis on other similar situations suggests one decision should be made, we often see the exact opposite on the field. Ward Edwards, in his 1954 paper “The theory of decision making” introduces this well, saying “The traditional mathematical notion for dealing with games of chance (and so with risky decisions) is the notion that choices should be made so as to maximize expected value… The assumption that people actually behave the way this mathematical notion says they should is contradicted by observable behavior in many risky situations” <span class="citation" data-cites="edwards_theory_1954">(<a href="#ref-edwards_theory_1954" role="doc-biblioref">Edwards 1954, 391</a>)</span>.</p>
-<p>Why do people behave this way? It goes against what we know about expected value and suggests that we are illogical actors. This is elaborated further by Daniel Kahneman and Amos Tversky in their influential 1979 paper “Prospect Theory: an Analysis of Decision Under Risk” in which they explain, “Choices among risky prospects exhibit several pervasive effects that are inconsistent with the basic tenets of utility theory” <span class="citation" data-cites="kahneman_prospect_1979">(<a href="#ref-kahneman_prospect_1979" role="doc-biblioref">Kahneman and Tversky 1979</a>)</span>. This eventually leads them to an alternative theory of choice “in which value is assigned to gains and losses rather than to final assets and in which probabilities are replaced by decision weights” <span class="citation" data-cites="kahneman_prospect_1979">(<a href="#ref-kahneman_prospect_1979" role="doc-biblioref">Kahneman and Tversky 1979</a>)</span>.</p>
-<p>To better understand decision making, we will do as David Romer did in his 2006 paper “Do Firms Maximize? Evidence from Professional Football” <span class="citation" data-cites="romer2006">(<a href="#ref-romer2006" role="doc-biblioref">Romer 2006</a>)</span>. We will look at one of the most decisions certainly in football but perhaps in all of sports: 4th down. Focusing on this decision and attempting to understand the reasoning behind why it is so frequently done incorrectly will hopefully allow us to learn more about the decision making process not only in football, but in many other areas of life.</p>
-</section>
-<section id="questions" class="level1">
-<h1>Questions</h1>
-<ol type="1">
-<li>How are decisions in sports currently evaluated?</li>
-<li>Could we improve this evaluation process?</li>
-<li>Would improvements in this process lead to better decision making on the field?</li>
-<li>How can we determine why certain decisions are made?</li>
-<li>How can we apply alternative theories of choice to specific games?</li>
-<li>How different would the sports landscape look if everything were optimized?</li>
-<li>Are there certain factors that theories of choice could not take into account?</li>
-<li>If there truly is an optimal choice every time, would it be possible for anyone to coach a team?</li>
-<li>Can these principles be exteneded to off-field deicisons, such as team-building and player evaluation?</li>
-<li>Are unoptimized decisions part of what makes sports enjoyable?</li>
-</ol>
-</section>
-<section id="references" class="level1">
-
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-edwards_theory_1954" class="csl-entry" role="listitem">
-Edwards, Ward. 1954. <span>“The Theory of Decision Making.”</span> <em>Psychological Bulletin</em> 51 (4): 380–417. <a href="https://doi.org/10.1037/h0053870">https://doi.org/10.1037/h0053870</a>.
+<section id="sentiment-analysis" class="level1">
+<h1>Sentiment Analysis</h1>
+<p>The NFL subreddit is a useful place to extract text data produced by fans and their reaction to these essential decisions. Like most jobs, the goal of an NFL head coach is not only to win games, but to keep their bosses happy. The size and outspoken nature of NFL fan bases can be a factor in the job security of these coaches, as if a coach loses the fans, their job gets a lot harder. This is where sentiment analysis comes in, as getting an idea of how fans feel about 4th down decisions by certain coaches may give us insights into how they are making their decisions, and whether or not the fans have any influence on the decision making process.</p>
+<p>This allows us to get posts from the NFL subreddit using a search query of “4th down” and access the comments of those posts.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>subreddit <span class="op">=</span> reddit.subreddit(<span class="st">"nfl"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="st">"4th down"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>top_posts <span class="op">=</span> subreddit.search(query, limit<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>urls <span class="op">=</span> []</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> []</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> post <span class="kw">in</span> top_posts:</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    urls.append(post.permalink)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://www.reddit.com"</span> <span class="op">+</span> urls[<span class="dv">0</span>]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>submission <span class="op">=</span> reddit.submission(url<span class="op">=</span>url)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>submission.comments.replace_more(limit<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[]</code></pre>
 </div>
-<div id="ref-kahneman_prospect_1979" class="csl-entry" role="listitem">
-Kahneman, Daniel, and Amos Tversky. 1979. <span>“Prospect <span>Theory</span>: <span>An</span> <span>Analysis</span> of <span>Decision</span> Under <span>Risk</span>.”</span> <em>Econometrica</em> 47 (2): 263. <a href="https://doi.org/10.2307/1914185">https://doi.org/10.2307/1914185</a>.
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> top_level_comment <span class="kw">in</span> submission.comments:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    corpus.append(top_level_comment.body)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>vectorizer<span class="op">=</span>CountVectorizer()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Xs <span class="op">=</span> vectorizer.fit_transform(corpus)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>col_names<span class="op">=</span>vectorizer.get_feature_names_out()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ref-romer2006" class="csl-entry" role="listitem">
-Romer, David. 2006. <span>“Do Firms Maximize? Evidence from Professional Football.”</span> <em>Journal of Political Economy</em> 114 (2): 340–65. <a href="https://doi.org/10.1086/501171">https://doi.org/10.1086/501171</a>.
+<p>The overall sentiment from this brief analysis is a positive one, but the search terms need to be more specific to get any useful information out of this process.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>overall <span class="op">=</span> []</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> text <span class="kw">in</span> corpus:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  score<span class="op">=</span>sia.polarity_scores(text)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  overall.append(score[<span class="st">'compound'</span>])</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(overall)<span class="op">/</span><span class="bu">len</span>(overall)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.14158709677419354</code></pre>
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

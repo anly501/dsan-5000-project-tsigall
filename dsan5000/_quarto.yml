@@ -7,14 +7,19 @@ website:
     style: "docked"
     search: true
     contents:
-      - href: index.qmd
-        text: About You
+      - index.qmd
       - code.qmd
       - data.qmd
       - introduction.qmd
       - data_gathering.qmd
-      - data_cleaning.qmd
-      - data_exploration.qmd
+      - section: "Data Cleaning"
+        contents:
+        - nflverse.qmd
+        - reddit.qmd
+      - section: "Data Exploration"
+        contents:
+        - data_exploration.qmd
+        - data_exploration2.qmd
       - clustering.qmd
       - dimensionality_reduction.qmd
       - decision_trees.qmd

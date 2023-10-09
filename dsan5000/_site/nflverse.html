@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSAN 5000 - Introduction</title>
+<title>DSAN 5000 - 4th Down Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -92,7 +73,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nflverse.html">Data Cleaning</a></li><li class="breadcrumb-item"><a href="./nflverse.html">4th Down Data</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,7 +101,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About You</span></a>
+ <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -137,7 +118,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -147,18 +128,52 @@ div.csl-indent {
  <span class="menu-text">Data Gathering</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./data_cleaning.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Data Cleaning</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nflverse.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4th Down Data</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reddit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Data Exploration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_exploration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Exploration</span></a>
+ <span class="menu-text">4th Down Decisions</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_exploration2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Effect on Team Success</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./clustering.html" class="sidebar-item-text sidebar-link">
@@ -199,9 +214,8 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#decision-making-in-sports" id="toc-decision-making-in-sports" class="nav-link active" data-scroll-target="#decision-making-in-sports">Decision Making in Sports</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#by-coach" id="toc-by-coach" class="nav-link active" data-scroll-target="#by-coach">By Coach</a></li>
+  <li><a href="#by-situation" id="toc-by-situation" class="nav-link" data-scroll-target="#by-situation">By Situation</a></li>
   </ul>
 </nav>
     </div>
@@ -210,7 +224,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">4th Down Data</h1>
 </div>
 
 
@@ -225,48 +239,170 @@ div.csl-indent {
 
 </header>
 
-<blockquote class="blockquote">
-<p>Thomas Sigall - tns29</p>
-</blockquote>
-<section id="decision-making-in-sports" class="level1">
-<h1>Decision Making in Sports</h1>
-<p>In sports, as in all areas of life, there are a variety of decisions that actors can make as their game or competition unfolds. As a result, there are numerous decisions that can be made, each coming with their own level of risk. Some decisions are obvious, like tagging up from third base on a deep fly ball with less than two outs or punting on fourth and long when back at your own end zone. However, many more appear to not be so obvious, as evidenced by the variety of opinions that arise when observing these choices in action. Despite numerous advancements in analysis in many sports, decisions are still heavily debated on a daily basis. Even if analysis on other similar situations suggests one decision should be made, we often see the exact opposite on the field. Ward Edwards, in his 1954 paper “The theory of decision making” introduces this well, saying “The traditional mathematical notion for dealing with games of chance (and so with risky decisions) is the notion that choices should be made so as to maximize expected value… The assumption that people actually behave the way this mathematical notion says they should is contradicted by observable behavior in many risky situations” <span class="citation" data-cites="edwards_theory_1954">(<a href="#ref-edwards_theory_1954" role="doc-biblioref">Edwards 1954, 391</a>)</span>.</p>
-<p>Why do people behave this way? It goes against what we know about expected value and suggests that we are illogical actors. This is elaborated further by Daniel Kahneman and Amos Tversky in their influential 1979 paper “Prospect Theory: an Analysis of Decision Under Risk” in which they explain, “Choices among risky prospects exhibit several pervasive effects that are inconsistent with the basic tenets of utility theory” <span class="citation" data-cites="kahneman_prospect_1979">(<a href="#ref-kahneman_prospect_1979" role="doc-biblioref">Kahneman and Tversky 1979</a>)</span>. This eventually leads them to an alternative theory of choice “in which value is assigned to gains and losses rather than to final assets and in which probabilities are replaced by decision weights” <span class="citation" data-cites="kahneman_prospect_1979">(<a href="#ref-kahneman_prospect_1979" role="doc-biblioref">Kahneman and Tversky 1979</a>)</span>.</p>
-<p>To better understand decision making, we will do as David Romer did in his 2006 paper “Do Firms Maximize? Evidence from Professional Football” <span class="citation" data-cites="romer2006">(<a href="#ref-romer2006" role="doc-biblioref">Romer 2006</a>)</span>. We will look at one of the most decisions certainly in football but perhaps in all of sports: 4th down. Focusing on this decision and attempting to understand the reasoning behind why it is so frequently done incorrectly will hopefully allow us to learn more about the decision making process not only in football, but in many other areas of life.</p>
-</section>
-<section id="questions" class="level1">
-<h1>Questions</h1>
-<ol type="1">
-<li>How are decisions in sports currently evaluated?</li>
-<li>Could we improve this evaluation process?</li>
-<li>Would improvements in this process lead to better decision making on the field?</li>
-<li>How can we determine why certain decisions are made?</li>
-<li>How can we apply alternative theories of choice to specific games?</li>
-<li>How different would the sports landscape look if everything were optimized?</li>
-<li>Are there certain factors that theories of choice could not take into account?</li>
-<li>If there truly is an optimal choice every time, would it be possible for anyone to coach a team?</li>
-<li>Can these principles be exteneded to off-field deicisons, such as team-building and player evaluation?</li>
-<li>Are unoptimized decisions part of what makes sports enjoyable?</li>
-</ol>
-</section>
-<section id="references" class="level1">
-
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-edwards_theory_1954" class="csl-entry" role="listitem">
-Edwards, Ward. 1954. <span>“The Theory of Decision Making.”</span> <em>Psychological Bulletin</em> 51 (4): 380–417. <a href="https://doi.org/10.1037/h0053870">https://doi.org/10.1037/h0053870</a>.
+<section id="by-coach" class="level1">
+<h1>By Coach</h1>
+<p>We start with the raw 4th down data from the nflverse package. The first six rows and eight columns can be seen here.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 383
+  play_id game_id      old_game_id home_team away_team season_type  week posteam
+    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;  
+1       1 2014_01_BUF… 2014090702  CHI       BUF       REG             1 &lt;NA&gt;   
+2      36 2014_01_BUF… 2014090702  CHI       BUF       REG             1 BUF    
+3      51 2014_01_BUF… 2014090702  CHI       BUF       REG             1 BUF    
+4      72 2014_01_BUF… 2014090702  CHI       BUF       REG             1 BUF    
+5      93 2014_01_BUF… 2014090702  CHI       BUF       REG             1 BUF    
+6     115 2014_01_BUF… 2014090702  CHI       BUF       REG             1 BUF    
+# ℹ 375 more variables: posteam_type &lt;chr&gt;, defteam &lt;chr&gt;, side_of_field &lt;chr&gt;,
+#   yardline_100 &lt;dbl&gt;, game_date &lt;chr&gt;, quarter_seconds_remaining &lt;dbl&gt;,
+#   half_seconds_remaining &lt;dbl&gt;, game_seconds_remaining &lt;dbl&gt;,
+#   game_half &lt;chr&gt;, quarter_end &lt;dbl&gt;, drive &lt;dbl&gt;, sp &lt;dbl&gt;, qtr &lt;dbl&gt;,
+#   down &lt;dbl&gt;, goal_to_go &lt;dbl&gt;, time &lt;chr&gt;, yrdln &lt;chr&gt;, ydstogo &lt;dbl&gt;,
+#   ydsnet &lt;dbl&gt;, desc &lt;chr&gt;, play_type &lt;chr&gt;, yards_gained &lt;dbl&gt;,
+#   shotgun &lt;dbl&gt;, no_huddle &lt;dbl&gt;, qb_dropback &lt;dbl&gt;, qb_kneel &lt;dbl&gt;, …</code></pre>
 </div>
-<div id="ref-kahneman_prospect_1979" class="csl-entry" role="listitem">
-Kahneman, Daniel, and Amos Tversky. 1979. <span>“Prospect <span>Theory</span>: <span>An</span> <span>Analysis</span> of <span>Decision</span> Under <span>Risk</span>.”</span> <em>Econometrica</em> 47 (2): 263. <a href="https://doi.org/10.2307/1914185">https://doi.org/10.2307/1914185</a>.
 </div>
-<div id="ref-romer2006" class="csl-entry" role="listitem">
-Romer, David. 2006. <span>“Do Firms Maximize? Evidence from Professional Football.”</span> <em>Journal of Political Economy</em> 114 (2): 340–65. <a href="https://doi.org/10.1086/501171">https://doi.org/10.1086/501171</a>.
+<p>There are a large number of columns in this data, taken from the 2022 NFL season, we do not need all 383. The purpose of this data is to help determine how coaches today approach 4th down, a basic yet essential decision in the NFL. To do this we only need to look at these columns:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 10
+  season home_coach    away_coach   posteam posteam_type ydstogo yardline_100
+   &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;        &lt;dbl&gt;
+1   2014 Marc Trestman Doug Marrone BUF     away               6           76
+2   2014 Marc Trestman Doug Marrone CHI     home              17           65
+3   2014 Marc Trestman Doug Marrone BUF     away               4           44
+4   2014 Marc Trestman Doug Marrone BUF     away               6           32
+5   2014 Marc Trestman Doug Marrone CHI     home               5           40
+6   2014 Marc Trestman Doug Marrone BUF     away              18           48
+# ℹ 3 more variables: go_boost &lt;dbl&gt;, go &lt;dbl&gt;, epa &lt;dbl&gt;</code></pre>
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+<p>Each unit in this table is one 4th down decision. The variables include:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Description</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Type</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">season</td>
+<td style="text-align: left;">Season</td>
+<td style="text-align: left;">Discrete Numeric</td>
+<td style="text-align: left;">integer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_coach</td>
+<td style="text-align: left;">Home Team Coach</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">character</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">away_coach</td>
+<td style="text-align: left;">Away Team Coach</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">character</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">posteam</td>
+<td style="text-align: left;">Offense Team</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">character</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">posteam_type</td>
+<td style="text-align: left;">Offense Home or Away</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">character</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ydstogo</td>
+<td style="text-align: left;">Yards to Go</td>
+<td style="text-align: left;">Discrete Numeric</td>
+<td style="text-align: left;">numeric</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">yardline_100</td>
+<td style="text-align: left;">Yardline Relative to End Zone</td>
+<td style="text-align: left;">Discrete Numeric</td>
+<td style="text-align: left;">numeric</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">go_boost</td>
+<td style="text-align: left;">Change in Win Probability if Conversion Attempted</td>
+<td style="text-align: left;">Continuous</td>
+<td style="text-align: left;">numeric</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">go</td>
+<td style="text-align: left;">Conversion Attempted (T/F)</td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">numeric</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">epa</td>
+<td style="text-align: left;">Estimated Points Added as a Result of the Play</td>
+<td style="text-align: left;">Continuous</td>
+<td style="text-align: left;">numeric</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Making a table showing when coaches make the correct decisions on 4th down is essential in evaluating their decision making process. This is made easy by the inclusion of the <code>go_boost</code> variable, which tells us the change in win probability if the team decides to go for it.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'coach', 'posteam'. You can override using
+the `.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+  coach     posteam season should_go shouldnt_go     EPA count
+  &lt;chr&gt;     &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;
+1 Adam Gase MIA       2016     0.075       0.975 -0.278    119
+2 Adam Gase MIA       2017     0.375       0.890 -0.133    131
+3 Adam Gase MIA       2018     0.211       1     -0.0208   123
+4 Adam Gase NYJ       2019     0.34        0.976 -0.171    133
+5 Adam Gase NYJ       2020     0.237       0.942 -0.382    128
+6 Andy Reid KC        2014     0.191       0.984  0.0565   111</code></pre>
+</div>
+</div>
+<p>This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season. It shows the percent of times each coach makes the correct decision in two scenarios: when going for it would have a positive effect on their win probability and when going for it would have a negative effect on their win probability.</p>
+</section>
+<section id="by-situation" class="level1">
+<h1>By Situation</h1>
+<p>One of, if not the most important factor in making a decision on fourth down is the position your team is on the field. Looking at this more closely requires a table that shows coaches decisions based on where they are on the field and how many downs they need to gain to get a first down.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'yardline_100'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+# Groups:   yardline_100 [3]
+  yardline_100 ydstogo actual_go expected_go count go_boost increase_odds
+         &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt;         &lt;dbl&gt;
+1            1       1     0.799       0.958   359    4.91              1
+2            2       1     0.710       0.903    31    4.47              1
+3            2       2     0.363       0.872   234    2.29              1
+4            3       1     0.825       0.95     40    6.12              1
+5            3       2     0.36        0.68     25    1.14              1
+6            3       3     0.2         0.637   215    0.728             1</code></pre>
+</div>
+</div>
+<p>This table shows us the percentage of times a coach chose to go for it in the given situation. The first row, for example, shows that 80% of the time a coach decided to go for it when they were at 4th and 1 at the 1 yard line - they were 1 yard away from scoring. It also shows is the average increase in win probability if a coach were to go for it. For example, at 4th and 1 at the 1 yard line, going for it increases your win probability by an average of 5%, an incredibly large number.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

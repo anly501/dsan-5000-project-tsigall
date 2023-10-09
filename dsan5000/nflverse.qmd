@@ -1,0 +1,128 @@
+---
+title: "4th Down Data"
+bibliography: reference.bib
+editor_options: 
+  chunk_output_type: inline
+---
+
+# By Coach
+
+```{r setup, include = FALSE}
+library(nflverse)
+library(tidyverse)
+library(ggplot2)
+library(grid)
+library(reticulate)
+library(kableExtra)
+use_condaenv("r-env")
+options(scipen = 999)
+```
+
+```{r load_data, include = FALSE}
+load("raw_nfl.Rdata")
+```
+
+We start with the raw 4th down data from the nflverse package. The first six rows and eight columns can be seen here.
+
+```{r head, message = FALSE, echo = FALSE}
+head(raw_data)
+```
+
+There are a large number of columns in this data, taken from the 2022 NFL season, we do not need all 383. The purpose of this data is to help determine how coaches today approach 4th down, a basic yet essential decision in the NFL. To do this we only need to look at these columns:
+
+```{r, message = FALSE, echo = FALSE}
+fourth_downs <- raw_data %>%
+    filter(!is.na(go_boost) & !is.na(go)) %>%
+    select(season, home_coach, away_coach, posteam, posteam_type, ydstogo, yardline_100, posteam, go_boost, go, epa)
+
+head(fourth_downs)
+```
+
+Each unit in this table is one 4th down decision. The variables include:
+
+```{r, echo = FALSE}
+codebook <- data.frame("Description" = c("Season",
+                                     "Home Team Coach",
+                                     "Away Team Coach",
+                                     "Offense Team",
+                                     "Offense Home or Away",
+                                     "Yards to Go",
+                                     "Yardline Relative to End Zone",
+                                     "Change in Win Probability if Conversion Attempted",
+                                     "Conversion Attempted (T/F)",
+                                     "Estimated Points Added as a Result of the Play"),
+                    "Type" = c("Discrete Numeric",
+                               "Categorical",
+                               "Categorical",
+                               "Categorical",
+                               "Categorical",
+                               "Discrete Numeric",
+                               "Discrete Numeric",
+                               "Continuous",
+                               "Categorical",
+                               "Continuous"),
+                    "Datatype" = sapply(fourth_downs, class))
+
+kable(codebook)
+
+```
+
+Making a table showing when coaches make the correct decisions on 4th down is essential in evaluating their decision making process. This is made easy by the inclusion of the `go_boost` variable, which tells us the change in win probability if the team decides to go for it.
+
+```{r, echo = FALSE, warning = FALSE}
+fourth_decisions <- fourth_downs %>%
+    mutate(should_go = ifelse((go_boost > 0),
+                             (if_else(go == 100, 1, 0)),
+                             NA),
+          shouldnt_go = ifelse((go_boost < 0),
+                             (if_else(go == 0, 1, 0)),
+                             NA),
+           coach = if_else(posteam_type == "home", home_coach, away_coach),) %>%
+    select(season, coach, posteam, ydstogo, yardline_100, go_boost, should_go, shouldnt_go, go, epa) %>%
+    group_by(coach, posteam, season) %>%
+    summarize(should_go = 
+                sum(should_go == 1, na.rm = TRUE) / 
+                (sum(should_go == 0 | should_go == 1, na.rm = TRUE)),
+              shouldnt_go = 
+                sum(shouldnt_go == 1, na.rm = TRUE) / 
+                (sum(shouldnt_go == 0 | shouldnt_go == 1, na.rm = TRUE)),
+              EPA = mean(epa),
+              count = n()) %>%
+    filter(count > 50) %>%
+  ungroup()
+
+
+head(fourth_decisions)
+```
+
+This data shows when coaches make the correct choice on 4th down, their average estimated points added on 4th downs throughout the season, and the number of 4th down decisions they had to make throughout the season. It shows the percent of times each coach makes the correct decision in two scenarios: when going for it would have a positive effect on their win probability and when going for it would have a negative effect on their win probability.
+
+# By Situation
+
+One of, if not the most important factor in making a decision on fourth down is the position your team is on the field. Looking at this more closely requires a table that shows coaches decisions based on where they are on the field and how many downs they need to gain to get a first down.
+
+```{r by_position, echo = FALSE}
+fourth_position <- fourth_downs %>%
+  mutate(expected_go = ifelse(go_boost > 0, 1, 0)) %>%
+  select(yardline_100,
+         ydstogo,
+         go,
+         expected_go,
+         go_boost) %>%
+  group_by(yardline_100, ydstogo) %>%
+  summarize(actual_go = mean(go)/100,
+            expected_go = mean(expected_go, na.rm = TRUE),
+            count = n(),
+            go_boost = mean(go_boost),
+            increase_odds = ifelse(go_boost > 0, 1, 0)) %>%
+  filter(go_boost > -20)
+
+head(fourth_position)
+
+```
+
+This table shows us the percentage of times a coach chose to go for it in the given situation. The first row, for example, shows that 80% of the time a coach decided to go for it when they were at 4th and 1 at the 1 yard line - they were 1 yard away from scoring. It also shows is the average increase in win probability if a coach were to go for it. For example, at 4th and 1 at the 1 yard line, going for it increases your win probability by an average of 5%, an incredibly large number.
+
+```{r include = FALSE}
+save(fourth_decisions, fourth_downs, fourth_position, file = "clean_data.Rdata")
+```

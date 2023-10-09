@@ -1,0 +1,69 @@
+---
+title: "Text Data"
+bibliography: reference.bib
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r, include = FALSE}
+library(reticulate)
+use_condaenv("r-env")
+```
+
+
+# Sentiment Analysis
+
+The NFL subreddit is a useful place to extract text data produced by fans and their reaction to these essential decisions. Like most jobs, the goal of an NFL head coach is not only to win games, but to keep their bosses happy. The size and outspoken nature of NFL fan bases can be a factor in the job security of these coaches, as if a coach loses the fans, their job gets a lot harder. This is where sentiment analysis comes in, as getting an idea of how fans feel about 4th down decisions by certain coaches may give us insights into how they are making their decisions, and whether or not the fans have any influence on the decision making process.
+
+```{python, include = FALSE}
+import praw
+from sklearn.feature_extraction.text import CountVectorizer
+import numpy as np
+
+reddit = praw.Reddit("bot1")
+```
+
+This allows us to get posts from the NFL subreddit using a search query of "4th down" and access the comments of those posts.
+
+```{python, warning = FALSE}
+subreddit = reddit.subreddit("nfl")
+query = "4th down"
+
+top_posts = subreddit.search(query, limit=100)
+urls = []
+corpus = []
+
+for post in top_posts:
+    urls.append(post.permalink)
+    
+url = "https://www.reddit.com" + urls[0]
+
+submission = reddit.submission(url=url)
+
+submission.comments.replace_more(limit=0)
+for top_level_comment in submission.comments:
+    corpus.append(top_level_comment.body)
+
+vectorizer=CountVectorizer()
+Xs = vectorizer.fit_transform(corpus)
+
+col_names=vectorizer.get_feature_names_out()
+```
+
+The overall sentiment from this brief analysis is a positive one, but the search terms need to be more specific to get any useful information out of this process.
+
+```{python}
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+overall = []
+sia = SentimentIntensityAnalyzer()
+
+for text in corpus:
+  score=sia.polarity_scores(text)
+  overall.append(score['compound'])
+
+
+
+sum(overall)/len(overall)
+```
+
