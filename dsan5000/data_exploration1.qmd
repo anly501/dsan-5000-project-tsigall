@@ -2,11 +2,10 @@
 title: "4th Down Decisions"
 editor_options: 
   chunk_output_type: inline
-bibliography: references.bib
+bibliography: reference.bib
 ---
 
 ```{r setup, include = FALSE}
-library(nflverse)
 library(tidyverse)
 library(ggplot2)
 library(grid)
@@ -61,13 +60,15 @@ grid.arrange(p, p1, ncol = 1)
 We can see a clear difference between these two plots when they are put on the same scale. When it would be a "correct" decision to kick rather than go for it (when win probability would go down if a conversion was attempted) coaches often make the correct decision. Every coach was correct in these situations at least 90% which makes sense because these decisions are often easy to make. They are not the borderline decisions that we can learn a lot about coaches from. For those we turn to the first graph, where we can clearly see that the decision on whether or not to go for it when doing so would increase your win probability is much more difficult, as only two coaches got this one right over 50% of the time. Let's look at this decision more closely and see what turns coaches away from going for it even when they should be.
 
 ```{r position_decisions_actual, echo = FALSE}
+fourth_position <- fourth_position %>%
+  filter(count > 10)
 plot_ly(data = fourth_position, 
         x = ~yardline_100, 
         y = ~ydstogo,
         text = ~paste("go:", actual_go, "<br>count:", count),
         type = "scatter",
         mode = "markers",
-        marker = list(size = 4),
+        marker = list(size = 8),
         color = ~actual_go,
         colors = (c("#FF0000", "#ecf54e", "#008000"))) %>%
   layout(title = "When Coaches Actually Go For It",
@@ -91,7 +92,7 @@ plot_ly(data = fourth_position,
         text = ~paste("go:", expected_go, "<br>count:", count),
         type = "scatter",
         mode = "markers",
-        marker = list(size = 4),
+        marker = list(size = 8),
         color = ~expected_go,
         colors = (c("#FF0000", "#ecf54e", "#008000"))) %>%
   layout(title = "When Coaches Should Go For It",

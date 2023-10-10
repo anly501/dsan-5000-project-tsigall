@@ -30,7 +30,7 @@ head(raw_data)
 
 There are a large number of columns in this data, taken from the 2022 NFL season, we do not need all 383. The purpose of this data is to help determine how coaches today approach 4th down, a basic yet essential decision in the NFL. To do this we only need to look at these columns:
 
-```{r, message = FALSE, echo = FALSE}
+```{r filter, message = FALSE, echo = FALSE}
 fourth_downs <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
     select(season, home_coach, away_coach, posteam, posteam_type, ydstogo, yardline_100, posteam, go_boost, go, epa)
@@ -40,7 +40,7 @@ head(fourth_downs)
 
 Each unit in this table is one 4th down decision. The variables include:
 
-```{r, echo = FALSE}
+```{r codebook, echo = FALSE}
 codebook <- data.frame("Description" = c("Season",
                                      "Home Team Coach",
                                      "Away Team Coach",
@@ -69,7 +69,7 @@ kable(codebook)
 
 Making a table showing when coaches make the correct decisions on 4th down is essential in evaluating their decision making process. This is made easy by the inclusion of the `go_boost` variable, which tells us the change in win probability if the team decides to go for it.
 
-```{r, echo = FALSE, warning = FALSE}
+```{r correct_decisions, echo = FALSE, warning = FALSE}
 fourth_decisions <- fourth_downs %>%
     mutate(should_go = ifelse((go_boost > 0),
                              (if_else(go == 100, 1, 0)),
@@ -114,15 +114,13 @@ fourth_position <- fourth_downs %>%
             expected_go = mean(expected_go, na.rm = TRUE),
             count = n(),
             go_boost = mean(go_boost),
-            increase_odds = ifelse(go_boost > 0, 1, 0)) %>%
-  filter(go_boost > -20)
+            increase_odds = ifelse(go_boost > 0, 1, 0))
 
 head(fourth_position)
-
 ```
 
 This table shows us the percentage of times a coach chose to go for it in the given situation. The first row, for example, shows that 80% of the time a coach decided to go for it when they were at 4th and 1 at the 1 yard line - they were 1 yard away from scoring. It also shows is the average increase in win probability if a coach were to go for it. For example, at 4th and 1 at the 1 yard line, going for it increases your win probability by an average of 5%, an incredibly large number.
 
-```{r include = FALSE}
+```{r save_data, include = FALSE}
 save(fourth_decisions, fourth_downs, fourth_position, file = "clean_data.Rdata")
 ```

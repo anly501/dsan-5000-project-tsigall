@@ -1,5 +1,29 @@
 ---
-title: "About"
+title: "Introduction"
+bibliography: reference.bib
 ---
 
-Thomas Sigall is a graduate student at Georgetown University currently pursuing a Masters of Science in Data Science and Analytics. He graduated from Villanova University in 2023 with a B.A. in Philosophy and Minors in Computer Science and Statistics. Originally from Redmond, Washington, he enjoys studying a wide range of topics, as evidenced by his diverse academic background. Outside of academics, he enjoys running and loves to follow sports.
+> Thomas Sigall - tns29
+
+# Decision Making in Sports
+
+In sports, as in all areas of life, there are a variety of decisions that actors can make as their game or competition unfolds. As a result, there are numerous decisions that can be made, each coming with their own level of risk. Some decisions are obvious, like tagging up from third base on a deep fly ball with less than two outs or punting on fourth and long when back at your own end zone. However, many more appear to not be so obvious, as evidenced by the variety of opinions that arise when observing these choices in action. Despite numerous advancements in analysis in many sports, decisions are still heavily debated on a daily basis. Even if analysis on other similar situations suggests one decision should be made, we often see the exact opposite on the field. Ward Edwards, in his 1954 paper "The theory of decision making" introduces this well, saying "The traditional mathematical notion for dealing with games of chance (and so with risky decisions) is the notion that choices should be made so as to maximize expected value... The assumption that people actually behave the way this mathematical notion says they should is contradicted by observable behavior in many risky situations" [@edwards_theory_1954, pp. 391].
+
+Why do people behave this way? It goes against what we know about expected value and suggests that we are illogical actors. This is elaborated further by Daniel Kahneman and Amos Tversky in their influential 1979 paper "Prospect Theory: an Analysis of Decision Under Risk" in which they explain, "Choices among risky prospects exhibit several pervasive effects that are inconsistent with the basic tenets of utility theory" [@kahneman_prospect_1979]. This eventually leads them to an alternative theory of choice "in which value is assigned to gains and losses rather than to final assets and in which probabilities are replaced by decision weights" [@kahneman_prospect_1979].
+
+To better understand decision making, we will do as David Romer did in his 2006 paper "Do Firms Maximize? Evidence from Professional Football" [@romer2006]. We will look at one of the most decisions certainly in football but perhaps in all of sports: 4th down. Focusing on this decision and attempting to understand the reasoning behind why it is so frequently done incorrectly will hopefully allow us to learn more about the decision making process not only in football, but in many other areas of life.
+
+# Questions
+
+1.  How are decisions in sports currently evaluated?
+2.  Could we improve this evaluation process?
+3.  Would improvements in this process lead to better decision making on the field?
+4.  How can we determine why certain decisions are made?
+5.  How can we apply alternative theories of choice to specific games?
+6.  How different would the sports landscape look if everything were optimized?
+7.  Are there certain factors that theories of choice could not take into account?
+8.  If there truly is an optimal choice every time, would it be possible for anyone to coach a team?
+9.  Can these principles be exteneded to off-field deicisons, such as team-building and player evaluation?
+10. Are unoptimized decisions part of what makes sports enjoyable?
+
+# References
