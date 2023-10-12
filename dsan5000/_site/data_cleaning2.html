@@ -188,6 +188,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Effect on Coach Success</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_exploration3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">High-Leverage Scenarios</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -297,28 +303,230 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> top_level_comment <span class="kw">in</span> submission.comments:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    corpus.append(top_level_comment.body)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>vectorizer<span class="op">=</span>CountVectorizer()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Xs <span class="op">=</span> vectorizer.fit_transform(corpus)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>col_names<span class="op">=</span>vectorizer.get_feature_names_out()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>urls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['/r/nfl/comments/1738fiy/highlight_tj_watt_calls_ballgame_with_a_4th_down/', '/r/nfl/comments/j7rtos/highlight_brady_gets_confused_thought_4th_down/', '/r/nfl/comments/rlv1ew/highlight_rams_get_away_with_pass_interference_on/', '/r/nfl/comments/yudyr5/highlight_okwara_sacks_fields_on_4th_down/', '/r/nfl/comments/yyar3n/highlight_packers_stuffed_on_4th_down_and_have/', '/r/nfl/comments/uorvep/highlight_josh_allen_27_yard_td_pass_on_4th_down/', '/r/nfl/comments/10ohcjv/highlight_devonta_smith_makes_an_incredible_one/', '/r/nfl/comments/qf4n13/highlight_matt_judon_with_a_hard_tackle_on_4th/', '/r/nfl/comments/10cagft/highlight_pedersons_gutsy_4th_down_call_plays_off/', '/r/nfl/comments/1003l0d/highlight_5_years_ago_today_deshone_kizers_4th/', '/r/nfl/comments/ss02sw/highlight_sb_lvi_lar_vs_cin_rams_defense_stops/', '/r/nfl/comments/7vb4c0/highlight_trey_burton_pass_to_nick_foles_for_the/', '/r/nfl/comments/qjwvle/highlight_justin_fields_changes_field_on_4th_down/', '/r/nfl/comments/106996p/highlight_jaguars_get_the_stop_on_4th_down_and/', '/r/nfl/comments/tomh57/highlight_julio_jones_drops_a_wide_open_td_catch/', '/r/nfl/comments/yyaoba/highlight_ugly_4th_down_attempt_by_gb/', '/r/nfl/comments/77jmol/highlight_romo_calls_4th_down_call_cbs/', '/r/nfl/comments/u74w01/highlight_the_chiefs_fail_to_find_the_endzone_on/', '/r/nfl/comments/y0uplq/highlight_carr_finds_adams_for_the_touch_on_4th/', '/r/nfl/comments/7zfdm2/doug_pederson_went_for_it_on_4th_down_29_times/', '/r/nfl/comments/a4oocn/highlight_mahomes_rolls_out_and_finds_tyreek_hill/', '/r/nfl/comments/r9pkdh/highlight_on_the_game_defining_4th_down_jared/', '/r/nfl/comments/qjw6bn/highlight_for_the_second_time_this_season_goff/', '/r/nfl/comments/j9jdsw/highlight_min_vs_sea_wilson_td_pass_to_metcalf_on/', '/r/nfl/comments/afd5br/highlight_unsportsmanlike_conduct_penalty_on_the/', '/r/nfl/comments/110wpck/highlight_dallas_godert_with_a_top_class_catch_to/', '/r/nfl/comments/pcw9p5/highlight_browns_coleman_drops_the_ball_on_4th/', '/r/nfl/comments/xntaaj/highlight_sun_god_for_thirty_yards_on_4th_down/', '/r/nfl/comments/10cvybe/highlight_kaiir_elam_knocks_away_the_4th_down_pass/', '/r/nfl/comments/d0avcg/highlight_the_chicago_crowd_booong_their_team/', '/r/nfl/comments/y0yc8h/highlight_carr_throws_to_nowhere_on_4th_down_and/', '/r/nfl/comments/z0df3r/highlight_nothing_cooking_for_the_eagles_on_4th/', '/r/nfl/comments/173cewt/highlight_reddick_with_the_huge_4th_down_sack/', '/r/nfl/comments/16depvu/pff_aidan_hutchinson_vs_the_chiefs_7_pressures/', '/r/nfl/comments/z7j2ql/highlight_colts_cant_convert_the_4th_down_and_the/', '/r/nfl/comments/xzpqtc/highlight_giants_stop_packers_on_4th_down/', '/r/nfl/comments/zulabw/highlight_minshew_finds_smith_on_4th_down_for_an/', '/r/nfl/comments/uouon1/highlight_4_minutes_of_justin_herbert_converting/', '/r/nfl/comments/10dzun3/highlight_cowboys_go_for_it_on_4th_down_and_dak/', '/r/nfl/comments/zumoyv/highlight_the_cowboys_defense_stifles_the_eagles/', '/r/nfl/comments/jpryj7/highlight_rodgers_to_davante_4th_down_conversion/', '/r/nfl/comments/y5ulhj/highlight_the_avatar_makes_another_victim_murray/', '/r/nfl/comments/10iwne3/highlight_mcdermott_decides_not_to_kick_the_field/', '/r/nfl/comments/11dh2bg/highlight_belichicks_4th_down_gamble_deep_in_pats/', '/r/nfl/comments/enfqxi/highlight_expletives_during_the_delay_of_game_on/', '/r/nfl/comments/16l7e16/highlight_herbert_finds_allen_for_the_4th_down/', '/r/nfl/comments/sb667m/highlight_eric_weddle_called_for_personal_foul/', '/r/nfl/comments/100uowl/highlight_darnell_savage_picksixes_cousins_on_4th/', '/r/nfl/comments/jt9nh4/espn_the_colts_have_already_gone_for_it_on_4th/', '/r/nfl/comments/wngyxs/kyler_murrays_playcalling_debut_in_4th_q_doesnt/', '/r/nfl/comments/e4l1lz/highlight_jimmy_g_finds_deebo_on_4th_down_for_the/', '/r/nfl/comments/qcg8ax/russell_per_stathead_sean_mcdermott_became_the/', '/r/nfl/comments/v0z4tk/highlight_antonio_brown_makes_clutch_touchdown/', '/r/nfl/comments/k85e0s/highlight_the_giants_stop_the_seahawks_on_4th/', '/r/nfl/comments/s0jr3u/pff_justin_herbert_on_4th_down_vs_the_raiders_66/', '/r/nfl/comments/e5b6eq/highlight_seahawks_fake_a_punt_on_4th_down_and/', '/r/nfl/comments/l008i6/jones_andy_reid_is_asked_by_adamteicher_when_did/', '/r/nfl/comments/xzutf5/highlight_chargers_go_for_it_on_4th_down_and_fail/', '/r/nfl/comments/yo2tml/highlight_sauce_gardner_deflects_the_josh_allen/', '/r/nfl/comments/10onvq3/highlight_mahomes_hits_kelce_in_the_endzone_on/', '/r/nfl/comments/a6m8qm/highlight_jabrill_pepper_sacks_keenum_on_4th_down/', '/r/nfl/comments/yuk9wo/highlight_pressure_gets_to_dak_and_cowboys_fail/', '/r/nfl/comments/16l8v7c/highlight_josh_allen_to_gabe_davis_on_4th_down/', '/r/nfl/comments/reyeoa/highlight_denzel_ward_provides_the_4thdown_stop/', '/r/nfl/comments/y0ygi5/sharp_image_of_adams_and_renfrow_colliding_on_the/', '/r/nfl/comments/dhi807/49ers_defense_held_the_rams_to_013_on_3rd_and_4th/', '/r/nfl/comments/xzs5t5/highlight_matthew_judon_strip_sacks_goff_on_4th/', '/r/nfl/comments/y3hxva/highlight_bears_cannot_convert_on_4th_down/', '/r/nfl/comments/10j1qcz/burke_espn_4th_recommendation_chart_on_dallas_4th/', '/r/nfl/comments/adbyxx/highlight_phi_vs_chi_foles_to_golden_tate_td_pass/', '/r/nfl/comments/xu3v8i/fox_sports_nfl_boos_coming_down_from_panthers/', '/r/nfl/comments/jb8a5i/game_on_wisconsin_whose_quarterback_is_better/', '/r/nfl/comments/2rjv59/adam_schefter_on_twitter_nfl_admitted_to_lions/', '/r/nfl/comments/yu7l4j/highlight_geno_with_a_hell_of_a_touchdown_to/', '/r/nfl/comments/ja5vo1/highlight_marshon_lattimore_stops_mike_williams/', '/r/nfl/comments/11n5z1m/throwback_watch_the_longest_4thdown_conversions/', '/r/nfl/comments/xo0iib/highlight_robinson_with_the_big_run_for_the_td_on/', '/r/nfl/comments/qa59oa/highlight_chargers_go_for_it_on_4th_down_while_at/', '/r/nfl/comments/uaewt7/pff_best_on_3rd_and_4th_down_aaron_rodgers_925/', '/r/nfl/comments/3s51uy/aaron_rodgers_on_the_4thdown_play_i_got_scared_by/', '/r/nfl/comments/wpl6t1/chargers_hc_brandon_staleys_yes_unless_system_for/', '/r/nfl/comments/j9b8kd/highlight_what_is_that_jaguars_attempt_the/', '/r/nfl/comments/k2nkno/oc_highlight_andy_dalton_is_100_in_his_career_on/', '/r/nfl/comments/yifduj/forder_tua_on_3rd_and_4th_down_is_on_a_completely/', '/r/nfl/comments/xzt9ct/highlight_lions_stuffed_on_4th_down_for_third_time/', '/r/nfl/comments/rzygwj/dov_kleiman_already_today_bears_failed_on_4th/', '/r/nfl/comments/wn1cnz/highlight_desmond_ridder_avoids_the_pressure_and/', '/r/nfl/comments/uib1c4/los_angeles_rams_may_the_4th_down_stop_be_with_you/', '/r/nfl/comments/prmudl/ben_baldwins_4th_down_bot_the_final_4th_down_of/', '/r/nfl/comments/s09r06/highlight_chargers_go_for_it_on_4th_down_at_their/', '/r/nfl/comments/q9q1q6/pff_justin_herbert_on_3rd4th_down_this_season_924/', '/r/nfl/comments/ixem9n/highlight_raiders_score_a_td_on_4th_down_take_the/', '/r/nfl/comments/a8xw1v/highlight_julian_edelman_converts_on_4th_down_and/', '/r/nfl/comments/dkr5be/highlight_ravens_qb_lamar_jackson_runs_it_in/', '/r/nfl/comments/10cw1jy/field_yates_whats_crazy_about_that_4th_down_delay/', '/r/nfl/comments/9mfssf/rams_convinced_sean_mcvay_to_go_for_it_on_4th_down/', '/r/nfl/comments/9kjp40/john_clark_eagles_are_first_team_in_nfl_history/', '/r/nfl/comments/xtuo1e/highlight_jags_stops_eagles_on_4th_down/', '/r/nfl/comments/162enit/helman_will_grier_take_a_bowcowboys_told_him_they/', '/r/nfl/comments/raqkpi/highlight_myles_bryant_with_the_pass_breakup_on/']</code></pre>
+</div>
 </div>
 <p>The overall sentiment from this brief analysis is a positive one, but the search terms need to be more specific to get any useful information out of this process.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>overall <span class="op">=</span> []</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> text <span class="kw">in</span> corpus:</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  score<span class="op">=</span>sia.polarity_scores(text)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  overall.append(score[<span class="st">'compound'</span>])</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(overall)<span class="op">/</span><span class="bu">len</span>(overall)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>overall <span class="op">=</span> []</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> text <span class="kw">in</span> corpus:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  score<span class="op">=</span>sia.polarity_scores(text)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(text)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(score)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  overall.append(score[<span class="st">'compound'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0.1478294736842105</code></pre>
+<pre><code>TJ Watt- singlehandedly keeping Matt Canada employed
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+17-10 perfectly normal game.
+{'neg': 0.0, 'neu': 0.417, 'pos': 0.583, 'compound': 0.6369}
+True sickos game
+{'neg': 0.0, 'neu': 0.417, 'pos': 0.583, 'compound': 0.4215}
+When a play is needed most, TJ Watt will make that play.
+{'neg': 0.0, 'neu': 0.652, 'pos': 0.348, 'compound': 0.5859}
+Got flagged for unsportsmanlike lol
+{'neg': 0.0, 'neu': 0.588, 'pos': 0.412, 'compound': 0.4215}
+AFC is wild
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+He is a fucking wrecking ball
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Worth it for tj to get his second sack of the game
+{'neg': 0.0, 'neu': 0.853, 'pos': 0.147, 'compound': 0.2263}
+I love our defense
+{'neg': 0.0, 'neu': 0.149, 'pos': 0.851, 'compound': 0.6908}
+Yea but he wasnt double teamed so does it really count?
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Best defensive player in the league
+{'neg': 0.0, 'neu': 0.43, 'pos': 0.57, 'compound': 0.6486}
+DPOY
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+PFF says he was the lowest rated player in the game, probably
+{'neg': 0.191, 'neu': 0.809, 'pos': 0.0, 'compound': -0.3818}
+This is the worst BEST game I have ever watched. What the fuck are both teams doing?
+
+Insanity. As a 49ers fan who saw Watt eat my RT live..I am so happy we played them week 1 man.
+{'neg': 0.209, 'neu': 0.519, 'pos': 0.271, 'compound': 0.5168}
+Bias aside, I really don’t know if their is a more valuable player to their team than TJ Watt. It is staggering how many games they’ve won off his back. And if its not him its Highsmith ,Fitzpatrick or Heyward.
+{'neg': 0.032, 'neu': 0.805, 'pos': 0.163, 'compound': 0.7713}
+An AFC North game without at least 3 deaths is considered a dull affair.
+{'neg': 0.197, 'neu': 0.803, 'pos': 0.0, 'compound': -0.4019}
+HEY TOM….
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I’m so sad that we’re going to waste one of this generations best past rushers by not having a competent offense.
+{'neg': 0.28, 'neu': 0.516, 'pos': 0.204, 'compound': -0.2993}
+Keep writing that MVP resume
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I love playing the ravens with LJ lol
+{'neg': 0.0, 'neu': 0.312, 'pos': 0.688, 'compound': 0.8316}
+Best Defender in the NFL.
+{'neg': 0.0, 'neu': 0.349, 'pos': 0.651, 'compound': 0.6808}
+That ending was hilarious
+{'neg': 0.0, 'neu': 0.526, 'pos': 0.474, 'compound': 0.4019}
+Here I come to save the day
+{'neg': 0.0, 'neu': 0.61, 'pos': 0.39, 'compound': 0.4939}
+Man this guy is fucking fun to watch. Between this and the safety that changed momentum he really won the game.
+{'neg': 0.0, 'neu': 0.634, 'pos': 0.366, 'compound': 0.8856}
+But does he really disrupt the game?
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I just want to juxtapose TJ Watt taking his helmet off to Sneed's in the chiefs game. Neither affected the outcome of the game. Both were on change of possessions. One was flagged and one wasn't.
+{'neg': 0.0, 'neu': 0.923, 'pos': 0.077, 'compound': 0.1887}
+what a monster
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+DPOY X2
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+As a Browns fan this game just confirmed two things
+
+TJ Watt is the Pittsburgh steelers. We saw this last year
+
+The ravens can never have a good wr core
+{'neg': 0.078, 'neu': 0.847, 'pos': 0.075, 'compound': -0.0274}
+Iirc no matter how sucked Steelers are they always own the Ravens and Browns every fucking single year
+{'neg': 0.244, 'neu': 0.704, 'pos': 0.052, 'compound': -0.6249}
+TJ Watt is by far our best player. It’s not even close. If we were a better team he would be in talks for DPOY this year. I fucking love this man. The only jersey I’ve ever bought
+{'neg': 0.0, 'neu': 0.74, 'pos': 0.26, 'compound': 0.9117}
+As a bengals fan, I hate the dude. But I’m not even gonna lie I think he’s better than Garrett and Donald.
+{'neg': 0.099, 'neu': 0.671, 'pos': 0.231, 'compound': 0.4854}
+TJ Watt&gt;Parsons
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+It ain't even a rivalry now, they just have our fucking number and Lamar and the shit for hands crew has no answer for it.
+
+I don't see this team making a step forward until they get the pitt monkey off our back
+{'neg': 0.049, 'neu': 0.826, 'pos': 0.125, 'compound': 0.5256}
+DPOY x2
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Honest question here and as someone who didn’t watch the Texans often. Is TJ bette than JJ?
+{'neg': 0.0, 'neu': 0.713, 'pos': 0.287, 'compound': 0.7213}
+That’s my franchise QB.
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+TJ Watt, the 32nd best edge rusher in the league  according to some people on here. I love this man.
+{'neg': 0.0, 'neu': 0.669, 'pos': 0.331, 'compound': 0.8555}
+I don’t think I’ll live past 35, my heart can’t take this lmao BUT I LOVE IT
+{'neg': 0.0, 'neu': 0.572, 'pos': 0.428, 'compound': 0.8936}
+TJ Watt is a fucking machine this year. He’s basically doing what Bosa was doing last year. OC’s better plan around this man lol.
+{'neg': 0.0, 'neu': 0.787, 'pos': 0.213, 'compound': 0.6908}
+Can't wait to see his 60.5 rating from PFF.
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+He should be a candidate for MVP
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Tj is dpoy so far and it’s not close
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Steeler's defense is the best in the league. Only reason they've won games this season.
+{'neg': 0.0, 'neu': 0.561, 'pos': 0.439, 'compound': 0.8555}
+Watt like a hot knife through butter.
+{'neg': 0.0, 'neu': 0.667, 'pos': 0.333, 'compound': 0.3612}
+But ya know Micha Parsons already won DPOY after week 2 so no discussions of that.
+{'neg': 0.174, 'neu': 0.595, 'pos': 0.231, 'compound': 0.3073}
+The fact that TJ Watt is +350 DPOY and Micah is +190 is proof that it is just a popularity contest.
+{'neg': 0.0, 'neu': 0.86, 'pos': 0.14, 'compound': 0.4767}
+When he ripped his helmet off I actually got scared and shit my pants
+{'neg': 0.371, 'neu': 0.629, 'pos': 0.0, 'compound': -0.7579}
+How can you argue against this man being DPOTY?
+{'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.34}
+He isn’t on my favorite and I’d still die for this man.
+{'neg': 0.231, 'neu': 0.592, 'pos': 0.178, 'compound': -0.2263}
+Was he called for a penalty for taking off his helmet on the field of play? Asking for Panther’s fans.
+{'neg': 0.134, 'neu': 0.759, 'pos': 0.107, 'compound': -0.1531}
+Man NFL feels wild this year. A few terrible teams, a few great teams, and then like 20 teams that are just going to ruin each other's day.
+{'neg': 0.194, 'neu': 0.62, 'pos': 0.186, 'compound': -0.0772}
+This announcer calling it like it’s 2nd down in the first quarter.
+{'neg': 0.0, 'neu': 0.815, 'pos': 0.185, 'compound': 0.3612}
+He’s gonna get another D MVP thisnyear
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I'll never forgive us for not drafting him
+{'neg': 0.206, 'neu': 0.794, 'pos': 0.0, 'compound': -0.2057}
+Lamar moment. Homie is an inch tall in big moments. At least he run good for fantasy stats
+{'neg': 0.0, 'neu': 0.854, 'pos': 0.146, 'compound': 0.4404}
+And unlike Dwayne Rudd he waited until after the play was over, so that the penalty wouldn't give the offense another chance.
+{'neg': 0.119, 'neu': 0.657, 'pos': 0.224, 'compound': 0.2207}
+He's trying to set a record for fastest player to lock up DPOY in a season.
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Was Watt flagged for removing his helmet while on the field?
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+PFF will say he didn’t make an impact this week
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+A win is a win but honestly am I jaded in that I don’t think we are that good. Defense sure but our offense is just not enough
+{'neg': 0.15, 'neu': 0.408, 'pos': 0.442, 'compound': 0.8873}
+Tj watt is something else, for real
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Most normal Steelers Ravens game
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Why did the refs throw a flag for TJ there?
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+The steelers have pleasantly surprised me this season. Taking out the ravens and the browns has been great
+{'neg': 0.0, 'neu': 0.622, 'pos': 0.378, 'compound': 0.8442}
+As a Steelers fan, I still expect a record around.500, but they’ve already delivered two wins that crushed the souls of a division rival.  That is something to savor.
+{'neg': 0.114, 'neu': 0.679, 'pos': 0.207, 'compound': 0.4588}
+Did he get a penalty for removing his helmet on the field of play?
+{'neg': 0.183, 'neu': 0.671, 'pos': 0.146, 'compound': -0.1531}
+Every game these teams play is so fucking gritty. Truly the best rivalry in the nfl and it’s not close.
+{'neg': 0.0, 'neu': 0.629, 'pos': 0.371, 'compound': 0.8762}
+Game changer
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Bosa, Parsons or Watt.  Can't go wrong choosing either one as an edge rusher.
+{'neg': 0.0, 'neu': 0.836, 'pos': 0.164, 'compound': 0.3724}
+Fortunately for Harbaugh, i also watched the Miami-GT game this weekend so this was not worst coaching performance i saw in the last two days.
+{'neg': 0.0, 'neu': 0.87, 'pos': 0.13, 'compound': 0.5096}
+did he get a penalty for taking his helmet off?
+{'neg': 0.273, 'neu': 0.727, 'pos': 0.0, 'compound': -0.4588}
+u/savevideobot
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I’m so over Lamar at this point, he just can’t be trusted to put this team on his back. Also has yet to have a big against the Steelers, which imo is just sad at this point in this career
+{'neg': 0.072, 'neu': 0.856, 'pos': 0.072, 'compound': 0.0}
+what the hell was that awful attempt at a chip block lol
+{'neg': 0.517, 'neu': 0.345, 'pos': 0.138, 'compound': -0.8271}
+The standard is the standard
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Imagine watching JJ Watt years ago and some dude leans over and is like "His younger brother is gonna be better."
+
+Insane.
+{'neg': 0.1, 'neu': 0.705, 'pos': 0.194, 'compound': 0.368}
+I am curious when the Ravens will decide when its time to part ways with their passing running back
+{'neg': 0.0, 'neu': 0.881, 'pos': 0.119, 'compound': 0.3182}
+probably the worst title I've seen in my life OP
+{'neg': 0.313, 'neu': 0.687, 'pos': 0.0, 'compound': -0.6249}
+Isn't taking off your helmet on the field a penalty?
+{'neg': 0.273, 'neu': 0.727, 'pos': 0.0, 'compound': -0.4588}
+How did he not get flagged for taking off his helmet?
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Ravens have the worst luck ISTG
+{'neg': 0.369, 'neu': 0.36, 'pos': 0.27, 'compound': -0.2732}
+when are you allowed to take your helmet off without drawing a PF? I'm not a rule expert...
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Should be flag
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+He’s gotta be on the juice right??
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I saw the box so I checked the highlights, I was baffled the entire time how it gets to 17-10. Even with 2 minutes left in the game I was baffled
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+O man did he get a penalty for taking his helmet off. 😂
+{'neg': 0.25, 'neu': 0.75, 'pos': 0.0, 'compound': -0.4588}
+What an animal
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Sick as fuck
+{'neg': 0.872, 'neu': 0.128, 'pos': 0.0, 'compound': -0.7783}
+He's an animal !
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+Good game
+{'neg': 0.0, 'neu': 0.256, 'pos': 0.744, 'compound': 0.4404}
+I wish this guy was on the Falcons.
+{'neg': 0.0, 'neu': 0.69, 'pos': 0.31, 'compound': 0.4019}
+Did Jackson think it was 3rd down?
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+So... the helmet coming off for the celebration is an unsportsmanlike, right? That rule is still a thing, or am I crazy?
+{'neg': 0.127, 'neu': 0.873, 'pos': 0.0, 'compound': -0.4137}
+Took his helmet off. Shades of Dwayne Rudd.
+{'neg': 0.0, 'neu': 1.0, 'pos': 0.0, 'compound': 0.0}
+I want to learn the game
+{'neg': 0.0, 'neu': 0.755, 'pos': 0.245, 'compound': 0.0772}</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>corpus[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'17-10 perfectly normal game.'</code></pre>
 </div>
 </div>
 

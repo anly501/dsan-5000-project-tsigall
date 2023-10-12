@@ -17,6 +17,7 @@ website:
         contents:
         - data_exploration1.qmd
         - data_exploration2.qmd
+        - data_exploration3.qmd
       - clustering.qmd
       - dimensionality_reduction.qmd
       - decision_trees.qmd

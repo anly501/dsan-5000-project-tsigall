@@ -33,35 +33,42 @@ There are a large number of columns in this data, taken from the 2022 NFL season
 ```{r filter, message = FALSE, echo = FALSE}
 fourth_downs <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
-    select(season, home_coach, away_coach, posteam, posteam_type, ydstogo, yardline_100, posteam, go_boost, go, epa)
+    select(season, home_coach, away_coach, posteam, posteam_type, qtr, time, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
 
 head(fourth_downs)
+```
+
+```{r}
+gase <- fourth_downs %>% 
+  mutate(wp_change = wp_succeed - wp_fail) %>%
+  filter(abs(wp_change) > .2)
 ```
 
 Each unit in this table is one 4th down decision. The variables include:
 
 ```{r codebook, echo = FALSE}
-codebook <- data.frame("Description" = c("Season",
+codebook <- data.frame("Variable" = names(fourth_downs),
+                       "Description" = c("Season",
                                      "Home Team Coach",
                                      "Away Team Coach",
                                      "Offense Team",
                                      "Offense Home or Away",
+                                     "Quarter",
+                                     "Time left in Quarter",
                                      "Yards to Go",
                                      "Yardline Relative to End Zone",
+                                     "Offense Score",
+                                     "Defense Score",
                                      "Change in Win Probability if Conversion Attempted",
                                      "Conversion Attempted (T/F)",
-                                     "Estimated Points Added as a Result of the Play"),
-                    "Type" = c("Discrete Numeric",
-                               "Categorical",
-                               "Categorical",
-                               "Categorical",
-                               "Categorical",
-                               "Discrete Numeric",
-                               "Discrete Numeric",
-                               "Continuous",
-                               "Categorical",
-                               "Continuous"),
-                    "Datatype" = sapply(fourth_downs, class))
+                                     "Estimated Points Added as a Result of the Play",
+                                     "Win Probability if Conversion Fails",
+                                     "Win Probability if Conversion Succeeds",
+                                     "Win Probability at Time of Play",
+                                     "Chance of Making Field Goal",
+                                     "Win Probability if Field Goal Misses",
+                                     "Win Probability if Field Goal is Made",
+                                     "Win Probability if Team Punts"))
 
 kable(codebook)
 
@@ -90,7 +97,6 @@ fourth_decisions <- fourth_downs %>%
               count = n()) %>%
     filter(count > 50) %>%
   ungroup()
-
 
 head(fourth_decisions)
 ```

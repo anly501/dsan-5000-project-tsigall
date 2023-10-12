@@ -1,0 +1,81 @@
+---
+title: "High-Leverage Scenarios"
+editor_options: 
+  chunk_output_type: inline
+bibliography: reference.bib
+---
+
+# High Leverage
+Not all 4th down decisions are created equal. Depending on a variety of factors such as score, time of game, field position, and others different 4th down decisions can be a lot more important than others. It would be useful to attempt to isolate those high-leverage situations and explore those as they have the potential to tell us a lot more about decision making tendencies of NFL head coaches. 
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(ggplot2)
+library(grid)
+library(reticulate)
+library(kableExtra)
+library(gridExtra)
+library(plotly)
+library(RColorBrewer)
+library(scales)
+options(digits = 3)
+
+load("clean_data.Rdata")
+```
+
+Filtering all 4th down decisions by ones that have a difference of at least 20% in resultant win probability base simply on whether the coach decides to go for it or not gives us a good look at those high leverage situations. Filtering the data further by only including situations in which if the coach goes for it and succeeds, then they are almost guaranteed to win the game (wp_succeed > 0.95)
+```{r high_leverage, echo = FALSE}
+leverage <- fourth_downs %>% 
+  mutate(wp_change = wp_succeed - wp_fail,
+         coach = if_else(posteam_type == "home", home_coach, away_coach)) %>%
+  select(season,
+         coach,
+         posteam,
+         qtr,
+         time,
+         ydstogo,
+         yardline_100,
+         posteam_score,
+         defteam_score,
+         go_boost,
+         go,
+         epa,
+         wp,
+         wp_fail,
+         wp_succeed,
+         wp_change,
+         fg_make_prob,
+         miss_fg_wp,
+         make_fg_wp,
+         punt_wp) %>%
+  filter(abs(wp_change) > .2,
+         wp_succeed > .95,
+         qtr == 4)
+
+head(leverage, 10)
+```
+
+Let's visualize this data and make it easier to look through using a familiar plot structure.
+```{r, echo = FALSE}
+labels <- paste(leverage$ydstogo, "to go /", leverage$yardline_100, "yardline",
+                "<br>Season: ", leverage$season,
+                "<br>Coach: ", leverage$coach, "-", leverage$posteam, "<br>",
+                leverage$posteam_score, "-", leverage$defteam_score, "/", leverage$time,
+                "<br>Win Probability: ", sprintf("%.2f", leverage$wp),
+                "<br>WP Fail / Succeed: ", sprintf("%.2f", leverage$wp_fail), "/", sprintf("%.2f", leverage$wp_succeed),
+                "<br>FG Make Prob: ", sprintf("%.2f", leverage$fg_make_prob),
+                "<br>Punt WP: ", sprintf("%.2f", leverage$punt_wp),
+                "<extra></extra>")
+plot_ly(data = leverage,
+        x = ~yardline_100, 
+        y = ~ydstogo,
+        type = "scatter",
+        mode = "markers",
+        color = ~go,
+        colors = c("#FF0000", "#008800"),
+        marker = list(size = 8),
+        hovertemplate = labels) %>%
+  hide_colorbar()
+  
+```
+

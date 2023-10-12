@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DSAN 5000 - High-Leverage Scenarios</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.2/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_exploration1.html">Data Exploration</a></li><li class="breadcrumb-item"><a href="./data_exploration3.html">High-Leverage Scenarios</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">DSAN 5000</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_gathering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Gathering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Data Cleaning</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_cleaning1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4th Down Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_cleaning2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Data Exploration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_exploration1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4th Down Decisions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_exploration2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Effect on Coach Success</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_exploration3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">High-Leverage Scenarios</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./clustering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Clustering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dimensionality_reduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dimensionality Reduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./decision_trees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision Trees</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./arm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ARM</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#high-leverage" id="toc-high-leverage" class="nav-link active" data-scroll-target="#high-leverage">High Leverage</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">High-Leverage Scenarios</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="high-leverage" class="level1">
+<h1>High Leverage</h1>
+<p>Not all 4th down decisions are created equal. Depending on a variety of factors such as score, time of game, field position, and others different 4th down decisions can be a lot more important than others. It would be useful to attempt to isolate those high-leverage situations and explore those as they have the potential to tell us a lot more about decision making tendencies of NFL head coaches.</p>
+<p>Filtering all 4th down decisions by ones that have a difference of at least 20% in resultant win probability base simply on whether the coach decides to go for it or not gives us a good look at those high leverage situations. Filtering the data further by only including situations in which if the coach goes for it and succeeds, then they are almost guaranteed to win the game (wp_succeed &gt; 0.95)</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 20
+   season coach         posteam   qtr time  ydstogo yardline_100 posteam_score
+    &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;
+ 1   2016 Ben McAdoo    NYG         4 01:12       1           37            20
+ 2   2016 Mike McCoy    LAC         4 01:59      10           75            27
+ 3   2016 Jason Garrett DAL         4 01:40       9           42            27
+ 4   2016 Jeff Fisher   LA          4 02:00       5           42             9
+ 5   2016 Gus Bradley   JAX         4 01:27      10           51            30
+ 6   2016 Gus Bradley   JAX         4 00:38      15           56            30
+ 7   2016 Jeff Fisher   LA          4 01:14      12           57            17
+ 8   2016 Chuck Pagano  IND         4 02:00      21           90            23
+ 9   2016 Sean Payton   NO          4 02:00      16           18            22
+10   2016 Sean Payton   NO          4 02:00      21           23            22
+# ℹ 12 more variables: defteam_score &lt;dbl&gt;, go_boost &lt;dbl&gt;, go &lt;dbl&gt;,
+#   epa &lt;dbl&gt;, wp &lt;dbl&gt;, wp_fail &lt;dbl&gt;, wp_succeed &lt;dbl&gt;, wp_change &lt;dbl&gt;,
+#   fg_make_prob &lt;dbl&gt;, miss_fg_wp &lt;dbl&gt;, make_fg_wp &lt;dbl&gt;, punt_wp &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Let’s visualize this data and make it easier to look through using a familiar plot structure.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-07194dbe18a411d108f8" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-07194dbe18a411d108f8">{"x":{"visdat":{"b02d147e01":["function () ","plotlyVisDat"]},"cur_data":"b02d147e01","attrs":{"b02d147e01":{"x":{},"y":{},"mode":"markers","marker":{"size":8},"hovertemplate":["1 to go / 37 yardline <br>Season:  2016 <br>Coach:  Ben McAdoo - NYG <br> 20 - 19 / 01:12 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.65 / 1.00 <br>FG Make Prob:  0.63 <br>Punt WP:  0.74 <extra><\/extra>","10 to go / 75 yardline <br>Season:  2016 <br>Coach:  Mike McCoy - LAC <br> 27 - 20 / 01:59 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.69 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","9 to go / 42 yardline <br>Season:  2016 <br>Coach:  Jason Garrett - DAL <br> 27 - 23 / 01:40 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.36 <br>Punt WP:  0.83 <extra><\/extra>","5 to go / 42 yardline <br>Season:  2016 <br>Coach:  Jeff Fisher - LA <br> 9 - 3 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.73 / 0.98 <br>FG Make Prob:  0.36 <br>Punt WP:  0.82 <extra><\/extra>","10 to go / 51 yardline <br>Season:  2016 <br>Coach:  Gus Bradley - JAX <br> 30 - 27 / 01:27 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.73 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","15 to go / 56 yardline <br>Season:  2016 <br>Coach:  Gus Bradley - JAX <br> 30 - 27 / 00:38 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.91 <extra><\/extra>","12 to go / 57 yardline <br>Season:  2016 <br>Coach:  Jeff Fisher - LA <br> 17 - 13 / 01:14 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.63 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","21 to go / 90 yardline <br>Season:  2016 <br>Coach:  Chuck Pagano - IND <br> 23 - 16 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","16 to go / 18 yardline <br>Season:  2016 <br>Coach:  Sean Payton - NO <br> 22 - 20 / 02:00 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.73 / 0.98 <br>FG Make Prob:  0.90 <br>Punt WP:  NA <extra><\/extra>","21 to go / 23 yardline <br>Season:  2016 <br>Coach:  Sean Payton - NO <br> 22 - 20 / 02:00 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.72 / 0.98 <br>FG Make Prob:  0.84 <br>Punt WP:  NA <extra><\/extra>","1 to go / 74 yardline <br>Season:  2016 <br>Coach:  Mike Mularkey - TEN <br> 27 - 21 / 02:06 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.78 / 0.99 <br>FG Make Prob:  0.00 <br>Punt WP:  0.90 <extra><\/extra>","3 to go / 31 yardline <br>Season:  2016 <br>Coach:  Ben McAdoo - NYG <br> 10 - 7 / 01:15 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.74 / 1.00 <br>FG Make Prob:  0.68 <br>Punt WP:  0.85 <extra><\/extra>","8 to go / 36 yardline <br>Season:  2016 <br>Coach:  Ben McAdoo - NYG <br> 10 - 7 / 01:15 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.57 <br>Punt WP:  0.83 <extra><\/extra>","7 to go / 35 yardline <br>Season:  2016 <br>Coach:  Dirk Koetter - TB <br> 16 - 11 / 02:08 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.76 / 0.97 <br>FG Make Prob:  0.59 <br>Punt WP:  0.82 <extra><\/extra>","9 to go / 39 yardline <br>Season:  2016 <br>Coach:  Bill O'Brien - HOU <br> 21 - 20 / 01:20 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.61 / 1.00 <br>FG Make Prob:  0.53 <br>Punt WP:  0.73 <extra><\/extra>","10 to go / 88 yardline <br>Season:  2016 <br>Coach:  John Harbaugh - BAL <br> 27 - 20 / 01:50 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.76 / 0.99 <br>FG Make Prob:  0.00 <br>Punt WP:  0.87 <extra><\/extra>","2 to go / 67 yardline <br>Season:  2016 <br>Coach:  Andy Reid - KC <br> 17 - 16 / 01:16 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.46 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.68 <extra><\/extra>","5 to go / 58 yardline <br>Season:  2016 <br>Coach:  Doug Pederson - PHI <br> 24 - 19 / 01:37 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.69 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.83 <extra><\/extra>","8 to go / 63 yardline <br>Season:  2016 <br>Coach:  Hue Jackson - CLE <br> 20 - 17 / 01:52 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.54 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.72 <extra><\/extra>","15 to go / 91 yardline <br>Season:  2017 <br>Coach:  Jim Caldwell - DET <br> 14 - 7 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","5 to go / 15 yardline <br>Season:  2017 <br>Coach:  Sean McVay - LA <br> 32 - 30 / 02:00 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.67 / 0.99 <br>FG Make Prob:  0.93 <br>Punt WP:  NA <extra><\/extra>","3 to go / 30 yardline <br>Season:  2017 <br>Coach:  Bill Belichick - NE <br> 16 - 14 / 01:14 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.75 / 1.00 <br>FG Make Prob:  0.71 <br>Punt WP:  NA <extra><\/extra>","8 to go / 74 yardline <br>Season:  2017 <br>Coach:  Mike Tomlin - PIT <br> 19 - 13 / 01:59 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.65 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.81 <extra><\/extra>","4 to go / 40 yardline <br>Season:  2017 <br>Coach:  Jay Gruden - WAS <br> 26 - 24 / 01:00 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.78 / 1.00 <br>FG Make Prob:  0.41 <br>Punt WP:  0.87 <extra><\/extra>","9 to go / 45 yardline <br>Season:  2017 <br>Coach:  Jay Gruden - WAS <br> 26 - 24 / 01:00 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","15 to go / 71 yardline <br>Season:  2017 <br>Coach:  Andy Reid - KC <br> 30 - 24 / 02:38 <br>Win Probability:  0.81 <br>WP Fail / Succeed:  0.75 / 0.95 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","2 to go / 72 yardline <br>Season:  2017 <br>Coach:  Bill O'Brien - HOU <br> 38 - 34 / 01:49 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.55 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.75 <extra><\/extra>","4 to go / 84 yardline <br>Season:  2017 <br>Coach:  Anthony Lynn - LAC <br> 17 - 14 / 01:08 <br>Win Probability:  0.85 <br>WP Fail / Succeed:  0.35 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.62 <extra><\/extra>","8 to go / 83 yardline <br>Season:  2017 <br>Coach:  Dan Quinn - ATL <br> 34 - 31 / 01:55 <br>Win Probability:  0.79 <br>WP Fail / Succeed:  0.50 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.73 <extra><\/extra>","13 to go / 41 yardline <br>Season:  2017 <br>Coach:  Marvin Lewis - CIN <br> 20 - 17 / 02:00 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.38 <br>Punt WP:  0.78 <extra><\/extra>","12 to go / 56 yardline <br>Season:  2017 <br>Coach:  Sean McDermott - BUF <br> 16 - 10 / 02:35 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.75 / 0.95 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","12 to go / 77 yardline <br>Season:  2017 <br>Coach:  Bruce Arians - ARI <br> 12 - 7 / 01:41 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.56 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.76 <extra><\/extra>","12 to go / 63 yardline <br>Season:  2017 <br>Coach:  Dan Quinn - ATL <br> 24 - 21 / 01:14 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.70 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","2 to go / 2 yardline <br>Season:  2017 <br>Coach:  Doug Pederson - PHI <br> 31 - 29 / 03:59 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.73 / 0.96 <br>FG Make Prob:  0.99 <br>Punt WP:  NA <extra><\/extra>","2 to go / 47 yardline <br>Season:  2017 <br>Coach:  Sean Payton - NO <br> 31 - 26 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.87 <extra><\/extra>","6 to go / 60 yardline <br>Season:  2018 <br>Coach:  Doug Marrone - JAX <br> 20 - 15 / 00:54 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.90 <extra><\/extra>","18 to go / 60 yardline <br>Season:  2018 <br>Coach:  Kyle Shanahan - SF <br> 30 - 27 / 01:16 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","15 to go / 18 yardline <br>Season:  2018 <br>Coach:  Mike McCarthy - GB <br> 26 - 21 / 01:49 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.69 / 0.97 <br>FG Make Prob:  0.90 <br>Punt WP:  NA <extra><\/extra>","3 to go / 61 yardline <br>Season:  2018 <br>Coach:  Matt Nagy - CHI <br> 16 - 14 / 00:55 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.56 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.81 <extra><\/extra>","1 to go / 71 yardline <br>Season:  2018 <br>Coach:  Doug Pederson - PHI <br> 20 - 16 / 00:53 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.57 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","1 to go / 58 yardline <br>Season:  2018 <br>Coach:  Sean McVay - LA <br> 33 - 31 / 01:39 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.55 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.70 <extra><\/extra>","2 to go / 39 yardline <br>Season:  2018 <br>Coach:  Dan Quinn - ATL <br> 31 - 29 / 01:16 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.60 / 1.00 <br>FG Make Prob:  0.53 <br>Punt WP:  0.75 <extra><\/extra>","3 to go / 68 yardline <br>Season:  2018 <br>Coach:  Jay Gruden - WAS <br> 20 - 17 / 01:18 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.45 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.69 <extra><\/extra>","14 to go / 66 yardline <br>Season:  2018 <br>Coach:  Kyle Shanahan - SF <br> 15 - 10 / 02:23 <br>Win Probability:  0.78 <br>WP Fail / Succeed:  0.64 / 0.96 <br>FG Make Prob:  0.00 <br>Punt WP:  0.79 <extra><\/extra>","6 to go / 71 yardline <br>Season:  2018 <br>Coach:  Sean McVay - LA <br> 36 - 31 / 01:35 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","7 to go / 48 yardline <br>Season:  2018 <br>Coach:  Anthony Lynn - LAC <br> 22 - 20 / 01:58 <br>Win Probability:  0.82 <br>WP Fail / Succeed:  0.66 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.77 <extra><\/extra>","5 to go / 27 yardline <br>Season:  2018 <br>Coach:  Bill O'Brien - HOU <br> 23 - 21 / 00:56 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.80 / 1.00 <br>FG Make Prob:  0.76 <br>Punt WP:  NA <extra><\/extra>","11 to go / 66 yardline <br>Season:  2018 <br>Coach:  Sean McVay - LA <br> 54 - 51 / 01:04 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.44 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.70 <extra><\/extra>","1 to go / 62 yardline <br>Season:  2018 <br>Coach:  Doug Marrone - JAX <br> 6 - 0 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.73 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","3 to go / 76 yardline <br>Season:  2018 <br>Coach:  Gregg Williams - CLE <br> 26 - 20 / 01:15 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.74 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","1 to go / 10 yardline <br>Season:  2018 <br>Coach:  Gregg Williams - CLE <br> 17 - 16 / 01:53 <br>Win Probability:  0.85 <br>WP Fail / Succeed:  0.68 / 0.99 <br>FG Make Prob:  0.97 <br>Punt WP:  NA <extra><\/extra>","1 to go / 41 yardline <br>Season:  2018 <br>Coach:  Sean McDermott - BUF <br> 14 - 13 / 01:50 <br>Win Probability:  0.80 <br>WP Fail / Succeed:  0.60 / 1.00 <br>FG Make Prob:  0.38 <br>Punt WP:  0.70 <extra><\/extra>","7 to go / 75 yardline <br>Season:  2018 <br>Coach:  Anthony Lynn - LAC <br> 23 - 17 / 00:54 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.71 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","3 to go / 73 yardline <br>Season:  2019 <br>Coach:  Matt LaFleur - GB <br> 10 - 3 / 01:45 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.74 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","9 to go / 63 yardline <br>Season:  2019 <br>Coach:  Frank Reich - IND <br> 19 - 17 / 01:14 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.48 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.71 <extra><\/extra>","24 to go / 47 yardline <br>Season:  2019 <br>Coach:  Sean Payton - NO <br> 12 - 10 / 01:45 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.72 <extra><\/extra>","3 to go / 3 yardline <br>Season:  2019 <br>Coach:  Bruce Arians - TB <br> 45 - 40 / 02:37 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.73 / 0.97 <br>FG Make Prob:  0.99 <br>Punt WP:  NA <extra><\/extra>","10 to go / 51 yardline <br>Season:  2019 <br>Coach:  Pete Carroll - SEA <br> 30 - 29 / 01:50 <br>Win Probability:  0.78 <br>WP Fail / Succeed:  0.57 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.68 <extra><\/extra>","10 to go / 17 yardline <br>Season:  2019 <br>Coach:  Kliff Kingsbury - ARI <br> 24 - 21 / 02:13 <br>Win Probability:  0.88 <br>WP Fail / Succeed:  0.73 / 0.97 <br>FG Make Prob:  0.91 <br>Punt WP:  NA <extra><\/extra>","5 to go / 43 yardline <br>Season:  2019 <br>Coach:  Vic Fangio - DEN <br> 13 - 12 / 01:55 <br>Win Probability:  0.73 <br>WP Fail / Succeed:  0.52 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.61 <extra><\/extra>","7 to go / 64 yardline <br>Season:  2019 <br>Coach:  Mike Vrabel - TEN <br> 27 - 23 / 00:50 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.67 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","13 to go / 73 yardline <br>Season:  2019 <br>Coach:  Mike Tomlin - PIT <br> 17 - 12 / 01:10 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.58 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.79 <extra><\/extra>","1 to go / 25 yardline <br>Season:  2019 <br>Coach:  Kyle Shanahan - SF <br> 19 - 17 / 01:52 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.74 / 0.96 <br>FG Make Prob:  0.80 <br>Punt WP:  NA <extra><\/extra>","11 to go / 32 yardline <br>Season:  2019 <br>Coach:  Jon Gruden - LV <br> 16 - 13 / 01:52 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.66 <br>Punt WP:  0.83 <extra><\/extra>","12 to go / 68 yardline <br>Season:  2019 <br>Coach:  Adam Gase - NYJ <br> 16 - 10 / 01:39 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.75 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","1 to go / 69 yardline <br>Season:  2020 <br>Coach:  Pete Carroll - SEA <br> 35 - 30 / 01:49 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.65 / 0.95 <br>FG Make Prob:  0.00 <br>Punt WP:  0.80 <extra><\/extra>","13 to go / 40 yardline <br>Season:  2020 <br>Coach:  Matt Rhule - CAR <br> 21 - 16 / 01:55 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.51 <br>Punt WP:  0.83 <extra><\/extra>","7 to go / 7 yardline <br>Season:  2020 <br>Coach:  Zac Taylor - CIN <br> 20 - 16 / 03:08 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.73 / 0.95 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","14 to go / 53 yardline <br>Season:  2020 <br>Coach:  Doug Pederson - PHI <br> 25 - 20 / 01:46 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.69 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.80 <extra><\/extra>","1 to go / 6 yardline <br>Season:  2020 <br>Coach:  Mike Zimmer - MIN <br> 26 - 21 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.76 / 0.98 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","2 to go / 66 yardline <br>Season:  2020 <br>Coach:  Pete Carroll - SEA <br> 34 - 31 / 00:59 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.63 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","4 to go / 62 yardline <br>Season:  2020 <br>Coach:  Mike Zimmer - MIN <br> 28 - 22 / 00:57 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.70 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","1 to go / 85 yardline <br>Season:  2020 <br>Coach:  Mike Tomlin - PIT <br> 28 - 24 / 00:59 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.49 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.77 <extra><\/extra>","13 to go / 45 yardline <br>Season:  2020 <br>Coach:  Andy Reid - KC <br> 33 - 31 / 01:33 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","9 to go / 57 yardline <br>Season:  2020 <br>Coach:  Bill Belichick - NE <br> 23 - 17 / 01:16 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","26 to go / 39 yardline <br>Season:  2020 <br>Coach:  Frank Reich - IND <br> 31 - 28 / 01:33 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.73 / 0.98 <br>FG Make Prob:  0.53 <br>Punt WP:  0.83 <extra><\/extra>","3 to go / 3 yardline <br>Season:  2020 <br>Coach:  Matt Rhule - CAR <br> 24 - 21 / 01:54 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.75 / 0.98 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","5 to go / 82 yardline <br>Season:  2020 <br>Coach:  Joe Judge - NYG <br> 19 - 17 / 01:11 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.47 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.72 <extra><\/extra>","5 to go / 86 yardline <br>Season:  2020 <br>Coach:  Adam Gase - NYJ <br> 28 - 24 / 00:42 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.38 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.76 <extra><\/extra>","4 to go / 74 yardline <br>Season:  2020 <br>Coach:  Sean Payton - NO <br> 21 - 16 / 00:38 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","4 to go / 59 yardline <br>Season:  2020 <br>Coach:  Zac Taylor - CIN <br> 24 - 17 / 02:23 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.69 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","1 to go / 52 yardline <br>Season:  2020 <br>Coach:  Andy Reid - KC <br> 22 - 17 / 01:14 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.78 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","3 to go / 47 yardline <br>Season:  2021 <br>Coach:  Zac Taylor - CIN <br> 24 - 21 / 01:55 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.68 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","1 to go / 57 yardline <br>Season:  2021 <br>Coach:  John Harbaugh - BAL <br> 36 - 35 / 01:05 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.42 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.66 <extra><\/extra>","10 to go / 60 yardline <br>Season:  2021 <br>Coach:  Robert Saleh - NYJ <br> 24 - 17 / 02:21 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.78 / 0.99 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","16 to go / 16 yardline <br>Season:  2021 <br>Coach:  Andy Reid - KC <br> 17 - 17 / 01:12 <br>Win Probability:  0.78 <br>WP Fail / Succeed:  0.59 / 0.95 <br>FG Make Prob:  0.92 <br>Punt WP:  NA <extra><\/extra>","3 to go / 11 yardline <br>Season:  2021 <br>Coach:  Ron Rivera - WAS <br> 24 - 21 / 01:54 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.78 / 1.00 <br>FG Make Prob:  0.96 <br>Punt WP:  NA <extra><\/extra>","8 to go / 31 yardline <br>Season:  2021 <br>Coach:  John Harbaugh - BAL <br> 13 - 10 / 01:15 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.68 <br>Punt WP:  0.88 <extra><\/extra>","18 to go / 71 yardline <br>Season:  2021 <br>Coach:  Joe Judge - NYG <br> 13 - 7 / 01:19 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.71 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","5 to go / 58 yardline <br>Season:  2021 <br>Coach:  Zac Taylor - CIN <br> 15 - 10 / 01:16 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.71 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","3 to go / 70 yardline <br>Season:  2021 <br>Coach:  Kevin Stefanski - CLE <br> 14 - 13 / 02:00 <br>Win Probability:  0.73 <br>WP Fail / Succeed:  0.40 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.60 <extra><\/extra>","1 to go / 1 yardline <br>Season:  2021 <br>Coach:  Robert Saleh - NYJ <br> 23 - 21 / 01:49 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.72 / 0.97 <br>FG Make Prob:  0.99 <br>Punt WP:  NA <extra><\/extra>","2 to go / 7 yardline <br>Season:  2021 <br>Coach:  Robert Saleh - NYJ <br> 24 - 20 / 02:17 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.75 / 0.96 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","16 to go / 81 yardline <br>Season:  2021 <br>Coach:  Rich Bisaccia - LV <br> 29 - 22 / 02:16 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.69 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","1 to go / 42 yardline <br>Season:  2022 <br>Coach:  Arthur Smith - ATL <br> 26 - 24 / 00:54 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.65 / 1.00 <br>FG Make Prob:  0.47 <br>Punt WP:  0.79 <extra><\/extra>","6 to go / 47 yardline <br>Season:  2022 <br>Coach:  Arthur Smith - ATL <br> 26 - 24 / 00:54 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.79 <extra><\/extra>","8 to go / 81 yardline <br>Season:  2022 <br>Coach:  Mike Tomlin - PIT <br> 20 - 14 / 01:36 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.57 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.77 <extra><\/extra>","11 to go / 99 yardline <br>Season:  2022 <br>Coach:  Mike McDaniel - MIA <br> 21 - 17 / 01:37 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.29 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.57 <extra><\/extra>","4 to go / 36 yardline <br>Season:  2022 <br>Coach:  Dan Campbell - DET <br> 24 - 21 / 01:14 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.70 / 1.00 <br>FG Make Prob:  0.65 <br>Punt WP:  0.79 <extra><\/extra>","1 to go / 54 yardline <br>Season:  2022 <br>Coach:  Brandon Staley - LAC <br> 30 - 28 / 01:14 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.60 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.76 <extra><\/extra>","3 to go / 43 yardline <br>Season:  2022 <br>Coach:  Dan Campbell - DET <br> 15 - 9 / 02:04 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.74 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.83 <extra><\/extra>","4 to go / 87 yardline <br>Season:  2022 <br>Coach:  Sean McVay - LA <br> 13 - 9 / 00:54 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.39 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.73 <extra><\/extra>","1 to go / 30 yardline <br>Season:  2022 <br>Coach:  Doug Pederson - JAX <br> 24 - 20 / 01:08 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.75 / 1.00 <br>FG Make Prob:  0.71 <br>Punt WP:  NA <extra><\/extra>","10 to go / 66 yardline <br>Season:  2022 <br>Coach:  Nathaniel Hackett - DEN <br> 16 - 13 / 01:53 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","2 to go / 72 yardline <br>Season:  2022 <br>Coach:  Ron Rivera - WAS <br> 19 - 13 / 00:44 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.69 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","7 to go / 87 yardline <br>Season:  2022 <br>Coach:  Kliff Kingsbury - ARI <br> 24 - 17 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.71 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","20 to go / 90 yardline <br>Season:  2022 <br>Coach:  Todd Bowles - TB <br> 17 - 10 / 02:21 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.76 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.87 <extra><\/extra>","9 to go / 97 yardline <br>Season:  2022 <br>Coach:  Kevin O'Connell - MIN <br> 27 - 22 / 01:30 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.50 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.73 <extra><\/extra>","10 to go / 62 yardline <br>Season:  2022 <br>Coach:  Mike McCarthy - DAL <br> 34 - 31 / 01:13 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","7 to go / 32 yardline <br>Season:  2022 <br>Coach:  Brian Daboll - NYG <br> 17 - 12 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.72 / 0.97 <br>FG Make Prob:  0.66 <br>Punt WP:  0.75 <extra><\/extra>","8 to go / 75 yardline <br>Season:  2022 <br>Coach:  Zac Taylor - CIN <br> 22 - 18 / 00:48 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.54 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","3 to go / 8 yardline <br>Season:  2022 <br>Coach:  Matt LaFleur - GB <br> 23 - 20 / 02:06 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.75 / 0.97 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","10 to go / 38 yardline <br>Season:  2022 <br>Coach:  Lovie Smith - HOU <br> 19 - 14 / 01:17 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.73 / 1.00 <br>FG Make Prob:  0.46 <br>Punt WP:  0.82 <extra><\/extra>"],"color":{},"colors":["#FF0000","#008800"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"yardline_100"},"yaxis":{"domain":[0,1],"automargin":true,"title":"ydstogo"},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[37,75,42,42,51,56,57,90,18,23,74,31,36,35,39,88,67,58,63,91,15,30,74,40,45,71,72,84,83,41,56,77,63,2,47,60,60,18,61,71,58,39,68,66,71,48,27,66,62,76,10,41,75,73,63,47,3,51,17,43,64,73,25,32,68,69,40,7,53,6,66,62,85,45,57,39,3,82,86,74,59,52,47,57,60,16,11,31,71,58,70,1,7,81,42,47,81,99,36,54,43,87,30,66,72,87,90,97,62,32,75,8,38],"y":[1,10,9,5,10,15,12,21,16,21,1,3,8,7,9,10,2,5,8,15,5,3,8,4,9,15,2,4,8,13,12,12,12,2,2,6,18,15,3,1,1,2,3,14,6,7,5,11,1,3,1,1,7,3,9,24,3,10,10,5,7,13,1,11,12,1,13,7,14,1,2,4,1,13,9,26,3,5,5,4,4,1,3,1,10,16,3,8,18,5,3,1,2,16,1,6,8,11,4,1,3,4,1,10,2,7,20,9,10,7,8,3,10],"mode":"markers","marker":{"colorbar":{"title":"go","ticklen":2},"cmin":0,"cmax":100,"colorscale":[["0","rgba(255,0,0,1)"],["0.0416666666666667","rgba(248,35,0,1)"],["0.0833333333333333","rgba(240,51,0,1)"],["0.125","rgba(233,62,0,1)"],["0.166666666666667","rgba(226,71,0,1)"],["0.208333333333333","rgba(218,79,0,1)"],["0.25","rgba(211,85,0,1)"],["0.291666666666667","rgba(203,91,0,1)"],["0.333333333333333","rgba(196,96,0,1)"],["0.375","rgba(188,100,0,1)"],["0.416666666666667","rgba(180,104,0,1)"],["0.458333333333333","rgba(172,108,0,1)"],["0.5","rgba(164,112,0,1)"],["0.541666666666667","rgba(156,115,0,1)"],["0.583333333333333","rgba(147,118,0,1)"],["0.625","rgba(139,120,0,1)"],["0.666666666666667","rgba(130,123,0,1)"],["0.708333333333333","rgba(120,125,0,1)"],["0.75","rgba(111,127,0,1)"],["0.791666666666667","rgba(100,129,0,1)"],["0.833333333333333","rgba(89,130,0,1)"],["0.875","rgba(76,132,0,1)"],["0.916666666666667","rgba(61,133,0,1)"],["0.958333333333333","rgba(42,135,0,1)"],["1","rgba(0,136,0,1)"]],"showscale":false,"color":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,100,0,100,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,100,100,0,0,0,0,0,0,0,0,0,0,0,0],"size":8,"line":{"colorbar":{"title":"","ticklen":2},"cmin":0,"cmax":100,"colorscale":[["0","rgba(255,0,0,1)"],["0.0416666666666667","rgba(248,35,0,1)"],["0.0833333333333333","rgba(240,51,0,1)"],["0.125","rgba(233,62,0,1)"],["0.166666666666667","rgba(226,71,0,1)"],["0.208333333333333","rgba(218,79,0,1)"],["0.25","rgba(211,85,0,1)"],["0.291666666666667","rgba(203,91,0,1)"],["0.333333333333333","rgba(196,96,0,1)"],["0.375","rgba(188,100,0,1)"],["0.416666666666667","rgba(180,104,0,1)"],["0.458333333333333","rgba(172,108,0,1)"],["0.5","rgba(164,112,0,1)"],["0.541666666666667","rgba(156,115,0,1)"],["0.583333333333333","rgba(147,118,0,1)"],["0.625","rgba(139,120,0,1)"],["0.666666666666667","rgba(130,123,0,1)"],["0.708333333333333","rgba(120,125,0,1)"],["0.75","rgba(111,127,0,1)"],["0.791666666666667","rgba(100,129,0,1)"],["0.833333333333333","rgba(89,130,0,1)"],["0.875","rgba(76,132,0,1)"],["0.916666666666667","rgba(61,133,0,1)"],["0.958333333333333","rgba(42,135,0,1)"],["1","rgba(0,136,0,1)"]],"showscale":false,"color":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,100,0,100,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,100,100,0,0,0,0,0,0,0,0,0,0,0,0]}},"hovertemplate":["1 to go / 37 yardline <br>Season:  2016 <br>Coach:  Ben McAdoo - NYG <br> 20 - 19 / 01:12 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.65 / 1.00 <br>FG Make Prob:  0.63 <br>Punt WP:  0.74 <extra><\/extra>","10 to go / 75 yardline <br>Season:  2016 <br>Coach:  Mike McCoy - LAC <br> 27 - 20 / 01:59 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.69 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","9 to go / 42 yardline <br>Season:  2016 <br>Coach:  Jason Garrett - DAL <br> 27 - 23 / 01:40 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.36 <br>Punt WP:  0.83 <extra><\/extra>","5 to go / 42 yardline <br>Season:  2016 <br>Coach:  Jeff Fisher - LA <br> 9 - 3 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.73 / 0.98 <br>FG Make Prob:  0.36 <br>Punt WP:  0.82 <extra><\/extra>","10 to go / 51 yardline <br>Season:  2016 <br>Coach:  Gus Bradley - JAX <br> 30 - 27 / 01:27 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.73 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","15 to go / 56 yardline <br>Season:  2016 <br>Coach:  Gus Bradley - JAX <br> 30 - 27 / 00:38 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.91 <extra><\/extra>","12 to go / 57 yardline <br>Season:  2016 <br>Coach:  Jeff Fisher - LA <br> 17 - 13 / 01:14 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.63 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","21 to go / 90 yardline <br>Season:  2016 <br>Coach:  Chuck Pagano - IND <br> 23 - 16 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","16 to go / 18 yardline <br>Season:  2016 <br>Coach:  Sean Payton - NO <br> 22 - 20 / 02:00 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.73 / 0.98 <br>FG Make Prob:  0.90 <br>Punt WP:  NA <extra><\/extra>","21 to go / 23 yardline <br>Season:  2016 <br>Coach:  Sean Payton - NO <br> 22 - 20 / 02:00 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.72 / 0.98 <br>FG Make Prob:  0.84 <br>Punt WP:  NA <extra><\/extra>","1 to go / 74 yardline <br>Season:  2016 <br>Coach:  Mike Mularkey - TEN <br> 27 - 21 / 02:06 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.78 / 0.99 <br>FG Make Prob:  0.00 <br>Punt WP:  0.90 <extra><\/extra>","3 to go / 31 yardline <br>Season:  2016 <br>Coach:  Ben McAdoo - NYG <br> 10 - 7 / 01:15 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.74 / 1.00 <br>FG Make Prob:  0.68 <br>Punt WP:  0.85 <extra><\/extra>","8 to go / 36 yardline <br>Season:  2016 <br>Coach:  Ben McAdoo - NYG <br> 10 - 7 / 01:15 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.57 <br>Punt WP:  0.83 <extra><\/extra>","7 to go / 35 yardline <br>Season:  2016 <br>Coach:  Dirk Koetter - TB <br> 16 - 11 / 02:08 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.76 / 0.97 <br>FG Make Prob:  0.59 <br>Punt WP:  0.82 <extra><\/extra>","9 to go / 39 yardline <br>Season:  2016 <br>Coach:  Bill O'Brien - HOU <br> 21 - 20 / 01:20 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.61 / 1.00 <br>FG Make Prob:  0.53 <br>Punt WP:  0.73 <extra><\/extra>","10 to go / 88 yardline <br>Season:  2016 <br>Coach:  John Harbaugh - BAL <br> 27 - 20 / 01:50 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.76 / 0.99 <br>FG Make Prob:  0.00 <br>Punt WP:  0.87 <extra><\/extra>","2 to go / 67 yardline <br>Season:  2016 <br>Coach:  Andy Reid - KC <br> 17 - 16 / 01:16 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.46 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.68 <extra><\/extra>","5 to go / 58 yardline <br>Season:  2016 <br>Coach:  Doug Pederson - PHI <br> 24 - 19 / 01:37 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.69 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.83 <extra><\/extra>","8 to go / 63 yardline <br>Season:  2016 <br>Coach:  Hue Jackson - CLE <br> 20 - 17 / 01:52 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.54 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.72 <extra><\/extra>","15 to go / 91 yardline <br>Season:  2017 <br>Coach:  Jim Caldwell - DET <br> 14 - 7 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","5 to go / 15 yardline <br>Season:  2017 <br>Coach:  Sean McVay - LA <br> 32 - 30 / 02:00 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.67 / 0.99 <br>FG Make Prob:  0.93 <br>Punt WP:  NA <extra><\/extra>","3 to go / 30 yardline <br>Season:  2017 <br>Coach:  Bill Belichick - NE <br> 16 - 14 / 01:14 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.75 / 1.00 <br>FG Make Prob:  0.71 <br>Punt WP:  NA <extra><\/extra>","8 to go / 74 yardline <br>Season:  2017 <br>Coach:  Mike Tomlin - PIT <br> 19 - 13 / 01:59 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.65 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.81 <extra><\/extra>","4 to go / 40 yardline <br>Season:  2017 <br>Coach:  Jay Gruden - WAS <br> 26 - 24 / 01:00 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.78 / 1.00 <br>FG Make Prob:  0.41 <br>Punt WP:  0.87 <extra><\/extra>","9 to go / 45 yardline <br>Season:  2017 <br>Coach:  Jay Gruden - WAS <br> 26 - 24 / 01:00 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","15 to go / 71 yardline <br>Season:  2017 <br>Coach:  Andy Reid - KC <br> 30 - 24 / 02:38 <br>Win Probability:  0.81 <br>WP Fail / Succeed:  0.75 / 0.95 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","2 to go / 72 yardline <br>Season:  2017 <br>Coach:  Bill O'Brien - HOU <br> 38 - 34 / 01:49 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.55 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.75 <extra><\/extra>","4 to go / 84 yardline <br>Season:  2017 <br>Coach:  Anthony Lynn - LAC <br> 17 - 14 / 01:08 <br>Win Probability:  0.85 <br>WP Fail / Succeed:  0.35 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.62 <extra><\/extra>","8 to go / 83 yardline <br>Season:  2017 <br>Coach:  Dan Quinn - ATL <br> 34 - 31 / 01:55 <br>Win Probability:  0.79 <br>WP Fail / Succeed:  0.50 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.73 <extra><\/extra>","13 to go / 41 yardline <br>Season:  2017 <br>Coach:  Marvin Lewis - CIN <br> 20 - 17 / 02:00 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.38 <br>Punt WP:  0.78 <extra><\/extra>","12 to go / 56 yardline <br>Season:  2017 <br>Coach:  Sean McDermott - BUF <br> 16 - 10 / 02:35 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.75 / 0.95 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","12 to go / 77 yardline <br>Season:  2017 <br>Coach:  Bruce Arians - ARI <br> 12 - 7 / 01:41 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.56 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.76 <extra><\/extra>","12 to go / 63 yardline <br>Season:  2017 <br>Coach:  Dan Quinn - ATL <br> 24 - 21 / 01:14 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.70 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","2 to go / 2 yardline <br>Season:  2017 <br>Coach:  Doug Pederson - PHI <br> 31 - 29 / 03:59 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.73 / 0.96 <br>FG Make Prob:  0.99 <br>Punt WP:  NA <extra><\/extra>","2 to go / 47 yardline <br>Season:  2017 <br>Coach:  Sean Payton - NO <br> 31 - 26 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.87 <extra><\/extra>","6 to go / 60 yardline <br>Season:  2018 <br>Coach:  Doug Marrone - JAX <br> 20 - 15 / 00:54 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.90 <extra><\/extra>","18 to go / 60 yardline <br>Season:  2018 <br>Coach:  Kyle Shanahan - SF <br> 30 - 27 / 01:16 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","15 to go / 18 yardline <br>Season:  2018 <br>Coach:  Mike McCarthy - GB <br> 26 - 21 / 01:49 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.69 / 0.97 <br>FG Make Prob:  0.90 <br>Punt WP:  NA <extra><\/extra>","3 to go / 61 yardline <br>Season:  2018 <br>Coach:  Matt Nagy - CHI <br> 16 - 14 / 00:55 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.56 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.81 <extra><\/extra>","1 to go / 71 yardline <br>Season:  2018 <br>Coach:  Doug Pederson - PHI <br> 20 - 16 / 00:53 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.57 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","1 to go / 58 yardline <br>Season:  2018 <br>Coach:  Sean McVay - LA <br> 33 - 31 / 01:39 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.55 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.70 <extra><\/extra>","2 to go / 39 yardline <br>Season:  2018 <br>Coach:  Dan Quinn - ATL <br> 31 - 29 / 01:16 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.60 / 1.00 <br>FG Make Prob:  0.53 <br>Punt WP:  0.75 <extra><\/extra>","3 to go / 68 yardline <br>Season:  2018 <br>Coach:  Jay Gruden - WAS <br> 20 - 17 / 01:18 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.45 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.69 <extra><\/extra>","14 to go / 66 yardline <br>Season:  2018 <br>Coach:  Kyle Shanahan - SF <br> 15 - 10 / 02:23 <br>Win Probability:  0.78 <br>WP Fail / Succeed:  0.64 / 0.96 <br>FG Make Prob:  0.00 <br>Punt WP:  0.79 <extra><\/extra>","6 to go / 71 yardline <br>Season:  2018 <br>Coach:  Sean McVay - LA <br> 36 - 31 / 01:35 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","7 to go / 48 yardline <br>Season:  2018 <br>Coach:  Anthony Lynn - LAC <br> 22 - 20 / 01:58 <br>Win Probability:  0.82 <br>WP Fail / Succeed:  0.66 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.77 <extra><\/extra>","5 to go / 27 yardline <br>Season:  2018 <br>Coach:  Bill O'Brien - HOU <br> 23 - 21 / 00:56 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.80 / 1.00 <br>FG Make Prob:  0.76 <br>Punt WP:  NA <extra><\/extra>","11 to go / 66 yardline <br>Season:  2018 <br>Coach:  Sean McVay - LA <br> 54 - 51 / 01:04 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.44 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.70 <extra><\/extra>","1 to go / 62 yardline <br>Season:  2018 <br>Coach:  Doug Marrone - JAX <br> 6 - 0 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.73 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.85 <extra><\/extra>","3 to go / 76 yardline <br>Season:  2018 <br>Coach:  Gregg Williams - CLE <br> 26 - 20 / 01:15 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.74 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","1 to go / 10 yardline <br>Season:  2018 <br>Coach:  Gregg Williams - CLE <br> 17 - 16 / 01:53 <br>Win Probability:  0.85 <br>WP Fail / Succeed:  0.68 / 0.99 <br>FG Make Prob:  0.97 <br>Punt WP:  NA <extra><\/extra>","1 to go / 41 yardline <br>Season:  2018 <br>Coach:  Sean McDermott - BUF <br> 14 - 13 / 01:50 <br>Win Probability:  0.80 <br>WP Fail / Succeed:  0.60 / 1.00 <br>FG Make Prob:  0.38 <br>Punt WP:  0.70 <extra><\/extra>","7 to go / 75 yardline <br>Season:  2018 <br>Coach:  Anthony Lynn - LAC <br> 23 - 17 / 00:54 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.71 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","3 to go / 73 yardline <br>Season:  2019 <br>Coach:  Matt LaFleur - GB <br> 10 - 3 / 01:45 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.74 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","9 to go / 63 yardline <br>Season:  2019 <br>Coach:  Frank Reich - IND <br> 19 - 17 / 01:14 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.48 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.71 <extra><\/extra>","24 to go / 47 yardline <br>Season:  2019 <br>Coach:  Sean Payton - NO <br> 12 - 10 / 01:45 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.72 <extra><\/extra>","3 to go / 3 yardline <br>Season:  2019 <br>Coach:  Bruce Arians - TB <br> 45 - 40 / 02:37 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.73 / 0.97 <br>FG Make Prob:  0.99 <br>Punt WP:  NA <extra><\/extra>","10 to go / 51 yardline <br>Season:  2019 <br>Coach:  Pete Carroll - SEA <br> 30 - 29 / 01:50 <br>Win Probability:  0.78 <br>WP Fail / Succeed:  0.57 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.68 <extra><\/extra>","10 to go / 17 yardline <br>Season:  2019 <br>Coach:  Kliff Kingsbury - ARI <br> 24 - 21 / 02:13 <br>Win Probability:  0.88 <br>WP Fail / Succeed:  0.73 / 0.97 <br>FG Make Prob:  0.91 <br>Punt WP:  NA <extra><\/extra>","5 to go / 43 yardline <br>Season:  2019 <br>Coach:  Vic Fangio - DEN <br> 13 - 12 / 01:55 <br>Win Probability:  0.73 <br>WP Fail / Succeed:  0.52 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.61 <extra><\/extra>","7 to go / 64 yardline <br>Season:  2019 <br>Coach:  Mike Vrabel - TEN <br> 27 - 23 / 00:50 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.67 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","13 to go / 73 yardline <br>Season:  2019 <br>Coach:  Mike Tomlin - PIT <br> 17 - 12 / 01:10 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.58 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.79 <extra><\/extra>","1 to go / 25 yardline <br>Season:  2019 <br>Coach:  Kyle Shanahan - SF <br> 19 - 17 / 01:52 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.74 / 0.96 <br>FG Make Prob:  0.80 <br>Punt WP:  NA <extra><\/extra>","11 to go / 32 yardline <br>Season:  2019 <br>Coach:  Jon Gruden - LV <br> 16 - 13 / 01:52 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.66 <br>Punt WP:  0.83 <extra><\/extra>","12 to go / 68 yardline <br>Season:  2019 <br>Coach:  Adam Gase - NYJ <br> 16 - 10 / 01:39 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.75 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","1 to go / 69 yardline <br>Season:  2020 <br>Coach:  Pete Carroll - SEA <br> 35 - 30 / 01:49 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.65 / 0.95 <br>FG Make Prob:  0.00 <br>Punt WP:  0.80 <extra><\/extra>","13 to go / 40 yardline <br>Season:  2020 <br>Coach:  Matt Rhule - CAR <br> 21 - 16 / 01:55 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.77 / 1.00 <br>FG Make Prob:  0.51 <br>Punt WP:  0.83 <extra><\/extra>","7 to go / 7 yardline <br>Season:  2020 <br>Coach:  Zac Taylor - CIN <br> 20 - 16 / 03:08 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.73 / 0.95 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","14 to go / 53 yardline <br>Season:  2020 <br>Coach:  Doug Pederson - PHI <br> 25 - 20 / 01:46 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.69 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.80 <extra><\/extra>","1 to go / 6 yardline <br>Season:  2020 <br>Coach:  Mike Zimmer - MIN <br> 26 - 21 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.76 / 0.98 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","2 to go / 66 yardline <br>Season:  2020 <br>Coach:  Pete Carroll - SEA <br> 34 - 31 / 00:59 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.63 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","4 to go / 62 yardline <br>Season:  2020 <br>Coach:  Mike Zimmer - MIN <br> 28 - 22 / 00:57 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.70 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","1 to go / 85 yardline <br>Season:  2020 <br>Coach:  Mike Tomlin - PIT <br> 28 - 24 / 00:59 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.49 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.77 <extra><\/extra>","13 to go / 45 yardline <br>Season:  2020 <br>Coach:  Andy Reid - KC <br> 33 - 31 / 01:33 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","9 to go / 57 yardline <br>Season:  2020 <br>Coach:  Bill Belichick - NE <br> 23 - 17 / 01:16 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.72 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.86 <extra><\/extra>","26 to go / 39 yardline <br>Season:  2020 <br>Coach:  Frank Reich - IND <br> 31 - 28 / 01:33 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.73 / 0.98 <br>FG Make Prob:  0.53 <br>Punt WP:  0.83 <extra><\/extra>","3 to go / 3 yardline <br>Season:  2020 <br>Coach:  Matt Rhule - CAR <br> 24 - 21 / 01:54 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.75 / 0.98 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","5 to go / 82 yardline <br>Season:  2020 <br>Coach:  Joe Judge - NYG <br> 19 - 17 / 01:11 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.47 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.72 <extra><\/extra>","5 to go / 86 yardline <br>Season:  2020 <br>Coach:  Adam Gase - NYJ <br> 28 - 24 / 00:42 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.38 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.76 <extra><\/extra>","4 to go / 74 yardline <br>Season:  2020 <br>Coach:  Sean Payton - NO <br> 21 - 16 / 00:38 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.88 <extra><\/extra>","4 to go / 59 yardline <br>Season:  2020 <br>Coach:  Zac Taylor - CIN <br> 24 - 17 / 02:23 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.69 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","1 to go / 52 yardline <br>Season:  2020 <br>Coach:  Andy Reid - KC <br> 22 - 17 / 01:14 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.78 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","3 to go / 47 yardline <br>Season:  2021 <br>Coach:  Zac Taylor - CIN <br> 24 - 21 / 01:55 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.68 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","1 to go / 57 yardline <br>Season:  2021 <br>Coach:  John Harbaugh - BAL <br> 36 - 35 / 01:05 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.42 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.66 <extra><\/extra>","10 to go / 60 yardline <br>Season:  2021 <br>Coach:  Robert Saleh - NYJ <br> 24 - 17 / 02:21 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.78 / 0.99 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","16 to go / 16 yardline <br>Season:  2021 <br>Coach:  Andy Reid - KC <br> 17 - 17 / 01:12 <br>Win Probability:  0.78 <br>WP Fail / Succeed:  0.59 / 0.95 <br>FG Make Prob:  0.92 <br>Punt WP:  NA <extra><\/extra>","3 to go / 11 yardline <br>Season:  2021 <br>Coach:  Ron Rivera - WAS <br> 24 - 21 / 01:54 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.78 / 1.00 <br>FG Make Prob:  0.96 <br>Punt WP:  NA <extra><\/extra>","8 to go / 31 yardline <br>Season:  2021 <br>Coach:  John Harbaugh - BAL <br> 13 - 10 / 01:15 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.79 / 1.00 <br>FG Make Prob:  0.68 <br>Punt WP:  0.88 <extra><\/extra>","18 to go / 71 yardline <br>Season:  2021 <br>Coach:  Joe Judge - NYG <br> 13 - 7 / 01:19 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.71 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","5 to go / 58 yardline <br>Season:  2021 <br>Coach:  Zac Taylor - CIN <br> 15 - 10 / 01:16 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.71 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","3 to go / 70 yardline <br>Season:  2021 <br>Coach:  Kevin Stefanski - CLE <br> 14 - 13 / 02:00 <br>Win Probability:  0.73 <br>WP Fail / Succeed:  0.40 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.60 <extra><\/extra>","1 to go / 1 yardline <br>Season:  2021 <br>Coach:  Robert Saleh - NYJ <br> 23 - 21 / 01:49 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.72 / 0.97 <br>FG Make Prob:  0.99 <br>Punt WP:  NA <extra><\/extra>","2 to go / 7 yardline <br>Season:  2021 <br>Coach:  Robert Saleh - NYJ <br> 24 - 20 / 02:17 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.75 / 0.96 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","16 to go / 81 yardline <br>Season:  2021 <br>Coach:  Rich Bisaccia - LV <br> 29 - 22 / 02:16 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.69 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","1 to go / 42 yardline <br>Season:  2022 <br>Coach:  Arthur Smith - ATL <br> 26 - 24 / 00:54 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.65 / 1.00 <br>FG Make Prob:  0.47 <br>Punt WP:  0.79 <extra><\/extra>","6 to go / 47 yardline <br>Season:  2022 <br>Coach:  Arthur Smith - ATL <br> 26 - 24 / 00:54 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.79 <extra><\/extra>","8 to go / 81 yardline <br>Season:  2022 <br>Coach:  Mike Tomlin - PIT <br> 20 - 14 / 01:36 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.57 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.77 <extra><\/extra>","11 to go / 99 yardline <br>Season:  2022 <br>Coach:  Mike McDaniel - MIA <br> 21 - 17 / 01:37 <br>Win Probability:  0.87 <br>WP Fail / Succeed:  0.29 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.57 <extra><\/extra>","4 to go / 36 yardline <br>Season:  2022 <br>Coach:  Dan Campbell - DET <br> 24 - 21 / 01:14 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.70 / 1.00 <br>FG Make Prob:  0.65 <br>Punt WP:  0.79 <extra><\/extra>","1 to go / 54 yardline <br>Season:  2022 <br>Coach:  Brandon Staley - LAC <br> 30 - 28 / 01:14 <br>Win Probability:  0.86 <br>WP Fail / Succeed:  0.60 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.76 <extra><\/extra>","3 to go / 43 yardline <br>Season:  2022 <br>Coach:  Dan Campbell - DET <br> 15 - 9 / 02:04 <br>Win Probability:  0.94 <br>WP Fail / Succeed:  0.74 / 0.97 <br>FG Make Prob:  0.00 <br>Punt WP:  0.83 <extra><\/extra>","4 to go / 87 yardline <br>Season:  2022 <br>Coach:  Sean McVay - LA <br> 13 - 9 / 00:54 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.39 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.73 <extra><\/extra>","1 to go / 30 yardline <br>Season:  2022 <br>Coach:  Doug Pederson - JAX <br> 24 - 20 / 01:08 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.75 / 1.00 <br>FG Make Prob:  0.71 <br>Punt WP:  NA <extra><\/extra>","10 to go / 66 yardline <br>Season:  2022 <br>Coach:  Nathaniel Hackett - DEN <br> 16 - 13 / 01:53 <br>Win Probability:  0.83 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","2 to go / 72 yardline <br>Season:  2022 <br>Coach:  Ron Rivera - WAS <br> 19 - 13 / 00:44 <br>Win Probability:  0.97 <br>WP Fail / Succeed:  0.69 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.89 <extra><\/extra>","7 to go / 87 yardline <br>Season:  2022 <br>Coach:  Kliff Kingsbury - ARI <br> 24 - 17 / 02:00 <br>Win Probability:  0.95 <br>WP Fail / Succeed:  0.71 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.84 <extra><\/extra>","20 to go / 90 yardline <br>Season:  2022 <br>Coach:  Todd Bowles - TB <br> 17 - 10 / 02:21 <br>Win Probability:  0.84 <br>WP Fail / Succeed:  0.76 / 0.98 <br>FG Make Prob:  0.00 <br>Punt WP:  0.87 <extra><\/extra>","9 to go / 97 yardline <br>Season:  2022 <br>Coach:  Kevin O'Connell - MIN <br> 27 - 22 / 01:30 <br>Win Probability:  0.91 <br>WP Fail / Succeed:  0.50 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.73 <extra><\/extra>","10 to go / 62 yardline <br>Season:  2022 <br>Coach:  Mike McCarthy - DAL <br> 34 - 31 / 01:13 <br>Win Probability:  0.89 <br>WP Fail / Succeed:  0.62 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.78 <extra><\/extra>","7 to go / 32 yardline <br>Season:  2022 <br>Coach:  Brian Daboll - NYG <br> 17 - 12 / 02:00 <br>Win Probability:  0.92 <br>WP Fail / Succeed:  0.72 / 0.97 <br>FG Make Prob:  0.66 <br>Punt WP:  0.75 <extra><\/extra>","8 to go / 75 yardline <br>Season:  2022 <br>Coach:  Zac Taylor - CIN <br> 22 - 18 / 00:48 <br>Win Probability:  0.93 <br>WP Fail / Succeed:  0.54 / 1.00 <br>FG Make Prob:  0.00 <br>Punt WP:  0.82 <extra><\/extra>","3 to go / 8 yardline <br>Season:  2022 <br>Coach:  Matt LaFleur - GB <br> 23 - 20 / 02:06 <br>Win Probability:  0.90 <br>WP Fail / Succeed:  0.75 / 0.97 <br>FG Make Prob:  0.98 <br>Punt WP:  NA <extra><\/extra>","10 to go / 38 yardline <br>Season:  2022 <br>Coach:  Lovie Smith - HOU <br> 19 - 14 / 01:17 <br>Win Probability:  0.96 <br>WP Fail / Succeed:  0.73 / 1.00 <br>FG Make Prob:  0.46 <br>Punt WP:  0.82 <extra><\/extra>"],"type":"scatter","xaxis":"x","yaxis":"y","frame":null},{"x":[1,99],"y":[1,26],"type":"scatter","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"go","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"cmin":0,"cmax":100,"colorscale":[["0","rgba(255,0,0,1)"],["0.0416666666666667","rgba(248,35,0,1)"],["0.0833333333333333","rgba(240,51,0,1)"],["0.125","rgba(233,62,0,1)"],["0.166666666666667","rgba(226,71,0,1)"],["0.208333333333333","rgba(218,79,0,1)"],["0.25","rgba(211,85,0,1)"],["0.291666666666667","rgba(203,91,0,1)"],["0.333333333333333","rgba(196,96,0,1)"],["0.375","rgba(188,100,0,1)"],["0.416666666666667","rgba(180,104,0,1)"],["0.458333333333333","rgba(172,108,0,1)"],["0.5","rgba(164,112,0,1)"],["0.541666666666667","rgba(156,115,0,1)"],["0.583333333333333","rgba(147,118,0,1)"],["0.625","rgba(139,120,0,1)"],["0.666666666666667","rgba(130,123,0,1)"],["0.708333333333333","rgba(120,125,0,1)"],["0.75","rgba(111,127,0,1)"],["0.791666666666667","rgba(100,129,0,1)"],["0.833333333333333","rgba(89,130,0,1)"],["0.875","rgba(76,132,0,1)"],["0.916666666666667","rgba(61,133,0,1)"],["0.958333333333333","rgba(42,135,0,1)"],["1","rgba(0,136,0,1)"]],"showscale":false,"color":[0,100],"line":{"color":"rgba(255,127,14,1)"}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
