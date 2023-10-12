@@ -52,7 +52,7 @@ leverage <- fourth_downs %>%
          wp_succeed > .95,
          qtr == 4)
 
-head(leverage, 10)
+kable(head(leverage, 10))
 ```
 
 Let's visualize this data and make it easier to look through using a familiar plot structure.
