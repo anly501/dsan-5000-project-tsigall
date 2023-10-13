@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -305,25 +271,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>There are a large number of columns in this data, taken from the 2022 NFL season, we do not need all 383. The purpose of this data is to help determine how coaches today approach 4th down, a basic yet essential decision in the NFL. To do this we only need to look at these columns:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 21
-  season home_coach    away_coach posteam posteam_type   qtr time  ydstogo
-   &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
-1   2016 John Harbaugh Rex Ryan   BAL     home             1 12:05       1
-2   2016 John Harbaugh Rex Ryan   BAL     home             1 11:52       6
-3   2016 John Harbaugh Rex Ryan   BUF     away             1 09:42      18
-4   2016 John Harbaugh Rex Ryan   BUF     away             1 05:30       6
-5   2016 John Harbaugh Rex Ryan   BUF     away             1 05:30      11
-6   2016 John Harbaugh Rex Ryan   BAL     home             1 00:41      15
+<pre><code># A tibble: 6 × 22
+  season home_coach  away_coach posteam defteam posteam_type   qtr time  ydstogo
+   &lt;int&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
+1   2016 John Harba… Rex Ryan   BAL     BUF     home             1 12:05       1
+2   2016 John Harba… Rex Ryan   BAL     BUF     home             1 11:52       6
+3   2016 John Harba… Rex Ryan   BUF     BAL     away             1 09:42      18
+4   2016 John Harba… Rex Ryan   BUF     BAL     away             1 05:30       6
+5   2016 John Harba… Rex Ryan   BUF     BAL     away             1 05:30      11
+6   2016 John Harba… Rex Ryan   BAL     BUF     home             1 00:41      15
 # ℹ 13 more variables: yardline_100 &lt;dbl&gt;, posteam_score &lt;dbl&gt;,
 #   defteam_score &lt;dbl&gt;, go_boost &lt;dbl&gt;, go &lt;dbl&gt;, epa &lt;dbl&gt;, wp_fail &lt;dbl&gt;,
 #   wp_succeed &lt;dbl&gt;, wp &lt;dbl&gt;, fg_make_prob &lt;dbl&gt;, miss_fg_wp &lt;dbl&gt;,
 #   make_fg_wp &lt;dbl&gt;, punt_wp &lt;dbl&gt;</code></pre>
 </div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gase <span class="ot">&lt;-</span> fourth_downs <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">wp_change =</span> wp_succeed <span class="sc">-</span> wp_fail) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">abs</span>(wp_change) <span class="sc">&gt;</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Each unit in this table is one 4th down decision. The variables include:</p>
 <div class="cell">
@@ -353,70 +314,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Offense Team</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">defteam</td>
+<td style="text-align: left;">Defense Team</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">posteam_type</td>
 <td style="text-align: left;">Offense Home or Away</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">qtr</td>
 <td style="text-align: left;">Quarter</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">time</td>
 <td style="text-align: left;">Time left in Quarter</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">ydstogo</td>
 <td style="text-align: left;">Yards to Go</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">yardline_100</td>
 <td style="text-align: left;">Yardline Relative to End Zone</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">posteam_score</td>
 <td style="text-align: left;">Offense Score</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">defteam_score</td>
 <td style="text-align: left;">Defense Score</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">go_boost</td>
 <td style="text-align: left;">Change in Win Probability if Conversion Attempted</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">go</td>
 <td style="text-align: left;">Conversion Attempted (T/F)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">epa</td>
 <td style="text-align: left;">Estimated Points Added as a Result of the Play</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">wp_fail</td>
 <td style="text-align: left;">Win Probability if Conversion Fails</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">wp_succeed</td>
 <td style="text-align: left;">Win Probability if Conversion Succeeds</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">wp</td>
 <td style="text-align: left;">Win Probability at Time of Play</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">fg_make_prob</td>
 <td style="text-align: left;">Chance of Making Field Goal</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">miss_fg_wp</td>
 <td style="text-align: left;">Win Probability if Field Goal Misses</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">make_fg_wp</td>
 <td style="text-align: left;">Win Probability if Field Goal is Made</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">punt_wp</td>
 <td style="text-align: left;">Win Probability if Team Punts</td>
 </tr>
