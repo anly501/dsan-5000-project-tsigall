@@ -1,0 +1,46 @@
+---
+title: "Record Data"
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Machine Learning before Feature Selection
+It is important to establish benchmarks by which to judge our models by before we start to build them. This is done by creating basic models that predict through randomly guessing. The purpose of this is to compare our actual models to these - if they cannot outperform a model that predicts through random guessing then we have a problem!
+
+```{python setup, include = FALSE}
+import numpy as np
+import pandas as pd
+from sklearn.metrics import f1_score
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import train_test_split
+```
+
+
+## Random Guessing
+```{python set_seed, include = FALSE}
+rng = np.random.default_rng(621)
+epa_df = pd.read_csv("leverage_win_pct.csv")
+epa_df = epa_df[['coach', 'team', 'season', 'z_should', 'z_shouldnt', 'above_mean_epa']]
+epa_df['random_guess'] = rng.choice([0,1], len(epa_df))
+epa_df = epa_df.dropna()
+```
+
+```{python metric, include = FALSE}
+f1_random = f1_score(epa_df['above_mean_epa'], epa_df['random_guess'])
+```
+
+```{python, echo = FALSE}
+feature_matrix = epa_df[['z_should', 'z_shouldnt']]
+label_vec = epa_df['above_mean_epa']
+
+X_train, X_test, y_train, y_test = train_test_split(feature_matrix, label_vec, test_size=0.2, random_state=621)
+model = GaussianNB()
+model.fit(X_train, y_train)
+test_predictions = model.predict(X_test)
+
+f1_gaussianNB = f1_score(y_true = y_test, y_pred = test_predictions)
+
+print("F1 score from random guessing:", f1_random)
+print("F1 score from Gaussian NB model:", f1_gaussianNB)
+```
+

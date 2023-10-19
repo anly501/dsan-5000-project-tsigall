@@ -144,20 +144,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_exploration1.html" class="sidebar-item-text sidebar-link">
+  <a href="./fourth_decisions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4th Down Decisions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_exploration2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Effect on Coach Success</span></a>
+  <a href="./high_leverage_scenarios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">High-Leverage Scenarios</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_exploration3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">High-Leverage Scenarios</span></a>
+  <a href="./effect_on_coach_success.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Effect on Coach Success</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Naïve Bayes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./naive_bayes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Naïve Bayes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./feature_record.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Record Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./feature_text.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text Data</span></a>
   </div>
 </li>
       </ul>
@@ -270,20 +299,183 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>There are a large number of columns in this data, taken from the 2022 NFL season, we do not need all 383. The purpose of this data is to help determine how coaches today approach 4th down, a basic yet essential decision in the NFL. To do this we only need to look at these columns:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 22
-  season home_coach  away_coach posteam defteam posteam_type   qtr time  ydstogo
-   &lt;int&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
-1   2016 John Harba… Rex Ryan   BAL     BUF     home             1 12:05       1
-2   2016 John Harba… Rex Ryan   BAL     BUF     home             1 11:52       6
-3   2016 John Harba… Rex Ryan   BUF     BAL     away             1 09:42      18
-4   2016 John Harba… Rex Ryan   BUF     BAL     away             1 05:30       6
-5   2016 John Harba… Rex Ryan   BUF     BAL     away             1 05:30      11
-6   2016 John Harba… Rex Ryan   BAL     BUF     home             1 00:41      15
-# ℹ 13 more variables: yardline_100 &lt;dbl&gt;, posteam_score &lt;dbl&gt;,
-#   defteam_score &lt;dbl&gt;, go_boost &lt;dbl&gt;, go &lt;dbl&gt;, epa &lt;dbl&gt;, wp_fail &lt;dbl&gt;,
-#   wp_succeed &lt;dbl&gt;, wp &lt;dbl&gt;, fg_make_prob &lt;dbl&gt;, miss_fg_wp &lt;dbl&gt;,
-#   make_fg_wp &lt;dbl&gt;, punt_wp &lt;dbl&gt;</code></pre>
+<div class="cell-output-display">
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">season</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">home_coach</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">away_coach</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">posteam</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">defteam</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">posteam_type</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qtr</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">time</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ydstogo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">yardline_100</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">posteam_score</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">defteam_score</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">go_boost</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">go</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">epa</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">wp_fail</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">wp_succeed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">wp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">fg_make_prob</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">miss_fg_wp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">make_fg_wp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">punt_wp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: left;">BAL</td>
+<td style="text-align: left;">BUF</td>
+<td style="text-align: left;">home</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">12:05</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.8427797</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.9226208</td>
+<td style="text-align: right;">0.4501592</td>
+<td style="text-align: right;">0.5882827</td>
+<td style="text-align: right;">0.5102725</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.4320890</td>
+<td style="text-align: right;">0.5741632</td>
+<td style="text-align: right;">0.5265389</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: left;">BAL</td>
+<td style="text-align: left;">BUF</td>
+<td style="text-align: left;">home</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">11:52</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1.1323169</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.4050476</td>
+<td style="text-align: right;">0.4403515</td>
+<td style="text-align: right;">0.5971214</td>
+<td style="text-align: right;">0.4710029</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.4196399</td>
+<td style="text-align: right;">0.5725211</td>
+<td style="text-align: right;">0.5166918</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: left;">BUF</td>
+<td style="text-align: left;">BAL</td>
+<td style="text-align: left;">away</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">09:42</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-5.7820437</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.2241808</td>
+<td style="text-align: right;">0.3423280</td>
+<td style="text-align: right;">0.5154754</td>
+<td style="text-align: right;">0.4189611</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.3280475</td>
+<td style="text-align: right;">0.5250292</td>
+<td style="text-align: right;">0.4171238</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: left;">BUF</td>
+<td style="text-align: left;">BAL</td>
+<td style="text-align: left;">away</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">05:30</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2.0073829</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.4404633</td>
+<td style="text-align: right;">0.3919702</td>
+<td style="text-align: right;">0.5667855</td>
+<td style="text-align: right;">0.4749633</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.3907058</td>
+<td style="text-align: right;">0.5210628</td>
+<td style="text-align: right;">0.4426614</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: left;">BUF</td>
+<td style="text-align: left;">BAL</td>
+<td style="text-align: left;">away</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">05:30</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.6287521</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.4479581</td>
+<td style="text-align: right;">0.3906138</td>
+<td style="text-align: right;">0.5670854</td>
+<td style="text-align: right;">0.4759269</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.3771124</td>
+<td style="text-align: right;">0.5210628</td>
+<td style="text-align: right;">0.4410649</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: left;">BAL</td>
+<td style="text-align: left;">BUF</td>
+<td style="text-align: left;">home</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">00:41</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-4.0096273</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.7974257</td>
+<td style="text-align: right;">0.5135549</td>
+<td style="text-align: right;">0.6866364</td>
+<td style="text-align: right;">0.5298005</td>
+<td style="text-align: right;">0.6625606</td>
+<td style="text-align: right;">0.4986032</td>
+<td style="text-align: right;">0.6224666</td>
+<td style="text-align: right;">0.5387274</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
 </div>
 <p>Each unit in this table is one 4th down decision. The variables include:</p>

@@ -15,9 +15,14 @@ website:
         - data_cleaning2.qmd
       - section: "Data Exploration"
         contents:
-        - data_exploration1.qmd
-        - data_exploration2.qmd
-        - data_exploration3.qmd
+        - fourth_decisions.qmd
+        - high_leverage_scenarios.qmd
+        - effect_on_coach_success.qmd
+      - section: "Naïve Bayes"
+        contents:
+        - naive_bayes.qmd
+        - feature_record.qmd
+        - feature_text.qmd
       - clustering.qmd
       - dimensionality_reduction.qmd
       - decision_trees.qmd

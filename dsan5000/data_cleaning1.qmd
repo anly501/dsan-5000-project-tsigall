@@ -35,7 +35,7 @@ fourth_downs <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
     select(season, home_coach, away_coach, posteam, defteam, posteam_type, qtr, time, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
 
-head(fourth_downs)
+kable(head(fourth_downs))
 ```
 
 Each unit in this table is one 4th down decision. The variables include:

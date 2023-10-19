@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSAN 5000 - Effect on Coach Success</title>
+<title>DSAN 5000 - Naïve Bayes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,6 +60,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -73,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_exploration1.html">Data Exploration</a></li><li class="breadcrumb-item"><a href="./data_exploration2.html">Effect on Coach Success</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./naive_bayes.html">Naïve Bayes</a></li><li class="breadcrumb-item"><a href="./naive_bayes.html">Naïve Bayes</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -144,20 +146,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_exploration1.html" class="sidebar-item-text sidebar-link">
+  <a href="./fourth_decisions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4th Down Decisions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_exploration2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Effect on Coach Success</span></a>
+  <a href="./high_leverage_scenarios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">High-Leverage Scenarios</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_exploration3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">High-Leverage Scenarios</span></a>
+  <a href="./effect_on_coach_success.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Effect on Coach Success</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Naïve Bayes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./naive_bayes.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Naïve Bayes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./feature_record.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Record Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./feature_text.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text Data</span></a>
   </div>
 </li>
       </ul>
@@ -223,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Effect on Coach Success</h1>
+<h1 class="title">Naïve Bayes</h1>
 </div>
 
 
@@ -238,294 +269,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>As we saw in the last step of our EDA, coaches are consistently far too conservative when it comes to fourth down decisions. We are trying to figure out why this may be the case. Two possible reasons immediately come to mind:</p>
-<ol type="1">
-<li>4th down decisions have less effect on the outcome of games than we think.</li>
-<li>Coaches who are more conservative will keep their jobs longer, as being aggressive (and failing) on fourth down could be generally frowned upon by the NFL community.</li>
-</ol>
-<p>Lets explore the first reason. One simple measure of coach success season by season is winning percentage. To take a quick look this, we can look at how correct decision rate on 4th down compares to the winning percentage a coach had in that particular season. Alongside this process we will also look at the average EPA per play on 4th downs coaches had in go-for-it situations that season. EPA is a measure of success that stands for “Estimated Points Added” and it measures the estimated points a play will add to the total final score at the end of the game.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table data-quarto-postprocess="true" class="table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">coach</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">team</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">season</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">correct_rate</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">pct</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">epa</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">MIA</td>
-<td style="text-align: right;">2016</td>
-<td style="text-align: right;">0.075</td>
-<td style="text-align: right;">0.625</td>
-<td style="text-align: right;">-0.278</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">MIA</td>
-<td style="text-align: right;">2017</td>
-<td style="text-align: right;">0.375</td>
-<td style="text-align: right;">0.375</td>
-<td style="text-align: right;">-0.133</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">MIA</td>
-<td style="text-align: right;">2018</td>
-<td style="text-align: right;">0.211</td>
-<td style="text-align: right;">0.438</td>
-<td style="text-align: right;">-0.021</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">NYJ</td>
-<td style="text-align: right;">2019</td>
-<td style="text-align: right;">0.340</td>
-<td style="text-align: right;">0.438</td>
-<td style="text-align: right;">-0.171</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">NYJ</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">0.237</td>
-<td style="text-align: right;">0.125</td>
-<td style="text-align: right;">-0.382</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2016</td>
-<td style="text-align: right;">0.269</td>
-<td style="text-align: right;">0.750</td>
-<td style="text-align: right;">0.230</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2017</td>
-<td style="text-align: right;">0.170</td>
-<td style="text-align: right;">0.625</td>
-<td style="text-align: right;">0.096</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2018</td>
-<td style="text-align: right;">0.422</td>
-<td style="text-align: right;">0.750</td>
-<td style="text-align: right;">0.353</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2019</td>
-<td style="text-align: right;">0.286</td>
-<td style="text-align: right;">0.750</td>
-<td style="text-align: right;">0.021</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">0.360</td>
-<td style="text-align: right;">0.875</td>
-<td style="text-align: right;">0.097</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p>Now we have the winning percentage and epa alongside the correct decision rate on fourth down for every coach by season. Let’s take a closer look at this table and add averages for winning percentage, correct decision rate, and epa.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table data-quarto-postprocess="true" class="table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">coach</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">team</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">season</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">correct_rate</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">pct</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">epa</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">z_wins</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">z_correct</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">z_epa</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">above_mean_wins</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">above_mean_correct</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">above_mean_epa</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">MIA</td>
-<td style="text-align: right;">2016</td>
-<td style="text-align: right;">0.075</td>
-<td style="text-align: right;">0.625</td>
-<td style="text-align: right;">-0.278</td>
-<td style="text-align: right;">0.657</td>
-<td style="text-align: right;">-2.428</td>
-<td style="text-align: right;">-1.450</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">MIA</td>
-<td style="text-align: right;">2017</td>
-<td style="text-align: right;">0.375</td>
-<td style="text-align: right;">0.375</td>
-<td style="text-align: right;">-0.133</td>
-<td style="text-align: right;">-0.653</td>
-<td style="text-align: right;">0.567</td>
-<td style="text-align: right;">-0.613</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">MIA</td>
-<td style="text-align: right;">2018</td>
-<td style="text-align: right;">0.211</td>
-<td style="text-align: right;">0.438</td>
-<td style="text-align: right;">-0.021</td>
-<td style="text-align: right;">-0.326</td>
-<td style="text-align: right;">-1.075</td>
-<td style="text-align: right;">0.032</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">NYJ</td>
-<td style="text-align: right;">2019</td>
-<td style="text-align: right;">0.340</td>
-<td style="text-align: right;">0.438</td>
-<td style="text-align: right;">-0.171</td>
-<td style="text-align: right;">-0.326</td>
-<td style="text-align: right;">0.218</td>
-<td style="text-align: right;">-0.837</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adam Gase</td>
-<td style="text-align: left;">NYJ</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">0.237</td>
-<td style="text-align: right;">0.125</td>
-<td style="text-align: right;">-0.382</td>
-<td style="text-align: right;">-1.963</td>
-<td style="text-align: right;">-0.808</td>
-<td style="text-align: right;">-2.054</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2016</td>
-<td style="text-align: right;">0.269</td>
-<td style="text-align: right;">0.750</td>
-<td style="text-align: right;">0.230</td>
-<td style="text-align: right;">1.312</td>
-<td style="text-align: right;">-0.489</td>
-<td style="text-align: right;">1.482</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2017</td>
-<td style="text-align: right;">0.170</td>
-<td style="text-align: right;">0.625</td>
-<td style="text-align: right;">0.096</td>
-<td style="text-align: right;">0.657</td>
-<td style="text-align: right;">-1.481</td>
-<td style="text-align: right;">0.705</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2018</td>
-<td style="text-align: right;">0.422</td>
-<td style="text-align: right;">0.750</td>
-<td style="text-align: right;">0.353</td>
-<td style="text-align: right;">1.312</td>
-<td style="text-align: right;">1.039</td>
-<td style="text-align: right;">2.189</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2019</td>
-<td style="text-align: right;">0.286</td>
-<td style="text-align: right;">0.750</td>
-<td style="text-align: right;">0.021</td>
-<td style="text-align: right;">1.312</td>
-<td style="text-align: right;">-0.324</td>
-<td style="text-align: right;">0.274</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Andy Reid</td>
-<td style="text-align: left;">KC</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: right;">0.360</td>
-<td style="text-align: right;">0.875</td>
-<td style="text-align: right;">0.097</td>
-<td style="text-align: right;">1.967</td>
-<td style="text-align: right;">0.417</td>
-<td style="text-align: right;">0.710</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-<p>Now we can cross tabulate effectively.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="data_exploration2_files/figure-html/cross_tab_plot-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<hr>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="data_exploration2_files/figure-html/cross_tab2_plot-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>It looks as if decision rate on 4th down has little effect on the win rate of coaches, which makes sense as when looking at plays across an entire game, 4th down plays make up a small percentage of those plays. It would be worth looking at how influential 4th down plays are on the result of each game compared to other types of plays, though.</p>
-<p>Having a good correct 4th down decision does seem to have more of an effect on EPA, however. This makes sense as EPA in this case is estimated points added on 4th down, meaning this metric is directly measuring success on 4th down <strong><em>only</em></strong>, rather than success across an entire game. It is not suprxising that having a good correct 4th down decision rate would lead to a more positive 4th down success metric than a whole game success metric.</p>
-<p>It is an encouraging sign to see that making “correct” decisions on 4th down leads to more points on those 4th down plays. This means it would be useful to explore how 4th down plays contribute to a team’s final score compared to plays on other downs. This may give us a better idea as to how these 4th down decisions affect the success of coaches across the entire game, rather than simply on 4th down.</p>
+<p>Naïve Bayes methods are a set of supervised learning algorithms based on combining Bayes’ theorem with the assumption that the features used in the classification algorithm are conditionally independent. This is the naïve assumption. Essentially, it assumes that the presence of one feature does not affect the presence of the other features. The other component of these methods are that they are based on Bayes’ theorem which describes the probability of an event based on prior knowledge of that event. This probability is constantly updating, and is represented in the formula in this case as <span class="math display">\[P(y|x_1,...,x_n) = \frac{(P(y)P(x_1,...x_n|y)}{P(x_1,...,x_n)}\]</span></p>
+<p>Putting this in the context of a classification problem, we want to determine the likelihood that an event belongs to class <span class="math inline">\(y\)</span> given the features we select from the data, those being <span class="math inline">\(x_1,...x_n\)</span>. To do this, labelled training data is needed. Each algorithm will estimate prior probabilities <span class="math inline">\(P(y)\)</span> for each class and likelihood probabilities for each feature <span class="math inline">\(P(x_1,...x_n|y)\)</span> from this training data. Then, a posterior probability for each class <span class="math inline">\(P(y|x_1,...x_n)\)</span> is calculated and the highest probability is determined to be the class for the data.</p>
+<p>There are several types of Naïve Bayes algorithms, those being Gaussian, Multinomial, and Bernoulli Naïve Bayes. <strong>Gaussian</strong> is used when continuous, normally distributed data is obtained. In this case, the likelihood of features is assumed to be normally distributed. <span class="math inline">\(\sigma_y\)</span> and <span class="math inline">\(\mu_y\)</span> are estimated using maximum likelihood as in the steps outlined above. <strong>Multinomial</strong> is used for multinomially distributed data and commonly used in text classification with data in the form of vectors representing word counts. <span class="math inline">\(\theta_y\)</span> is estimated in this case where <span class="math inline">\(\theta_{yi}\)</span> is the probability <span class="math inline">\(P(x_i|y)\)</span> of feature <span class="math inline">\(i\)</span> appearing in a sample of class <span class="math inline">\(y\)</span>. Finally, <strong>Bernoulli</strong> is used when there are multiple features but each one is binary.</p>
+<p>In this case we will be using Gaussian Naïve Bayes, as we have continuous data that we would like to predict.</p>
 
 
 

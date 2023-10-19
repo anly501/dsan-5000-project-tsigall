@@ -1,0 +1,12 @@
+---
+title: "Naïve Bayes"
+bibliography: reference.bib
+---
+
+Naïve Bayes methods are a set of supervised learning algorithms based on combining Bayes' theorem with the assumption that the features used in the classification algorithm are conditionally independent. This is the naïve assumption. Essentially, it assumes that the presence of one feature does not affect the presence of the other features. The other component of these methods are that they are based on Bayes' theorem which describes the probability of an event based on prior knowledge of that event. This probability is constantly updating, and is represented in the formula in this case as $$P(y|x_1,...,x_n) = \frac{(P(y)P(x_1,...x_n|y)}{P(x_1,...,x_n)}$$
+
+Putting this in the context of a classification problem, we want to determine the likelihood that an event belongs to class $y$ given the features we select from the data, those being $x_1,...x_n$. To do this, labelled training data is needed. Each algorithm will estimate prior probabilities $P(y)$ for each class and likelihood probabilities for each feature $P(x_1,...x_n|y)$ from this training data. Then, a posterior probability for each class $P(y|x_1,...x_n)$ is calculated and the highest probability is determined to be the class for the data.
+
+There are several types of Naïve Bayes algorithms, those being Gaussian, Multinomial, and Bernoulli Naïve Bayes. **Gaussian** is used when continuous, normally distributed data is obtained. In this case, the likelihood of features is assumed to be normally distributed. $\sigma_y$ and $\mu_y$ are estimated using maximum likelihood as in the steps outlined above. **Multinomial** is used for multinomially distributed data and commonly used in text classification with data in the form of vectors representing word counts. $\theta_y$ is estimated in this case where $\theta_{yi}$ is the probability $P(x_i|y)$ of feature $i$ appearing in a sample of class $y$. Finally, **Bernoulli** is used when there are multiple features but each one is binary.
+
+In this case we will be using Gaussian Naïve Bayes, as we have continuous data that we would like to predict.

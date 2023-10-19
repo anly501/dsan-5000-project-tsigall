@@ -1,0 +1,294 @@
+---
+title: "Effect on Coach Success"
+editor_options: 
+  chunk_output_type: inline
+bibliography: reference.bib
+---
+
+```{r setup, include = FALSE}
+library(nflverse)
+library(tidyverse)
+library(ggplot2)
+library(grid)
+library(reticulate)
+library(kableExtra)
+library(gridExtra)
+library(plotly)
+library(RColorBrewer)
+library(scales)
+options(digits = 3)
+
+load("clean_data.Rdata")
+```
+
+As we saw in the last step of our EDA, coaches are consistently far too conservative when it comes to fourth down decisions. We are trying to figure out why this may be the case. Two possible reasons immediately come to mind:
+
+1.  4th down decisions have less effect on the outcome of games than we think.
+2.  Coaches who are more conservative will keep their jobs longer, as being aggressive (and failing) on fourth down could be generally frowned upon by the NFL community.
+
+# All 4th Downs
+
+Lets explore the first reason. One simple measure of coach success season by season is winning percentage. To take a quick look this, we can look at how correct decision rate on 4th down compares to the winning percentage a coach had in that particular season. Alongside this process we will also look at the average EPA per play on 4th downs coaches had in go-for-it situations that season. EPA is a measure of success that stands for "Estimated Points Added" and it measures the estimated points a play will add to the total final score at the end of the game.
+
+```{r get_seasons, include = FALSE}
+raw_games <- nflreadr::load_schedules()
+home_games <- raw_games %>%
+  filter(season > 2015 & season < 2023,
+         game_type == "REG") %>%
+  dplyr::select(season,
+                result,
+                coach = home_coach) %>%
+  dplyr::mutate(win = if_else(result > 0, 1, 0),
+                loss = if_else(result < 0, 1, 0),
+                tie = if_else(result == 0, 1, 0)) %>%
+  dplyr::group_by(coach,
+                  season) %>%
+  summarize(wins = sum(win),
+            losses = sum(loss),
+            ties = sum(tie))
+
+away_games <- raw_games %>%
+  filter(season > 2015 & season < 2023,
+         game_type == "REG") %>%
+  dplyr::select(season,
+                result,
+                coach = away_coach) %>%
+  dplyr::mutate(win = if_else(result < 0, 1, 0),
+                loss = if_else(result > 0, 1, 0),
+                tie = if_else(result == 0, 1, 0)) %>%
+  dplyr::group_by(coach,
+                  season) %>%
+  summarize(wins = sum(win),
+            losses = sum(loss),
+            ties = sum(tie))
+
+coach_record <- away_games %>%
+  left_join(home_games, by = c("coach", "season")) %>%
+  mutate(wins = wins.x + wins.y,
+         losses = losses.x + losses.y,
+         ties = ties.x + ties.y) %>%
+  select(coach, season, wins, losses, ties)
+rm(home_games, away_games, raw_games)
+```
+
+```{r get_coaches, include = FALSE}
+coaches <- fourth_decisions %>%
+  dplyr::select(coach, team = posteam, season, EPA) %>%
+  left_join(coach_record, by = c("coach", "season"))
+
+coaches <- coaches %>%
+  mutate(pct = (wins + ties * 0.5) / (wins + losses + ties)) %>%
+  select(coach,
+         team,
+         season,
+         pct,
+         epa = EPA)
+```
+
+```{r add_wins, echo = FALSE}
+win_pct <- coaches %>%
+  left_join(fourth_decisions, by = c("coach", "team" = "posteam", "season")) %>%
+  select(coach,
+         team,
+         season,
+         correct_rate = should_go,
+         pct,
+         epa)
+kable(head(win_pct, 10))
+```
+
+Now we have the winning percentage and epa alongside the correct decision rate on fourth down for every coach by season. Let's take a closer look at this table and add averages for winning percentage, correct decision rate, and epa.
+
+```{r avg_pct, echo = FALSE}
+win_pct <- win_pct %>%
+  mutate(z_wins = as.numeric(scale(pct)),
+         z_correct = as.numeric(scale(correct_rate)),
+         z_epa = as.numeric(scale(epa)),
+         above_mean_wins = if_else(z_wins > 0, 1, 0),
+         above_mean_correct = if_else(z_correct > 0, 1, 0),
+         above_mean_epa = if_else(z_epa > 0, 1, 0))
+
+kable(head(win_pct, 10))
+```
+
+Now we can cross tabulate effectively.
+
+```{r cross_tab, include = FALSE}
+cross_tab1 <- as.data.frame(table(win_pct$above_mean_wins,
+                                 win_pct$above_mean_correct)) %>%
+  rename(above_mean_wins = Var1,
+         above_mean_correct = Var2)
+
+cross_tab2 <- as.data.frame(table(win_pct$above_mean_epa,
+                                 win_pct$above_mean_correct)) %>%
+  rename(above_mean_epa = Var1,
+         above_mean_correct = Var2)
+```
+
+```{r cross_tab_plot, echo = FALSE}
+ggplot(cross_tab1, aes(x = above_mean_correct, y = Freq, fill = factor(above_mean_wins))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Above Mean Correct Decision Rate on 4th Down", 
+       y = "Frequency",
+       fill = "Above Mean 4th Down Wins") +
+  scale_fill_manual(values = c("0" = "orange", "1" = "blue"), labels = c("False", "True")) +
+  theme(legend.position = "top")
+```
+
+------------------------------------------------------------------------
+
+```{r cross_tab2_plot, echo = FALSE}
+ggplot(cross_tab2, aes(x = above_mean_correct, y = Freq, fill = factor(above_mean_epa))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Above Mean Correct Decision Rate on 4th Down", 
+       y = "Frequency",
+       fill = "Above Mean 4th Down EPA") +
+  scale_fill_manual(values = c("0" = "orange", "1" = "blue"), labels = c("False", "True")) +
+  theme(legend.position = "top")
+```
+
+It looks as if decision rate on 4th down has little effect on the win rate of coaches, which makes sense as when looking at plays across an entire game, 4th down plays make up a small percentage of those plays. It would be worth looking at how influential 4th down plays are on the result of each game compared to other types of plays, though.
+
+Having a good correct 4th down decision does seem to have more of an effect on EPA, however. This makes sense as EPA in this case is estimated points added on 4th down, meaning this metric is directly measuring success on 4th down ***only***, rather than success across an entire game. It is not surprising that having a good correct 4th down decision rate would lead to a more positive 4th down success metric than a whole game success metric.
+
+It is an encouraging sign to see that making "correct" decisions on 4th down leads to more points on those 4th down plays. This means it would be useful to explore how 4th down plays contribute to a team's final score compared to plays on other downs. This may give us a better idea as to how these 4th down decisions affect the success of coaches across the entire game, rather than simply on 4th down.
+
+# High-Leverage Scenarios
+Let's go back to our discussion involving high-leverage scenarios. What would happen if we did the same cross tabulation as above but only including high-leverage scenarios? In theory, this would give tell us more about a coaches success because these situations are single plays in which games are won and lost. 
+
+Here are the first few rows of the dataset showing high-leverage situations we were looking at earlier. This time though it is a larger dataset because I chose to remove the condition that `wp_succeed > 0.95` as that limited us too much. Now the definition for a "high-leverage scenario" is one in which the difference in win probability between failing and succeeding in a 4th down attempt is 10%. This way we have 3,676 4th down situations to look at instead of only 113.
+
+```{r filter_levergae, echo = FALSE}
+leverage <- fourth_downs %>% 
+  mutate(wp_change = wp_succeed - wp_fail,
+         coach = if_else(posteam_type == "home", home_coach, away_coach)) %>%
+  select(season,
+         coach,
+         posteam,
+         defteam,
+         qtr,
+         time,
+         ydstogo,
+         yardline_100,
+         posteam_score,
+         defteam_score,
+         go_boost,
+         go,
+         epa,
+         wp,
+         wp_fail,
+         wp_succeed,
+         wp_change,
+         fg_make_prob,
+         miss_fg_wp,
+         make_fg_wp,
+         punt_wp) %>%
+  filter(abs(wp_change) > .1,
+         qtr == 4)
+kable(head(leverage))
+```
+
+Applying the same transformations to this smaller set as we did to the set of every 4th down play gives us performance by coach in these scenarios.
+
+```{r clean_leverage, echo = FALSE, message = FALSE}
+leverage_decisions <- leverage %>%
+    mutate(should_go = ifelse((go_boost > 0),
+                             (if_else(go == 100, 1, 0)),
+                             NA),
+          shouldnt_go = ifelse((go_boost < 0),
+                             (if_else(go == 0, 1, 0)),
+                             NA)) %>%
+    select(season, coach, posteam, ydstogo, yardline_100, go_boost, should_go, shouldnt_go, go, epa) %>%
+    group_by(coach, posteam, season) %>%
+    summarize(should_go = 
+                sum(should_go == 1, na.rm = TRUE) / 
+                (sum(should_go == 0 | should_go == 1, na.rm = TRUE)),
+              shouldnt_go = 
+                sum(shouldnt_go == 1, na.rm = TRUE) / 
+                (sum(shouldnt_go == 0 | shouldnt_go == 1, na.rm = TRUE)),
+              EPA = mean(epa),
+              count = n()) %>%
+  filter(count > 5) %>%
+  ungroup()
+
+coaches <- fourth_decisions %>%
+  dplyr::select(coach, team = posteam, season, EPA) %>%
+  left_join(coach_record, by = c("coach", "season")) %>%
+  mutate(pct = (wins + ties * 0.5) / (wins + losses + ties)) %>%
+  select(coach,
+         team,
+         season,
+         pct,
+         epa = EPA) %>%
+  group_by(coach, team, season) %>%
+  summarise(pct = mean(pct, na.rm = TRUE),
+            epa = mean(epa, na.rm = TRUE)) %>%
+  ungroup()
+
+
+leverage_win_pct <- coaches %>%
+  inner_join(leverage_decisions, by = c("coach", "team" = "posteam", "season")) %>%
+  select(coach,
+         team,
+         season,
+         should_go,
+         shouldnt_go,
+         pct,
+         epa, count)
+kable(head(leverage_win_pct))
+```
+
+Now we can cross tabulate as before. 
+```{r leverage_pct, echo = FALSE}
+leverage_win_pct <- leverage_win_pct %>%
+  mutate(z_wins = as.numeric(scale(pct)),
+         z_should = as.numeric(scale(should_go)),
+         z_shouldnt = as.numeric(scale(shouldnt_go)),
+         z_epa = as.numeric(scale(epa)),
+         above_mean_wins = if_else(z_wins > 0, 1, 0),
+         above_mean_should = if_else(z_should > 0, 1, 0),
+         above_mean_shouldnt = if_else(z_shouldnt > 0, 1, 0),
+         above_mean_epa = if_else(z_epa > 0, 1, 0))
+
+kable(head(leverage_win_pct, 10))
+```
+
+```{r leverage_cross_tab, include = FALSE}
+cross_tab1 <- as.data.frame(table(leverage_win_pct$above_mean_wins,
+                                 leverage_win_pct$above_mean_should)) %>%
+  rename(above_mean_wins = Var1,
+         above_mean_should = Var2)
+
+cross_tab2 <- as.data.frame(table(leverage_win_pct$above_mean_epa,
+                                 leverage_win_pct$above_mean_should)) %>%
+  rename(above_mean_epa = Var1,
+         above_mean_should = Var2)
+```
+
+```{r levergae_cross_tab_plot, echo = FALSE}
+ggplot(cross_tab1, aes(x = above_mean_should, y = Freq, fill = factor(above_mean_wins))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Above Mean Correct Decision Rate on 4th Down (Go for it scenarios)", 
+       y = "Frequency",
+       fill = "Above Mean Wins") +
+  scale_fill_manual(values = c("0" = "orange", "1" = "blue"), labels = c("False", "True")) +
+  theme(legend.position = "top")
+```
+
+```{r leverage_cross_tab2_plot, echo = FALSE}
+ggplot(cross_tab2, aes(x = above_mean_should, y = Freq, fill = factor(above_mean_epa))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Above Mean Correct Decision Rate on 4th Down (Go for it scenarios)", 
+       y = "Frequency",
+       fill = "Above Mean 4th Down EPA") +
+  scale_fill_manual(values = c("0" = "orange", "1" = "blue"), labels = c("False", "True")) +
+  theme(legend.position = "top")
+```
+
+We see similar results here, where 4th down correct decision rate does not have much of an effect on a team's record throughout the entire season, but there seems to be even more of an effect on 4th down EPA. This is useful information going into feature selection. We will attempt to predict 4th down EPA during a season, using a variety of features. 
+
+```{r save, include = FALSE}
+save(leverage_win_pct, file = "leverage_win_pct.Rdata")
+write_csv(leverage_win_pct, "leverage_win_pct.csv")
+```
+
