@@ -3,14 +3,57 @@ title: "Record Data"
 editor_options: 
   chunk_output_type: inline
 ---
+```{r setup, include = FALSE}
+library(tidyverse)
+library(kableExtra)
+```
+
+# The Task at Hand
+As we are looking at coach decision making, could we develop a model to effectively predict when coaches will and will not go for it on 4th down? In other words, what properties of the (coach, sitaution) pair will effectively predict whether or not a coach decides to go for it on 4th down? Doing this will give valuable insights into the decision-making process as understanding what situations each coach decides to go for it or not allows us to compare philosophies between coaches.
+
+## Prepare Data
+```{r load_data, echo = FALSE}
+load("raw_nfl.Rdata")
+df <- raw_data %>%
+    filter(!is.na(go_boost) & !is.na(go)) %>%
+    select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
+df <- df %>%
+  mutate(coach = if_else(posteam_type == "home", home_coach, away_coach),
+         home_coach = coach,
+         go = if_else(go == 100, 1, 0),
+         game_half = if_else(game_half == "Half1", 1, 2)) %>%
+  select(-coach,
+         -away_coach,
+         -season,
+         -posteam,
+         -defteam,
+         -posteam_type,
+         -epa) %>%
+  rename(coach = home_coach) %>%
+  select(-go, everything())
+kable(head(df))
+write_csv(df, file = "df.csv")
+```
+
+Features for this model include: game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, go_boost, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp. 
+
+We want to look at the decision making process of each individual coach. To start, lets look at the process of the coach that has stayed on the same team and had the most 4th down situations over the past 8 NFL seasons: Bill Belichick. 
+
+```{r most_4ths, echo = FALSE}
+kable(head(df %>%
+  group_by(coach) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count))))
+```
+
 
 # Machine Learning before Feature Selection
-It is important to establish benchmarks by which to judge our models by before we start to build them. This is done by creating basic models that predict through randomly guessing. The purpose of this is to compare our actual models to these - if they cannot outperform a model that predicts through random guessing then we have a problem!
+It is important to establish benchmarks by which to judge our models by before we start to build them. This is done by creating basic models that predict through randomly guessing. The purpose of this is to compare our actual models to these - if they cannot outperform a model that predicts through random guessing then we have a problem.
 
-```{python setup, include = FALSE}
+```{python setup_py, include = FALSE}
 import numpy as np
 import pandas as pd
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, accuracy_score
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 ```
@@ -19,28 +62,78 @@ from sklearn.model_selection import train_test_split
 ## Random Guessing
 ```{python set_seed, include = FALSE}
 rng = np.random.default_rng(621)
-epa_df = pd.read_csv("leverage_win_pct.csv")
-epa_df = epa_df[['coach', 'team', 'season', 'z_should', 'z_shouldnt', 'above_mean_epa']]
-epa_df['random_guess'] = rng.choice([0,1], len(epa_df))
-epa_df = epa_df.dropna()
+df = pd.read_csv("df.csv")
+belichick = df[df['coach'] == 'Bill Belichick']
+belichick = belichick.drop(columns =['coach', 'punt_wp'])
+belichick['random_guess'] = rng.choice([0,1], len(belichick))
 ```
 
-```{python metric, include = FALSE}
-f1_random = f1_score(epa_df['above_mean_epa'], epa_df['random_guess'])
+```{python metric, echo = FALSE}
+f1_random = f1_score(belichick['go'], belichick['random_guess'])
+accuracy_random = accuracy_score(belichick['go'], belichick['random_guess'])
+metrics = pd.DataFrame({"Metric" : ["F1 Score", "Accuracy Score"],
+  "Random Guessing" : [f1_random, accuracy_random]})
+metrics
 ```
 
-```{python, echo = FALSE}
-feature_matrix = epa_df[['z_should', 'z_shouldnt']]
-label_vec = epa_df['above_mean_epa']
+
+# Train and Test Model
+```{python, include = FALSE}
+feature_matrix = belichick.drop(columns = ['go', 'random_guess'])
+label_vec = belichick[['go']]
 
 X_train, X_test, y_train, y_test = train_test_split(feature_matrix, label_vec, test_size=0.2, random_state=621)
 model = GaussianNB()
-model.fit(X_train, y_train)
+model.fit(X_train, np.ravel(y_train))
 test_predictions = model.predict(X_test)
 
 f1_gaussianNB = f1_score(y_true = y_test, y_pred = test_predictions)
+accuracy_gaussianNB = accuracy_score(y_true = y_test, y_pred = test_predictions)
+```
 
-print("F1 score from random guessing:", f1_random)
-print("F1 score from Gaussian NB model:", f1_gaussianNB)
+```{python metrics, echo = FALSE}
+metrics["GaussianNB"] = [f1_gaussianNB, accuracy_gaussianNB]
+metrics
+```
+
+This model is a clear improvement over random guessing, meaning we have a legitimate model. We can now attempt to improve the model through feature selection, and then move on to creating a model for each coach. 
+ 
+
+
+```{python, include = FALSE}
+compare_coaches = pd.DataFrame({"Feature":feature_matrix.columns.to_list()})
+metrics.drop(columns = ["Random Guessing", "GaussianNB"], inplace = True)
+```
+
+
+```{python, output = FALSE}
+def train_coach_model(coach):
+  coach_df = df[df['coach'] == coach]
+  coach_df = coach_df.drop(columns =['coach', 'punt_wp'])
+  
+  feature_matrix = coach_df.drop(columns = ['go'])
+  label_vec = coach_df[['go']]
+
+  X_train, X_test, y_train, y_test = train_test_split(feature_matrix, label_vec, test_size=0.2, random_state=621)
+  model = GaussianNB()
+  model.fit(X_train, np.ravel(y_train))
+  test_predictions = model.predict(X_test)
+
+  f1_gaussianNB = f1_score(y_true = y_test, y_pred = test_predictions)
+  accuracy_gaussianNB = accuracy_score(y_true = y_test, y_pred = test_predictions)
+  metrics[coach] = [f1_gaussianNB, accuracy_gaussianNB]
+  compare_coaches[coach] = model.theta_[0]
+  
+  return model
+```
+This function allows us to easily create a model for any coach we want, and compare the influence each feature has on their decision making. Essentially we are now comparing what coaches take into consideration when they decide to go for it or not. 
+```{python}
+staley_model = train_coach_model("Brandon Staley")
+belichick_model = train_coach_model("Bill Belichick")
+rivera_model = train_coach_model("Ron Rivera")
+stefanski_model = train_coach_model("Kevin Stefanski")
+
+compare_coaches.style.set_table_styles([{'selector': '', 'props': [('border', '2px solid black')]}])
+
 ```
 
