@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: inline
 ---
 
-```{r setup, include = FALSE}
+```{r, include = FALSE}
 library(tidyverse)
 library(kableExtra)
 ```
@@ -23,6 +23,7 @@ df <- raw_data %>%
 df <- df %>%
   mutate(coach = if_else(posteam_type == "home", home_coach, away_coach),
          home_coach = coach,
+         score_diff = posteam_score - defteam_score,
          go = if_else(go == 100, 1, 0),
          game_half = if_else(game_half == "Half1", 1, 2)) %>%
   select(-coach,
@@ -53,13 +54,16 @@ kable(head(df %>%
 
 It is important to establish benchmarks by which to judge our models by before we start to build them. This is done by creating basic models that predict through randomly guessing. The purpose of this is to compare our actual models to these - if they cannot outperform a model that predicts through random guessing then we have a problem.
 
-```{python setup_py, include = FALSE}
+```{python, include = FALSE}
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from sklearn.metrics import f1_score, accuracy_score
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from scipy.stats import zscore
+import matplotlib.pyplot as plt
+pd.set_option('display.float_format', '{:.3f}'.format)
 ```
 
 ## Random Guessing
@@ -79,6 +83,18 @@ metrics = pd.DataFrame({"Metric" : ["F1 Score", "Accuracy Score"],
   "Random Guessing" : [f1_random, accuracy_random]})
 metrics
 ```
+
+## Most Frequent Label
+```{python}
+most_frequent_label = int(belichick['go'].mode())
+belichick['frequent'] = most_frequent_label
+f1_random = f1_score(belichick['go'], belichick['frequent'])
+accuracy_random = accuracy_score(belichick['go'], belichick['frequent'])
+metrics = pd.DataFrame({"Metric" : ["F1 Score", "Accuracy Score"],
+  "Random Guessing" : [f1_random, accuracy_random]})
+metrics
+```
+
 
 # Train and Test Model
 
@@ -102,17 +118,203 @@ metrics
 
 This model is a clear improvement over random guessing, meaning we have a legitimate model. We can now attempt to improve the model through feature selection, and then move on to creating a model for each coach.
 
-```{python, include = FALSE}
-compare_coaches = pd.DataFrame({"Feature":feature_matrix.columns.to_list()})
-metrics.drop(columns = ["Random Guessing", "GaussianNB"], inplace = True)
+# Feature Selection
+
+```{python}
+def merit(x,y,correlation="pearson"):
+    # x=matrix of features 
+    # y=matrix (or vector) of targets 
+    # correlation="pearson" or "spearman"
+    k = len(x)
+    feature = pd.DataFrame(x)
+    target = pd.DataFrame(y)
+
+    f_corr = feature.corr(method=correlation)
+
+    if(correlation == "pearson"):
+        f_t_corr = np.corrcoef(feature, target, rowvar=False)
+    else:
+        f_t_corr =  feature.apply(lambda col: col.corr(target, method = "spearman"))
+        
+    rho_xx = f_t_corr.mean()
+    mask = np.triu(np.ones_like(f_corr), k=1)
+    rho_xy = f_corr[pd.DataFrame(mask) == 1].mean().mean()
+    return k*np.absolute(rho_xy)/(np.sqrt(k+k*(k+1)*np.absolute(rho_xx)))
 ```
+
+```{python}
+x = feature_matrix.to_numpy()
+y = label_vec.to_numpy()
+
+def explore_data(x,y,iplot=True):
+
+    #PRINT SHAPE
+    print(x.shape)
+    print(y.shape)
+
+    #COMPUTE MERIT 
+    print("merit =",merit(x,y,correlation="spearman")); 
+    print("merit =",merit(x,y,correlation="pearson"))
+    
+    #PLOT
+    if (iplot):
+        sns.pairplot(pd.DataFrame(np.hstack((x,y.reshape(y.shape[0],1)))))
+        plt.show()
+
+# TEST YOUR CODE ABOVE
+explore_data(x,y, iplot = False)
+```
+
+## Iteration
+
+```{python}
+import itertools
+
+def maximize_CFS(x,y):
+     k = x.shape[1]
+     max_merit = 0
+     list1 = [*range(0, k)]; #print(list1)
+     for L in range(2, len(list1) + 1):
+          for subset in itertools.combinations(list1, L):
+               m = merit(x[: ,subset], y)
+               if(m > max_merit):
+                    max_merit = m
+                    optimal_subset = subset
+                    print("found new max: ", max_merit, "optimal features = ", list(subset))
+     return(x[:, optimal_subset])
+   
+x_opt=maximize_CFS(x,y)
+explore_data(x_opt, y, iplot = False)
+features_opt = pd.DataFrame(x_opt, columns = feature_matrix.columns[[3,11]])
+```
+
+## Merit Score
+
+$$ \mathrm {Merit} _{S_{k}}={\frac {k|{\overline {r_{cf}}|}}{\sqrt {k+k(k-1)|{\overline {r_{ff}}}|}}}  $$
+
+```{python}
+from scipy.stats import spearmanr
+
+#compute base merit score s_2
+
+included_vars_s2 = ['half_seconds_remaining','yardline_100']
+included_vars_df = feature_matrix[included_vars_s2].copy()
+time_yardline_corr = spearmanr(included_vars_df['half_seconds_remaining'], 
+                                  included_vars_df['yardline_100']).statistic
+time_yardline_corr
+
+time_go_corr = spearmanr(included_vars_df['half_seconds_remaining'], label_vec).statistic
+time_go_corr
+
+yardline_go_corr = spearmanr(included_vars_df['yardline_100'], label_vec).statistic
+yardline_go_corr
+
+k = 2
+
+# since we only have two features there is only one correlation value, so this mean is just the one value
+mean_xx_corr = time_yardline_corr #r_{xx}
+
+# mean_xy_corr is the mean of the two feature/label correlations from above
+mean_xy_corr = np.mean([time_go_corr, yardline_go_corr]) #r_{xy}
+
+print(f"Number of Features: {k}")
+merit_score_numer = k * np.absolute(mean_xy_corr)
+merit_score_denom = np.sqrt(k + k * (k + 1) * np.absolute(mean_xx_corr))
+merit_score_s2 = merit_score_numer / merit_score_denom
+```
+```{python}
+def compute_mean_xx_corr(x_df):
+  df_colnames = x_df.columns
+  # This will contain our final set of x<->x correlations
+  xx_corrs = []
+  # Now we use itertools to iterate over all possible *pairs* of
+  # elements from df_cols
+  df_colname_pairs = itertools.combinations(df_colnames, 2)
+  for colname1, colname2 in df_colname_pairs:
+    # Extract the first column we're considering
+    col1 = x_df[colname1]
+    # Extract the second column
+    col2 = x_df[colname2]
+    # And compute the correlation
+    xx_pair_corr = spearmanr(col1, col2).statistic
+    xx_corrs.append(xx_pair_corr)
+  # And now that the loop has finished running, we can return the **mean**
+  # of the correlation values we've accumulated in the `xx_corrs` list
+  return np.mean(xx_corrs)
+
+def compute_mean_xy_corr(x_df, y_vec):
+  df_colnames = x_df.columns
+  xy_corrs = []
+  for colname in df_colnames:
+    x_col = x_df[colname]
+    xy_pair_corr = spearmanr(x_col, y_vec)
+    xy_corrs.append(xy_pair_corr)
+  # And return the mean
+  return np.mean(xy_corrs)
+
+included_vars_sp3 = ['half_seconds_remaining','yardline_100', 'score_diff']
+included_vars_df = feature_matrix[included_vars_sp3].copy()
+mean_xx_corr = compute_mean_xx_corr(included_vars_df)
+mean_xy_corr = compute_mean_xy_corr(included_vars_df, label_vec)
+mean_xx_corr, mean_xy_corr
+
+def compute_merit_score(num_features, mean_xx_corr, mean_xy_corr):
+  merit_score_numer = k * np.absolute(mean_xy_corr)
+  merit_score_denom = np.sqrt(k + k * (k + 1) * np.absolute(mean_xx_corr))
+  merit_score = merit_score_numer / merit_score_denom
+  return merit_score
+
+merit_score_sp3 = compute_merit_score(3, mean_xx_corr, mean_xy_corr)
+
+
+included_vars_sp5 = ['half_seconds_remaining','yardline_100', 'score_diff', 'posteam_score', 'defteam_score']
+included_vars_df = feature_matrix[included_vars_sp5].copy()
+mean_xx_corr = compute_mean_xx_corr(included_vars_df)
+mean_xy_corr = compute_mean_xy_corr(included_vars_df, label_vec)
+mean_xx_corr, mean_xy_corr
+
+merit_score_sp5 = compute_merit_score(5, mean_xx_corr, mean_xy_corr)
+
+print(f"Merit score (S_2): {merit_score_s2}")
+print(f"Merit score (S'_3): {merit_score_sp3}")
+print(f"Merit score (S'_5): {merit_score_sp5}")
+```
+
+### Evaluate New Model
+```{python}
+coach = "Ron Rivera"
+
+coach_df = df[df['coach'] == coach]
+coach_df = coach_df.drop(columns = ['punt_wp'])
+
+feature_matrix = coach_df.drop(columns = ['go', 'coach'])
+feature_matrix = feature_matrix.apply(zscore)
+label_vec = coach_df[['go']]
+
+feature_matrix_s3 = feature_matrix[included_vars_sp3].copy()
+X_train, X_test, y_train, y_test = train_test_split(feature_matrix_s3, label_vec, test_size=0.2, random_state=621)
+
+model = GaussianNB()
+model.fit(X_train, np.ravel(y_train))
+test_predictions = model.predict(X_test)
+
+fs_clf_f1 = f1_score(y_true = y_test, y_pred = test_predictions)
+accuracy_gaussianNB = accuracy_score(y_true = y_test, y_pred = test_predictions)
+
+print(f"Feature Selection Model F1: {fs_clf_f1}")
+print(f"Accuracy: {accuracy_gaussianNB}")
+```
+
+
+# Compare Coaches
 
 ```{python, output = FALSE}
 def train_coach_model(coach):
   coach_df = df[df['coach'] == coach]
-  coach_df = coach_df.drop(columns =['coach', 'punt_wp'])
+  # coach_df = coach_df[['yardline_100', 'miss_fg_wp', 'go']]
+  coach_df = coach_df.drop(columns = ['punt_wp'])
   
-  feature_matrix = coach_df.drop(columns = ['go'])
+  feature_matrix = coach_df.drop(columns = ['go', 'coach'])
   feature_matrix = feature_matrix.apply(zscore)
   label_vec = coach_df[['go']]
 
@@ -132,12 +334,15 @@ def train_coach_model(coach):
 This function allows us to easily create a model for any coach we want, and compare the influence each feature has on their decision making. Essentially we are now comparing what coaches take into consideration when they decide to go for it or not.
 
 ```{python}
+compare_coaches = pd.DataFrame({"Feature":feature_matrix.columns.to_list()})
+
 staley_model = train_coach_model("Brandon Staley")
 belichick_model = train_coach_model("Bill Belichick")
 rivera_model = train_coach_model("Ron Rivera")
 stefanski_model = train_coach_model("Kevin Stefanski")
 
-compare_coaches = compare_coaches.transpose()
+compare_coaches = compare_coaches.T.iloc[1:]
+compare_coaches.rename(columns = dict(zip(compare_coaches.columns, feature_matrix.columns.to_list())), inplace = True)
 compare_coaches.style.set_table_styles([{'selector': '', 'props': [('border', '2px solid black')]}])
 
 ```
