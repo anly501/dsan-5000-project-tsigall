@@ -1,0 +1,150 @@
+---
+title: "Coach Clustering"
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(plotly)
+```
+
+
+Attempting to "profile" each coach by how they perform on 4th down may give us some important insights into how they make their decisions. This would be a good fit for an unsupervised learning task, as this is just some exploratory analysis to see if we can extract some trends from this data. We do not know yet what kinds of coaches there may be out there, so lets attempt to group them based on the data we do have. 
+
+# Clean Data for Clustering
+We want to select the features to be used during this process, lets try just using two features to start with: `should_go` and `shouldnt_go` from our earlier cleaning process. Lets also group by coach alone and not by coach and season to make it easier to interpret the final output.
+```{r clean_data, echo = FALSE}
+load("clean_data.Rdata")
+
+fourth_by_coach <- fourth_decisions %>% 
+  group_by(coach) %>%
+  summarize(should_go = mean(should_go),
+            shouldnt_go = mean(shouldnt_go)) %>%
+  ungroup()
+  
+head(fourth_by_coach)
+```
+
+Lets get an initial look at the data before applying the clustering algorithm.
+```{r initial_viz, echo = FALSE}
+plot_ly(data = fourth_by_coach, x = ~should_go, y = ~shouldnt_go, type = "scatter", mode = "markers")
+```
+Obvious clusters have not formed from this, but we will still proceed with the unsupervised learning task. 
+
+```{r to_csv, include = FALSE}
+write_csv(fourth_by_coach, file = "fourth_by_coach.csv")
+```
+
+```{python imports, include = FALSE}
+import pandas as pd
+import numpy as np
+from sklearn.cluster import KMeans
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+
+np.random.seed(621)
+```
+
+```{python read_data, include = FALSE}
+df = pd.read_csv("fourth_by_coach.csv")
+scaler = StandardScaler()
+X = scaler.fit_transform(df[["should_go", "shouldnt_go"]])
+```
+
+
+```{python plot_function, include = FALSE}
+# plotting function from lab 4.1 demo
+def plot(X,color_vector):
+    fig, ax = plt.subplots()
+    ax.scatter(X[:,0], X[:,1],c=color_vector, alpha=0.5) #, c=y
+    ax.set(xlabel='Feature-1 (x_1)', ylabel='Feature-2 (x_2)',
+    title='Cluster data')
+    ax.grid()
+    # fig.savefig("test.png")
+    plt.show()
+```
+
+
+```{python clustering, echo = FALSE, messages = FALSE}
+X = np.ascontiguousarray(X)
+k_means_X = pd.DataFrame(columns = ["Cluster", "Inertia"], index = range(10))
+
+for i in range(1,11):
+  model = KMeans(n_clusters = i, n_init = 10).fit(X)
+  k_means_X.at[i - 1, "Inertia"] = model.inertia_
+  k_means_X.at[i - 1, "Cluster"] = i
+  
+
+plt.clf()
+sns.lineplot(data = k_means_X, x = "Cluster", y = "Inertia")
+plt.show()
+```
+Using the elbow method, the correct number of clusters here seems to be about 3, we will try 2, 3, and 4. 
+
+## 2 Clusters
+```{python plot_clusters2, echo = FALSE, messages = FALSE}
+labels = KMeans(n_clusters = 2, n_init = 10).fit(X).labels_
+
+plot(X, labels)
+```
+
+## 3 Clusters
+```{python plot_clusters3, echo = FALSE, messages = FALSE}
+labels = KMeans(n_clusters = 3, n_init = 10).fit(X).labels_
+
+plot(X, labels)
+```
+
+## 4 Clusters
+```{python plot_clusters4, echo = FALSE, messages = FALSE}
+np.random.seed(621)
+labels = KMeans(n_clusters = 4, n_init = 10).fit(X).labels_
+
+plot(X, labels)
+```
+I like 4 clusters the best as we are looking at 2 features here, we can form "quadrants" of sorts. Lets apply the labels to the points and see which coaches fell into which categories. 
+
+# Labelling Coaches
+
+The four categories I am using to describe coaches here are "Passive", "Aggresive", "Impulsive", and "Strategic". This can be seen on the plot below.
+
+```{python add_labels, include = FALSE}
+labels = pd.DataFrame(labels)
+labels.to_csv("labels.csv", index = False)
+```
+
+```{r plot_with_labels, echo = FALSE, warning = FALSE}
+labels <- read_csv("labels.csv", show_col_types = FALSE)
+
+count <- fourth_decisions %>%
+  group_by(coach) %>%
+  summarize(count = sum(count)) %>%
+  ungroup()
+
+fourth_by_coach <- fourth_by_coach %>%
+  mutate(count = count$count,
+         labels = labels$"0") 
+
+category_labels <- c("Passive", "Aggresive", "Impulsive", "Strategic")
+
+fourth_by_coach$labels <- factor(fourth_by_coach$labels)
+fourth_by_coach$labels <- category_labels[fourth_by_coach$labels]
+
+hover <- paste(fourth_by_coach$coach,
+             "<br>Count: ", fourth_by_coach$count)
+
+p1 <- ggplot(data = fourth_by_coach) +
+  geom_point(aes(x = should_go, y = shouldnt_go, color = labels, text = hover)) +
+  xlab("Should Go Correct Rate") +
+  ylab("Shouldn't Go Correct Rate") +
+  scale_x_continuous(breaks = seq(0.15, 0.55, by = 0.05)) +
+  scale_y_continuous(breaks = seq(0.85, 1, by = 0.01)) +
+  scale_color_brewer(palette = "Dark2")
+
+ggplotly(p1)  %>%
+  layout(legend = list(title = list(text = "Category")))
+
+```
+

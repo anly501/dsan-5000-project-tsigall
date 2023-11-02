@@ -18,6 +18,7 @@ website:
         - fourth_decisions.qmd
         - high_leverage_scenarios.qmd
         - effect_on_coach_success.qmd
+        - coach_clustering.qmd
       - section: "Naïve Bayes"
         contents:
         - naive_bayes.qmd
