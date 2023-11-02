@@ -11,7 +11,7 @@ library(kableExtra)
 
 # The Task at Hand
 
-As we are looking at coach decision making, could we develop a model to effectively predict when coaches will and will not go for it on 4th down? In other words, what properties of the (coach, sitaution) pair will effectively predict whether or not a coach decides to go for it on 4th down? Doing this will give valuable insights into the decision-making process as understanding what situations each coach decides to go for it or not allows us to compare philosophies between coaches.
+As we are looking at coach decision making, could we develop a model to effectively predict when coaches will and will not go for it on 4th down? In other words, what properties of the (coach, situation) pair will effectively predict whether or not a coach decides to go for it on 4th down? Doing this will give valuable insights into the decision-making process as understanding what situations each coach decides to go for it or not allows us to compare philosophies between coaches.
 
 ## Prepare Data
 

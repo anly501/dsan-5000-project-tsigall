@@ -55,8 +55,6 @@ sia = SentimentIntensityAnalyzer()
 
 for text in corpus:
   score=sia.polarity_scores(text)
-  print(text)
-  print(score)
   overall.append(score['compound'])
 
 corpus[1]
