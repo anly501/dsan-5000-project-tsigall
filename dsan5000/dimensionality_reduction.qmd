@@ -1,3 +1,66 @@
 ---
 title: "Dimensionality Reduction"
+bibliography: reference.bib
 ---
+
+```{r setup}
+library(tidyverse)
+library(plotly)
+load("raw_nfl.Rdata")
+```
+
+```{r}
+df <- raw_data %>%
+    filter(!is.na(go_boost) & !is.na(go)) %>%
+    select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
+df <- df %>%
+  mutate(coach = if_else(posteam_type == "home", home_coach, away_coach),
+         home_coach = coach,
+         score_diff = posteam_score - defteam_score,
+         go = if_else(go == 100, 1, 0),
+         game_half = if_else(game_half == "Half1", 1, 2)) %>%
+  select(-coach,
+         -away_coach,
+         -season,
+         -posteam,
+         -defteam,
+         -posteam_type,
+         -epa) %>%
+  rename(coach = home_coach) %>%
+  select(-go, everything())
+```
+
+```{python}
+import json
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import silhouette_samples, silhouette_score
+from sklearn.decomposition import PCA
+```
+
+```{python}
+X = pd.read_csv("PCA.csv")
+X = X.drop("coach", axis = 1)
+X = X.drop("punt_wp", axis = 1)
+
+pca = PCA(n_components = 2).fit(X)
+Xp = pca.transform(X)
+Xp_df = pd.DataFrame(Xp, columns = ['x', 'y'])
+
+
+custom_ticks_x = [-900,-450,0,450,900]
+custom_ticks_y = [-60,-30,0,30,60]
+
+pca_scatter = sns.scatterplot(data=Xp_df, x="x", y="y", color='black')
+pca_scatter.set_xticks(custom_ticks_x)
+pca_scatter.set_yticks(custom_ticks_y)
+pca_scatter.set_xlabel("First Principal Component")
+pca_scatter.set_ylabel("Second Principal Component")
+plt.axhline(0, color='black', alpha=0.5)
+plt.axvline(0, color='black', alpha=0.5)
+sns.rugplot(data=Xp_df, x="x", y="y", color='black')
+plt.tight_layout()
+plt.show()
+```

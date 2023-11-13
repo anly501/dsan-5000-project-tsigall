@@ -54,8 +54,6 @@ leverage <- fourth_downs %>%
   filter(abs(wp_change) > .2,
          wp_succeed > .95,
          qtr == 4)
-
-kable(head(leverage, 10))
 ```
 
 Let's visualize this data and make it easier to look through using a familiar plot structure.
