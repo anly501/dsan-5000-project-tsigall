@@ -85,6 +85,7 @@ metrics
 ```
 
 ## Most Frequent Label
+
 ```{python}
 most_frequent_label = int(belichick['go'].mode())
 belichick['frequent'] = most_frequent_label
@@ -94,7 +95,6 @@ metrics = pd.DataFrame({"Metric" : ["F1 Score", "Accuracy Score"],
   "Random Guessing" : [f1_random, accuracy_random]})
 metrics
 ```
-
 
 # Train and Test Model
 
@@ -222,6 +222,7 @@ merit_score_numer = k * np.absolute(mean_xy_corr)
 merit_score_denom = np.sqrt(k + k * (k + 1) * np.absolute(mean_xx_corr))
 merit_score_s2 = merit_score_numer / merit_score_denom
 ```
+
 ```{python}
 def compute_mean_xx_corr(x_df):
   df_colnames = x_df.columns
@@ -281,6 +282,7 @@ print(f"Merit score (S'_5): {merit_score_sp5}")
 ```
 
 ### Evaluate New Model
+
 ```{python}
 coach = "Ron Rivera"
 
@@ -304,7 +306,6 @@ accuracy_gaussianNB = accuracy_score(y_true = y_test, y_pred = test_predictions)
 print(f"Feature Selection Model F1: {fs_clf_f1}")
 print(f"Accuracy: {accuracy_gaussianNB}")
 ```
-
 
 # Compare Coaches
 

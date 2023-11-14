@@ -3,30 +3,45 @@ title: "Dimensionality Reduction"
 bibliography: reference.bib
 ---
 
-```{r setup}
+```{r setup, include = FALSE}
 library(tidyverse)
 library(plotly)
-load("raw_nfl.Rdata")
-load("high_leverage_data.Rdata")
+library(reticulate)
+library(gridExtra)
+knitr::opts_chunk$set(echo = FALSE)
 ```
+
+```{r include = FALSE}
+load("raw_nfl.Rdata")
+```
+
+# Principal Component Analysis
 
 ```{r}
 df <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
     select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
-df <- leverage %>%
-  mutate(score_diff = posteam_score - defteam_score,
-         go = if_else(go == 100, 1, 0)) %>%
+df <- df %>%
+  mutate(coach = if_else(posteam_type == "home", home_coach, away_coach),
+         home_coach = coach,
+         score_diff = posteam_score - defteam_score,
+         go = if_else(go == 100, 1, 0),
+         game_half = if_else(game_half == "Half1", 1, 2)) %>%
   select(-coach,
+         -away_coach,
          -season,
          -posteam,
          -defteam,
-         -epa) %>%
+         -posteam_type,
+         -epa,
+         -punt_wp,
+         -posteam_score,
+         -defteam_score) %>%
+  rename(coach = home_coach) %>%
   select(-go, everything())
-write.csv(df, "PCA.csv")
 ```
 
-```{python}
+```{python echo = TRUE}
 import json
 import pandas as pd
 import numpy as np
@@ -37,38 +52,170 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 ```
 
-```{python}
-X = pd.read_csv("PCA.csv")
-to_drop = ["qtr", "Unnamed: 0", "punt_wp", "posteam_score", "defteam_score"]
+```{python, echo = TRUE}
+X = r.df
+to_drop = ["coach", "go"]
 X = X.drop(to_drop, axis = 1)
-
-def convert_time_to_seconds(time_str):
-    minutes, seconds = map(int, time_str.split(':'))
-    total_seconds = minutes * 60 + seconds
-    return total_seconds
-
-X['time'] = X['time'].apply(convert_time_to_seconds)
+Y = r.df["go"]
 
 scaler = StandardScaler()
-X = scaler.fit_transform(X[['time', 'ydstogo', 'yardline_100', 'go_boost', 'wp', 'wp_fail', 'wp_succeed', 'wp_change', 'fg_make_prob', 'miss_fg_wp', 'make_fg_wp', 'score_diff', 'go']])
+X = scaler.fit_transform(X)
 
-pca = PCA(n_components = 2).fit(X)
-Xp = pca.transform(X)
-Xp_df = pd.DataFrame(Xp, columns = ['x', 'y'])
+pca = PCA(n_components = 5).fit(X)
+variance_ratios = pca.explained_variance_ratio_
+```
 
-
-custom_ticks_x = [-900,-450,0,450,900]
-custom_ticks_y = [-60,-30,0,30,60]
-
-pca_scatter = sns.scatterplot(data=Xp_df, x="x", y="y", color='black')
-
-pca_scatter.set_xticks(custom_ticks_x)
-pca_scatter.set_yticks(custom_ticks_y)
-pca_scatter.set_xlabel("First Principal Component")
-pca_scatter.set_ylabel("Second Principal Component")
-plt.axhline(0, color='black', alpha=0.5)
-plt.axvline(0, color='black', alpha=0.5)
-sns.rugplot(data=Xp_df, x="x", y="y", color='black')
-plt.tight_layout()
+```{python}
+plt.cla()
+plt.plot(range(1, len(variance_ratios) + 1), variance_ratios, marker='o')
+plt.xlabel("Principal Component")
+plt.ylabel("Prop. Variance Explained")
 plt.show()
 ```
+
+The optimal number of principal components to keep is 2, looking at where the "elbow" is on this graph of the proporition variance explained by each principal component.
+
+```{python}
+pca = PCA(n_components =  2).fit(X)
+Xp = pca.transform(X)
+Xp_df = pd.DataFrame(Xp, columns = ['x', 'y'])
+```
+
+```{r}
+ggplot(data = py$Xp_df, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "First Principal Component", y = "Second Principal Component") +
+  geom_abline(intercept = 1, slope = 0.3, color = "black", linewidth = 1.5) + 
+  theme_minimal()
+```
+
+When graphing the first and second principal components and coloring each based on whether the coach attempted a conversion on the play (0 being no and 1 being yes), we can see some clustering take place. There is a clear main group of points with most of the green points being in the upper left portion of the cluster, and the red points being in the bottom right. There are more red than green points, which makes sense as there are more 4th down plays where coaches did not go for it than ones where they did. There are also some outliers where points increase in the y-direction up to 8. From this analysis, it is worth looking at those outliers to see why they are so far up there, as well as the points that are on the edge of the border between red and green points. I have drawn an approximate line on the graph for demonstration purposes, just to show the area that I think is worth looking at.
+
+# t-SNE
+
+```{python echo = TRUE}
+from sklearn.manifold import TSNE
+```
+
+```{python}
+# X_5 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=5, n_iter=300).fit_transform(X)
+# X5_df = pd.DataFrame(X_5, columns = ['x', 'y'])
+# 
+# X_10 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=10, n_iter=300).fit_transform(X)
+# X10_df = pd.DataFrame(X_10, columns = ['x', 'y'])
+# 
+# X_20 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=20, n_iter=300).fit_transform(X)
+# X20_df = pd.DataFrame(X_20, columns = ['x', 'y'])
+# 
+# X_30 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=30, n_iter=300).fit_transform(X)
+# X30_df = pd.DataFrame(X_30, columns = ['x', 'y'])
+# 
+# X_40 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=40, n_iter=300).fit_transform(X)
+# X40_df = pd.DataFrame(X_40, columns = ['x', 'y'])
+# 
+# X_50 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=50, n_iter=300).fit_transform(X)
+# X50_df = pd.DataFrame(X_50, columns = ['x', 'y'])
+```
+
+```{r}
+load("tsne.Rdata")
+```
+
+```{r}
+p5 <- ggplot(data = X5, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  ggtitle("Perplexity = 5")
+
+p10 <- ggplot(data = X10, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  ggtitle("Perplexity = 10")
+
+p20 <- ggplot(data = X20, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  ggtitle("Perplexity = 20")
+
+p30 <- ggplot(data = X30, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  ggtitle("Perplexity = 30")
+
+p40 <- ggplot(data = X40, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  ggtitle("Perplexity = 40")
+
+p50 <- ggplot(data = X50, aes(x = x, y = y, color = factor(py$Y))) +
+  geom_point(size = 0.5) +
+  scale_color_manual(values = c("red", "darkgreen"), 
+                     name = "Conversion Attempted",
+                     labels = c("No", "Yes")) +
+  labs(x = "x", y = "y") +
+  theme_minimal() +
+  ggtitle("Perplexity = 50")
+```
+
+::: panel-tabset
+## Perplexity = 5
+
+```{r}
+p5
+```
+
+## Perplexity = 10
+
+```{r}
+p10
+```
+
+## Perplexity = 20
+
+```{r}
+p20
+```
+
+## Perplexity = 30
+
+```{r}
+p30
+```
+
+## Perplexity = 40
+
+```{r}
+p40
+```
+
+## Perplexity = 50
+
+```{r}
+p50
+```
+:::
+
+Perplexity levels 20 and 30 seem to do the best job at reducing the dimensions so that similar points are grouped together, as there are clearer areas of green within the larger areas of red. However, going forward I would prefer to use PCA as my chosen method of dimensionality reduction due to the clearer distinction drawn between the two types of points. PCA seems to preserve data structure and information better than t-SNE because of this difference. The visualization capabilities are similar between the two, though it was easier to make a distinction between points in this case, as I only have two categories of points I am looking at. This may be a place that PCA outperforms t-SNE, as there are only two types of points. If there were multiple scenarios being looked at, then t-SNE may perform better. This is worth keeping in mind going forward as there are instances where there are many categories of points that could be looked at.
