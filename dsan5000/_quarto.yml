@@ -25,7 +25,7 @@ website:
         - feature_text.qmd
       - coach_clustering.qmd
       - dimensionality_reduction.qmd
-      - decision_trees.qmd
+      - decision_trees.ipynb
       - arm.qmd
       - conclusions.qmd
       - about.qmd

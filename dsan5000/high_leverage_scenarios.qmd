@@ -21,7 +21,7 @@ library(RColorBrewer)
 library(scales)
 options(digits = 3)
 
-load("clean_data.Rdata")
+load("data/clean_data.Rdata")
 ```
 
 Filtering all 4th down decisions by ones that have a difference of at least 20% in resultant win probability base simply on whether the coach decides to go for it or not gives us a good look at those high leverage situations. Filtering the data further by only including situations in which if the coach goes for it and succeeds, then they are almost guaranteed to win the game (wp_succeed \> 0.95)
@@ -110,5 +110,5 @@ It would absolutely be unfair to place all of the blame for the loss on this one
 Taking option 1 in this situation resulted in a 10.65% increase in win probability *regardless* of the outcome (success or failure in the attempt). This should be a clear-cut decision with that kind of increase in win probability. Why is it such a hard decision then? My initial thoughts say that this is the case becasue it is such a big risk to take, as attempting it and failing puts your opponent in a much better position. Just punt it away, take the safe play and make your opponent go win the game, rather than go for it and fail and have loss be on your shoulders. As I said earlier, it is a lot easier to stomach a loss that is the result of conservative decision making than one that is the result of risky decision making.
 
 ```{r save_data, include=FALSE}
-save(leverage, file = "high_leverage_data.Rdata")
+save(leverage, file = "data/high_leverage_data.Rdata")
 ```

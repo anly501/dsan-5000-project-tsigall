@@ -16,7 +16,7 @@ As we are looking at coach decision making, could we develop a model to effectiv
 ## Prepare Data
 
 ```{r load_data, echo = FALSE}
-load("raw_nfl.Rdata")
+load("data/raw_nfl.Rdata")
 df <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
     select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
@@ -70,7 +70,7 @@ pd.set_option('display.float_format', '{:.3f}'.format)
 
 ```{python set_seed, include = FALSE}
 rng = np.random.default_rng(621)
-df = pd.read_csv("df.csv")
+df = pd.read_csv("data/df.csv")
 belichick = df[df['coach'] == 'Bill Belichick']
 belichick = belichick.drop(columns =['coach', 'punt_wp'])
 belichick['random_guess'] = rng.choice([0,1], len(belichick))

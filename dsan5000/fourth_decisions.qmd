@@ -21,7 +21,7 @@ options(scipen = 999)
 ```
 
 ```{r load_data, include = FALSE}
-load("clean_data.Rdata")
+load("data/clean_data.Rdata")
 ```
 
 We will initially explore the data in a similar manner to the method seen in David Romer's paper [@romer2006]. In his evaluation of fourth down decisions, he followed a four step process. First, he estimated the value of kicking (not going for it). Second, he estimated the value of going for it. Third, he figured out which decision was better. Finally, he compared this to the actual decisions made by coaches.

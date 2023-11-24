@@ -1,0 +1,41 @@
+{
+  "clustering.qmd": {
+    "clustering.html": "5cb8b1c4"
+  },
+  "high_leverage_scenarios.qmd": {
+    "high_leverage_scenarios.html": "6fac8f9a"
+  },
+  "dimensionality_reduction.qmd": {
+    "dimensionality_reduction.html": "b90b3ba6"
+  },
+  "data_gathering.qmd": {
+    "data_gathering.html": "d5154815"
+  },
+  "code.qmd": {
+    "code.html": "672cc3c8"
+  },
+  "decision_trees.qmd": {
+    "decision_trees.html": "0c0c43df"
+  },
+  "fourth_decisions.qmd": {
+    "fourth_decisions.html": "1223783d"
+  },
+  "arm.qmd": {
+    "arm.html": "ec46f6c4"
+  },
+  "index.qmd": {
+    "index.html": "50fde5b7"
+  },
+  "about.qmd": {
+    "about.html": "6b8b4a12"
+  },
+  "feature_text.qmd": {
+    "feature_text.html": "f2e5f07b"
+  },
+  "extra/non-quarto-website-example/pages/markdown-cheatsheet/cheatsheet.md": {
+    "cheatsheet.html": "19ece84b"
+  },
+  "effect_on_coach_success.qmd": {
+    "effect_on_coach_success.html": "77885a91"
+  }
+}

@@ -38,7 +38,7 @@ Agglomerative clustering is a hierarchical clustering algorithm that initially t
 We want to select the features to be used during this process, lets try just using two features to start with: `should_go` and `shouldnt_go` from our earlier cleaning process. Lets also group by coach alone and not by coach and season to make it easier to interpret the final output.
 
 ```{r clean_data}
-load("clean_data.Rdata")
+load("data/clean_data.Rdata")
 
 fourth_by_coach <- fourth_decisions %>% 
   group_by(coach) %>%
@@ -58,7 +58,7 @@ plot_ly(data = fourth_by_coach, x = ~should_go, y = ~shouldnt_go, type = "scatte
 Obvious clusters have not formed from this, but we will still proceed with the unsupervised learning task.
 
 ```{r to_csv, include = FALSE}
-write_csv(fourth_by_coach, file = "fourth_by_coach.csv")
+write_csv(fourth_by_coach, file = "data/fourth_by_coach.csv")
 ```
 
 ### Imports
@@ -76,7 +76,7 @@ np.random.seed(621)
 ```
 
 ```{python read_data, include = FALSE}
-df = pd.read_csv("fourth_by_coach.csv")
+df = pd.read_csv("data/fourth_by_coach.csv")
 scaler = StandardScaler()
 X = scaler.fit_transform(df[["should_go", "shouldnt_go"]])
 ```

@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r include = FALSE}
-load("raw_nfl.Rdata")
+load("data/raw_nfl.Rdata")
 ```
 
 # Principal Component Analysis
@@ -40,7 +40,7 @@ df <- df %>%
   rename(coach = home_coach) %>%
   select(-go, everything())
 
-write.csv(df, "df.csv")
+write.csv(df, "data/df.csv")
 ```
 
 ```{python echo = TRUE}
@@ -123,7 +123,7 @@ from sklearn.manifold import TSNE
 ```
 
 ```{r}
-load("tsne.Rdata")
+load("data/tsne.Rdata")
 ```
 
 ```{r}

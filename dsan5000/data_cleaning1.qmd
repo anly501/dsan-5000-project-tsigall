@@ -19,7 +19,7 @@ options(scipen = 999)
 ```
 
 ```{r load_data, include = FALSE}
-load("raw_nfl.Rdata")
+load("data/raw_nfl.Rdata")
 ```
 
 We start with the raw 4th down data from the nflverse package. The first six rows and eight columns can be seen here.
@@ -123,5 +123,5 @@ head(fourth_position)
 This table shows us the percentage of times a coach chose to go for it in the given situation. The first row, for example, shows that 80% of the time a coach decided to go for it when they were at 4th and 1 at the 1 yard line - they were 1 yard away from scoring. It also shows is the average increase in win probability if a coach were to go for it. For example, at 4th and 1 at the 1 yard line, going for it increases your win probability by an average of 5%, an incredibly large number.
 
 ```{r save_data, include = FALSE}
-save(fourth_decisions, fourth_downs, fourth_position, file = "clean_data.Rdata")
+save(fourth_decisions, fourth_downs, fourth_position, file = "data/clean_data.Rdata")
 ```

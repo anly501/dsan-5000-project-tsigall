@@ -12,7 +12,7 @@ library(tidyverse)
 # Decision Trees
 
 ```{r}
-load("raw_nfl.Rdata")
+load("data/raw_nfl.Rdata")
 df <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
     select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
@@ -34,9 +34,8 @@ df <- df %>%
          -defteam_score) %>%
   rename(coach = home_coach) %>%
   select(-go, everything())
-write.csv(df, "df.csv")
+write.csv(df, "data/dt.csv")
 ```
-
 
 ```{r}
 library(rpart)
@@ -44,4 +43,3 @@ library(rattle)
 tree <- rpart(go~., df[,2:14], method = "class")
 fancyRpartPlot(tree)
 ```
-
