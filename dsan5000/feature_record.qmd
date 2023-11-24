@@ -36,7 +36,7 @@ df <- df %>%
   rename(coach = home_coach) %>%
   select(-go, everything())
 kable(head(df))
-write_csv(df, file = "df.csv")
+write_csv(df, file = "data/df.csv")
 ```
 
 Features for this model include: game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, go_boost, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp.

@@ -17,7 +17,7 @@ options(scipen = 999, digits = 3)
 ```
 
 ```{r}
-df <- read.csv("df.csv")[,-1]
+df <- read.csv("data/dt.csv")[,-1]
 ```
 
 # Make Tree Function
@@ -170,11 +170,9 @@ campbell <- df %>%
 campbell_tree <- make_tree(campbell[,c(2, 3, 4, 5, 13, 14)], "Dan Campbell")
 ```
 
-
 ```{r cpu}
 cpu <- df2 %>% 
   mutate(go = if_else(go_boost > 1, 1, 0))
 cpu1 <- cpu[,c(1, 2, 3, 4, 12, 13)]
 cpu_tree <- make_tree(cpu1)
 ```
-
