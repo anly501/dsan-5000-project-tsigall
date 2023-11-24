@@ -344,6 +344,5 @@ stefanski_model = train_coach_model("Kevin Stefanski")
 
 compare_coaches = compare_coaches.T.iloc[1:]
 compare_coaches.rename(columns = dict(zip(compare_coaches.columns, feature_matrix.columns.to_list())), inplace = True)
-compare_coaches.style.set_table_styles([{'selector': '', 'props': [('border', '2px solid black')]}])
 
 ```

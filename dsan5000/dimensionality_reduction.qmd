@@ -39,6 +39,8 @@ df <- df %>%
          -defteam_score) %>%
   rename(coach = home_coach) %>%
   select(-go, everything())
+
+write.csv(df, "df.csv")
 ```
 
 ```{python echo = TRUE}

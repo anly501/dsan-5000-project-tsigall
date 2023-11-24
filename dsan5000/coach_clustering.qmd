@@ -25,11 +25,11 @@ K-Means clustering is a centroid based clustering algorithm that aims to categor
 
 ## DBSCAN
 
-DBSCAN is a density based clustering algorithm that groups points together based on how close they are to their neighbors. Core points are determined, those being ones that have a certain amount of points close by. Other observations are assigned to the same cluster as those core points if they are within a certain distance of that point. The process repeats until stationary. As a result, outliers belong their own clusters as they are not close to any other points. 
+DBSCAN is a density based clustering algorithm that groups points together based on how close they are to their neighbors. Core points are determined, those being ones that have a certain amount of points close by. Other observations are assigned to the same cluster as those core points if they are within a certain distance of that point. The process repeats until stationary. As a result, outliers belong their own clusters as they are not close to any other points.
 
 ## Agglomerative
 
-Agglomerative clustering is a hierarchical clustering algorithm that initially treats each point as its own cluster. The distance between each observation is calculated, and the two closest points are determined to be a cluster. They are merged and the distance matrix is updated with one less cluster (as two clusters (points) were just merged). The two closest clusters are then determined and merged, and this repeats until some stopping criterion is met.  
+Agglomerative clustering is a hierarchical clustering algorithm that initially treats each point as its own cluster. The distance between each observation is calculated, and the two closest points are determined to be a cluster. They are merged and the distance matrix is updated with one less cluster (as two clusters (points) were just merged). The two closest clusters are then determined and merged, and this repeats until some stopping criterion is met.
 
 # Methods
 
@@ -61,8 +61,8 @@ Obvious clusters have not formed from this, but we will still proceed with the u
 write_csv(fourth_by_coach, file = "fourth_by_coach.csv")
 ```
 
-
 ### Imports
+
 ```{python imports}
 import pandas as pd
 import numpy as np
@@ -114,9 +114,7 @@ plt.show()
 
 Using the elbow method, the correct number of clusters here seems to be about 3, we will try 2, 3, and 4.
 
-
 ::: panel-tabset
-
 ### 2 Clusters
 
 ```{python plot_clusters2, messages = FALSE}
@@ -141,7 +139,6 @@ labels = KMeans(n_clusters = 4, n_init = 10).fit(X).labels_
 
 plot(X, labels)
 ```
-
 :::
 
 I like 4 clusters the best as we are looking at 2 features here, we can form "quadrants" of sorts. Lets apply the labels to the points and see which coaches fell into which categories.
@@ -168,11 +165,11 @@ sns.lineplot(data = DBSCAN_X, x = "eps", y = "Silhouette")
 plt.show()
 ```
 
-It looks like the silhouette score is best when the eps is 1.2. Past that there is little to no increase. 
+It looks like the silhouette score is best when the eps is 1.2. Past that there is little to no increase.
 
 ::: panel-tabset
-
 ### eps = 0.8
+
 ```{python}
 np.random.seed(621)
 labels = DBSCAN(eps = 0.8).fit(X).labels_
@@ -181,6 +178,7 @@ plot(X, labels)
 ```
 
 ### eps = 1.0
+
 ```{python}
 np.random.seed(621)
 labels = DBSCAN(eps = 1.0).fit(X).labels_
@@ -189,13 +187,13 @@ plot(X, labels)
 ```
 
 ### eps = 1.2
+
 ```{python}
 np.random.seed(621)
 labels = DBSCAN(eps = 1.2).fit(X).labels_
 
 plot(X, labels)
 ```
-
 :::
 
 ## Agglomerative
@@ -221,7 +219,6 @@ plt.show()
 The best number of clusters looks to be around 8, we will try 4, 8, and 12.
 
 ::: panel-tabset
-
 ### 4 Clusters
 
 ```{python, messages = FALSE}
@@ -247,13 +244,12 @@ labels = AgglomerativeClustering(n_clusters = 12).fit(X).labels_
 plot(X, labels)
 ```
 
-8 and 12 seem to be too many clusters, and 4 looks very similar to the result from K-Means clustering so we will continue using that result. 
-
+8 and 12 seem to be too many clusters, and 4 looks very similar to the result from K-Means clustering so we will continue using that result.
 :::
 
 # Labelling Coaches
 
-The four categories I am using to describe coaches here are "Passive", "Aggresive", "Impulsive", and "Strategic". This can be seen on the plot below. Passive coaches tend to not go for it when they should not be going for it, but also they fail to go for it when they should. Aggresive coaches are the opposite, they usually go for it in both good and bad situations. Implusive coaches do not go for it when they should and do go for it when they should not. Strategic coaches are the opposite, usually making good decisions in all scenarios. This gives us an interesting way to compare coaches and start to create "archetypes" of different coaches based on their behavior in these situations. 
+The four categories I am using to describe coaches here are "Passive", "Aggresive", "Impulsive", and "Strategic". This can be seen on the plot below. Passive coaches tend to not go for it when they should not be going for it, but also they fail to go for it when they should. Aggresive coaches are the opposite, they usually go for it in both good and bad situations. Implusive coaches do not go for it when they should and do go for it when they should not. Strategic coaches are the opposite, usually making good decisions in all scenarios. This gives us an interesting way to compare coaches and start to create "archetypes" of different coaches based on their behavior in these situations.
 
 ```{python add_labels, include = FALSE}
 np.random.seed(621)

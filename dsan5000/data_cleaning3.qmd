@@ -1,0 +1,47 @@
+---
+title: "Cleaning Data"
+bibliography: reference.bib
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup ,include = FALSE}
+library(tidyverse)
+```
+
+# Decision Trees
+
+```{r}
+load("raw_nfl.Rdata")
+df <- raw_data %>%
+    filter(!is.na(go_boost) & !is.na(go)) %>%
+    select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
+df <- df %>%
+  mutate(coach = if_else(posteam_type == "home", home_coach, away_coach),
+         home_coach = coach,
+         score_diff = posteam_score - defteam_score,
+         go = if_else(go == 100, 1, 0),
+         game_half = if_else(game_half == "Half1", 1, 2)) %>%
+  select(-coach,
+         -away_coach,
+         -season,
+         -posteam,
+         -defteam,
+         -posteam_type,
+         -epa,
+         -punt_wp,
+         -posteam_score,
+         -defteam_score) %>%
+  rename(coach = home_coach) %>%
+  select(-go, everything())
+write.csv(df, "df.csv")
+```
+
+
+```{r}
+library(rpart)
+library(rattle)
+tree <- rpart(go~., df[,2:14], method = "class")
+fancyRpartPlot(tree)
+```
+

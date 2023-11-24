@@ -1,0 +1,2506 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="1922.4" height="238.4" viewBox="0.0 0.0 1922.4 238.4">
+<g id="graph0" class="graph" transform="scale(0.8 0.8) rotate(0) translate(4 294)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-294 2399,-294 2399,4 -4,4" />
+<g id="clust32" class="cluster">
+<title>cluster_legend</title>
+</g>
+
+<g id="node1" class="node">
+<title>node4</title>
+<text text-anchor="start" x="0" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">score_diff@-14.50</text>
+</g>
+
+<g id="node2" class="node">
+<title>node7</title>
+<text text-anchor="start" x="112" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@51.50</text>
+</g>
+
+
+<g id="node32" class="node">
+<title>leaf5</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="23,-59.5 1,-59.5 1,-23.5 23,-23.5 23,-59.5" />
+<svg width="14px" height="28px" viewBox="0 0 19.095985 37.609774" version="1.1" preserveAspectRatio="xMinYMin meet" x="5" y="-55.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.070417</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 37.609774  L 19.095985 37.609774  L 19.095985 0  L -0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 19.095985 9.547966  C 19.095985 7.659776 18.535879 5.813354 17.486857 4.243381  C 16.437835 2.673408 14.946307 1.449343 13.201847 0.726764  C 11.457387 0.004185 9.537172 -0.18494 7.685263 0.183428  C 5.833354 0.551795 4.131682 1.461358 2.79653 2.79651  L 9.547985 9.547966  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 2.79653 2.79651  C 1.68631 3.90673 0.866892 5.273847 0.411119 6.776327  C -0.044653 8.278808 -0.122861 9.870769 0.183448 11.410688  C 0.489757 12.950607 1.171228 14.391458 2.167282 15.605153  C 3.163335 16.818847 4.443552 17.768321 5.894124 18.369167  C 7.344696 18.970014 8.921326 19.203885 10.483853 19.049989  C 12.046381 18.896094 13.54709 18.359131 14.85257 17.486837  C 16.15805 16.614543 17.228435 15.433555 17.96857 14.048862  C 18.708704 12.664168 19.095985 11.118053 19.095985 9.547966  L 9.547985 9.547966  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(1.91486 26.301837) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-38" x="114.013672" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(7.045564 35.821024) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge1" class="edge">
+<title>node4-&gt;leaf5</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M45.59,-99.69C40.75,-91.44 31.64,-75.94 24.13,-63.16" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="25.29,-62.37 22.06,-59.63 22.88,-63.79 25.29,-62.37" />
+</g>
+
+<g id="node33" class="node">
+<title>leaf6</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="67,-63.5 37,-63.5 37,-19.5 67,-19.5 67,-63.5" />
+<svg width="22px" height="36px" viewBox="0 0 30.183962 49.14132" version="1.1" preserveAspectRatio="xMinYMin meet" x="41" y="-59.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.090705</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 49.14132  L 30.183962 49.14132  L 30.183962 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 30.183962 15.091991  C 30.183962 12.285262 29.400992 9.533406 27.923439 7.147076  C 26.445887 4.760747 24.331526 2.833253 21.819045 1.582186  C 19.306564 0.33112 16.494204 -0.194602 13.699447 0.064371  C 10.904691 0.323343 8.236818 1.356883 5.997 3.048315  C 3.757181 4.739748 2.032998 7.022936 1.019091 9.640133  C 0.005184 12.25733 -0.258803 15.106201 0.256932 17.86514  C 0.772668 20.624079 2.047959 23.185209 3.938841 25.259407  C 5.829722 27.333604 8.262258 28.839766 10.961842 29.607864  L 15.091962 15.091991  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 10.961842 29.607864  C 13.207174 30.246716 15.570412 30.355974 17.865112 29.92702  C 20.159811 29.498066 22.323996 28.542485 24.186926 27.135665  C 26.049855 25.728846 27.561215 23.908784 28.601768 21.819072  C 29.64232 19.729359 30.183963 17.426436 30.183962 15.091988  L 15.091962 15.091991  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(4.956415 37.833382) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-37" d="M 303 3981  L 303 4522  L 3269 4522  L 3269 4084  Q 2831 3619 2401 2847  Q 1972 2075 1738 1259  Q 1569 684 1522 0  L 944 0  Q 953 541 1156 1306  Q 1359 2072 1739 2783  Q 2119 3494 2547 3981  L 303 3981  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-37" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(12.58954 47.35257) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge2" class="edge">
+<title>node4-&gt;leaf6</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M49.28,-99.69C49.62,-92.42 50.24,-79.5 50.8,-67.77" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="52.21,-67.58 51,-63.52 49.41,-67.45 52.21,-67.58" />
+</g>
+
+<g id="node34" class="node">
+<title>leaf8</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="160,-83 92,-83 92,0 160,0 160,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079994 101.033169" version="1.1" preserveAspectRatio="xMinYMin meet" x="96" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.113947</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033169  L 80.079994 101.033169  L 80.079994 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079994 40.04  C 80.079994 36.59701 79.635907 33.168356 78.758734 29.83898  C 77.881561 26.509604 76.578607 23.30723 74.882151 20.311197  L 40.039994 40.04  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 74.882151 20.311197  C 72.505022 16.113054 69.388591 12.378896 65.683406 9.289113  C 61.978222 6.19933 57.744924 3.80449 53.188014 2.22028  C 48.631104 0.636071 43.82516 -0.111579 39.002348 0.013447  C 34.179536 0.138474 29.418786 1.13413 24.950079 2.952319  C 20.481373 4.770508 16.377845 7.381472 12.837729 10.659082  C 9.297612 13.936691 6.378846 17.827305 4.222427 22.142975  C 2.066009 26.458645 0.707232 31.128741 0.211734 35.927661  C -0.283763 40.726581 0.09213 45.575785 1.321254 50.241018  C 2.550378 54.906252 4.612617 59.311163 7.40835 63.24296  C 10.204082 67.174758 13.687552 70.569093 17.69048 73.261993  C 21.693409 75.954893 26.150284 77.902286 30.845803 79.010097  C 35.541323 80.117908 40.398639 80.368006 45.183107 79.748311  C 49.967574 79.128616 54.600889 77.649269 58.859225 75.381733  C 63.117562 73.114198 66.931229 70.095586 70.115995 66.471719  C 73.300762 62.847852 75.804505 58.678039 77.506276 54.163714  C 79.208047 49.64939 80.079994 44.864436 80.079994 40.040004  L 40.039994 40.04  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402025 89.725231) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-35" x="114.013672" />
+     <use xlink:href="#ArialMT-30" x="169.628906" />
+     <use xlink:href="#ArialMT-30" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537572 99.244419) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge4" class="edge">
+<title>node7-&gt;leaf8</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M164.12,-99.69C161.88,-96.32 158.83,-91.74 155.42,-86.64" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="156.4,-85.57 153.01,-83.02 154.07,-87.13 156.4,-85.57" />
+</g>
+
+<g id="node35" class="node">
+<title>leaf9</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="242,-83 174,-83 174,0 242,0 242,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079881 101.033126" version="1.1" preserveAspectRatio="xMinYMin meet" x="178" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.134836</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033126  L 80.079881 101.033126  L 80.079881 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079881 40.039957  C 80.079881 33.937054 78.684573 27.914166 76.000914 22.43298  C 73.317256 16.951793 69.415618 12.156036 64.595082 8.413328  C 59.774547 4.670621 54.161517 2.079104 48.186261 0.837431  C 42.211006 -0.404242 36.030208 -0.263511 30.117659 1.248836  L 40.039881 40.039957  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 30.117659 1.248836  C 22.85938 3.105401 16.265831 6.962388 11.090179 12.379221  C 5.914526 17.796054 2.361639 24.558319 0.837354 31.893577  C -0.68693 39.228835 -0.122276 46.846735 2.466818 53.877101  C 5.055912 60.907468 9.566961 67.072017 15.484679 71.666587  C 21.402397 76.261156 28.492542 79.10388 35.945223 79.870039  C 43.397905 80.636198 50.918122 79.295466 57.646859 76.000991  C 64.375595 72.706516 70.046506 67.588705 74.011818 61.232152  C 77.977129 54.875599 80.079881 47.531917 80.079881 40.039957  L 40.039881 40.039957  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(29.904334 89.725189) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-36" d="M 3184 3459  L 2625 3416  Q 2550 3747 2413 3897  Q 2184 4138 1850 4138  Q 1581 4138 1378 3988  Q 1113 3794 959 3422  Q 806 3050 800 2363  Q 1003 2672 1297 2822  Q 1591 2972 1913 2972  Q 2475 2972 2870 2558  Q 3266 2144 3266 1488  Q 3266 1056 3080 686  Q 2894 316 2569 119  Q 2244 -78 1831 -78  Q 1128 -78 684 439  Q 241 956 241 2144  Q 241 3472 731 4075  Q 1159 4600 1884 4600  Q 2425 4600 2770 4297  Q 3116 3994 3184 3459  z M 888 1484  Q 888 1194 1011 928  Q 1134 663 1356 523  Q 1578 384 1822 384  Q 2178 384 2434 671  Q 2691 959 2691 1453  Q 2691 1928 2437 2201  Q 2184 2475 1800 2475  Q 1419 2475 1153 2201  Q 888 1928 888 1484  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-36" x="114.013672" />
+     <use xlink:href="#ArialMT-39" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537459 99.244376) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge5" class="edge">
+<title>node7-&gt;leaf9</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M171.69,-99.69C173.83,-96.32 176.73,-91.74 179.98,-86.64" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="181.31,-87.15 182.27,-83.02 178.95,-85.65 181.31,-87.15" />
+</g>
+
+<g id="node3" class="node">
+<title>node3</title>
+<text text-anchor="start" x="100" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@32.50</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>node3-&gt;node4</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M159.74,-129.97C136.87,-125.33 104.2,-118.7 80.27,-113.84" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="80.41,-112.44 76.21,-113.02 79.85,-115.19 80.41,-112.44" />
+</g>
+
+<g id="edge8" class="edge">
+<title>node3-&gt;node7</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M183.16,-129.83C180.58,-126.04 177.13,-120.96 174.18,-116.6" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="175.24,-115.68 171.84,-113.16 172.93,-117.25 175.24,-115.68" />
+</g>
+
+<g id="node6" class="node">
+<title>node10</title>
+<text text-anchor="start" x="306" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@50.50</text>
+</g>
+
+
+<g id="node4" class="node">
+<title>node11</title>
+<text text-anchor="start" x="231.5" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@778.00</text>
+</g>
+
+<g id="node5" class="node">
+<title>node14</title>
+<text text-anchor="start" x="426" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">score_diff@0.50</text>
+</g>
+
+
+<g id="node36" class="node">
+<title>leaf12</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="326,-83 258,-83 258,0 326,0 326,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079957 101.032874" version="1.1" preserveAspectRatio="xMinYMin meet" x="262" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.154910</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.032874  L 80.079957 101.032874  L 80.079957 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079957 40.039706  C 80.079957 31.630605 77.43087 23.431448 72.510649 16.612034  C 67.590428 9.792621 60.644752 4.693461 52.664584 2.042069  C 44.684415 -0.609324 36.068223 -0.680558 28.045307 1.838528  C 20.022391 4.357615 12.993356 9.341238 7.961056 16.078369  L 40.039957 40.039706  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 7.961056 16.078369  C 4.166503 21.158431 1.632398 27.067943 0.568061 33.318771  C -0.496276 39.569599 -0.060711 45.984761 1.83878 52.034356  C 3.738271 58.083951 7.047905 63.596695 11.494303 68.117227  C 15.940701 72.637759 21.397969 76.038088 27.415331 78.037343  C 33.432693 80.036597 39.839777 80.578171 46.107348 79.61733  C 52.374919 78.656489 58.325522 76.220438 63.467629 72.510397  C 68.609736 68.800357 72.797756 63.92137 75.685754 58.276449  C 78.573751 52.631528 80.079957 46.380499 80.079957 40.039706  L 40.039957 40.039706  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.401989 89.724937) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+      <path id="ArialMT-37" d="M 303 3981  L 303 4522  L 3269 4522  L 3269 4084  Q 2831 3619 2401 2847  Q 1972 2075 1738 1259  Q 1569 684 1522 0  L 944 0  Q 953 541 1156 1306  Q 1359 2072 1739 2783  Q 2119 3494 2547 3981  L 303 3981  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-34" x="114.013672" />
+     <use xlink:href="#ArialMT-37" x="169.628906" />
+     <use xlink:href="#ArialMT-35" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537536 99.244124) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge10" class="edge">
+<title>node11-&gt;leaf12</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M319.23,-99.69C317.63,-96.32 315.45,-91.74 313.02,-86.64" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="314.28,-86.03 311.3,-83.02 311.75,-87.24 314.28,-86.03" />
+</g>
+
+<g id="node37" class="node">
+<title>leaf13</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="408,-83 340,-83 340,0 408,0 408,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079997 101.033166" version="1.1" preserveAspectRatio="xMinYMin meet" x="344" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.177194</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033166  L 80.079997 101.033166  L 80.079997 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079997 40.039997  C 80.079997 30.221056 76.468174 20.737119 69.936669 13.405609  C 63.405163 6.0741 54.39966 1.395291 44.6459 0.265794  L 40.039997 40.039997  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 44.6459 0.265794  C 40.637974 -0.198329 36.58282 -0.053998 32.618032 0.693891  C 28.653243 1.44178 24.824177 2.784671 21.260754 4.676999  C 17.697332 6.569326 14.440317 8.989443 11.600224 11.855233  C 8.76013 14.721023 6.369447 17.999702 4.509291 21.580024  C 2.649136 25.160346 1.340787 29.001353 0.628639 32.972716  C -0.08351 36.94408 -0.191312 41.000369 0.308891 45.003953  C 0.809094 49.007536 1.911579 52.912614 3.578939 56.586685  C 5.246299 60.260755 7.459459 63.661789 10.143326 66.674386  C 12.827193 69.686983 15.951064 72.276681 19.408945 74.35561  C 22.866825 76.434539 26.619159 77.978916 30.538626 78.936341  C 34.458093 79.893765 38.499857 80.253284 42.526777 80.002699  C 46.553698 79.752113 50.519709 78.89429 54.290242 77.458336  C 58.060775 76.022382 61.592696 74.024723 64.766166 71.533142  C 67.939635 69.04156 70.718348 66.084559 73.008023 62.762471  C 75.297698 59.440382 77.072142 55.79121 78.271145 51.938773  C 79.470149 48.086335 80.079997 44.074703 80.079997 40.039993  L 40.039997 40.039997  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402028 89.725228) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+      <path id="ArialMT-33" d="M 269 1209  L 831 1284  Q 928 806 1161 595  Q 1394 384 1728 384  Q 2125 384 2398 659  Q 2672 934 2672 1341  Q 2672 1728 2419 1979  Q 2166 2231 1775 2231  Q 1616 2231 1378 2169  L 1441 2663  Q 1497 2656 1531 2656  Q 1891 2656 2178 2843  Q 2466 3031 2466 3422  Q 2466 3731 2256 3934  Q 2047 4138 1716 4138  Q 1388 4138 1169 3931  Q 950 3725 888 3313  L 325 3413  Q 428 3978 793 4289  Q 1159 4600 1703 4600  Q 2078 4600 2393 4439  Q 2709 4278 2876 4000  Q 3044 3722 3044 3409  Q 3044 3113 2884 2869  Q 2725 2625 2413 2481  Q 2819 2388 3044 2092  Q 3269 1797 3269 1353  Q 3269 753 2831 336  Q 2394 -81 1725 -81  Q 1122 -81 723 278  Q 325 638 269 1209  z " transform="scale(0.015625)" />
+      <path id="ArialMT-36" d="M 3184 3459  L 2625 3416  Q 2550 3747 2413 3897  Q 2184 4138 1850 4138  Q 1581 4138 1378 3988  Q 1113 3794 959 3422  Q 806 3050 800 2363  Q 1003 2672 1297 2822  Q 1591 2972 1913 2972  Q 2475 2972 2870 2558  Q 3266 2144 3266 1488  Q 3266 1056 3080 686  Q 2894 316 2569 119  Q 2244 -78 1831 -78  Q 1128 -78 684 439  Q 241 956 241 2144  Q 241 3472 731 4075  Q 1159 4600 1884 4600  Q 2425 4600 2770 4297  Q 3116 3994 3184 3459  z M 888 1484  Q 888 1194 1011 928  Q 1134 663 1356 523  Q 1578 384 1822 384  Q 2178 384 2434 671  Q 2691 959 2691 1453  Q 2691 1928 2437 2201  Q 2184 2475 1800 2475  Q 1419 2475 1153 2201  Q 888 1928 888 1484  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-34" x="114.013672" />
+     <use xlink:href="#ArialMT-33" x="169.628906" />
+     <use xlink:href="#ArialMT-36" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537575 99.244416) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge11" class="edge">
+<title>node11-&gt;leaf13</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M326.8,-99.69C329.63,-96.26 333.5,-91.57 337.81,-86.34" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="339.09,-87 340.55,-83.02 336.93,-85.22 339.09,-87" />
+</g>
+
+<g id="node38" class="node">
+<title>leaf15</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="487,-83 419,-83 419,0 487,0 487,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079975 101.033094" version="1.1" preserveAspectRatio="xMinYMin meet" x="423" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.197731</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033094  L 80.079975 101.033094  L 80.079975 -0  L 0 -0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079975 40.039925  C 80.079975 30.094685 76.374637 20.49762 69.691357 13.132731  C 63.008078 5.767843 53.814809 1.150809 43.916283 0.188002  C 34.017758 -0.774806 24.107055 1.984026 16.129746 7.922911  C 8.152438 13.861797 2.667083 22.564904 0.750512 32.323724  L 40.039975 40.039925  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 0.750512 32.323724  C -0.325753 37.803869 -0.243642 43.449056 0.991556 48.89558  C 2.226754 54.342104 4.58793 59.470429 7.92296 63.950152  C 11.257989 68.429875 15.493678 72.162678 20.357131 74.908067  C 25.220585 77.653455 30.605064 79.351176 36.163662 79.891849  C 41.72226 80.432522 47.332981 79.804281 52.634341 78.047603  C 57.935701 76.290924 62.811351 73.444362 66.947165 69.691312  C 71.082978 65.938262 74.388187 61.361094 76.649845 56.254702  C 78.911503 51.148309 80.079974 45.624764 80.079975 40.039933  L 40.039975 40.039925  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(29.904428 89.725157) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-38" x="114.013672" />
+     <use xlink:href="#ArialMT-31" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537553 99.244344) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge13" class="edge">
+<title>node14-&gt;leaf15</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M468.43,-99.69C467.54,-96.38 466.34,-91.92 464.99,-86.93" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="466.33,-86.52 463.93,-83.02 463.63,-87.25 466.33,-86.52" />
+</g>
+
+<g id="node39" class="node">
+<title>leaf16</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="569,-83 501,-83 501,0 569,0 569,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079909 101.033148" version="1.1" preserveAspectRatio="xMinYMin meet" x="505" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.217236</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033148  L 80.079909 101.033148  L 80.079909 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079909 40.039979  C 80.079909 32.616825 78.015603 25.337887 74.118621 19.019917  C 70.221639 12.701947 64.643402 7.590434 58.009829 4.258928  C 51.376256 0.927423 43.945101 -0.494627 36.550194 0.152343  C 29.155287 0.799314 22.083964 3.490166 16.12968 7.922966  C 10.175396 12.355766 5.569509 18.358275 2.828835 25.256965  C 0.088161 32.155654 -0.68081 39.682472 0.608207 46.992852  C 1.897224 54.303231 5.194143 61.113123 10.129025 66.658405  C 15.063907 72.203687 21.445004 76.268894 28.556307 78.397879  L 40.039909 40.039979  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 28.556307 78.397879  C 34.533891 80.18745 40.84786 80.555197 46.992782 79.471682  C 53.137704 78.388166 58.945117 75.883093 63.950139 72.156992  C 68.955161 68.430891 73.02058 63.585913 75.82096 58.009898  C 78.62134 52.433883 80.079909 46.279696 80.079909 40.039979  L 40.039909 40.039979  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(29.904363 89.72521) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-38" x="114.013672" />
+     <use xlink:href="#ArialMT-31" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537488 99.244398) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge14" class="edge">
+<title>node14-&gt;leaf16</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M476,-99.69C481.2,-94.64 489.22,-86.87 497.68,-78.67" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="498.91,-79.43 500.81,-75.64 496.96,-77.42 498.91,-79.43" />
+</g>
+
+<g id="edge16" class="edge">
+<title>node10-&gt;node11</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M353.91,-129.83C348.05,-125.73 340.05,-120.14 333.53,-115.57" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="334.16,-114.3 330.08,-113.16 332.56,-116.6 334.16,-114.3" />
+</g>
+
+<g id="edge17" class="edge">
+<title>node10-&gt;node14</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M383.34,-129.97C400.94,-125.4 425.96,-118.92 444.59,-114.09" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="445.19,-115.38 448.71,-113.02 444.48,-112.67 445.19,-115.38" />
+</g>
+
+<g id="node7" class="node">
+<title>node2</title>
+<text text-anchor="start" x="623.5" y="-163.4" font-family="Arial" font-size="12.00" fill="#444443">score_diff@-3.50</text>
+</g>
+
+<g id="edge19" class="edge">
+<title>node2-&gt;node3</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M623.22,-162.84C544.3,-158.26 381.22,-148.78 278.35,-142.81" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="278.18,-141.39 274.11,-142.56 278.02,-144.19 278.18,-141.39" />
+</g>
+
+<g id="edge20" class="edge">
+<title>node2-&gt;node10</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M623.37,-161.34C569.95,-156.47 481.28,-148.38 422.25,-142.99" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="422.16,-141.58 418.05,-142.61 421.91,-144.37 422.16,-141.58" />
+</g>
+
+<g id="node14" class="node">
+<title>node17</title>
+<text text-anchor="start" x="816.5" y="-163.4" font-family="Arial" font-size="12.00" fill="#444443">score_diff@-11.50</text>
+</g>
+
+
+<g id="node8" class="node">
+<title>node19</title>
+<text text-anchor="start" x="521.5" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@893.50</text>
+</g>
+
+<g id="node9" class="node">
+<title>node22</title>
+<text text-anchor="start" x="716.5" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@936.00</text>
+</g>
+
+
+<g id="node40" class="node">
+<title>leaf20</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="621.5,-69 580.5,-69 580.5,-14 621.5,-14 621.5,-69" />
+<svg width="33px" height="47px" viewBox="0 0 43.735921 63.23533" version="1.1" preserveAspectRatio="xMinYMin meet" x="585" y="-64.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.236392</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 63.23533  L 43.735921 63.23533  L 43.735921 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.735921 21.867921  C 43.735921 17.543357 42.453098 13.314455 40.050499 9.718711  C 37.647899 6.122968 34.231819 3.319462 30.236442 1.664523  C 26.241066 0.009584 21.843155 -0.423572 17.601686 0.420109  C 13.360217 1.263789 9.462839 3.346981 6.40491 6.40491  C 3.346981 9.462839 1.263789 13.360217 0.420109 17.601686  C -0.423572 21.843155 0.009584 26.241066 1.664523 30.236442  C 3.319462 34.231819 6.122968 37.647899 9.718711 40.050499  C 13.314455 42.453098 17.543357 43.735921 21.867921 43.735921  L 21.867921 21.867921  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 21.867921 43.735921  C 27.665451 43.735921 33.231459 41.430405 37.330932 37.330932  C 41.430405 33.231459 43.735921 27.665451 43.735921 21.867921  L 21.867921 21.867921  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(11.732374 51.927392) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-32" x="114.013672" />
+     <use xlink:href="#ArialMT-38" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(19.365499 61.44658) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge22" class="edge">
+<title>node19-&gt;leaf20</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M610.98,-99.69C609.9,-93.5 608.11,-83.23 606.34,-73.08" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="607.7,-72.76 605.64,-69.06 604.95,-73.24 607.7,-72.76" />
+</g>
+
+<g id="node41" class="node">
+<title>leaf21</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="654.5,-58 635.5,-58 635.5,-25 654.5,-25 654.5,-58" />
+<svg width="11px" height="25px" viewBox="0 0 15.399993 33.76591" version="1.1" preserveAspectRatio="xMinYMin meet" x="640" y="-53.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.256551</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 33.76591  L 15.399993 33.76591  L 15.399993 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 15.399993 7.699941  C 15.399993 6.074114 14.885061 4.489317 13.929424 3.173995  C 12.973786 1.858673 11.625677 0.879215 10.079423 0.376806  C 8.533169 -0.125602 6.866816 -0.125602 5.320562 0.376806  C 3.774308 0.879215 2.426199 1.858673 1.470562 3.173995  L 7.699993 7.699941  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 1.470562 3.173995  C 0.756355 4.157016 0.284873 5.295275 0.094792 6.495397  C -0.095288 7.695518 0.001377 8.923762 0.376858 10.079373  C 0.752338 11.234983 1.396079 12.285472 2.255271 13.144664  C 3.114463 14.003856 4.164952 14.647596 5.320563 15.023077  C 6.476173 15.398557 7.704418 15.495222 8.904539 15.305142  C 10.10466 15.115061 11.242919 14.643578 12.22594 13.929372  C 13.208961 13.215165 14.009109 12.278312 14.560744 11.195667  C 15.112379 10.113022 15.399993 8.915021 15.399993 7.69994  L 7.699993 7.699941  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(0.066868 22.457973) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-35" x="114.013672" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(5.197571 31.97716) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge23" class="edge">
+<title>node19-&gt;leaf21</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M615.05,-99.69C619.54,-91.11 628.15,-74.68 634.99,-61.62" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="636.25,-62.23 636.86,-58.03 633.77,-60.93 636.25,-62.23" />
+</g>
+
+<g id="node42" class="node">
+<title>leaf23</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="798,-78.5 740,-78.5 740,-4.5 798,-4.5 798,-78.5" />
+<svg width="50px" height="66px" viewBox="0 0 67.14399 87.579727" version="1.1" preserveAspectRatio="xMinYMin meet" x="744" y="-74.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.279062</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 87.579727  L 67.14399 87.579727  L 67.14399 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 67.14399 33.571998  C 67.14399 31.326087 66.918618 29.085833 66.471264 26.884926  C 66.02391 24.684019 65.356828 22.533547 64.480048 20.465849  L 33.57199 33.571998  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 64.480048 20.465849  C 62.869454 16.667607 60.572431 13.198584 57.704339 10.232998  C 54.836246 7.267412 51.445915 4.855754 47.703612 3.119142  C 43.961309 1.382529 39.930749 0.350528 35.814352 0.074968  C 31.697956 -0.200592 27.565806 0.28498 23.625426 1.507297  C 19.685046 2.729614 16.003522 4.667867 12.765746 7.224713  C 9.527971 9.781559 6.789067 12.913467 4.686588 16.463148  C 2.584109 20.012829 1.153849 23.919849 0.467639 27.987989  C -0.21857 32.05613 -0.149048 36.216131 0.672716 40.259071  C 1.49448 44.30201 3.054493 48.159055 5.274411 51.636499  C 7.494329 55.113944 10.336356 58.152582 13.65776 60.59981  C 16.979165 63.047038 20.7234 64.86119 24.702423 65.951157  C 28.681446 67.041124 32.827514 67.388349 36.932404 66.975393  C 41.037294 66.562437 45.031119 65.396331 48.713303 63.53564  C 52.395487 61.674948 55.70334 59.151349 58.470736 56.091582  C 61.238131 53.031815 63.417954 49.487973 64.90073 45.638034  C 66.383506 41.788095 67.14399 37.697606 67.14399 33.571996  L 33.57199 33.571998  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(23.436443 76.271789) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+      <path id="ArialMT-37" d="M 303 3981  L 303 4522  L 3269 4522  L 3269 4084  Q 2831 3619 2401 2847  Q 1972 2075 1738 1259  Q 1569 684 1522 0  L 944 0  Q 953 541 1156 1306  Q 1359 2072 1739 2783  Q 2119 3494 2547 3981  L 303 3981  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-34" x="114.013672" />
+     <use xlink:href="#ArialMT-37" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(31.069568 85.790977) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge25" class="edge">
+<title>node22-&gt;leaf23</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M803.49,-99.69C800.87,-95.34 797.03,-88.98 792.86,-82.06" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="794.05,-81.32 790.79,-78.62 791.66,-82.77 794.05,-81.32" />
+</g>
+
+<g id="node43" class="node">
+<title>leaf24</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="862,-74 812,-74 812,-9 862,-9 862,-74" />
+<svg width="42px" height="57px" viewBox="0 0 57.287981 77.329402" version="1.1" preserveAspectRatio="xMinYMin meet" x="816" y="-69.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.298393</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 77.329402  L 57.287981 77.329402  L 57.287981 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.287981 28.643913  C 57.287981 21.646909 54.724195 14.88676 50.084323 9.649427  C 45.444451 4.412095 39.042621 1.052155 32.096634 0.20876  C 25.150646 -0.634636 18.130756 1.095612 12.372334 5.070363  C 6.613913 9.045114 2.506816 14.995272 0.832324 21.788955  L 28.643981 28.643913  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 0.832324 21.788955  C -0.137598 25.724084 -0.261383 29.820627 0.469173 33.807139  C 1.199728 37.793651 2.768123 41.580091 5.070432 44.915561  C 7.372741 48.251031 10.356964 51.060195 13.825359 53.156913  C 17.293754 55.25363 21.167983 56.590544 25.191331 57.079066  C 29.21468 57.567589 33.296275 57.196686 37.165662 55.990936  C 41.035049 54.785186 44.604832 52.771821 47.63847 50.084252  C 50.672107 47.396683 53.101081 44.095611 54.764442 40.399773  C 56.427803 36.703935 57.287982 32.696806 57.287981 28.643907  L 28.643981 28.643913  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(18.508434 66.021464) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-33" d="M 269 1209  L 831 1284  Q 928 806 1161 595  Q 1394 384 1728 384  Q 2125 384 2398 659  Q 2672 934 2672 1341  Q 2672 1728 2419 1979  Q 2166 2231 1775 2231  Q 1616 2231 1378 2169  L 1441 2663  Q 1497 2656 1531 2656  Q 1891 2656 2178 2843  Q 2466 3031 2466 3422  Q 2466 3731 2256 3934  Q 2047 4138 1716 4138  Q 1388 4138 1169 3931  Q 950 3725 888 3313  L 325 3413  Q 428 3978 793 4289  Q 1159 4600 1703 4600  Q 2078 4600 2393 4439  Q 2709 4278 2876 4000  Q 3044 3722 3044 3409  Q 3044 3113 2884 2869  Q 2725 2625 2413 2481  Q 2819 2388 3044 2092  Q 3269 1797 3269 1353  Q 3269 753 2831 336  Q 2394 -81 1725 -81  Q 1122 -81 723 278  Q 325 638 269 1209  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-33" x="114.013672" />
+     <use xlink:href="#ArialMT-39" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(26.141559 75.540652) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge26" class="edge">
+<title>node22-&gt;leaf24</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M809.77,-99.69C812.26,-94.46 816.13,-86.32 820.19,-77.8" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="821.48,-78.35 821.93,-74.14 818.95,-77.15 821.48,-78.35" />
+</g>
+
+<g id="node10" class="node">
+<title>node18</title>
+<text text-anchor="start" x="804" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">game_half@1.50</text>
+</g>
+
+<g id="edge28" class="edge">
+<title>node18-&gt;node19</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M803.83,-130.07C763.36,-125.31 704.64,-118.4 662.85,-113.48" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="662.99,-112.09 658.86,-113.01 662.66,-114.87 662.99,-112.09" />
+</g>
+
+<g id="edge29" class="edge">
+<title>node18-&gt;node22</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M841.3,-129.83C835,-125.73 826.41,-120.14 819.4,-115.57" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="819.8,-114.17 815.69,-113.16 818.28,-116.51 819.8,-114.17" />
+</g>
+
+<g id="node13" class="node">
+<title>node25</title>
+<text text-anchor="start" x="919.5" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">score_diff@-0.50</text>
+</g>
+
+
+<g id="node11" class="node">
+<title>node26</title>
+<text text-anchor="start" x="904.5" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@513.00</text>
+</g>
+
+<g id="node12" class="node">
+<title>node29</title>
+<text text-anchor="start" x="1099" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@62.50</text>
+</g>
+
+
+<g id="node44" class="node">
+<title>leaf27</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="948,-83 880,-83 880,0 948,0 948,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079997 101.033135" version="1.1" preserveAspectRatio="xMinYMin meet" x="884" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.318014</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033135  L 80.079997 101.033135  L 80.079997 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079997 40.039966  C 80.079997 34.135891 78.774124 28.304247 76.256198 22.964008  C 73.738273 17.623769 70.070074 12.905962 65.515144 9.149539  C 60.960214 5.393116 55.630312 2.690243 49.908364 1.235109  C 44.186416 -0.220026 38.212816 -0.391719 32.416736 0.732365  C 26.620657 1.856448 21.14431 4.248728 16.381143 7.73733  C 11.617977 11.225933 7.68486 15.725262 4.864366 20.912065  C 2.043872 26.098867 0.405206 31.845879 0.066096 37.740207  C -0.273013 43.634536 0.695755 49.531558 2.902799 55.007602  L 40.039997 40.039966  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 2.902799 55.007602  C 6.377161 63.628074 12.746952 70.775532 20.912095 75.215597  C 29.077239 79.655661 38.538979 81.117116 47.663257 79.347567  C 56.787534 77.578018 65.017005 72.685554 70.930423 65.515113  C 76.843842 58.344672 80.079997 49.334251 80.079997 40.039966  L 40.039997 40.039966  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(29.90445 89.725197) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-38" x="114.013672" />
+     <use xlink:href="#ArialMT-32" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537575 99.244385) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge31" class="edge">
+<title>node26-&gt;leaf27</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M987.81,-99.91C979.53,-93.47 965.29,-82.39 951.51,-71.67" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="952.04,-70.31 948.02,-68.96 950.32,-72.52 952.04,-70.31" />
+</g>
+
+<g id="node45" class="node">
+<title>leaf28</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1030,-83 962,-83 962,0 1030,0 1030,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.08 101.033169" version="1.1" preserveAspectRatio="xMinYMin meet" x="966" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.341008</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033169  L 80.08 101.033169  L 80.08 -0  L 0 -0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.08 40.04  C 80.08 35.821588 79.413354 31.629555 78.104766 27.619244  C 76.796178 23.608932 74.862013 19.830498 72.373946 16.423957  C 69.885879 13.017415 66.875027 10.025372 63.452962 7.5587  C 60.030896 5.092029 56.240416 3.18158 52.221983 1.898148  C 48.20355 0.614716 44.007422 -0.025648 39.789092 0.000786  C 35.570763 0.02722 31.38299 0.720122 27.380958 2.053815  C 23.378925 3.387508 19.612685 5.345311 16.221802 7.854676  C 12.830919 10.364041 9.857801 13.393584 7.412623 16.83104  C 4.967444 20.268495 3.080785 24.070873 1.822559 28.097269  C 0.564333 32.123666 -0.049723 36.323724 0.003145 40.541805  C 0.056012 44.759886 0.775143 48.943235 2.133888 52.936831  C 3.492633 56.930428 5.473999 60.684325 8.004563 64.059417  C 10.535128 67.434509 13.583242 70.388584 17.035952 72.812174  C 20.488663 75.235764 24.302788 77.098559 28.33699 78.331529  C 32.371192 79.564499 36.575016 80.152224 40.792683 80.072925  C 45.01035 79.993626 49.18911 79.248295 53.174114 77.864551  L 40.04 40.04  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 53.174114 77.864551  C 61.031196 75.136275 67.84631 70.026463 72.667377 63.24896  C 77.488445 56.471458 80.08 48.357286 80.08 40.04  L 40.04 40.04  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402031 89.725231) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-38" x="169.628906" />
+     <use xlink:href="#ArialMT-38" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537578 99.244419) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge32" class="edge">
+<title>node26-&gt;leaf28</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M995.09,-99.69C995.14,-96.45 995.21,-92.09 995.29,-87.22" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="996.69,-87.04 995.36,-83.02 993.89,-87 996.69,-87.04" />
+</g>
+
+<g id="node46" class="node">
+<title>leaf30</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1106,-83 1038,-83 1038,0 1106,0 1106,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079839 101.033043" version="1.1" preserveAspectRatio="xMinYMin meet" x="1042" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.360791</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033043  L 80.079839 101.033043  L 80.079839 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079839 40.039875  C 80.079839 32.181131 77.766158 24.493613 73.428627 17.940318  C 69.091096 11.387023 62.918725 6.253516 55.684714 3.182861  C 48.450703 0.112205 40.470277 -0.761794 32.74313 0.670348  C 25.015982 2.10249 17.878826 5.778366 12.225719 11.237508  C 6.572612 16.696649 2.649891 23.701171 0.948947 31.37363  C -0.751997 39.04609 -0.157044 47.052156 2.659277 54.388925  C 5.475599 61.725694 10.390565 68.073462 16.78849 72.637058  C 23.186414 77.200654 30.788503 79.781216 38.642459 80.055483  L 40.039839 40.039875  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 38.642459 80.055483  C 44.014802 80.24309 49.370317 79.346884 54.388889 77.420436  C 59.40746 75.493987 63.987063 72.576459 67.853958 68.842241  C 71.720854 65.108024 74.796431 60.633032 76.896853 55.68475  C 78.997274 50.736468 80.079839 45.415492 80.079839 40.039875  L 40.039839 40.039875  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(29.904292 89.725106) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-39" x="114.013672" />
+     <use xlink:href="#ArialMT-30" x="169.628906" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537417 99.244293) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge34" class="edge">
+<title>node29-&gt;leaf30</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1147.63,-99.91C1138.93,-93.3 1123.8,-81.82 1109.34,-70.84" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1110.11,-69.67 1106.08,-68.37 1108.42,-71.9 1110.11,-69.67" />
+</g>
+
+<g id="node47" class="node">
+<title>leaf31</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1188,-83 1120,-83 1120,0 1188,0 1188,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079998 101.03316" version="1.1" preserveAspectRatio="xMinYMin meet" x="1124" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.382688</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.03316  L 80.079998 101.03316  L 80.079998 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079998 40.039991  C 80.079998 35.267267 79.226642 30.532764 77.560289 26.060386  C 75.893935 21.588009 73.441273 17.449388 70.318292 13.840249  C 67.195312 10.231109 63.452032 7.209257 59.265482 4.9176  C 55.078932 2.625943 50.516164 1.101187 45.792961 0.41544  C 41.069758 -0.270307 36.261769 -0.106061 31.596374 0.90041  C 26.930978 1.906881 22.4829 3.739456 18.462498 6.31147  C 14.442095 8.883485 10.913761 12.153743 8.044357 15.967588  C 5.174953 19.781434 3.010437 24.077782 1.653174 28.653449  C 0.29591 33.229116 -0.232362 38.010817 0.09334 42.772415  C 0.419042 47.534012 1.593501 52.199243 3.561176 56.547479  C 5.52885 60.895714 8.258224 64.857311 11.620221 68.244917  C 14.982217 71.632524 18.922988 74.391882 23.256167 76.392496  C 27.589345 78.39311 32.245529 79.602938 37.004519 79.964764  C 41.763508 80.326589 46.549079 79.834618 51.134915 78.512116  C 55.72075 77.189614 60.033399 75.057763 63.868909 72.217383  C 67.704419 69.377003 71.001358 65.873587 73.603807 61.872818  L 40.039998 40.039991  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 73.603807 61.872818  C 75.705998 58.6411 77.330459 55.12264 78.426821 51.426535  C 79.523183 47.730429 80.079997 43.895278 80.079998 40.039995  L 40.039998 40.039991  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402029 89.725222) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-34" x="114.013672" />
+     <use xlink:href="#ArialMT-31" x="169.628906" />
+     <use xlink:href="#ArialMT-34" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537576 99.24441) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge35" class="edge">
+<title>node29-&gt;leaf31</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1154.91,-99.69C1154.86,-96.45 1154.79,-92.09 1154.71,-87.22" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1156.11,-87 1154.64,-83.02 1153.31,-87.04 1156.11,-87" />
+</g>
+
+<g id="edge37" class="edge">
+<title>node25-&gt;node26</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M971.07,-129.83C975.3,-125.89 981.02,-120.55 985.8,-116.08" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="986.97,-116.91 988.94,-113.16 985.06,-114.86 986.97,-116.91" />
+</g>
+
+<g id="edge38" class="edge">
+<title>node25-&gt;node29</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1002.54,-129.97C1034.55,-125.25 1080.5,-118.48 1113.57,-113.61" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1113.79,-114.99 1117.54,-113.02 1113.38,-112.22 1113.79,-114.99" />
+</g>
+
+<g id="edge40" class="edge">
+<title>node17-&gt;node18</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M861.96,-159.83C859.97,-156.11 857.32,-151.16 855.02,-146.86" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="856.15,-146.02 853.03,-143.16 853.69,-147.34 856.15,-146.02" />
+</g>
+
+<g id="edge41" class="edge">
+<title>node17-&gt;node25</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M884.76,-159.97C900.92,-155.44 923.83,-149.03 941.04,-144.21" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="941.81,-145.45 945.28,-143.02 941.05,-142.75 941.81,-145.45" />
+</g>
+
+<g id="node15" class="node">
+<title>node1</title>
+<text text-anchor="start" x="1005" y="-193.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@56.50</text>
+</g>
+
+<g id="edge43" class="edge">
+<title>node1-&gt;node2</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1004.84,-191.49C928.24,-186.02 792.21,-176.3 718.98,-171.07" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="718.77,-169.65 714.68,-170.76 718.57,-172.44 718.77,-169.65" />
+</g>
+
+<g id="edge44" class="edge">
+<title>node1-&gt;node17</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1022.28,-189.97C989.26,-185.25 941.86,-178.48 907.74,-173.61" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="907.8,-172.2 903.64,-173.02 907.4,-174.97 907.8,-172.2" />
+</g>
+
+<g id="node30" class="node">
+<title>node32</title>
+<text text-anchor="start" x="1208.5" y="-193.4" font-family="Arial" font-size="12.00" fill="#444443">score_diff@-11.50</text>
+</g>
+
+
+<g id="node16" class="node">
+<title>node35</title>
+<text text-anchor="start" x="1270" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">ydstogo@5.50</text>
+</g>
+
+<g id="node17" class="node">
+<title>node38</title>
+<text text-anchor="start" x="1361.5" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@840.50</text>
+</g>
+
+
+<g id="node48" class="node">
+<title>leaf36</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1263,-83 1195,-83 1195,0 1263,0 1263,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079951 101.033157" version="1.1" preserveAspectRatio="xMinYMin meet" x="1199" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.402527</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 101.033157  L 80.079951 101.033157  L 80.079951 -0  L -0 -0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079951 40.039989  C 80.079951 33.37033 78.413455 26.805179 75.232377 20.943005  C 72.051299 15.08083 67.455329 10.105343 61.863428 6.470099  C 56.271527 2.834856 49.858937 0.653779 43.210217 0.125693  C 36.561498 -0.402394 29.885009 0.739059 23.789369 3.445998  C 17.693729 6.152937 12.369964 10.340531 8.303381 15.627047  C 4.236798 20.913563 1.554836 27.133329 0.501979 33.719363  C -0.550879 40.305396 0.058363 47.051302 2.274166 53.342133  C 4.489969 59.632965 8.242895 65.271579 13.190832 69.743968  L 40.039951 40.039989  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 13.190832 69.743968  C 18.937554 74.93837 26.070054 78.355132 33.719323 79.577961  C 41.368593 80.80079 49.210822 79.777922 56.29053 76.633981  C 63.370238 73.49004 69.387727 68.358115 73.609837 61.86347  C 77.831948 55.368825 80.07995 47.786391 80.079951 40.039996  L 40.039951 40.039989  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.401983 89.72522) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-30" x="169.628906" />
+     <use xlink:href="#ArialMT-39" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537529 99.244407) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge46" class="edge">
+<title>node35-&gt;leaf36</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1301.9,-99.91C1293.86,-93.58 1280.14,-82.77 1266.75,-72.23" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1267.37,-70.93 1263.36,-69.56 1265.64,-73.13 1267.37,-70.93" />
+</g>
+
+<g id="node49" class="node">
+<title>leaf37</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1345,-83 1277,-83 1277,0 1345,0 1345,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079991 101.033161" version="1.1" preserveAspectRatio="xMinYMin meet" x="1281" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.649257</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033161  L 80.079991 101.033161  L 80.079991 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079991 40.039992  C 80.079991 35.177054 79.194071 30.354548 77.465703 25.80912  C 75.737335 21.263693 73.19526 17.070928 69.964221 13.43657  C 66.733182 9.802212 62.866907 6.786697 58.555119 4.537997  C 54.24333 2.289298 49.557728 0.844808 44.72824 0.275411  C 39.898751 -0.293986 35.005686 0.021178 30.289151 1.205437  C 25.572616 2.389696 21.111043 4.423357 17.123365 7.206628  C 13.135687 9.989898 9.688215 13.476494 6.95012 17.495326  C 4.212025 21.514157 2.228838 25.998395 1.097877 30.727993  C -0.033084 35.457591 -0.293013 40.353901 0.330845 45.176656  C 0.954703 49.999412 2.451975 54.668416 4.749186 58.954555  C 7.046398 63.240694 10.10535 67.072695 13.775936 70.262517  C 17.446522 73.452339 21.667705 75.94694 26.232347 77.623906  C 30.796989 79.300872 35.629184 80.132318 40.491813 80.077443  C 45.354442 80.022568 50.166644 79.082286 54.692279 77.302736  C 59.217914 75.523186 63.381726 72.933961 66.979393 69.662117  C 70.577059 66.390273 73.548755 62.490216 75.748656 58.153327  L 40.039991 40.039992  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 75.748656 58.153327  C 77.167448 55.356318 78.25271 52.402272 78.982106 49.351991  C 79.711501 46.301711 80.079992 43.176267 80.079991 40.039991  L 40.039991 40.039992  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402023 89.725224) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-37" d="M 303 3981  L 303 4522  L 3269 4522  L 3269 4084  Q 2831 3619 2401 2847  Q 1972 2075 1738 1259  Q 1569 684 1522 0  L 944 0  Q 953 541 1156 1306  Q 1359 2072 1739 2783  Q 2119 3494 2547 3981  L 303 3981  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-37" x="169.628906" />
+     <use xlink:href="#ArialMT-34" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537569 99.244411) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge47" class="edge">
+<title>node35-&gt;leaf37</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1309.18,-99.69C1309.29,-96.45 1309.43,-92.09 1309.58,-87.22" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1310.99,-87.06 1309.71,-83.02 1308.19,-86.98 1310.99,-87.06" />
+</g>
+
+<g id="node50" class="node">
+<title>leaf39</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1420,-83 1352,-83 1352,0 1420,0 1420,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079995 101.033163" version="1.1" preserveAspectRatio="xMinYMin meet" x="1356" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.672092</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033163  L 80.079995 101.033163  L 80.079995 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079995 40.039994  C 80.079995 32.890164 78.164908 25.869154 74.534559 19.709557  C 70.90421 13.549961 65.689418 8.473734 59.434308 5.010546  L 40.039995 40.039994  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 59.434308 5.010546  C 55.617871 2.897548 51.481644 1.422379 47.189415 0.643454  C 42.897186 -0.135471 38.506368 -0.207733 34.190833 0.42953  C 29.875297 1.066792 25.692768 2.405056 21.808867 4.391326  C 17.924966 6.377596 14.391646 8.985305 11.34882 12.111191  C 8.305994 15.237077 5.794364 18.839328 3.913386 22.7753  C 2.032408 26.711272 0.807243 30.928317 0.286405 35.259446  C -0.234433 39.590575 -0.043977 43.977855 0.850232 48.247556  C 1.744441 52.517257 3.330441 56.612266 5.545429 60.370428  C 7.760418 64.12859 10.574766 67.499634 13.877031 70.350073  C 17.179295 73.200512 20.925304 75.492218 24.966722 77.134442  C 29.008139 78.776666 33.290906 79.747441 37.645431 80.008328  C 41.999957 80.269214 46.367994 79.816721 50.576575 78.668767  C 54.785156 77.520813 58.777987 75.692753 62.396957 73.256976  C 66.015926 70.821199 69.212628 67.810285 71.860476 64.343463  C 74.508324 60.876642 76.571901 57.000284 77.969492 52.867888  C 79.367083 48.735493 80.079994 44.402335 80.079995 40.040002  L 40.039995 40.039994  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402027 89.725226) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-35" x="114.013672" />
+     <use xlink:href="#ArialMT-32" x="169.628906" />
+     <use xlink:href="#ArialMT-35" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537573 99.244413) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge49" class="edge">
+<title>node38-&gt;leaf39</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1445.91,-99.69C1440.51,-94.53 1432.13,-86.54 1423.34,-78.14" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1423.95,-76.79 1420.09,-75.04 1422.01,-78.81 1423.95,-76.79" />
+</g>
+
+<g id="node51" class="node">
+<title>leaf40</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1502,-83 1434,-83 1434,0 1502,0 1502,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079983 101.033127" version="1.1" preserveAspectRatio="xMinYMin meet" x="1438" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.691836</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033127  L 80.079983 101.033127  L 80.079983 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079983 40.039958  C 80.079983 33.820626 78.630929 27.685987 75.848077 22.123989  C 73.065226 16.56199 69.02437 11.724115 64.046918 7.995166  C 59.069465 4.266218 53.290979 1.747756 47.171079 0.640097  C 41.051178 -0.467562 34.756541 -0.134249 28.787841 1.613523  C 22.819141 3.361296 17.338937 6.475927 12.783125 10.709679  C 8.227312 14.943431 4.719969 20.180998 2.540069 26.005783  C 0.360169 31.830569 -0.432917 38.083933 0.223891 44.268486  C 0.8807 50.453039 2.969515 56.400341 6.324194 61.637346  L 40.039983 40.039958  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 6.324194 61.637346  C 10.992494 68.925052 17.900159 74.506369 26.005808 77.539872  C 34.111457 80.573375 42.986208 80.898556 51.292125 78.466393  C 59.598042 76.03423 66.895649 70.973411 72.084775 64.046893  C 77.273901 57.120375 80.079983 48.69465 80.079983 40.039958  L 40.039983 40.039958  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402014 89.725189) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-33" d="M 269 1209  L 831 1284  Q 928 806 1161 595  Q 1394 384 1728 384  Q 2125 384 2398 659  Q 2672 934 2672 1341  Q 2672 1728 2419 1979  Q 2166 2231 1775 2231  Q 1616 2231 1378 2169  L 1441 2663  Q 1497 2656 1531 2656  Q 1891 2656 2178 2843  Q 2466 3031 2466 3422  Q 2466 3731 2256 3934  Q 2047 4138 1716 4138  Q 1388 4138 1169 3931  Q 950 3725 888 3313  L 325 3413  Q 428 3978 793 4289  Q 1159 4600 1703 4600  Q 2078 4600 2393 4439  Q 2709 4278 2876 4000  Q 3044 3722 3044 3409  Q 3044 3113 2884 2869  Q 2725 2625 2413 2481  Q 2819 2388 3044 2092  Q 3269 1797 3269 1353  Q 3269 753 2831 336  Q 2394 -81 1725 -81  Q 1122 -81 723 278  Q 325 638 269 1209  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+      <path id="ArialMT-36" d="M 3184 3459  L 2625 3416  Q 2550 3747 2413 3897  Q 2184 4138 1850 4138  Q 1581 4138 1378 3988  Q 1113 3794 959 3422  Q 806 3050 800 2363  Q 1003 2672 1297 2822  Q 1591 2972 1913 2972  Q 2475 2972 2870 2558  Q 3266 2144 3266 1488  Q 3266 1056 3080 686  Q 2894 316 2569 119  Q 2244 -78 1831 -78  Q 1128 -78 684 439  Q 241 956 241 2144  Q 241 3472 731 4075  Q 1159 4600 1884 4600  Q 2425 4600 2770 4297  Q 3116 3994 3184 3459  z M 888 1484  Q 888 1194 1011 928  Q 1134 663 1356 523  Q 1578 384 1822 384  Q 2178 384 2434 671  Q 2691 959 2691 1453  Q 2691 1928 2437 2201  Q 2184 2475 1800 2475  Q 1419 2475 1153 2201  Q 888 1928 888 1484  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-33" x="114.013672" />
+     <use xlink:href="#ArialMT-38" x="169.628906" />
+     <use xlink:href="#ArialMT-36" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537561 99.244377) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge50" class="edge">
+<title>node38-&gt;leaf40</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1453.48,-99.69C1454.31,-96.38 1455.45,-91.92 1456.72,-86.93" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1458.08,-87.24 1457.71,-83.02 1455.37,-86.55 1458.08,-87.24" />
+</g>
+
+<g id="node18" class="node">
+<title>node34</title>
+<text text-anchor="start" x="1405" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">game_half@1.50</text>
+</g>
+
+<g id="edge52" class="edge">
+<title>node34-&gt;node35</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1422.95,-129.97C1399.41,-125.33 1365.8,-118.7 1341.18,-113.84" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1341.19,-112.42 1337,-113.02 1340.65,-115.17 1341.19,-112.42" />
+</g>
+
+<g id="edge53" class="edge">
+<title>node34-&gt;node38</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1451.2,-129.83C1451.33,-126.27 1451.5,-121.56 1451.65,-117.39" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1453.05,-117.21 1451.8,-113.16 1450.26,-117.11 1453.05,-117.21" />
+</g>
+
+<g id="node21" class="node">
+<title>node41</title>
+<text text-anchor="start" x="1510.5" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@407.50</text>
+</g>
+
+
+<g id="node19" class="node">
+<title>node42</title>
+<text text-anchor="start" x="1555" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">game_half@1.50</text>
+</g>
+
+<g id="node20" class="node">
+<title>node45</title>
+<text text-anchor="start" x="1661" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">ydstogo@4.50</text>
+</g>
+
+
+<g id="node52" class="node">
+<title>leaf43</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1577,-83 1509,-83 1509,0 1577,0 1577,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079999 101.033169" version="1.1" preserveAspectRatio="xMinYMin meet" x="1513" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.714162</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033169  L 80.079999 101.033169  L 80.079999 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079999 40.04  C 80.079999 34.851307 79.071413 29.711743 77.110474 24.907864  C 75.149534 20.103986 72.273377 15.726763 68.642361 12.020248  C 65.011344 8.313732 60.69423 5.348115 55.931718 3.288743  C 51.169206 1.229371 46.051484 0.115243 40.863889 0.008477  C 35.676295 -0.098289 30.517066 0.804329 25.673855 2.666005  C 20.830643 4.527681 16.395166 7.313161 12.614721 10.867141  C 8.834276 14.42112 5.780455 18.676298 3.623522 23.395427  C 1.46659 28.114555 0.247392 33.208269 0.033905 38.392568  C -0.179582 43.576867 0.616685 48.753577 2.37831 53.63407  C 4.139934 58.514563 6.833557 63.006418 10.308995 66.859191  C 13.784433 70.711964 17.975873 73.852697 22.64962 76.106277  C 27.323367 78.359856 32.390915 79.683608 37.569724 80.003725  C 42.748532 80.323843 47.94053 79.634264 52.856238 77.973436  C 57.771947 76.312609 62.318276 73.711984 66.241747 70.316559  C 70.165217 66.921134 73.391531 62.795208 75.740803 58.168821  C 78.090076 53.542435 79.517821 48.503198 79.944433 43.332073  L 40.039999 40.04  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 79.944433 43.332073  C 79.989598 42.784615 80.023492 42.236285 80.046093 41.687433  C 80.068695 41.13858 80.079999 40.58932 80.079999 40.040002  L 40.039999 40.04  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.40203 89.725231) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-32" x="114.013672" />
+     <use xlink:href="#ArialMT-32" x="169.628906" />
+     <use xlink:href="#ArialMT-39" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537577 99.244419) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge55" class="edge">
+<title>node42-&gt;leaf43</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1595.65,-99.69C1591.79,-95.5 1586.21,-89.43 1580.11,-82.81" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1580.81,-81.51 1577.07,-79.51 1578.75,-83.4 1580.81,-81.51" />
+</g>
+
+<g id="node53" class="node">
+<title>leaf44</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1659,-83 1591,-83 1591,0 1659,0 1659,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079942 101.033039" version="1.1" preserveAspectRatio="xMinYMin meet" x="1595" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.734386</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033039  L 80.079942 101.033039  L 80.079942 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079942 40.03987  C 80.079942 32.167016 77.757945 24.466314 73.405831 17.905756  C 69.053717 11.345197 62.861816 6.211695 55.608462 3.150539  C 48.355107 0.089383 40.35751 -0.765553 32.620982 0.693198  C 24.884453 2.151949 17.747335 5.860591 12.106776 11.352942  L 40.039942 40.03987  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 12.106776 11.352942  C 7.373304 15.96204 3.853386 21.671844 1.86203 27.971372  C -0.129327 34.270899 -0.530893 40.966452 0.693269 47.45883  C 1.917431 53.951208 4.72968 60.040784 8.878342 65.182589  C 13.027004 70.324393 18.384515 74.360325 24.471421 76.929201  C 30.558327 79.498077 37.187467 80.520909 43.765585 79.906161  C 50.343702 79.291413 56.668534 77.057988 62.174056 73.405759  C 67.679578 69.753531 72.196507 64.794798 75.320613 58.973328  C 78.444719 53.151858 80.079942 46.64665 80.079942 40.03987  L 40.039942 40.03987  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.401973 89.725101) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-32" x="114.013672" />
+     <use xlink:href="#ArialMT-39" x="169.628906" />
+     <use xlink:href="#ArialMT-35" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.53752 99.244289) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge56" class="edge">
+<title>node42-&gt;leaf44</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1603.21,-99.69C1604.47,-96.38 1606.17,-91.92 1608.07,-86.93" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1609.45,-87.26 1609.56,-83.02 1606.83,-86.26 1609.45,-87.26" />
+</g>
+
+<g id="node54" class="node">
+<title>leaf46</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1734,-83 1666,-83 1666,0 1734,0 1734,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079835 101.033048" version="1.1" preserveAspectRatio="xMinYMin meet" x="1670" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.754154</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033048  L 80.079835 101.033048  L 80.079835 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079835 40.039879  C 80.079835 32.196696 77.775307 24.523718 73.453835 17.97846  C 69.132362 11.433202 62.981506 6.299742 55.768835 3.218687  C 48.556163 0.137633 40.594722 -0.757292 32.878022 0.64559  C 25.161323 2.048472 18.024287 5.688274 12.357549 11.110783  C 6.69081 16.533292 2.740318 23.503159 0.999055 31.150612  C -0.742208 38.798065 -0.198666 46.791187 2.561851 54.132513  C 5.322369 61.473839 10.180049 67.84474 16.5287 72.450189  C 22.877352 77.055637 30.441429 79.695746 38.277007 80.041055  L 40.039835 40.039879  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 38.277007 80.041055  C 43.678168 80.279081 49.072004 79.420721 54.13247 77.517863  C 59.192937 75.615004 63.815972 72.706775 67.722124 68.968973  C 71.628277 65.231171 74.737221 60.740657 76.861029 55.768874  C 78.984837 50.79709 80.079836 45.446275 80.079835 40.039872  L 40.039835 40.039879  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.401866 89.725111) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-32" x="114.013672" />
+     <use xlink:href="#ArialMT-31" x="169.628906" />
+     <use xlink:href="#ArialMT-34" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537413 99.244298) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge58" class="edge">
+<title>node45-&gt;leaf46</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1700,-99.69C1700,-96.45 1700,-92.09 1700,-87.22" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1701.4,-87.02 1700,-83.02 1698.6,-87.02 1701.4,-87.02" />
+</g>
+
+<g id="node55" class="node">
+<title>leaf47</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1816,-83 1748,-83 1748,0 1816,0 1816,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079993 101.033167" version="1.1" preserveAspectRatio="xMinYMin meet" x="1752" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.776694</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033167  L 80.079993 101.033167  L 80.079993 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079993 40.039999  C 80.079993 34.945667 79.107758 29.897829 77.21557 25.167941  C 75.323383 20.438053 72.545781 16.11245 69.032137 12.423749  C 65.518492 8.735048 61.332939 5.750579 56.700563 3.630837  C 52.068187 1.511095 47.073542 0.294772 41.985226 0.047278  C 36.89691 -0.200216 31.807799 0.525637 26.99157 2.185802  C 22.17534 3.845966 17.719903 6.410141 13.864857 9.740431  C 10.009811 13.070721 6.825522 17.10634 4.483232 21.630264  C 2.140942 26.154188 0.683405 31.083843 0.189001 36.154127  C -0.305403 41.224411 0.172352 46.342776 1.596573 51.233973  C 3.020795 56.12517 5.365486 60.69992 8.504557 64.712207  C 11.643628 68.724493 15.519782 72.101081 19.92457 74.660388  C 24.329359 77.219694 29.182382 78.915005 34.22266 79.65515  C 39.262937 80.395296 44.398469 80.166767 49.353082 78.981852  C 54.307696 77.796938 58.990954 75.677267 63.151006 72.736829  C 67.311058 69.79639 70.871971 66.088856 73.64225 61.813605  C 76.412529 57.538355 78.341608 52.773424 79.325748 47.775056  L 40.039993 40.039999  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 79.325748 47.775056  C 79.57642 46.501911 79.765055 45.217333 79.890986 43.92587  C 80.016917 42.634407 80.079993 41.337586 80.079993 40.039998  L 40.039993 40.039999  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402025 89.72523) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-38" x="114.013672" />
+     <use xlink:href="#ArialMT-30" x="169.628906" />
+     <use xlink:href="#ArialMT-38" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537572 99.244417) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge59" class="edge">
+<title>node45-&gt;leaf47</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1707.28,-99.91C1715.8,-93.36 1730.58,-82.01 1744.74,-71.12" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1745.63,-72.21 1747.95,-68.66 1743.92,-69.99 1745.63,-72.21" />
+</g>
+
+<g id="edge61" class="edge">
+<title>node41-&gt;node42</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1601,-129.83C1601,-126.27 1601,-121.56 1601,-117.39" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1602.4,-117.16 1601,-113.16 1599.6,-117.16 1602.4,-117.16" />
+</g>
+
+<g id="edge62" class="edge">
+<title>node41-&gt;node45</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1620.56,-129.97C1636.56,-125.44 1659.24,-119.03 1676.28,-114.21" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1677.01,-115.46 1680.48,-113.02 1676.25,-112.76 1677.01,-115.46" />
+</g>
+
+<g id="node22" class="node">
+<title>node33</title>
+<text text-anchor="start" x="1431" y="-163.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@51.50</text>
+</g>
+
+<g id="edge64" class="edge">
+<title>node33-&gt;node34</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1479.71,-159.83C1474.54,-155.81 1467.51,-150.34 1461.71,-145.83" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1462.29,-144.51 1458.27,-143.16 1460.57,-146.72 1462.29,-144.51" />
+</g>
+
+<g id="edge65" class="edge">
+<title>node33-&gt;node41</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1509.52,-159.97C1528.1,-155.4 1554.51,-148.92 1574.18,-144.09" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1574.97,-145.33 1578.52,-143.02 1574.31,-142.61 1574.97,-145.33" />
+</g>
+
+<g id="node29" class="node">
+<title>node48</title>
+<text text-anchor="start" x="1604" y="-163.4" font-family="Arial" font-size="12.00" fill="#444443">ydstogo@3.50</text>
+</g>
+
+
+<g id="node23" class="node">
+<title>node50</title>
+<text text-anchor="start" x="1804" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@33.50</text>
+</g>
+
+<g id="node24" class="node">
+<title>node53</title>
+<text text-anchor="start" x="1929.5" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@8.00</text>
+</g>
+
+
+<g id="node56" class="node">
+<title>leaf51</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1891,-83 1823,-83 1823,0 1891,0 1891,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079998 101.033168" version="1.1" preserveAspectRatio="xMinYMin meet" x="1827" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.799510</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033168  L 80.079998 101.033168  L 80.079998 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079998 40.04  C 80.079998 35.953898 79.454515 31.891768 78.22531 27.994938  C 76.996106 24.098108 75.177602 20.4123 72.833069 17.065751  C 70.488536 13.719202 67.645481 10.751177 64.40282 8.264939  C 61.16016 5.778701 57.55594 3.803421 53.715558 2.407824  C 49.875176 1.012226 45.843691 0.212685 41.761367 0.037019  C 37.679043 -0.138648 33.593779 0.311621 29.647706 1.372159  C 25.701634 2.432698 21.941055 4.091062 18.496805 6.289556  C 15.052556 8.488049 11.965049 11.200876 9.341703 14.333652  C 6.718358 17.466428 4.589954 20.982396 3.030544 24.759229  C 1.471134 28.536062 0.499014 32.529446 0.148006 36.600443  C -0.203003 40.671441 0.071219 44.772286 0.96113 48.760304  C 1.851042 52.748322 3.346201 56.57672 5.394589 60.112301  C 7.442978 63.647882 10.02056 66.849162 13.037659 69.604764  C 16.054758 72.360366 19.475973 74.637957 23.182273 76.358297  C 26.888573 78.078636 30.836472 79.221538 34.888615 79.747239  C 38.940759 80.27294 43.049602 80.175272 47.072191 79.457633  L 40.039998 40.04  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 47.072191 79.457633  C 56.323564 77.807168 64.704977 72.951279 70.738293 65.746347  C 76.771608 58.541414 80.079998 49.437443 80.079998 40.04  L 40.039998 40.04  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(24.899607 89.725231) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-30" x="169.628906" />
+     <use xlink:href="#ArialMT-34" x="225.244141" />
+     <use xlink:href="#ArialMT-31" x="280.859375" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537576 99.244418) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge67" class="edge">
+<title>node50-&gt;leaf51</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1859.72,-99.69C1859.57,-96.45 1859.36,-92.09 1859.13,-87.22" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1860.52,-86.95 1858.93,-83.02 1857.72,-87.08 1860.52,-86.95" />
+</g>
+
+<g id="node57" class="node">
+<title>leaf52</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1973,-83 1905,-83 1905,0 1973,0 1973,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079999 101.033132" version="1.1" preserveAspectRatio="xMinYMin meet" x="1909" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.819022</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033132  L 80.079999 101.033132  L 80.079999 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079999 40.039963  C 80.079999 34.098645 78.757599 28.23114 76.208984 22.864221  C 73.660369 17.497302 69.948865 12.764322 65.344428 9.009536  C 60.739992 5.254749 55.35703 2.571451 49.587074 1.154813  C 43.817118 -0.261826 37.803535 -0.376606 31.983723 0.818821  C 26.16391 2.014248 20.682476 4.490179 15.938111 8.066527  C 11.193747 11.642875 7.304337 16.230778 4.552778 21.496534  C 1.80122 26.76229 0.255881 32.575059 0.029162 38.512049  C -0.197557 44.44904 0.899977 50.362734 3.241936 55.822999  L 40.039999 40.039963  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 3.241936 55.822999  C 6.875725 64.295157 13.326211 71.257859 21.496569 75.527184  C 29.666927 79.796508 39.066242 81.115933 48.096275 79.261106  C 57.126308 77.406279 65.244491 72.488647 71.070427 65.344393  C 76.896362 58.200139 80.079999 49.258525 80.079999 40.039963  L 40.039999 40.039963  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.40203 89.725195) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+      <path id="ArialMT-33" d="M 269 1209  L 831 1284  Q 928 806 1161 595  Q 1394 384 1728 384  Q 2125 384 2398 659  Q 2672 934 2672 1341  Q 2672 1728 2419 1979  Q 2166 2231 1775 2231  Q 1616 2231 1378 2169  L 1441 2663  Q 1497 2656 1531 2656  Q 1891 2656 2178 2843  Q 2466 3031 2466 3422  Q 2466 3731 2256 3934  Q 2047 4138 1716 4138  Q 1388 4138 1169 3931  Q 950 3725 888 3313  L 325 3413  Q 428 3978 793 4289  Q 1159 4600 1703 4600  Q 2078 4600 2393 4439  Q 2709 4278 2876 4000  Q 3044 3722 3044 3409  Q 3044 3113 2884 2869  Q 2725 2625 2413 2481  Q 2819 2388 3044 2092  Q 3269 1797 3269 1353  Q 3269 753 2831 336  Q 2394 -81 1725 -81  Q 1122 -81 723 278  Q 325 638 269 1209  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-35" x="114.013672" />
+     <use xlink:href="#ArialMT-33" x="169.628906" />
+     <use xlink:href="#ArialMT-35" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537577 99.244382) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge68" class="edge">
+<title>node50-&gt;leaf52</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1867.01,-99.91C1874.88,-93.64 1888.26,-82.96 1901.37,-72.51" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1902.44,-73.44 1904.7,-69.86 1900.7,-71.26 1902.44,-73.44" />
+</g>
+
+<g id="node58" class="node">
+<title>leaf54</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="1999.5,-58 1980.5,-58 1980.5,-25 1999.5,-25 1999.5,-58" />
+<svg width="11px" height="25px" viewBox="0 0 15.4 33.765969" version="1.1" preserveAspectRatio="xMinYMin meet" x="1985" y="-53.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.840991</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 33.765969  L 15.4 33.765969  L 15.4 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 15.4 7.7  C 15.4 6.074172 14.885068 4.489376 13.929431 3.174053  C 12.973793 1.858731 11.625685 0.879273 10.079431 0.376865  L 7.7 7.7  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 10.079431 0.376865  C 9.31098 0.12718 8.507996 -0 7.7 -0  C 6.892003 0 6.089019 0.12718 5.320569 0.376865  C 4.552119 0.62655 3.827736 0.995641 3.174053 1.470569  C 2.52037 1.945498 1.945497 2.520371 1.470569 3.174054  C 0.995641 3.827737 0.626549 4.552119 0.376865 5.320569  C 0.12718 6.08902 -0 6.892004 0 7.7  C 0 8.507997 0.12718 9.310981 0.376865 10.079431  C 0.62655 10.847882 0.995641 11.572264 1.470569 12.225947  C 1.945498 12.87963 2.520371 13.454503 3.174054 13.929431  C 3.827737 14.40436 4.552119 14.773451 5.32057 15.023135  C 6.08902 15.27282 6.892004 15.4 7.700001 15.4  C 8.507997 15.4 9.310981 15.27282 10.079431 15.023135  C 10.847882 14.77345 11.572264 14.404359 12.225947 13.92943  C 12.87963 13.454502 13.454503 12.879629 13.929431 12.225946  C 14.40436 11.572263 14.773451 10.847881 15.023135 10.07943  C 15.27282 9.31098 15.4 8.507996 15.4 7.699999  L 7.7 7.7  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(0.066875 22.458031) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-35" d="M 266 1200  L 856 1250  Q 922 819 1161 601  Q 1400 384 1738 384  Q 2144 384 2425 690  Q 2706 997 2706 1503  Q 2706 1984 2436 2262  Q 2166 2541 1728 2541  Q 1456 2541 1237 2417  Q 1019 2294 894 2097  L 366 2166  L 809 4519  L 3088 4519  L 3088 3981  L 1259 3981  L 1013 2750  Q 1425 3038 1878 3038  Q 2478 3038 2890 2622  Q 3303 2206 3303 1553  Q 3303 931 2941 478  Q 2500 -78 1738 -78  Q 1113 -78 717 272  Q 322 622 266 1200  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-35" x="114.013672" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(5.197578 31.977219) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-31" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge70" class="edge">
+<title>node53-&gt;leaf54</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2010.88,-99.69C2007.77,-91.18 2001.85,-74.96 1997.1,-61.95" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1998.36,-61.31 1995.67,-58.03 1995.73,-62.27 1998.36,-61.31" />
+</g>
+
+<g id="node59" class="node">
+<title>leaf55</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="2081,-83 2013,-83 2013,0 2081,0 2081,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.07999 101.033166" version="1.1" preserveAspectRatio="xMinYMin meet" x="2017" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.862722</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033166  L 80.07999 101.033166  L 80.07999 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.07999 40.039998  C 80.07999 34.99515 79.12655 29.995453 77.269968 25.304655  C 75.413386 20.613857 72.686893 16.31592 69.234319 12.637576  C 65.781746 8.959231 61.664892 5.966317 57.100933 3.81672  C 52.536975 1.667124 47.607604 0.39932 42.572861 0.080191  C 37.538117 -0.238939 32.48812 0.396318 27.689272 1.952449  C 22.890425 3.50858 18.428622 5.957731 14.53924 9.170703  C 10.649857 12.383675 7.402512 16.302957 4.968511 20.721794  C 2.534511 25.140631 0.957422 29.979931 0.320441 34.984402  C -0.316539 39.988874 -0.00201 45.068943 1.247436 49.956618  C 2.496882 54.844293 4.658882 59.452088 7.619382 63.536929  C 10.579882 67.621769 14.285892 71.110539 18.541908 73.819194  C 22.797924 76.527848 27.527767 78.407905 32.481921 79.360186  C 37.436075 80.312466 42.525866 80.319924 47.48279 79.382167  C 52.439714 78.44441 57.175046 76.578223 61.438982 73.882053  C 65.702918 71.185884 69.419137 67.70799 72.391596 63.631844  C 75.364055 59.555697 77.539549 54.954257 78.803315 50.070265  L 40.03999 40.039998  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 78.803315 50.070265  C 79.226738 48.433888 79.546119 46.772339 79.759539 45.095595  C 79.972959 43.41885 80.07999 41.730273 80.07999 40.040001  L 40.03999 40.039998  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(24.899599 89.725229) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-33" d="M 269 1209  L 831 1284  Q 928 806 1161 595  Q 1394 384 1728 384  Q 2125 384 2398 659  Q 2672 934 2672 1341  Q 2672 1728 2419 1979  Q 2166 2231 1775 2231  Q 1616 2231 1378 2169  L 1441 2663  Q 1497 2656 1531 2656  Q 1891 2656 2178 2843  Q 2466 3031 2466 3422  Q 2466 3731 2256 3934  Q 2047 4138 1716 4138  Q 1388 4138 1169 3931  Q 950 3725 888 3313  L 325 3413  Q 428 3978 793 4289  Q 1159 4600 1703 4600  Q 2078 4600 2393 4439  Q 2709 4278 2876 4000  Q 3044 3722 3044 3409  Q 3044 3113 2884 2869  Q 2725 2625 2413 2481  Q 2819 2388 3044 2092  Q 3269 1797 3269 1353  Q 3269 753 2831 336  Q 2394 -81 1725 -81  Q 1122 -81 723 278  Q 325 638 269 1209  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-33" x="169.628906" />
+     <use xlink:href="#ArialMT-34" x="225.244141" />
+     <use xlink:href="#ArialMT-30" x="280.859375" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537568 99.244416) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge71" class="edge">
+<title>node53-&gt;leaf55</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2016.14,-99.69C2017.95,-96.32 2020.42,-91.74 2023.18,-86.64" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2024.46,-87.21 2025.13,-83.02 2022,-85.88 2024.46,-87.21" />
+</g>
+
+<g id="node25" class="node">
+<title>node49</title>
+<text text-anchor="start" x="1850" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@50.50</text>
+</g>
+
+<g id="edge73" class="edge">
+<title>node49-&gt;node50</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1896.69,-129.83C1889.83,-125.66 1880.42,-119.93 1872.85,-115.32" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1873.44,-114.04 1869.29,-113.16 1871.98,-116.43 1873.44,-114.04" />
+</g>
+
+<g id="edge74" class="edge">
+<title>node49-&gt;node53</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1927.14,-129.97C1944.58,-125.4 1969.37,-118.92 1987.83,-114.09" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1988.39,-115.39 1991.9,-113.02 1987.68,-112.68 1988.39,-115.39" />
+</g>
+
+<g id="node28" class="node">
+<title>node56</title>
+<text text-anchor="start" x="2036.5" y="-133.4" font-family="Arial" font-size="12.00" fill="#444443">half_seconds_remaining@170.50</text>
+</g>
+
+
+<g id="node26" class="node">
+<title>node57</title>
+<text text-anchor="start" x="2112" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">game_half@1.50</text>
+</g>
+
+<g id="node27" class="node">
+<title>node60</title>
+<text text-anchor="start" x="2222" y="-103.4" font-family="Arial" font-size="12.00" fill="#444443">yardline_100@49.50</text>
+</g>
+
+
+<g id="node60" class="node">
+<title>leaf58</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="2156,-83 2088,-83 2088,0 2156,0 2156,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079989 101.033166" version="1.1" preserveAspectRatio="xMinYMin meet" x="2092" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.885533</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033166  L 80.079989 101.033166  L 80.079989 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079989 40.039997  C 80.079989 35.010435 79.132318 30.025612 77.286671 25.346928  C 75.441024 20.668244 72.730237 16.378936 69.296459 12.70393  C 65.862682 9.028924 61.767003 6.033601 57.224198 3.875034  C 52.681392 1.716466 47.772279 0.433056 42.754286 0.092104  C 37.736294 -0.248849 32.698696 0.358723 27.905659 1.882958  C 23.112622 3.407193 18.649417 5.820974 14.75009 8.997726  C 10.850764 12.174477 7.584687 16.057682 5.12313 20.443709  C 2.661572 24.829736 1.048327 29.640554 0.367992 34.623891  C -0.312344 39.607227 -0.047667 44.674424 1.148143 49.559762  C 2.343954 54.445101 4.449623 59.061668 7.354733 63.167376  C 10.259843 67.273083 13.912709 70.794888 18.121778 73.54811  C 22.330847 76.301332 27.021238 78.236989 31.946991 79.253579  C 36.872744 80.270168 41.946227 80.349603 46.901391 79.487719  C 51.856555 78.625835 56.605245 76.837964 60.898445 74.217862  C 65.191644 71.59776 68.952974 68.192038 71.985193 64.179291  C 75.017413 60.166544 77.266578 55.618161 78.614744 50.772653  L 40.039989 40.039997  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 78.614744 50.772653  C 79.100344 49.027333 79.466935 47.251066 79.711987 45.456101  C 79.957039 43.661136 80.079989 41.851607 80.079989 40.039992  L 40.039989 40.039997  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(24.899599 89.725228) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-31" x="114.013672" />
+     <use xlink:href="#ArialMT-32" x="169.628906" />
+     <use xlink:href="#ArialMT-30" x="225.244141" />
+     <use xlink:href="#ArialMT-34" x="280.859375" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537567 99.244416) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge76" class="edge">
+<title>node57-&gt;leaf58</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2154.68,-99.69C2152.75,-96.32 2150.14,-91.74 2147.22,-86.64" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2148.36,-85.8 2145.16,-83.02 2145.92,-87.19 2148.36,-85.8" />
+</g>
+
+<g id="node61" class="node">
+<title>leaf59</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="2238,-83 2170,-83 2170,0 2238,0 2238,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079971 101.033164" version="1.1" preserveAspectRatio="xMinYMin meet" x="2174" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.905072</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033164  L 80.079971 101.033164  L 80.079971 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079971 40.039995  C 80.079971 32.776658 78.103595 25.648394 74.363457 19.422044  C 70.623319 13.195695 65.258526 8.102836 58.84621 4.691346  C 52.433894 1.279856 45.212547 -0.323381 37.959026 0.054106  C 30.705506 0.431594 23.68959 2.775766 17.666036 6.834443  C 11.642482 10.89312 6.835323 16.515347 3.761702 23.096298  C 0.688082 29.677249 -0.537684 36.972159 0.216271 44.196259  C 0.970225 51.420358 3.675858 58.304962 8.042104 64.109439  C 12.40835 69.913917 18.272815 74.422383 25.004613 77.149827  L 40.039971 40.039995  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 25.004613 77.149827  C 31.082677 79.612405 37.67368 80.544432 44.196236 79.863695  C 50.718793 79.182957 56.975311 76.910078 62.413908 73.245544  C 67.852506 69.581011 72.308428 64.635836 75.388622 58.846229  C 78.468816 53.056622 80.079972 46.597971 80.079971 40.039987  L 40.039971 40.039995  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(27.402002 89.725226) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-38" d="M 1131 2484  Q 781 2613 612 2850  Q 444 3088 444 3419  Q 444 3919 803 4259  Q 1163 4600 1759 4600  Q 2359 4600 2725 4251  Q 3091 3903 3091 3403  Q 3091 3084 2923 2848  Q 2756 2613 2416 2484  Q 2838 2347 3058 2040  Q 3278 1734 3278 1309  Q 3278 722 2862 322  Q 2447 -78 1769 -78  Q 1091 -78 675 323  Q 259 725 259 1325  Q 259 1772 486 2073  Q 713 2375 1131 2484  z M 1019 3438  Q 1019 3113 1228 2906  Q 1438 2700 1772 2700  Q 2097 2700 2305 2904  Q 2513 3109 2513 3406  Q 2513 3716 2298 3927  Q 2084 4138 1766 4138  Q 1444 4138 1231 3931  Q 1019 3725 1019 3438  z M 838 1322  Q 838 1081 952 856  Q 1066 631 1291 507  Q 1516 384 1775 384  Q 2178 384 2440 643  Q 2703 903 2703 1303  Q 2703 1709 2433 1975  Q 2163 2241 1756 2241  Q 1359 2241 1098 1978  Q 838 1716 838 1322  z " transform="scale(0.015625)" />
+      <path id="ArialMT-36" d="M 3184 3459  L 2625 3416  Q 2550 3747 2413 3897  Q 2184 4138 1850 4138  Q 1581 4138 1378 3988  Q 1113 3794 959 3422  Q 806 3050 800 2363  Q 1003 2672 1297 2822  Q 1591 2972 1913 2972  Q 2475 2972 2870 2558  Q 3266 2144 3266 1488  Q 3266 1056 3080 686  Q 2894 316 2569 119  Q 2244 -78 1831 -78  Q 1128 -78 684 439  Q 241 956 241 2144  Q 241 3472 731 4075  Q 1159 4600 1884 4600  Q 2425 4600 2770 4297  Q 3116 3994 3184 3459  z M 888 1484  Q 888 1194 1011 928  Q 1134 663 1356 523  Q 1578 384 1822 384  Q 2178 384 2434 671  Q 2691 959 2691 1453  Q 2691 1928 2437 2201  Q 2184 2475 1800 2475  Q 1419 2475 1153 2201  Q 888 1928 888 1484  z " transform="scale(0.015625)" />
+      <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-38" x="114.013672" />
+     <use xlink:href="#ArialMT-36" x="169.628906" />
+     <use xlink:href="#ArialMT-31" x="225.244141" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537549 99.244414) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge77" class="edge">
+<title>node57-&gt;leaf59</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2162.25,-99.69C2164.75,-96.26 2168.17,-91.57 2171.99,-86.34" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2173.18,-87.08 2174.41,-83.02 2170.92,-85.43 2173.18,-87.08" />
+</g>
+
+<g id="node62" class="node">
+<title>leaf61</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="2313,-83 2245,-83 2245,0 2313,0 2313,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.079987 101.033164" version="1.1" preserveAspectRatio="xMinYMin meet" x="2249" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.927385</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 101.033164  L 80.079987 101.033164  L 80.079987 -0  L -0 -0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.079987 40.039996  C 80.079987 35.059732 79.150803 30.122903 77.340224 25.483417  C 75.529644 20.843931 72.869251 16.582714 69.495873 12.918926  C 66.122494 9.255138 62.094971 6.252685 57.620444 4.065989  C 53.145918 1.879293 48.302436 0.546495 43.339107 0.136144  C 38.375777 -0.274208 33.379175 0.245044 28.606281 1.667194  C 23.833386 3.089343 19.367454 5.389585 15.438172 8.449613  C 11.508891 11.509641 8.184797 15.276081 5.636855 19.555218  C 3.088913 23.834356 1.361566 28.551552 0.543653 33.464193  C -0.27426 38.376834 -0.168471 43.399231 0.855577 48.273075  C 1.879626 53.146919 3.804073 57.787195 6.52994 61.955249  C 9.255808 66.123303 12.73555 69.746431 16.790198 72.638292  C 20.844846 75.530152 25.403676 77.640302 30.232221 78.860214  C 35.060765 80.080125 40.074801 80.38852 45.016449 79.769537  C 49.958098 79.150553 54.741162 77.614989 59.119643 75.241819  C 63.498123 72.868649 67.395647 69.699269 70.611759 65.896685  C 73.827872 62.0941 76.306474 57.724639 77.920088 53.013028  L 40.039987 40.039996  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 77.920088 53.013028  C 78.633915 50.928717 79.174495 48.789041 79.536322 46.615799  C 79.898148 44.442557 80.079987 42.243154 80.079987 40.039997  L 40.039987 40.039996  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(24.899597 89.725227) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-34" d="M 2069 0  L 2069 1097  L 81 1097  L 81 1613  L 2172 4581  L 2631 4581  L 2631 1613  L 3250 1613  L 3250 1097  L 2631 1097  L 2631 0  L 2069 0  z M 2069 1613  L 2069 3678  L 634 1613  L 2069 1613  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+      <path id="ArialMT-33" d="M 269 1209  L 831 1284  Q 928 806 1161 595  Q 1394 384 1728 384  Q 2125 384 2398 659  Q 2672 934 2672 1341  Q 2672 1728 2419 1979  Q 2166 2231 1775 2231  Q 1616 2231 1378 2169  L 1441 2663  Q 1497 2656 1531 2656  Q 1891 2656 2178 2843  Q 2466 3031 2466 3422  Q 2466 3731 2256 3934  Q 2047 4138 1716 4138  Q 1388 4138 1169 3931  Q 950 3725 888 3313  L 325 3413  Q 428 3978 793 4289  Q 1159 4600 1703 4600  Q 2078 4600 2393 4439  Q 2709 4278 2876 4000  Q 3044 3722 3044 3409  Q 3044 3113 2884 2869  Q 2725 2625 2413 2481  Q 2819 2388 3044 2092  Q 3269 1797 3269 1353  Q 3269 753 2831 336  Q 2394 -81 1725 -81  Q 1122 -81 723 278  Q 325 638 269 1209  z " transform="scale(0.015625)" />
+      <path id="ArialMT-32" d="M 3222 541  L 3222 0  L 194 0  Q 188 203 259 391  Q 375 700 629 1000  Q 884 1300 1366 1694  Q 2113 2306 2375 2664  Q 2638 3022 2638 3341  Q 2638 3675 2398 3904  Q 2159 4134 1775 4134  Q 1369 4134 1125 3890  Q 881 3647 878 3216  L 300 3275  Q 359 3922 746 4261  Q 1134 4600 1788 4600  Q 2447 4600 2831 4234  Q 3216 3869 3216 3328  Q 3216 3053 3103 2787  Q 2991 2522 2730 2228  Q 2469 1934 1863 1422  Q 1356 997 1212 845  Q 1069 694 975 541  L 3222 541  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-34" x="114.013672" />
+     <use xlink:href="#ArialMT-39" x="169.628906" />
+     <use xlink:href="#ArialMT-33" x="225.244141" />
+     <use xlink:href="#ArialMT-32" x="280.859375" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537566 99.244414) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge79" class="edge">
+<title>node60-&gt;leaf61</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2278.09,-99.69C2278.14,-96.45 2278.21,-92.09 2278.29,-87.22" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2279.69,-87.04 2278.36,-83.02 2276.89,-87 2279.69,-87.04" />
+</g>
+
+<g id="node63" class="node">
+<title>leaf62</title>
+<polygon fill="none" stroke="#444443" stroke-width="0" points="2395,-83 2327,-83 2327,0 2395,0 2395,-83" />
+<svg width="60px" height="75px" viewBox="0 0 80.08 101.033169" version="1.1" preserveAspectRatio="xMinYMin meet" x="2331" y="-78.5">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.950687</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 101.033169  L 80.08 101.033169  L 80.08 -0  L 0 -0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 80.08 40.04  C 80.08 34.834927 79.065035 29.679451 77.092048 24.862802  C 75.11906 20.046154 72.225649 15.660124 68.574139 11.950776  C 64.922629 8.241429 60.582608 5.279453 55.797557 3.23102  C 51.012507 1.182588 45.873616 0.086736 40.669186 0.004944  C 35.464756 -0.076849 30.293967 0.856978 25.44691 2.754033  C 20.599853 4.651088 16.168897 7.475221 12.402628 11.067991  C 8.636359 14.660761 5.60655 18.953703 3.483178 23.705973  C 1.359807 28.458244 0.183338 33.57928 0.019774 38.781782  C -0.143791 43.984284 0.708667 49.169109 2.529321 54.045378  C 4.349976 58.921647 7.104132 63.396434 10.637276 67.218694  C 14.17042 71.040955 18.415221 74.137849 23.133538 76.335635  C 27.851855 78.533422 32.953772 79.790217 38.153061 80.035513  C 43.352351 80.280809 48.549931 79.509931 53.454207 77.766127  C 58.358484 76.022322 62.875997 73.338823 66.753305 69.866178  C 70.630614 66.393533 73.793828 62.197921 76.065486 57.514722  C 78.337145 52.831523 79.673956 47.749986 80.000923 42.555193  L 40.04 40.04  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 80.000923 42.555193  C 80.027274 42.136537 80.047044 41.717494 80.060226 41.298217  C 80.073407 40.87894 80.08 40.459483 80.08 40.039999  L 40.04 40.04  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    
+    <g style="fill: #444443" transform="translate(24.899609 89.725231) scale(0.09 -0.09)">
+     <defs>
+      <path id="ArialMT-6e" d="M 422 0  L 422 3319  L 928 3319  L 928 2847  Q 1294 3394 1984 3394  Q 2284 3394 2536 3286  Q 2788 3178 2913 3003  Q 3038 2828 3088 2588  Q 3119 2431 3119 2041  L 3119 0  L 2556 0  L 2556 2019  Q 2556 2363 2490 2533  Q 2425 2703 2258 2804  Q 2091 2906 1866 2906  Q 1506 2906 1245 2678  Q 984 2450 984 1813  L 984 0  L 422 0  z " transform="scale(0.015625)" />
+      <path id="ArialMT-3d" d="M 3381 2694  L 356 2694  L 356 3219  L 3381 3219  L 3381 2694  z M 3381 1303  L 356 1303  L 356 1828  L 3381 1828  L 3381 1303  z " transform="scale(0.015625)" />
+      <path id="ArialMT-37" d="M 303 3981  L 303 4522  L 3269 4522  L 3269 4084  Q 2831 3619 2401 2847  Q 1972 2075 1738 1259  Q 1569 684 1522 0  L 944 0  Q 953 541 1156 1306  Q 1359 2072 1739 2783  Q 2119 3494 2547 3981  L 303 3981  z " transform="scale(0.015625)" />
+      <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+      <path id="ArialMT-39" d="M 350 1059  L 891 1109  Q 959 728 1153 556  Q 1347 384 1650 384  Q 1909 384 2104 503  Q 2300 622 2425 820  Q 2550 1019 2634 1356  Q 2719 1694 2719 2044  Q 2719 2081 2716 2156  Q 2547 1888 2255 1720  Q 1963 1553 1622 1553  Q 1053 1553 659 1965  Q 266 2378 266 3053  Q 266 3750 677 4175  Q 1088 4600 1706 4600  Q 2153 4600 2523 4359  Q 2894 4119 3086 3673  Q 3278 3228 3278 2384  Q 3278 1506 3087 986  Q 2897 466 2520 194  Q 2144 -78 1638 -78  Q 1100 -78 759 220  Q 419 519 350 1059  z M 2653 3081  Q 2653 3566 2395 3850  Q 2138 4134 1775 4134  Q 1400 4134 1122 3828  Q 844 3522 844 3034  Q 844 2597 1108 2323  Q 1372 2050 1759 2050  Q 2150 2050 2401 2323  Q 2653 2597 2653 3081  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#ArialMT-6e" />
+     <use xlink:href="#ArialMT-3d" x="55.615234" />
+     <use xlink:href="#ArialMT-37" x="114.013672" />
+     <use xlink:href="#ArialMT-30" x="169.628906" />
+     <use xlink:href="#ArialMT-39" x="225.244141" />
+     <use xlink:href="#ArialMT-37" x="280.859375" />
+    </g>
+    
+    <g style="fill: #444443" transform="translate(37.537578 99.244419) scale(0.09 -0.09)">
+     <use xlink:href="#ArialMT-30" />
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+
+<g id="edge80" class="edge">
+<title>node60-&gt;leaf62</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2285.37,-99.91C2294.07,-93.3 2309.2,-81.82 2323.66,-70.84" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2324.58,-71.9 2326.92,-68.37 2322.89,-69.67 2324.58,-71.9" />
+</g>
+
+<g id="edge82" class="edge">
+<title>node56-&gt;node57</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2133.27,-129.83C2137.64,-125.89 2143.55,-120.55 2148.5,-116.08" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2149.71,-116.88 2151.74,-113.16 2147.83,-114.8 2149.71,-116.88" />
+</g>
+
+<g id="edge83" class="edge">
+<title>node56-&gt;node60</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M2156.83,-129.97C2181.96,-125.31 2217.9,-118.64 2244.11,-113.78" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2244.55,-115.13 2248.23,-113.02 2244.04,-112.37 2244.55,-115.13" />
+</g>
+
+<g id="edge85" class="edge">
+<title>node48-&gt;node49</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1682.09,-161.34C1726.49,-156.61 1799.31,-148.86 1849.79,-143.48" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1850.17,-144.85 1854,-143.04 1849.87,-142.07 1850.17,-144.85" />
+</g>
+
+<g id="edge86" class="edge">
+<title>node48-&gt;node56</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1682.2,-163.23C1757.74,-158.86 1925.43,-149.16 2031.96,-143" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="2032.13,-144.39 2036.04,-142.76 2031.96,-141.6 2032.13,-144.39" />
+</g>
+
+<g id="edge88" class="edge">
+<title>node32-&gt;node33</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1302.44,-189.97C1341.35,-185.23 1397.26,-178.42 1437.34,-173.55" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1437.85,-174.89 1441.65,-173.02 1437.51,-172.11 1437.85,-174.89" />
+</g>
+
+<g id="edge89" class="edge">
+<title>node32-&gt;node48</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1305.89,-191.95C1381.87,-186.44 1527.08,-175.91 1599.58,-170.65" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1599.94,-172.03 1603.82,-170.34 1599.73,-169.23 1599.94,-172.03" />
+</g>
+
+<g id="node31" class="node">
+<title>node0</title>
+<text text-anchor="start" x="1081" y="-254.9" font-family="Arial" font-size="12.00" fill="#444443">ydstogo@1.50</text>
+</g>
+
+<g id="edge91" class="edge">
+<title>node0-&gt;node1</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1114.13,-251.08C1103.59,-240.46 1081.46,-218.14 1069.35,-205.92" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1070.31,-204.91 1066.5,-203.05 1068.33,-206.88 1070.31,-204.91" />
+<text text-anchor="start" x="1089" y="-214.8" font-family="Arial" font-size="14.00" fill="#444443"> &#160;&#8804;</text>
+</g>
+
+<g id="edge92" class="edge">
+<title>node0-&gt;node32</title>
+<path fill="none" stroke="#444443" stroke-width="0.3" d="M1132.89,-251.4C1157.78,-240.59 1212.43,-216.86 1240.16,-204.81" />
+<polygon fill="#444443" stroke="#444443" stroke-width="0.3" points="1240.93,-206 1244.05,-203.13 1239.82,-203.44 1240.93,-206" />
+<text text-anchor="start" x="1221" y="-214.8" font-family="Arial" font-size="14.00" fill="#444443"> &#160;&gt;</text>
+</g>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<g id="node64" class="node">
+<title>legend</title>
+<polygon fill="none" stroke="black" stroke-width="0" points="1212,-282 1166,-282 1166,-234 1212,-234 1212,-282" />
+<svg width="42px" height="44px" viewBox="0 0 55.8 58.553125" version="1.1" preserveAspectRatio="xMinYMin meet" x="1168" y="-280">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2023-11-23T20:11:42.017472</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 58.553125  L 55.8 58.553125  L 55.8 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="legend_1">
+    <g id="patch_2">
+     <path d="M 7.739062 58.553125  L 48.8 58.553125  Q 50.8 58.553125 50.8 56.553125  L 50.8 7  Q 50.8 5 48.8 5  L 7.739062 5  Q 5.739062 5 5.739062 7  L 5.739062 56.553125  Q 5.739062 58.553125 7.739062 58.553125  z " style="fill: #ffffff; opacity: 0.8; stroke: #444443; stroke-width: 0.5; stroke-linejoin: miter" />
+    </g>
+    <g id="text_1">
+     
+     <g style="fill: #444443" transform="translate(22.161719 20.157812) scale(0.1 -0.1)">
+      <defs>
+       <path id="Arial-BoldMT-67" d="M 378 -219  L 1381 -341  Q 1406 -516 1497 -581  Q 1622 -675 1891 -675  Q 2234 -675 2406 -572  Q 2522 -503 2581 -350  Q 2622 -241 2622 53  L 2622 538  Q 2228 0 1628 0  Q 959 0 569 566  Q 263 1013 263 1678  Q 263 2513 664 2953  Q 1066 3394 1663 3394  Q 2278 3394 2678 2853  L 2678 3319  L 3500 3319  L 3500 341  Q 3500 -247 3403 -537  Q 3306 -828 3131 -993  Q 2956 -1159 2664 -1253  Q 2372 -1347 1925 -1347  Q 1081 -1347 728 -1058  Q 375 -769 375 -325  Q 375 -281 378 -219  z M 1163 1728  Q 1163 1200 1367 954  Q 1572 709 1872 709  Q 2194 709 2416 961  Q 2638 1213 2638 1706  Q 2638 2222 2425 2472  Q 2213 2722 1888 2722  Q 1572 2722 1367 2476  Q 1163 2231 1163 1728  z " transform="scale(0.015625)" />
+       <path id="Arial-BoldMT-6f" d="M 256 1706  Q 256 2144 472 2553  Q 688 2963 1083 3178  Q 1478 3394 1966 3394  Q 2719 3394 3200 2905  Q 3681 2416 3681 1669  Q 3681 916 3195 420  Q 2709 -75 1972 -75  Q 1516 -75 1102 131  Q 688 338 472 736  Q 256 1134 256 1706  z M 1156 1659  Q 1156 1166 1390 903  Q 1625 641 1969 641  Q 2313 641 2545 903  Q 2778 1166 2778 1666  Q 2778 2153 2545 2415  Q 2313 2678 1969 2678  Q 1625 2678 1390 2415  Q 1156 2153 1156 1659  z " transform="scale(0.015625)" />
+      </defs>
+      <use xlink:href="#Arial-BoldMT-67" />
+      <use xlink:href="#Arial-BoldMT-6f" x="61.083984" />
+     </g>
+    </g>
+    <g id="patch_3">
+     <path d="M 13.739062 34.420312  L 33.739062 34.420312  L 33.739062 27.420312  L 13.739062 27.420312  z " style="fill: #fefebb; stroke: #444443; stroke-width: 0.4; stroke-linejoin: miter" />
+    </g>
+    <g id="text_2">
+     
+     <g style="fill: #444443" transform="translate(37.239062 34.420312) scale(0.1 -0.1)">
+      <defs>
+       <path id="ArialMT-30" d="M 266 2259  Q 266 3072 433 3567  Q 600 4063 929 4331  Q 1259 4600 1759 4600  Q 2128 4600 2406 4451  Q 2684 4303 2865 4023  Q 3047 3744 3150 3342  Q 3253 2941 3253 2259  Q 3253 1453 3087 958  Q 2922 463 2592 192  Q 2263 -78 1759 -78  Q 1097 -78 719 397  Q 266 969 266 2259  z M 844 2259  Q 844 1131 1108 757  Q 1372 384 1759 384  Q 2147 384 2411 759  Q 2675 1134 2675 2259  Q 2675 3391 2411 3762  Q 2147 4134 1753 4134  Q 1366 4134 1134 3806  Q 844 3388 844 2259  z " transform="scale(0.015625)" />
+      </defs>
+      <use xlink:href="#ArialMT-30" />
+     </g>
+    </g>
+    <g id="patch_4">
+     <path d="M 13.739062 48.565625  L 33.739062 48.565625  L 33.739062 41.565625  L 13.739062 41.565625  z " style="fill: #a1dab4; stroke: #444443; stroke-width: 0.4; stroke-linejoin: miter" />
+    </g>
+    <g id="text_3">
+     
+     <g style="fill: #444443" transform="translate(37.239062 48.565625) scale(0.1 -0.1)">
+      <defs>
+       <path id="ArialMT-31" d="M 2384 0  L 1822 0  L 1822 3584  Q 1619 3391 1289 3197  Q 959 3003 697 2906  L 697 3450  Q 1169 3672 1522 3987  Q 1875 4303 2022 4600  L 2384 4600  L 2384 0  z " transform="scale(0.015625)" />
+      </defs>
+      <use xlink:href="#ArialMT-31" />
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg></g>
+</g>
+</svg>

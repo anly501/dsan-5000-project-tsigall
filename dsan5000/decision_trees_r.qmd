@@ -1,0 +1,180 @@
+---
+title: "Decision Trees in R"
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Imports
+
+```{r setup, include = FALSE}
+library(rpart)
+library(plotly)
+library(rattle)
+library(tidyverse)
+library(caret)
+library(yardstick)
+options(scipen = 999, digits = 3)
+```
+
+```{r}
+df <- read.csv("df.csv")[,-1]
+```
+
+# Make Tree Function
+
+```{r}
+make_tree <- function(df, caption = NULL, metrics = FALSE) {
+  set.seed(621)
+  indices <- createDataPartition(df$go, p = 0.8, list = FALSE)
+  x_train <- df[indices, -length(df)]
+  x_test <- df[-indices, -length(df)]
+  y_train <- df[indices, length(df)]
+  y_test <- df[-indices, length(df)]
+  
+  tree <- rpart(y_train~., 
+                cbind(x_train, y_train), 
+                method = "class")
+  yp_train <- predict(tree, newdata = x_train, type = "class")
+  yp_test <- predict(tree, newdata = x_test, type = "class")
+  confusion_matrix <- table(y_train, yp_train)
+  if(metrics){
+      print(confusionMatrix(confusion_matrix, positive = "1"))
+  }
+  accuracy <- round(confusionMatrix(confusion_matrix)$overall[1], 3)
+  fancyRpartPlot(tree,
+                 caption = caption)
+  
+  return(tree)
+}
+```
+
+## Tree 1
+
+```{r}
+# Only using readily available information (field position, time left, score, etc.)
+df1 <- df[,c(2, 3, 4, 5, 13, 14)]
+tree <- make_tree(df1)
+```
+
+## Tree 2
+
+```{r}
+# Also using win probability information
+df2 <- df[,2:14]
+tree <- make_tree(df2)
+```
+
+## Tree 3
+
+```{r}
+# High leverage situations
+leverage <- df %>%
+  filter(abs(wp_succeed - wp_fail) > .1,
+         game_half == 2)
+
+df3 <- leverage[,c(2, 3, 4, 5, 13, 14)]
+tree <- make_tree(df3)
+```
+
+# Hyper-parameter Tuning on Leverage Tree
+
+```{r hyper-parameters}
+indices <- createDataPartition(df$go, p = 0.8, list = FALSE)
+x_train <- df[indices, -length(df)]
+x_test <- df[-indices, -length(df)]
+y_train <- df[indices, length(df)]
+y_test <- df[-indices, length(df)]
+
+test_results <- data.frame()
+train_results <- data.frame()
+
+for (num_layer in 1:10) {
+  model <- rpart(y_train ~ ., data = cbind(x_train, y_train), method = "class", control = rpart.control(maxdepth = num_layer))
+
+  yp_train <- predict(model, newdata = x_train, type = "class")
+  yp_test <- predict(model, newdata = x_test, type = "class")
+
+  # Calculate metrics
+  test_metrics <- cbind(num_layer, 
+                        confusionMatrix(yp_test, as.factor(y_test))$overall[1],
+                        confusionMatrix(yp_test, as.factor(y_test))$overall[2],
+                        confusionMatrix(yp_test, as.factor(y_test))$overall[3],
+                        confusionMatrix(yp_test, as.factor(y_test))$overall[4])
+  
+  train_metrics <- cbind(num_layer, 
+                         confusionMatrix(yp_train, as.factor(y_train))$overall[1],
+                         confusionMatrix(yp_train, as.factor(y_train))$overall[2],
+                         confusionMatrix(yp_train, as.factor(y_train))$overall[3],
+                         confusionMatrix(yp_train, as.factor(y_train))$overall[4])
+
+  test_results <- rbind(test_results, test_metrics)
+  train_results <- rbind(train_results, train_metrics)
+}
+
+# Rename columns for clarity
+colnames(test_results) <- c("num_layer", "accuracy", "kappa", "Accuracy_0", "Accuracy_1")
+rownames(test_results) <- NULL
+colnames(train_results) <- c("num_layer", "accuracy", "kappa", "Accuracy_0", "Accuracy_1")
+rownames(train_results) <- NULL
+
+plot_ly(data = train_results, x = ~num_layer) %>%
+  add_trace(y = ~accuracy, name = "test", mode = "lines", type = "scatter") %>% 
+  add_trace(y = ~test_results$accuracy, name = "train", mode = "lines", type = "scatter")
+```
+
+A max-depth of 5 is the best parameter. We can now build trees for individual coaches.
+
+```{r staley}
+staley <- df %>%
+  filter(coach == "Brandon Staley")
+staley1 <- staley[,c(2, 3, 4, 5, 13, 14)]
+staley_tree <- make_tree(staley1, "Brandon Staley")
+```
+
+```{r belichick}
+belichick <- df %>%
+  filter(coach == "Bill Belichick")
+belichick1 <- belichick[,c(2, 3, 4, 5, 13, 14)]
+belichick_tree <- make_tree(belichick1, "Bill Belichick")
+```
+
+```{r carroll}
+carroll <- df %>%
+  filter(coach == "Pete Carroll")
+carroll1 <- carroll[,c(2, 3, 4, 5, 13, 14)]
+carroll_tree <- make_tree(carroll1)
+```
+
+```{r sirianni}
+sirianni <- df %>%
+  filter(coach == "Nick Sirianni")
+sirianni1 <- sirianni[,c(2, 3, 4, 5, 13, 14)]
+sirianni_tree <- make_tree(sirianni1)
+```
+
+```{r mcvay}
+mcvay <- df %>%
+  filter(coach == "Sean McVay")
+mcvay_tree <- make_tree(mcvay[,c(2, 3, 4, 5, 13, 14)])
+```
+
+```{r stefanski}
+stefanski <- df %>%
+  filter(coach == "Kevin Stefanski")
+stefanski_tree <- make_tree(stefanski[,c(2, 3, 4, 5, 13, 14)])
+```
+
+```{r}
+campbell <- df %>%
+  filter(coach == "Dan Campbell")
+campbell_tree <- make_tree(campbell[,c(2, 3, 4, 5, 13, 14)], "Dan Campbell")
+```
+
+
+```{r cpu}
+cpu <- df2 %>% 
+  mutate(go = if_else(go_boost > 1, 1, 0))
+cpu1 <- cpu[,c(1, 2, 3, 4, 12, 13)]
+cpu_tree <- make_tree(cpu1)
+```
+
