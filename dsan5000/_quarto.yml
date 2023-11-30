@@ -25,7 +25,10 @@ website:
         - feature_text.qmd
       - coach_clustering.qmd
       - dimensionality_reduction.qmd
-      - decision_trees.ipynb
+      - section: "Decision Trees"
+        contents:
+        - decision_trees.ipynb
+        - random_forests.ipynb
       - arm.qmd
       - conclusions.qmd
       - about.qmd
