@@ -337,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The end goal of making these decision trees is to model the decision making process for each coach. To help us better understand the individual trees, we will start by making an “average” baseline tree that is built using data from every coach. This classification tree will predict whether or not a coach decides to go for it on a given 4th down scenario. It may help to try this using every 4th down play, as well as with some filters imposed on the data to extract more informative, higher leverage scenarios.</p>
 <div class="cell" data-execution_count="8">
 <details>
-<summary>Inputs</summary>
+<summary>Imports</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -495,7 +495,11 @@ POSITIVE PRECISION (Y=1):  0.709
 <p>To interpret this tree, first look at the feature chosen on each level. The higher the feature on the tree, the more important it is in making a decision. According to this decision tree made with data from every coach in the last 6 seasons, the most important variable in determining whether or not to go for it is the yards needed to get the first down, <code>ydstogo</code>. The decsion point is set at 1, where if the yards to go is 1 or less, take a left. If the yards to go is more than 1, take a right.</p>
 <p>Let’s say there is only 1 yard to go, meaning you arrive at the node labelled <code>yardline_100 &lt;= 56.5</code>. If you chose to stop here, the average coach would go for it, though it is close. The counts of each class are displayed in each node and in this node we observe that out of the 2,560 4th down scenarios with 1 yard to go, the coach decided to go for it 1,415 times and decided to not go for it 1,145 times, independent of all other variables. The next variable they would look at is <code>yardline_100</code>. If they are 56 yards or closer to the end zone (essentially right around midfield), they would take a left. If not, take a right. This process continues until a leaf is reached.</p>
 <p>We can see some variables come up more than others, meaning they are more important in making deicsions. This makes sense when thinking about this tree as an actual coach’s deicsion making process. Let’s return to the scenerio detailed in the High-Leverage Scenarios tab and evaluate Vic Fangio’s situation as an average NFL head coach. More context is provided on that tab, so here we will keep it simple and only go over the relevant parameters to our model. Going over those parameters one more time:</p>
-<p><code>game_half</code>: 2 <code>half_seconds_remaining</code>: 210 <code>ydstogo</code>: 5 <code>yardline_100</code>: 43 <code>score_diff</code>: 1</p>
+<p><code>game_half</code>: 2</p>
+<p><code>half_seconds_remaining</code>: 210</p>
+<p><code>ydstogo</code>: 5</p>
+<p><code>yardline_100</code>: 43</p>
+<p><code>score_diff</code>: 1</p>
 <p>We can use the <code>dtreeviz</code> library to observe the path this particular instance takes through our tree.</p>
 <div class="cell" data-execution_count="123">
 <details>
