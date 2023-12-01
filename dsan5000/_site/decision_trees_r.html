@@ -247,12 +247,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Dimensionality Reduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Decision Trees</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./decision_trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Decision Trees</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./random_forests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Forests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./arm.html" class="sidebar-item-text sidebar-link">
@@ -441,7 +458,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_trace</span>(<span class="at">y =</span> <span class="sc">~</span>test_results<span class="sc">$</span>accuracy, <span class="at">name =</span> <span class="st">"train"</span>, <span class="at">mode =</span> <span class="st">"lines"</span>, <span class="at">type =</span> <span class="st">"scatter"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9fd57352d8160f035f36" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-9fd57352d8160f035f36">{"x":{"visdat":{"116e5370e2007":["function () ","plotlyVisDat"]},"cur_data":"116e5370e2007","attrs":{"116e5370e2007":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"test","mode":"lines","type":"scatter","inherit":true},"116e5370e2007.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"train","mode":"lines","type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"num_layer"},"yaxis":{"domain":[0,1],"automargin":true,"title":"accuracy"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1,2,3,4,5,6,7,8,9,10],"y":[0.85476787954830613,0.88031009141423189,0.89420146979745474,0.89913066857859836,0.90123678078508695,0.90123678078508695,0.90123678078508695,0.90123678078508695,0.90123678078508695,0.90123678078508695],"name":"test","mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[0.85406955898171388,0.87737540337038367,0.88920760129078524,0.89494442452491929,0.89709573323771963,0.89709573323771963,0.89709573323771963,0.89709573323771963,0.89709573323771963,0.89709573323771963],"name":"train","mode":"lines","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-9fd57352d8160f035f36">{"x":{"visdat":{"5a265ce970e":["function () ","plotlyVisDat"]},"cur_data":"5a265ce970e","attrs":{"5a265ce970e":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"test","mode":"lines","type":"scatter","inherit":true},"5a265ce970e.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"train","mode":"lines","type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"num_layer"},"yaxis":{"domain":[0,1],"automargin":true,"title":"accuracy"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1,2,3,4,5,6,7,8,9,10],"y":[0.85476787954830613,0.88031009141423189,0.89420146979745474,0.89913066857859836,0.90123678078508695,0.90123678078508695,0.90123678078508695,0.90123678078508695,0.90123678078508695,0.90123678078508695],"name":"test","mode":"lines","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[0.85406955898171388,0.87737540337038367,0.88920760129078524,0.89494442452491929,0.89709573323771963,0.89709573323771963,0.89709573323771963,0.89709573323771963,0.89709573323771963,0.89709573323771963],"name":"train","mode":"lines","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>A max-depth of 5 is the best parameter. We can now build trees for individual coaches.</p>
