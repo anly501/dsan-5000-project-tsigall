@@ -422,7 +422,7 @@ POSITIVE PRECISION (Y=1):  0.77
 </section>
 <section id="hyperparameter-tuning" class="level1">
 <h1>Hyperparameter Tuning</h1>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="6">
 <details>
 <summary><code>n_estimators</code> Tuning</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>test_results<span class="op">=</span>[]</span>
@@ -447,7 +447,7 @@ POSITIVE PRECISION (Y=1):  0.77
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">1</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell" data-execution_count="18">
+<div class="cell" data-execution_count="7">
 <details>
 <summary><code>n_estimators</code> Plots</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
@@ -478,27 +478,49 @@ POSITIVE PRECISION (Y=1):  0.77
 </div>
 </div>
 <p>200 appears to be the optimal <code>n_estimators</code> parameter, we will fit a model with that value. Note also that the accuracy at that level of estimators is over 91%, meaning we have an excellent model.</p>
+<p>Optimized forest metrics:</p>
+<div class="cell" data-execution_count="11">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">200</span>, random_state<span class="op">=</span><span class="dv">621</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> clf.fit(x_train.values, y_train)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>yp_train <span class="op">=</span> model.predict(x_train.values)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>yp_test <span class="op">=</span> model.predict(x_test.values)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>confusion_plot(y_test, yp_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>ACCURACY:  0.912
+NEGATIVE RECALL (Y=0):  0.961
+NEGATIVE PRECISION (Y=0):  0.935
+POSITIVE RECALL (Y=1):  0.662
+POSITIVE PRECISION (Y=1):  0.771
+[[4483  180]
+ [ 310  606]]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="random_forests_files/figure-html/cell-8-output-2.png" class="img-fluid"></p>
+</div>
+</div>
 </section>
 <section id="feature-importance" class="level1">
 <h1>Feature Importance</h1>
 <p>As it is difficult to visualize the trees in a random forest due to their compelxity, we can visualize the importance of each of the features, allowing us to compare this model to the previous decision tree model.</p>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="9">
 <details>
 <summary>Feature Importance</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.model_selection <span class="im">import</span> FeatureImportances</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">200</span>, random_state<span class="op">=</span><span class="dv">621</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> clf.fit(x_train.values, y_train)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize feature importances</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>viz <span class="op">=</span> FeatureImportances(model)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>viz.fit(x_train, y_train)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>viz.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yellowbrick.model_selection <span class="im">import</span> FeatureImportances</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize feature importances</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>viz <span class="op">=</span> FeatureImportances(model)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>viz.fit(x_train, y_train)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>viz.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="random_forests_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+<p><img src="random_forests_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>&lt;Axes: title={'center': 'Feature Importances of 5 Features using RandomForestClassifier'}, xlabel='relative importance'&gt;</code></pre>
 </div>
 </div>
