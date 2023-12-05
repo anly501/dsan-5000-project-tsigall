@@ -1,5 +1,5 @@
 ---
-title: "Naïve Bayes"
+title: "Naïve Bayes Introduction"
 bibliography: reference.bib
 ---
 

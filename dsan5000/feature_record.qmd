@@ -4,7 +4,9 @@ editor_options:
   chunk_output_type: inline
 ---
 
-```{r, include = FALSE}
+```{r, message = FALSE}
+#| code-fold: true
+#| code-summary: Imports
 library(tidyverse)
 library(kableExtra)
 ```
@@ -16,6 +18,7 @@ As we are looking at coach decision making, could we develop a model to effectiv
 ## Prepare Data
 
 ```{r load_data, echo = FALSE}
+#| code-fold: true
 load("data/raw_nfl.Rdata")
 df <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
@@ -43,7 +46,9 @@ Features for this model include: game_half, half_seconds_remaining, ydstogo, yar
 
 We want to look at the decision making process of each individual coach. To start, lets look at the process of the coach that has stayed on the same team and had the most 4th down situations over the past 8 NFL seasons: Bill Belichick.
 
-```{r most_4ths, echo = FALSE}
+```{r most_4ths}
+#| code-fold: true
+
 kable(head(df %>%
   group_by(coach) %>%
   summarize(count = n()) %>%
@@ -54,7 +59,10 @@ kable(head(df %>%
 
 It is important to establish benchmarks by which to judge our models by before we start to build them. This is done by creating basic models that predict through randomly guessing. The purpose of this is to compare our actual models to these - if they cannot outperform a model that predicts through random guessing then we have a problem.
 
-```{python, include = FALSE}
+```{python}
+#| code-fold: true
+#| code-summary: Python Imports
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -68,15 +76,15 @@ pd.set_option('display.float_format', '{:.3f}'.format)
 
 ## Random Guessing
 
-```{python set_seed, include = FALSE}
+```{python set_seed}
+#| code-fold: true
+
 rng = np.random.default_rng(621)
 df = pd.read_csv("data/df.csv")
 belichick = df[df['coach'] == 'Bill Belichick']
 belichick = belichick.drop(columns =['coach', 'punt_wp'])
 belichick['random_guess'] = rng.choice([0,1], len(belichick))
-```
 
-```{python metric, echo = FALSE}
 f1_random = f1_score(belichick['go'], belichick['random_guess'])
 accuracy_random = accuracy_score(belichick['go'], belichick['random_guess'])
 metrics = pd.DataFrame({"Metric" : ["F1 Score", "Accuracy Score"],
@@ -86,7 +94,9 @@ metrics
 
 ## Most Frequent Label
 
-```{python}
+```{python, message = FALSE}
+#| code-fold: true
+
 most_frequent_label = int(belichick['go'].mode())
 belichick['frequent'] = most_frequent_label
 f1_random = f1_score(belichick['go'], belichick['frequent'])
@@ -98,7 +108,9 @@ metrics
 
 # Train and Test Model
 
-```{python, include = FALSE}
+```{python, message = FALSE}
+#| code-fold: true
+
 feature_matrix = belichick.drop(columns = ['go', 'random_guess'])
 label_vec = belichick[['go']]
 
@@ -109,18 +121,20 @@ test_predictions = model.predict(X_test)
 
 f1_gaussianNB = f1_score(y_true = y_test, y_pred = test_predictions)
 accuracy_gaussianNB = accuracy_score(y_true = y_test, y_pred = test_predictions)
-```
 
-```{python metrics, echo = FALSE}
 metrics["GaussianNB"] = [f1_gaussianNB, accuracy_gaussianNB]
 metrics
 ```
+
 
 This model is a clear improvement over random guessing, meaning we have a legitimate model. We can now attempt to improve the model through feature selection, and then move on to creating a model for each coach.
 
 # Feature Selection
 
 ```{python}
+#| code-fold: true
+#| code-summary: Merit Function
+
 def merit(x,y,correlation="pearson"):
     # x=matrix of features 
     # y=matrix (or vector) of targets 
@@ -128,14 +142,11 @@ def merit(x,y,correlation="pearson"):
     k = len(x)
     feature = pd.DataFrame(x)
     target = pd.DataFrame(y)
-
     f_corr = feature.corr(method=correlation)
-
     if(correlation == "pearson"):
         f_t_corr = np.corrcoef(feature, target, rowvar=False)
     else:
         f_t_corr =  feature.apply(lambda col: col.corr(target, method = "spearman"))
-        
     rho_xx = f_t_corr.mean()
     mask = np.triu(np.ones_like(f_corr), k=1)
     rho_xy = f_corr[pd.DataFrame(mask) == 1].mean().mean()
@@ -143,6 +154,8 @@ def merit(x,y,correlation="pearson"):
 ```
 
 ```{python}
+#| code-fold: true
+#| code-summary: Explore Data Function
 x = feature_matrix.to_numpy()
 y = label_vec.to_numpy()
 
@@ -160,14 +173,18 @@ def explore_data(x,y,iplot=True):
     if (iplot):
         sns.pairplot(pd.DataFrame(np.hstack((x,y.reshape(y.shape[0],1)))))
         plt.show()
+```
 
-# TEST YOUR CODE ABOVE
+```{python, warning = FALSE}
 explore_data(x,y, iplot = False)
 ```
 
 ## Iteration
 
-```{python}
+```{python, warning = FALSE}
+#| code-fold: true
+#| code-summary: Maximize CFS function
+
 import itertools
 
 def maximize_CFS(x,y):
@@ -182,40 +199,48 @@ def maximize_CFS(x,y):
                     optimal_subset = subset
                     print("found new max: ", max_merit, "optimal features = ", list(subset))
      return(x[:, optimal_subset])
-   
+```
+
+```{python, warning = FALSE}
 x_opt=maximize_CFS(x,y)
 explore_data(x_opt, y, iplot = False)
-features_opt = pd.DataFrame(x_opt, columns = feature_matrix.columns[[3,11]])
+features_opt = pd.DataFrame(x_opt, columns = feature_matrix.columns[[3,10]])
+
+features_opt
 ```
+
+
 
 ## Merit Score
 
 $$ \mathrm {Merit} _{S_{k}}={\frac {k|{\overline {r_{cf}}|}}{\sqrt {k+k(k-1)|{\overline {r_{ff}}}|}}}  $$
 
 ```{python}
+#| code-fold: true
 from scipy.stats import spearmanr
 
 #compute base merit score s_2
 
-included_vars_s2 = ['half_seconds_remaining','yardline_100']
+included_vars_s2 = ['fg_make_prob','yardline_100']
 included_vars_df = feature_matrix[included_vars_s2].copy()
-time_yardline_corr = spearmanr(included_vars_df['half_seconds_remaining'], 
+fg_yardline_corr = spearmanr(included_vars_df['fg_make_prob'], 
                                   included_vars_df['yardline_100']).statistic
-time_yardline_corr
+print("fg_make_prob/yardline_100 correlation: ", round(fg_yardline_corr, 3))
 
-time_go_corr = spearmanr(included_vars_df['half_seconds_remaining'], label_vec).statistic
-time_go_corr
+fg_go_corr = spearmanr(included_vars_df['fg_make_prob'], label_vec).statistic
+
+print("fg_make_prob/go correlation: ", round(fg_go_corr, 3))
 
 yardline_go_corr = spearmanr(included_vars_df['yardline_100'], label_vec).statistic
-yardline_go_corr
+print("yardline_100/go correlation: ", round(yardline_go_corr, 3))
 
 k = 2
 
 # since we only have two features there is only one correlation value, so this mean is just the one value
-mean_xx_corr = time_yardline_corr #r_{xx}
+mean_xx_corr = fg_yardline_corr #r_{xx}
 
 # mean_xy_corr is the mean of the two feature/label correlations from above
-mean_xy_corr = np.mean([time_go_corr, yardline_go_corr]) #r_{xy}
+mean_xy_corr = np.mean([fg_go_corr, yardline_go_corr]) #r_{xy}
 
 print(f"Number of Features: {k}")
 merit_score_numer = k * np.absolute(mean_xy_corr)
@@ -223,7 +248,12 @@ merit_score_denom = np.sqrt(k + k * (k + 1) * np.absolute(mean_xx_corr))
 merit_score_s2 = merit_score_numer / merit_score_denom
 ```
 
+### Computing Fucntions
+
 ```{python}
+#| code-fold: true
+#| code-summary: Computing Functions
+
 def compute_mean_xx_corr(x_df):
   df_colnames = x_df.columns
   # This will contain our final set of x<->x correlations
@@ -310,6 +340,9 @@ print(f"Accuracy: {accuracy_gaussianNB}")
 # Compare Coaches
 
 ```{python, output = FALSE}
+#| code-fold: true
+#| code-summary: Train Coach Model Function
+
 def train_coach_model(coach):
   coach_df = df[df['coach'] == coach]
   # coach_df = coach_df[['yardline_100', 'miss_fg_wp', 'go']]
@@ -335,6 +368,11 @@ def train_coach_model(coach):
 This function allows us to easily create a model for any coach we want, and compare the influence each feature has on their decision making. Essentially we are now comparing what coaches take into consideration when they decide to go for it or not.
 
 ```{python}
+#| code-fold: true
+
+from IPython.display import Markdown
+from tabulate import tabulate
+
 compare_coaches = pd.DataFrame({"Feature":feature_matrix.columns.to_list()})
 
 staley_model = train_coach_model("Brandon Staley")
@@ -344,5 +382,9 @@ stefanski_model = train_coach_model("Kevin Stefanski")
 
 compare_coaches = compare_coaches.T.iloc[1:]
 compare_coaches.rename(columns = dict(zip(compare_coaches.columns, feature_matrix.columns.to_list())), inplace = True)
+
+Markdown(tabulate(
+  compare_coaches,
+  headers=["Coach", "game_half", "half_seconds_remaining", "ydstogo", "yardline_100", "posteam_score", "defteam_score", "go_boost", "wp_fail", "wp_succeed", "wp", "fg_make_prob", "miss_fg_wp", "make_fg_wp", "punt_wp"]))
 
 ```
