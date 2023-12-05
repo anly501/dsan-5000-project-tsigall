@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSAN 5000 - Cleaning Data</title>
+<title>4th Down Decision Making - Decision Trees Cleaning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked fullcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -107,9 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      DSAN 5000
-      </li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_cleaning1.html">Data Cleaning</a></li><li class="breadcrumb-item"><a href="./data_cleaning3.html">Decision Trees Cleaning</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -124,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">DSAN 5000</a> 
+      <a href="./">4th Down Decision Making</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -158,13 +157,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_cleaning1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4th Down Data</span></a>
+ <span class="menu-text">Initial Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data_cleaning2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Text Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data_cleaning3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Decision Trees Cleaning</span></a>
   </div>
 </li>
       </ul>
@@ -239,18 +244,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Dimensionality Reduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Decision Trees</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./decision_trees.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Decision Trees</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./arm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ARM</span></a>
+  <a href="./random_forests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random Forests</span></a>
   </div>
 </li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
@@ -280,21 +296,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#decision-trees" id="toc-decision-trees" class="nav-link active" data-scroll-target="#decision-trees">Decision Trees</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cleaning Data</h1>
+<h1 class="title">Decision Trees Cleaning</h1>
 </div>
 
 
@@ -309,48 +317,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<div class="cell">
+<details>
+<summary>Inputs</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <section id="decision-trees" class="level1">
 <h1>Decision Trees</h1>
+<p>For our decision tree building, we would like to format our play by play data in a slightly different manner. Mainly, we want to only have the coach of the team on offense as we are evaluating their deicion-making, not the defensive team’s coach. Also, we want to drop unnecessary columns and make a singular <code>score_diff</code> column, rather than have separate columns for <code>posteam_score</code> and <code>defteam_score</code>. The resultant table can be seen below, and is used in our decision tree analysis later on in the project.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/raw_nfl.Rdata"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> raw_data <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(go_boost) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(go)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">coach =</span> <span class="fu">if_else</span>(posteam_type <span class="sc">==</span> <span class="st">"home"</span>, home_coach, away_coach),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">home_coach =</span> coach,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">score_diff =</span> posteam_score <span class="sc">-</span> defteam_score,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">go =</span> <span class="fu">if_else</span>(go <span class="sc">==</span> <span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">game_half =</span> <span class="fu">if_else</span>(game_half <span class="sc">==</span> <span class="st">"Half1"</span>, <span class="dv">1</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>coach,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>away_coach,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>season,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>posteam,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>defteam,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>posteam_type,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>epa,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>punt_wp,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>posteam_score,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>defteam_score) <span class="sc">%&gt;%</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">coach =</span> home_coach) <span class="sc">%&gt;%</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>go, <span class="fu">everything</span>())</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df, <span class="st">"data/dt.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rattle)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: bitops</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rattle: A free graphical interface for data science with R.
-Version 5.5.1 Copyright (c) 2006-2021 Togaware Pty Ltd.
-Type 'rattle()' to shake, rattle, and roll your data.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(go<span class="sc">~</span>., df[,<span class="dv">2</span><span class="sc">:</span><span class="dv">14</span>], <span class="at">method =</span> <span class="st">"class"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fancyRpartPlot</span>(tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/raw_nfl.Rdata"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> raw_data <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(go_boost) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(go)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">coach =</span> <span class="fu">if_else</span>(posteam_type <span class="sc">==</span> <span class="st">"home"</span>, home_coach, away_coach),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">home_coach =</span> coach,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">score_diff =</span> posteam_score <span class="sc">-</span> defteam_score,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">go =</span> <span class="fu">if_else</span>(go <span class="sc">==</span> <span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">game_half =</span> <span class="fu">if_else</span>(game_half <span class="sc">==</span> <span class="st">"Half1"</span>, <span class="dv">1</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>coach,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>away_coach,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>season,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>posteam,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>defteam,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>posteam_type,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>epa,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>punt_wp,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>posteam_score,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>         <span class="sc">-</span>defteam_score) <span class="sc">%&gt;%</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">coach =</span> home_coach) <span class="sc">%&gt;%</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>go, <span class="fu">everything</span>())</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df, <span class="st">"data/dt.csv"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img src="data_cleaning3_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">coach</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">game_half</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">half_seconds_remaining</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ydstogo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">yardline_100</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">go_boost</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">wp_fail</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">wp_succeed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">wp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">fg_make_prob</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">miss_fg_wp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">make_fg_wp</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">score_diff</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">go</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1625</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">1.8427797</td>
+<td style="text-align: right;">0.4501592</td>
+<td style="text-align: right;">0.5882827</td>
+<td style="text-align: right;">0.5102725</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.4320890</td>
+<td style="text-align: right;">0.5741632</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1612</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">-1.1323169</td>
+<td style="text-align: right;">0.4403515</td>
+<td style="text-align: right;">0.5971214</td>
+<td style="text-align: right;">0.4710029</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.4196399</td>
+<td style="text-align: right;">0.5725211</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1482</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">-5.7820437</td>
+<td style="text-align: right;">0.3423280</td>
+<td style="text-align: right;">0.5154754</td>
+<td style="text-align: right;">0.4189611</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.3280475</td>
+<td style="text-align: right;">0.5250292</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1230</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">2.0073829</td>
+<td style="text-align: right;">0.3919702</td>
+<td style="text-align: right;">0.5667855</td>
+<td style="text-align: right;">0.4749633</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.3907058</td>
+<td style="text-align: right;">0.5210628</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rex Ryan</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1230</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">-0.6287521</td>
+<td style="text-align: right;">0.3906138</td>
+<td style="text-align: right;">0.5670854</td>
+<td style="text-align: right;">0.4759269</td>
+<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">0.3771124</td>
+<td style="text-align: right;">0.5210628</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">John Harbaugh</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">941</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">-4.0096273</td>
+<td style="text-align: right;">0.5135549</td>
+<td style="text-align: right;">0.6866364</td>
+<td style="text-align: right;">0.5298005</td>
+<td style="text-align: right;">0.6625606</td>
+<td style="text-align: right;">0.4986032</td>
+<td style="text-align: right;">0.6224666</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
 </div>
 

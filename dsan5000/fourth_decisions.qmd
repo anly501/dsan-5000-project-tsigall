@@ -3,9 +3,15 @@ title: "4th Down Decisions"
 editor_options: 
   chunk_output_type: inline
 bibliography: reference.bib
+format:
+  html:
+    toc: false
 ---
 
-```{r setup, include = FALSE}
+```{r setup, message = FALSE}
+#| code-fold: true
+#| code-summary: Inputs and Setup
+
 library(tidyverse)
 library(ggplot2)
 library(grid)
@@ -15,14 +21,12 @@ library(gridExtra)
 library(plotly)
 library(RColorBrewer)
 library(scales)
-display.brewer.all(type = 'div')
 use_condaenv("r-env")
 options(scipen = 999)
-```
 
-```{r load_data, include = FALSE}
 load("data/clean_data.Rdata")
 ```
+
 
 We will initially explore the data in a similar manner to the method seen in David Romer's paper [@romer2006]. In his evaluation of fourth down decisions, he followed a four step process. First, he estimated the value of kicking (not going for it). Second, he estimated the value of going for it. Third, he figured out which decision was better. Finally, he compared this to the actual decisions made by coaches.
 
@@ -32,7 +36,9 @@ Thanks again to the nflverse package, we already have completed steps one and tw
 
 How often do coaches make the correct decision on 4th down?
 
-```{r coach_decisions, warning = FALSE, echo = FALSE}
+```{r coach_decisions, warning = FALSE}
+#| code-fold: true
+
 p <- ggplot(data = fourth_decisions, aes(x = should_go)) + 
   geom_histogram(binwidth = 0.05, fill = "#69b3a2", color="#e9ecef") +
   scale_x_continuous(limits = c(0, 1.1), breaks = seq(0, 1, by = 0.1)) +
@@ -59,7 +65,9 @@ grid.arrange(p, p1, ncol = 1)
 
 We can see a clear difference between these two plots when they are put on the same scale. When it would be a "correct" decision to kick rather than go for it (when win probability would go down if a conversion was attempted) coaches often make the correct decision. Every coach was correct in these situations at least 90% which makes sense because these decisions are often easy to make. They are not the borderline decisions that we can learn a lot about coaches from. For those we turn to the first graph, where we can clearly see that the decision on whether or not to go for it when doing so would increase your win probability is much more difficult, as only two coaches got this one right over 50% of the time. Let's look at this decision more closely and see what turns coaches away from going for it even when they should be.
 
-```{r position_decisions_actual, echo = FALSE}
+```{r position_decisions_actual}
+#| code-fold: true
+
 fourth_position <- fourth_position %>%
   filter(count > 10)
 plot_ly(data = fourth_position, 

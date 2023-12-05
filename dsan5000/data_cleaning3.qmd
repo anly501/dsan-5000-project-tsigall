@@ -1,17 +1,26 @@
 ---
-title: "Cleaning Data"
+title: "Decision Trees Cleaning"
 bibliography: reference.bib
 editor_options: 
   chunk_output_type: inline
+format:
+  html:
+    toc: false
 ---
 
-```{r setup ,include = FALSE}
+```{r setup, message = FALSE}
+#| code-fold: true
+#| code-summary: Inputs
 library(tidyverse)
+library(kableExtra)
 ```
 
 # Decision Trees
 
+For our decision tree building, we would like to format our play by play data in a slightly different manner. Mainly, we want to only have the coach of the team on offense as we are evaluating their deicion-making, not the defensive team's coach. Also, we want to drop unnecessary columns and make a singular `score_diff` column, rather than have separate columns for `posteam_score` and `defteam_score`. The resultant table can be seen below, and is used in our decision tree analysis later on in the project. 
+
 ```{r}
+#| code-fold: true
 load("data/raw_nfl.Rdata")
 df <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
@@ -35,11 +44,7 @@ df <- df %>%
   rename(coach = home_coach) %>%
   select(-go, everything())
 write.csv(df, "data/dt.csv")
+
+kable(head(df))
 ```
 
-```{r}
-library(rpart)
-library(rattle)
-tree <- rpart(go~., df[,2:14], method = "class")
-fancyRpartPlot(tree)
-```

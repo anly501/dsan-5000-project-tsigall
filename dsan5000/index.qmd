@@ -1,9 +1,12 @@
 ---
 title: "Introduction"
 bibliography: reference.bib
+author: "Thomas Sigall - tns29"
+format:
+    html:
+        toc: false
 ---
 
-> Thomas Sigall - tns29
 
 # Decision Making in Sports
 
@@ -11,18 +14,40 @@ In sports, as in all areas of life, there are a variety of decisions that actors
 
 Why do people behave this way? It goes against what we know about expected value and suggests that we are illogical actors. This is elaborated further by Daniel Kahneman and Amos Tversky in their influential 1979 paper "Prospect Theory: an Analysis of Decision Under Risk" in which they explain, "Choices among risky prospects exhibit several pervasive effects that are inconsistent with the basic tenets of utility theory" [@kahneman_prospect_1979]. This eventually leads them to an alternative theory of choice "in which value is assigned to gains and losses rather than to final assets and in which probabilities are replaced by decision weights" [@kahneman_prospect_1979].
 
-To better understand decision making, we will do as David Romer did in his 2006 paper "Do Firms Maximize? Evidence from Professional Football" [@romer2006]. We will look at one of the most decisions certainly in football but perhaps in all of sports: 4th down. Focusing on this decision and attempting to understand the reasoning behind why it is so frequently done incorrectly will hopefully allow us to learn more about the decision making process not only in football, but in many other areas of life.
+To better understand decision making, we will do as David Romer did in his 2006 paper "Do Firms Maximize? Evidence from Professional Football" [@romer2006]. We will focus specifically on one of the most important decisions certainly in football but perhaps in all of sports: 4th down. Focusing on this decision and attempting to understand the reasoning behind why it is so frequently done incorrectly will hopefully allow us to learn more about the decision making process not only in football, but in many other areas of life.
+
+## 4th Down
+
+This project will focus specifically on one critical and often scrutinized decision: 4th downs in the National Football League. Here I will provide a breif overview of what this decision entails for those who may not be as familiar with the game of football. Even for those who are familiar, this section may be useful to understand how I will approach this decision throughout the project. 
+
+### Terminology and Rules
+
+To start I will clear up some terminology. To "go for it" is to attempt a first down conversion and conversely to "not go for it" is to not attempt a conversion. In football the offense has four chances, or "downs" to advance the ball 10 yards towards their goal (yards are denoted by markings on the field). If they are ever able to advance that 10 yards, the counter resets and they have another four chances to advance the ball another 10 yards. This is how teams progress down the field towards their goal. If, after their fourth chance (their fourth "down"), they have not advanced the ball the required 10 yards, the opposing team gains possession and is now on offense, attempting to advance in the same manner in the other direction. 
+
+The caveat and the reason this becomes a difficult decision is if a team does not get the required 10 yards, the opposing team gains possesion wherever the offenseive team is stopped on 4th down. Because the other team is attempting to progress the ball in the opposite direction, if this change occurs after very little advancement by the team on offense, the opposing team gets the ball in a favorable position. 
+
+There is another alternative to "going for it" on fourth down (attempting to gain the yards needed to reset the down count). A team can elect to "punt", meaning they dropkick the ball to the opposing team who will recieve it and start their possession further down the field. See the diagram below for a comparison of the two scenarios. The team on offense has the ball at the blue line, and must gain 10 yards (the yellow line) to reset the down count to first down. If they fail to gain those yards on fourth down, the opposing team gets the ball far closer to their goal than if they elect to punt, as evidenced by the location of the left-most blue line. 
+
+![](images/field_diagram.jpg)
+
+However, there is one other alternative beyond going for it and punting on fourth down. Kicking a field goal is worth 3 points in the NFL, and is typically attempted when a team is about 40 yards or less away from their goal. In the above diagram a field goal would not be an option as the team is 70 yards (50 + 20) away from their goal. 
+
+To summarize, a team will either attempt a conversion on 4th down (go for it) or they will not (not go for it). If they choose to not go for it, they can either punt or attempt a field goal though for the purpose of this project those will both be treated as the same scenario (not going for it). Throughout the project, this binary decision will be represented as such:
+
+**0: Not go for it** *(field goal or punt)*
+
+**1: Go for it** *(run a play)*
 
 # Questions
 
-1.  How are decisions in sports currently evaluated?
+1.  How are 4th down decisions currently evaluated?
 2.  Could we improve this evaluation process?
 3.  Would improvements in this process lead to better decision making on the field?
-4.  How can we determine why certain decisions are made?
-5.  How can we apply alternative theories of choice to specific games?
-6.  How different would the sports landscape look if everything were optimized?
+4.  Can we determine what factors coaches look at when making this decision?
+5.  How can we apply alternative theories of choice to this process?
+6.  How different would the football landscape look if the correct decision was made every time?
 7.  Are there certain factors that theories of choice could not take into account?
-8.  If there truly is an optimal choice every time, would it be possible for anyone to coach a team?
+8.  If there truly is an optimal choice every time, would it be worth it for any human to coach a team?
 9.  Can these principles be exteneded to off-field deicisons, such as team-building and player evaluation?
 10. Are unoptimized decisions part of what makes sports enjoyable?
 
