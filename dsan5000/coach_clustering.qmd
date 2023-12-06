@@ -3,7 +3,6 @@ title: "Clustering"
 format:
   html:
     code-fold: true
-    code-summary: "Show the code"
 ---
 
 ```{r setup, include = FALSE}
@@ -61,9 +60,10 @@ Obvious clusters have not formed from this, but we will still proceed with the u
 write_csv(fourth_by_coach, file = "data/fourth_by_coach.csv")
 ```
 
-### Imports
+### Setup
 
 ```{python imports}
+#| code-summary: Python Imports
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
@@ -75,15 +75,17 @@ import sklearn
 np.random.seed(621)
 ```
 
-```{python read_data, include = FALSE}
+```{python read_data}
+#| code-summary: Read Data
+
 df = pd.read_csv("data/fourth_by_coach.csv")
 scaler = StandardScaler()
 X = scaler.fit_transform(df[["should_go", "shouldnt_go"]])
 ```
 
-### Plotting Function
-
 ```{python plot_function}
+#| code-summary: Plotting Function
+
 # plotting function from lab 4.1 demo
 def plot(X,color_vector):
     fig, ax = plt.subplots()
@@ -97,7 +99,7 @@ def plot(X,color_vector):
 
 ## K-Means
 
-```{python clustering, messages = FALSE}
+```{python clustering, warning = FALSE}
 X = np.ascontiguousarray(X)
 k_means_X = pd.DataFrame(columns = ["Cluster", "Inertia"], index = range(10))
 
@@ -243,9 +245,9 @@ labels = AgglomerativeClustering(n_clusters = 12).fit(X).labels_
 
 plot(X, labels)
 ```
+:::
 
 8 and 12 seem to be too many clusters, and 4 looks very similar to the result from K-Means clustering so we will continue using that result.
-:::
 
 # Labelling Coaches
 

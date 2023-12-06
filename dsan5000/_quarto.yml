@@ -9,10 +9,7 @@ website:
     contents:
       - index.qmd
       - data_gathering.qmd
-      - section: "Data Cleaning"
-        contents:
-        - data_cleaning1.qmd
-        - data_cleaning2.qmd
+      - data_cleaning1.qmd
       - section: "Data Exploration"
         contents:
         - fourth_decisions.qmd

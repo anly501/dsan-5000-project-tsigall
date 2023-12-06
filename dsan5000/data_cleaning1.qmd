@@ -1,5 +1,5 @@
 ---
-title: "Initial Tables"
+title: "Data Cleaning"
 bibliography: reference.bib
 editor_options: 
   chunk_output_type: inline

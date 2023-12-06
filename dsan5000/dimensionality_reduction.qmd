@@ -1,23 +1,27 @@
 ---
 title: "Dimensionality Reduction"
 bibliography: reference.bib
+format:
+  html:
+    code-fold: true
+    toc: false
 ---
 
-```{r setup, include = FALSE}
+```{r setup, message = FALSE}
+#| code-summary: Imports and Data
 library(tidyverse)
 library(plotly)
 library(reticulate)
 library(gridExtra)
-knitr::opts_chunk$set(echo = FALSE)
-```
+library(kableExtra)
 
-```{r include = FALSE}
 load("data/raw_nfl.Rdata")
 ```
 
 # Principal Component Analysis
 
 ```{r}
+#| code-summary: Clean Data
 df <- raw_data %>%
     filter(!is.na(go_boost) & !is.na(go)) %>%
     select(season, home_coach, away_coach, posteam, defteam, posteam_type, game_half, half_seconds_remaining, ydstogo, yardline_100, posteam_score, defteam_score, posteam, go_boost, go, epa, wp_fail, wp_succeed, wp, fg_make_prob, miss_fg_wp, make_fg_wp, punt_wp)
@@ -41,9 +45,12 @@ df <- df %>%
   select(-go, everything())
 
 write.csv(df, "data/df.csv")
+
+kable(head(df))
 ```
 
 ```{python echo = TRUE}
+#| code-summary: Python Imports
 import json
 import pandas as pd
 import numpy as np
@@ -65,9 +72,7 @@ X = scaler.fit_transform(X)
 
 pca = PCA(n_components = 5).fit(X)
 variance_ratios = pca.explained_variance_ratio_
-```
 
-```{python}
 plt.cla()
 plt.plot(range(1, len(variance_ratios) + 1), variance_ratios, marker='o')
 plt.xlabel("Principal Component")
@@ -103,31 +108,29 @@ from sklearn.manifold import TSNE
 ```
 
 ```{python}
-# X_5 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=5, n_iter=300).fit_transform(X)
-# X5_df = pd.DataFrame(X_5, columns = ['x', 'y'])
-# 
-# X_10 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=10, n_iter=300).fit_transform(X)
-# X10_df = pd.DataFrame(X_10, columns = ['x', 'y'])
-# 
-# X_20 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=20, n_iter=300).fit_transform(X)
-# X20_df = pd.DataFrame(X_20, columns = ['x', 'y'])
-# 
-# X_30 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=30, n_iter=300).fit_transform(X)
-# X30_df = pd.DataFrame(X_30, columns = ['x', 'y'])
-# 
-# X_40 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=40, n_iter=300).fit_transform(X)
-# X40_df = pd.DataFrame(X_40, columns = ['x', 'y'])
-# 
-# X_50 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=50, n_iter=300).fit_transform(X)
-# X50_df = pd.DataFrame(X_50, columns = ['x', 'y'])
+X_5 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=5, n_iter=300).fit_transform(X)
+X5_df = pd.DataFrame(X_5, columns = ['x', 'y'])
+ 
+X_10 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=10, n_iter=300).fit_transform(X)
+X10_df = pd.DataFrame(X_10, columns = ['x', 'y'])
+ 
+X_20 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=20, n_iter=300).fit_transform(X)
+X20_df = pd.DataFrame(X_20, columns = ['x', 'y'])
+ 
+X_30 = TSNE(n_components=2,learning_rate='auto',init='random',perplexity=30, n_iter=300).fit_transform(X)
+X30_df = pd.DataFrame(X_30, columns = ['x', 'y'])
+
+X_40 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=40, n_iter=300).fit_transform(X)
+X40_df = pd.DataFrame(X_40, columns = ['x', 'y'])
+ 
+X_50 = TSNE(n_components=2,learning_rate='auto',init='random', perplexity=50, n_iter=300).fit_transform(X)
+X50_df = pd.DataFrame(X_50, columns = ['x', 'y'])
 ```
 
 ```{r}
-load("data/tsne.Rdata")
-```
+#| code-summary: Generate Plots
 
-```{r}
-p5 <- ggplot(data = X5, aes(x = x, y = y, color = factor(py$Y))) +
+p5 <- ggplot(data = py$X5_df, aes(x = x, y = y, color = factor(py$Y))) +
   geom_point(size = 0.5) +
   scale_color_manual(values = c("red", "darkgreen"), 
                      name = "Conversion Attempted",
@@ -136,7 +139,7 @@ p5 <- ggplot(data = X5, aes(x = x, y = y, color = factor(py$Y))) +
   theme_minimal() +
   ggtitle("Perplexity = 5")
 
-p10 <- ggplot(data = X10, aes(x = x, y = y, color = factor(py$Y))) +
+p10 <- ggplot(data = py$X10_df, aes(x = x, y = y, color = factor(py$Y))) +
   geom_point(size = 0.5) +
   scale_color_manual(values = c("red", "darkgreen"), 
                      name = "Conversion Attempted",
@@ -145,7 +148,7 @@ p10 <- ggplot(data = X10, aes(x = x, y = y, color = factor(py$Y))) +
   theme_minimal() +
   ggtitle("Perplexity = 10")
 
-p20 <- ggplot(data = X20, aes(x = x, y = y, color = factor(py$Y))) +
+p20 <- ggplot(data = py$X20_df, aes(x = x, y = y, color = factor(py$Y))) +
   geom_point(size = 0.5) +
   scale_color_manual(values = c("red", "darkgreen"), 
                      name = "Conversion Attempted",
@@ -154,7 +157,7 @@ p20 <- ggplot(data = X20, aes(x = x, y = y, color = factor(py$Y))) +
   theme_minimal() +
   ggtitle("Perplexity = 20")
 
-p30 <- ggplot(data = X30, aes(x = x, y = y, color = factor(py$Y))) +
+p30 <- ggplot(data = py$X30_df, aes(x = x, y = y, color = factor(py$Y))) +
   geom_point(size = 0.5) +
   scale_color_manual(values = c("red", "darkgreen"), 
                      name = "Conversion Attempted",
@@ -163,7 +166,7 @@ p30 <- ggplot(data = X30, aes(x = x, y = y, color = factor(py$Y))) +
   theme_minimal() +
   ggtitle("Perplexity = 30")
 
-p40 <- ggplot(data = X40, aes(x = x, y = y, color = factor(py$Y))) +
+p40 <- ggplot(data = py$X40_df, aes(x = x, y = y, color = factor(py$Y))) +
   geom_point(size = 0.5) +
   scale_color_manual(values = c("red", "darkgreen"), 
                      name = "Conversion Attempted",
@@ -172,7 +175,7 @@ p40 <- ggplot(data = X40, aes(x = x, y = y, color = factor(py$Y))) +
   theme_minimal() +
   ggtitle("Perplexity = 40")
 
-p50 <- ggplot(data = X50, aes(x = x, y = y, color = factor(py$Y))) +
+p50 <- ggplot(data = py$X50_df, aes(x = x, y = y, color = factor(py$Y))) +
   geom_point(size = 0.5) +
   scale_color_manual(values = c("red", "darkgreen"), 
                      name = "Conversion Attempted",
@@ -185,37 +188,37 @@ p50 <- ggplot(data = X50, aes(x = x, y = y, color = factor(py$Y))) +
 ::: panel-tabset
 ## Perplexity = 5
 
-```{r}
+```{r echo = FALSE}
 p5
 ```
 
 ## Perplexity = 10
 
-```{r}
+```{r echo = FALSE}
 p10
 ```
 
 ## Perplexity = 20
 
-```{r}
+```{r echo = FALSE}
 p20
 ```
 
 ## Perplexity = 30
 
-```{r}
+```{r echo = FALSE}
 p30
 ```
 
 ## Perplexity = 40
 
-```{r}
+```{r echo = FALSE}
 p40
 ```
 
 ## Perplexity = 50
 
-```{r}
+```{r echo = FALSE}
 p50
 ```
 :::
